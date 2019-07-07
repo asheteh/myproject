@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+        <div class="col my-4">
+            <h2>Please Process Payment  To get Notes </h2>
+            <div class="my-4">
+                <ul class="list-group" id="items">
+                </ul>
+    
+                <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mt-3">
+        <li class="breadcrumb-item active" aria-current="page">Your Cart Total Is <b>Rs. 200 <span id="totalPrice"></span></b>. Enter your details below & place your order. Thanks for using ccatcracker.in</li>
+      </ol>
+    </nav>
+     </div>
+        </div>
+        <div class="col my-4">
+            <h2>Step 2 - Enter Address & Other Details:</h2>
+            <form action="{% url 'payment' %}" method="POST">
+                    {% csrf_token %}
+             
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputname">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required placeholder="Name" >
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required placeholder="Email" >
+                    </div>
+                </div>
+              
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="city" name="city" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <input type="text" class="form-control" id="state" name="state"  required placeholder="Enter State">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Phone</label>
+                        <input type="text"  name="phone" required>
+                    </div>
+                </div>
+                <input type="submit" value="Pay" class="btn btn-secondary btn-block">
+            </form>
+        </div>
+    </div>
+
+
+
+{% endblock %}

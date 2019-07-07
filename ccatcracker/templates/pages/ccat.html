@@ -1,0 +1,95 @@
+{% extends 'base.html '%}
+
+{% block content %}
+<style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        </style>
+   <!-- Breadcrumb -->
+   <section id="bc" class="mt-3">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'index' %}">
+                  <i class="fas fa-home"></i> Home</a>
+              </li>
+              <li class="breadcrumb-item active">CCAT</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+      <section id="about" class="py-4">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8">
+                  <h2>Search For The Perfect Study Material</h2>
+                  <p class="lead">Checkout The Syllabus and Perfect notes to crack ccat with Good Rank.</p>
+                
+                  <p class="mt-4">Hey Guys Please read this Very carefully . <br>
+                        Before going to ccat exam first follow all the process which i Had mentioned. <br>
+                        First read syllabus . <br>
+                        Second Read my notes very carefully.If you follow my notes you can easily solve 80% quetions. <br>
+                        Finally after completing study and videos which i have recommend in notes Before exam give
+                        My practice online test i am sure Guys this is a very important test that will gain your confidence in exam. br
+                        At least give 4 test each year i change data as per exam requirement so follow only material from this website .     </p>
+                                
+                    <table style="width:100%">
+                    <tr>
+                        <th>Sections</th>
+                        <th>Topics</th> 
+                        <th>Time</th>
+                    </tr>
+                    <tr>
+                        <td>Section A</td>
+                        <td>English Aptitude & Reasoning</td>
+                        <td>1 Hour</td>
+                    </tr>
+                    <tr>
+                        <td>Section B</td>
+                        <td>C ,C++ ,Data Structre,Operating System,Networking</td>
+                        <td>1 Hour</td>
+                    </tr>
+                    <tr>
+                       <td>Section C</td>
+                        <td>Computer Architecture,Digital Electronics,Microprocessors</td>
+                        <td>1 Hour</td>
+                    </tr>
+                    </table>
+                </div>
+            </section>
+
+              <!-- Work -->
+      <section id="work" class="bg-dark text-white text-center">
+           
+            <h4>Lets Checkout CCAT Section</h4>
+           
+            <a href="{% url 'checkout' %}" class="btn btn-secondary text-white btn-lg">CCAT</a>
+          </section>
+    
+        <section id="about" class="py-4">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8">
+                  <h2>Do not join any Pre-Dac Course Guys Don't waste your money. </h2>
+                      <p class="lead">Check Out the study Material that notes are very relevent to exam nothing useless.</p>
+                      
+                      <p class="mt-4">If you click CCAT section you will get all material .That notes are created by me 
+                          I have completed CDAC 1 year ago . I saw how much peoples do struggle to get perfect notes unnecessary
+                        they waste lots of money for Pre-Dac Course . Thats why i have developed this website only for You Guys.
+                        So stay with me and start to explore I always update new Material and Important Tips for how to success in CDAC.           </p>
+                    </div>
+                    </div>
+                </div>
+                
+            
+        </section>
+
+
+
+
+
+
+{% endblock %}

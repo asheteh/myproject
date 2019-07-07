@@ -1,0 +1,86 @@
+{% extends 'base.html '%}
+
+{% block content %}
+ <!-- Showcase -->
+ <section id="showcase">
+        <div class="container text-center">
+          <div class="home-search p-5">
+            <div class="overlay p-5">
+              <h1 class="display-4 mb-4">
+                Search Centers Course Wise
+              </h1>
+              <p class="lead">Please enter course name and city you will get list of cdac center</p>
+              <div class="search">
+                <form action="search.html">
+                  <!-- Form Row 1 -->
+                  <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label class="sr-only">Course</label>
+                        <select name="state" class="form-control">
+                          <option selected="true" disabled="disabled">Courses (All)</option>
+                          <option value="AL">DAC</option>
+                          <option value="AK">Big Data</option>
+                          <option value="AZ">IOT</option>
+                          <option value="AR">VLSI</option>
+                          <option value="CA">HPCSA</option>
+                        </select>
+                    </div>
+    
+    
+                    <div class="col-md-6 mb-3">
+                      <label class="sr-only">City</label>
+                      <select name="state" class="form-control">
+                        <option selected="true" disabled="disabled">City (All)</option>
+                        <option value="AL">Pune</option>
+                        <option value="AK">Mumbai</option>
+                        <option value="AZ">Kolkatta</option>
+                        <option value="AR">Banglore</option>
+                        <option value="CA">Noida</option>
+                      </select>
+                    </div>
+                  </div>
+               
+                  </div>
+                  <button class="btn btn-secondary btn-block mt-4" type="submit">Search Center</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+        </div>
+      </section>
+    
+      <section id="services" class="py-5 bg-secondary text-white">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-md-4">
+                <i class="fas fa-comment fa-4x mr-4"></i>
+                <hr>
+                <h3>About Us</h3>
+                <p>Hey guys this is the website I have developed to all those students wants
+                  to success in cdac from start to end here you will find everything regarding CDAC.
+                </p>
+              </div>
+              <div class="col-md-4">
+                  <i class='fas fa-laptop-code' style='font-size:48px'></i>
+                <hr>
+                <h3>Test Series</h3>
+                <p>This online test series i have designed for ccat exam you will feel like you are 
+                  giving ccat exam after taking this test you will feel confident for exam. I recommend
+                  you guys at leaset give 2,3 test before exam my quetions are very relevent to ccat. 
+                </p>
+              </div>
+              <div class="col-md-4">
+                <i class="fas fa-suitcase fa-4x mr-4"></i>
+                <hr>
+                <h3>Contact Us</h3>
+                <p>This is the website only to clear doubts of all the students so feel free to contact us at any time for anything 
+                  regarding cdac.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+{% endblock %}

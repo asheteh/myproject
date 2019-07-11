@@ -6,8 +6,8 @@ class Orders(models.Model):
     name = models.CharField(max_length=90)
     email = models.CharField(max_length=111)
     phone = models.CharField(max_length=111, default="")
-    city = models.CharField(max_length=111)
-    state = models.CharField(max_length=111)
+    city = models.CharField(max_length=111, default="")
+    state = models.CharField(max_length=111, default="")
     status = models.CharField(max_length=111,default= 'New')
 
 def __str__(self):

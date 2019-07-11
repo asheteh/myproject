@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import render, redirect
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
-
+from payment.models import Orders
 
 def register(request):
   if request.method == 'POST':
@@ -51,6 +51,7 @@ def login(request):
 
     if user is not None:
       auth.login(request, user)
+      
       messages.success(request, 'You are now logged in')
       return redirect('dashboard')
     else:
@@ -66,5 +67,17 @@ def logout(request):
     return redirect('index')
 
 def dashboard(request):
+       user_contacts = request.user.email;
+       order = Orders.objects.order_by('-order_id').filter(email=user_contacts)
+       
+       context = {
+      'order': order
+      }
+       
+    
   
-  return render(request, 'accounts/dashboard.html')
+       return render(request, 'accounts/dashboard.html',context)
+
+      
+      
+   

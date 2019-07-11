@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{% block content %}
+<section id="listings" class="py-4">
+        <div class="container">
+          <div class="row">
+    
+                {% if courses %}
+                {% for list in courses %}
+  
+                 <!-- Listing 1 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="card listing-preview">
+                    
+                    <div class="card-body">
+                      <div class="listing-heading text-center">
+                        <h4 class="text-primary">{{list.center_name}}</h4>
+                       
+                        
+                            <h4 class="text-primary">Placement: {{list.placement}}</h4>
+                            <h4 class="text-primary">Recommend: {{list.recommend}}</h4>
+                        </div>
+                     
+                </div>
+            </div>
+        </div>
+  
+                {% endfor %}
+  
+              {% else %}
+              <div class="col-md-12">
+                <p>No Listings Available</p>
+              </div>
+              {% endif %}
+            </section>  
+{% endblock %}

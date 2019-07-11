@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">
+              <i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="breadcrumb-item active"> About</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <section id="about" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h3>Please Enter Exam Code which we have sent on email.</h3>
+          <p class="lead">How to get code Read below Instructions :</p>
+          <span style="font-weight:bold;font-size:20px;">Instruction:</span><br />
+          <div class="ins" style="margin-top: 5px; color : black;">Click On Test Series CCAT Link </div>
+          <div class="ins" style="margin-top: 5px; color: black";>Then Click Start Test Button</div>
+          <div class="ins" style="margin-top: 5px; color:black;">Then Enter Your Details and pay Rs.40 To Get Coupon</div>
+          <div style="border:#efefef 1px solid;margin-top:20px;">
+                <h3>Enter Exam Code </h3>
+
+                <div>
+                  <form action="{% url 'checkout' %}">
+                    <label for="fname">Exam Code</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Code">
+                
+                  
+                  
+                    <input type="submit" value="Submit">
+                  </form>
+                </div>
+              
+          </div>
+        </div>
+     </div>
+   </div>
+</section>
+
+{% endblock %}
+
+
+
+

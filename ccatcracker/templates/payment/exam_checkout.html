@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+        <div class="col my-4">
+            <h2>Please Process Payment  To get Exam Code </h2>
+            <div class="my-4">
+                <ul class="list-group" id="items">
+                </ul>
+    
+                <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mt-3">
+        <li class="breadcrumb-item active" aria-current="page">Your Cart Total Is <b>Rs. 60 For both Section <span id="totalPrice"></span></b>. Enter your details below & place your order. Thanks for using ccatcracker.in</li>
+      </ol>
+    </nav>
+     </div>
+        </div>
+        <div class="col my-4">
+            <h2>Step 2 - Enter Address & Other Details:</h2>
+            <form action="{% url 'process_payment' %}" method="POST">
+                    {% csrf_token %}
+             
+                <div class="form-row">
+                    {% if listings %}
+                        <h1>hello{{listings.order_id}}</h1>
+
+                    {% endif %}
+                  
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required placeholder="Email" >
+                    </div>
+                </div>
+              <input type="submit" value="Pay" class="btn btn-secondary btn-block">
+            </form>
+        </div>
+    </div>
+
+
+
+{% endblock %}

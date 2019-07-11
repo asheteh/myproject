@@ -15,7 +15,7 @@ img {
   margin-right: 0.4rem; }
 
 #showcase {
-  background: url(../img/showcase.jpg) no-repeat top center fixed/cover;
+  background: url(../img/ccee.png) no-repeat top center fixed/cover;
   position: relative;
   min-height: 650px;
   color: #fff;
@@ -52,7 +52,7 @@ img {
   position: relative;
   overflow: hidden;
   min-height: 200px; }
-    #showcase-inner::before {
+  #showcase-inner::before {
     content: '';
     position: absolute;
     top: 0;
@@ -65,7 +65,6 @@ img {
 
 #work {
   padding: 6rem 0; }
-
 
 .listing-preview a {
   position: relative; }
@@ -95,6 +94,3 @@ img {
     font-size: 30px; }
   #showcase-inner h1 {
     font-size: 40px; } }
-
-
-    

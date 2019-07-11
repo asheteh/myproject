@@ -1,14 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include 'partials/_alerts.html' %}
 <div class="container">
-        {{response}}
+       
         <div class="col my-4">
     
-            <h2>Payment status regarding your order Id {{response.ORDERID}}</h2>
+            <h3>Payment status regarding your order Id {{response.ORDERID}}</h3>
             {% if response.RESPCODE == '01' %}
             ORDER SUCCESS
             {% else %}
             ORDER FAILURE
             {% endif%}
+          {{response.ORDERID}}
+          <h4>If You Didnt Get email please contact Us : <br>
+            help.ccatcracker@gmail.com <br>
+            abhijeets7663@gmail.com <br></h4>
     
         </div>
     
     </div>
+
+
+{% endblock %}

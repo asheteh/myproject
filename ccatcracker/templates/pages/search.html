@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{% block content %}
+<section id="listings" class="py-4">
+        <div class="container">
+          <div class="row">
+    
+                {% if courses %}
+                {% for list in courses %}
+  
+                 <!-- Listing 1 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="card listing-preview">
+                    
+                    <div class="card-body">
+                      <div class="listing-heading text-center">
+                        <h4 class="text-primary">{{list.course}}</h4>
+                        <p>
+                          <i class="fas fa-map-marker text-secondary"></i>  ss{{list.city}},
+                          {{list.address}}
+                        </p>
+                        <p>
+                            <i class="material-icons text-secondary"></i>{{list.description}}</p> 
+                            <h4 class="text-primary">Quality: {{list.quality}}</h4>
+                            <h4 class="text-primary">Placement: {{list.placement}}</h4>
+                            <h4 class="text-primary">Recommend: {{list.recommend}}</h4>
+                        </div>
+                      <hr>
+                </div>
+            </div>
+        </div>
+  
+                {% endfor %}
+  
+              {% else %}
+              <div class="col-md-12">
+                <p>No Listings Available</p>
+              </div>
+              {% endif %}
+            </section>  
+{% endblock %}

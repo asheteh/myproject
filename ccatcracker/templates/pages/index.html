@@ -2,40 +2,41 @@
 
 {% block content %}
  <!-- Showcase -->
- <section id="showcase">
+ <section id="showcase" style="background-image: url(../static/img/ccee.jpg);background-repeat: no-repeat;background-attachment: fixed;">
         <div class="container text-center">
           <div class="home-search p-5">
             <div class="overlay p-5">
               <h1 class="display-4 mb-4">
                 Search Centers Course Wise
               </h1>
+            
               <p class="lead">Please enter course name and city you will get list of cdac center</p>
               <div class="search">
-                <form action="search.html">
+                <form action="{% url 'search' %}">
                   <!-- Form Row 1 -->
                   <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label class="sr-only">Course</label>
-                        <select name="state" class="form-control">
+                        <select name="course" class="form-control">
                           <option selected="true" disabled="disabled">Courses (All)</option>
-                          <option value="AL">DAC</option>
-                          <option value="AK">Big Data</option>
-                          <option value="AZ">IOT</option>
-                          <option value="AR">VLSI</option>
-                          <option value="CA">HPCSA</option>
+                          <option value="DAC">DAC</option>
+                          <option value="Big Data">Big Data</option>
+                          <option value="IOT">IOT</option>
+                          <option value="VLSI">VLSI</option>
+                          <option value="HPCSA">HPCSA</option>
                         </select>
                     </div>
     
     
                     <div class="col-md-6 mb-3">
                       <label class="sr-only">City</label>
-                      <select name="state" class="form-control">
+                      <select name="city" class="form-control">
                         <option selected="true" disabled="disabled">City (All)</option>
-                        <option value="AL">Pune</option>
-                        <option value="AK">Mumbai</option>
-                        <option value="AZ">Kolkatta</option>
-                        <option value="AR">Banglore</option>
-                        <option value="CA">Noida</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkatta">Kolkatta</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Noida">Noida</option>
                       </select>
                     </div>
                   </div>
@@ -63,6 +64,7 @@
                   to success in cdac from start to end here you will find everything regarding CDAC.
                 </p>
               </div>
+             
               <div class="col-md-4">
                   <i class='fas fa-laptop-code' style='font-size:48px'></i>
                 <hr>

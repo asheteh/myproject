@@ -10,7 +10,11 @@ urlpatterns = [
     path('cdac',views.cdac,name='cdac'),
     path('ccee',views.ccee,name='ccee'),
     path('test',views.test,name='test'),
+    path('search',views.search,name='search'),
+    path('rank',views.rank,name='rank'),
     path('payment/',include('payment.urls')),
+    path('OnlineTest/',include('OnlineTest.urls')),
     path('accounts/',include('accounts.urls')),
     path('admin/', admin.site.urls),
 ]
+ 

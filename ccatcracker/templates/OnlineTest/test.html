@@ -1,0 +1,71 @@
+{% extends 'base.html '%}
+
+{% block content %}
+
+ <!-- Breadcrumb -->
+ <section id="bc" class="mt-3">
+    <div class="container">
+     
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">
+              <i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="breadcrumb-item active">CCAT</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+  <section id="about" class="py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <h2>Online Test Series For Section A and Section B</h2>
+              <p class="lead">Hope You guys have completed all the notes and videos which i had mentioned in Notes.</p>
+              <span style="font-weight:bold;font-size:20px;">Instruction:</span><br />
+              <div class="ins" style="margin-top: 5px; color:black;">Total Number of Questions: 50</div>
+              <div class="ins" style="margin-top: 5px; color:black;">Time alloted: 60 minutes</div>
+              <div class="ins" style="margin-top: 5px; color:black;">Each question carry 1 mark each, no negative marking</div>
+              <div style="border:#efefef 1px solid;margin-top:20px;">
+                  <div class="note11">NOTE:</div>
+                  <div style="padding:5px">
+                    <div style="font-size:13px;" id="note_id">Each time you will get new paper no quetions will repeat.</div>
+                    <div style="font-size:13px;" id="note_id">Exam will be same like ccat Section wise</div>
+                      <div style="font-size:13px;" id="note_id">Click the 'Submit Test' button given in the bottom of this page to Submit your answers.</div>
+                      <div style="font-size:13px;" id="note_id">Test will be submitted after time is Expired.</div>
+                      <div style="font-size:13px;" id="note_id">Do not refresh the Page.</div>
+                      
+                  </div>
+              </div>
+            </div>
+          
+             </div>
+            
+             
+          </div>
+          
+        </section>
+        <section id="bc" class="mt-3">
+          <div class="container">
+          
+      </div> 
+          </div>
+        </section>
+        <br><br><br><br>
+          <!-- Work -->
+      <section id="work" class="bg-dark text-white text-center">
+        
+        <h4>If You want all the test series and unlimited access with explaination Lets checkout 
+          My CDAC Udemy Test Series USE  PROMO : CCATCRACKER 
+        </h4>
+        
+        <a href="{% url 'index' %}" class="btn btn-secondary text-white btn-lg">Udemy</a>
+      </section>
+                 
+       
+
+
+
+
+{% endblock %}

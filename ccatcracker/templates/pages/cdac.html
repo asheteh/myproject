@@ -3,7 +3,76 @@
 {% block content %}
 
 
-
+<section id="about" class="py-4" >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <h2>Congrats Guys Hope you got your ccat rank .</h2>
+              <p class="lead">After rank every one start to find which course which center I will get as per my rank.
+                  No Worries guys ccatcracker here just enter your rank and course you will get all list of colleges which
+                  is highest probability to get .
+              </p>
+              
+              <p class="mt-4">If you click CCAT section you will get all material .That notes are created by me 
+                  I have completed CDAC 1 year ago . I saw how much peoples do struggle to get perfect notes unnecessary
+                they wate lots of money for Pre-Dac Course . Thats why i have developed this website only for You Guys.
+                So stay with me and start to explore I always update new Material and Important Tips for how to success in CDAC.           </p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="showcase" style="background-image: url(../static/img/cdac.jpg);background-repeat: no-repeat;background-attachment: fixed;">
+            <div class="container text-center">
+              <div class="home-search p-5">
+                <div class="overlay p-5">
+                  <h1 class="display-4 mb-4">
+                    Search Centers Rank Wise
+                  </h1>
+                
+                  <p class="lead">Please enter course name and your Rank to get list of cdac center</p>
+                  <div class="search">
+                    <form action="{% url 'rank' %}">
+                      <!-- Form Row 1 -->
+                      <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label class="sr-only">Course</label>
+                            <select name="course" class="form-control">
+                              <option selected="true" disabled="disabled">Courses (All)</option>
+                              <option value="DAC">DAC</option>
+                              <option value="Big Data">Big Data</option>
+                              <option value="IOT">IOT</option>
+                              <option value="VLSI">VLSI</option>
+                              <option value="HPCSA">HPCSA</option>
+                            </select>
+                        </div>
+        
+        
+                        <div class="col-md-6 mb-3">
+                          <label class="sr-only">City</label>
+                          <select name="rank" class="form-control">
+                            <option selected="true" disabled="disabled">Rank <</option>
+                            <option value="500">500</option>
+                            <option value="1000">1000</option>
+                            <option value="1500">1500</option>
+                            <option value="2000">2000</option>
+                            <option value="2500">2500</option>
+                            <option value="3000">3000</option>
+                            <option value="3500">3500</option>
+                            <option value="4000">4000</option>
+                            <option value="5000">5000</option>
+                          </select>
+                        </div>
+                      </div>
+                   
+                      </div>
+                      <button class="btn btn-secondary btn-block mt-4" type="submit">Search Center</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
 
 

@@ -1,11 +1,8 @@
 from django.shortcuts import render
-from . models import OnlineTest
+
 # Create your views here.
 def test(request):
-   o = OnlineTest.objects.all()
-   context ={
-        "page": o
-    }
+   
  
    return render(request,'OnlineTest/test.html')
 

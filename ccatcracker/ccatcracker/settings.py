@@ -142,3 +142,7 @@ EMAIL_HOST_PASSWORD='9921471309'
 EMAIL_USE_TLS = True
 
 # Messages
+try:
+    from .local_settings import *
+except ImportError:
+    pass

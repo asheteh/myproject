@@ -1,0 +1,151 @@
+{% extends 'base_1.html' %}
+{% block title %} Data Types In - C | C Language Tutorial  {% endblock %}
+
+{% block content %}
+<style>
+        p {
+          display: block;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          margin-left: 0;
+          margin-right: 0;
+          font-style: italic;
+          font-size: 15px;
+          
+        }
+        pre{
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            color: rgba(0,0,0,.9);
+            font-family: Consolas,monospace;
+            margin-bottom: 10px;
+            overflow: auto;
+            padding: 10px;
+            margin: 0px 0px 10px;
+            text-align: left;
+            
+
+        }
+        </style>
+    <!-- Breadcrumb -->
+    <section id="bc" class="mt-3">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'index' %}">
+                  <i class="fas fa-home"></i> Home</a>
+              </li>
+              <li class="breadcrumb-item active"> C Language</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+     
+    </div>
+    <section id="about" class="py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+                 
+             
+                <div style=" background-color: white; width: 800px;
+                border: 0.2px solid white;
+                padding: 50px;
+                margin: 20px; ">
+                <h3 style="color:black">sizeof operator in C:</h3> 
+                <p >
+                        Sizeof is a much used operator in the C programming language. It is a compile time unary operator which can be used to compute the size of its operand. The result of sizeof is of unsigned integral type which is usually denoted by size_t. sizeof can be applied to any data-type, including primitive types such as integer and floating-point types, pointer types, or compound datatypes such as Structure, union etc.
+                      
+                </p>
+              
+                <h3 style="color: black">Copy Below Links And Watch Lectures First :</h3> <br>
+                 
+                <h4 style="color:rgb(189, 132, 47)">1. SizeOf In  C  : https://youtu.be/RLBEmk-Tgu8</h4>
+                
+
+                <h3 style="color:black">Where To Use and Usage Of SizeOf :</h3> 
+                <p>
+                        sizeof() operator is used in different way according to the operand type. <br> <br>
+                        1. When operand is a Data Type.
+                            When sizeof() is used with the data types such as int, float, char… etc it simply returns the amount of memory is allocated to that data types.
+                            <br> <br>
+                            Lets See an Example : <br>
+                            <div class="container">
+                                    <div class="line number1 index0 alt2"><code class="preprocessor">#include &lt;stdio.h&gt; </code></div>
+                                    <div class="line number2 index1 alt1"><code class="color1 bold">int</code> <code class="plain">main() </code></div>
+                                    <div class="line number3 index2 alt2"><code class="plain">{ </code></div>
+                                    <div class="line number4 index3 alt1 highlighted"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="functions bold">printf</code><code class="plain">(</code><code class="string">"%lu\n"</code><code class="plain">, </code><code class="keyword bold">sizeof</code><code class="plain">(</code><code class="color1 bold">char</code><code class="plain">)); </code></div>
+                                    <div class="line number5 index4 alt2 highlighted"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="functions bold">printf</code><code class="plain">(</code><code class="string">"%lu\n"</code><code class="plain">, </code><code class="keyword bold">sizeof</code><code class="plain">(</code><code class="color1 bold">int</code><code class="plain">)); </code></div>
+                                    <div class="line number6 index5 alt1 highlighted"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="functions bold">printf</code><code class="plain">(</code><code class="string">"%lu\n"</code><code class="plain">, </code><code class="keyword bold">sizeof</code><code class="plain">(</code><code class="color1 bold">float</code><code class="plain">)); </code></div>
+                                    <div class="line number7 index6 alt2 highlighted"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="functions bold">printf</code><code class="plain">(</code><code class="string">"%lu"</code><code class="plain">, </code><code class="keyword bold">sizeof</code><code class="plain">(</code><code class="color1 bold">double</code><code class="plain">)); </code></div>
+                                    <div class="line number8 index7 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword bold">return</code> <code class="plain">0; </code></div>
+                                    <div class="line number9 index8 alt2"><code class="plain">} </code></div>
+                                    </div>
+                </p>
+
+               <h3 style="color:black">Output  :</h3> 
+               <p>
+                    <pre>   
+                            1
+                            4
+                            4
+                            8
+                            </pre>     
+                     
+            
+              </p>
+              <h3 style="color:black">2. When operand is an expression : </h3> 
+              <p>
+                    When sizeof() is used with the expression, it returns size of the expression. Let see example:
+                    <br> <br>
+                    <div class="container">
+                            <div class="line number1 index0 alt2"><code class="preprocessor">#include &lt;stdio.h&gt; </code></div>
+                            <div class="line number2 index1 alt1"><code class="color1 bold">int</code> <code class="plain">main() </code></div>
+                            <div class="line number3 index2 alt2"><code class="plain">{ </code></div>
+                            <div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">int</code> <code class="plain">a = 0; </code></div>
+                            <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">double</code> <code class="plain">d = 10.21; </code></div>
+                            <div class="line number6 index5 alt1 highlighted"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="functions bold">printf</code><code class="plain">(</code><code class="string">"%lu"</code><code class="plain">, </code><code class="keyword bold">sizeof</code><code class="plain">(a + d)); </code></div>
+                            <div class="line number7 index6 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword bold">return</code> <code class="plain">0; </code></div>
+                            <div class="line number8 index7 alt1"><code class="plain">} </code></div>
+                            </div>   
+                    
+           
+             </p>
+             <h3 style="color:black">Output  :</h3> 
+               <p>
+                    <pre>   
+                            8
+                          
+                    </pre>     
+                     
+            
+              </p>
+
+             
+             <h4 style="color:black">In this way we can use size of do some exercises of coding to get more hands on for size_of . 
+                  <br> <br>
+                Exercise 1 . Write a c program to find size of each data types using size_of in c  .<br> 
+                <br> 
+                Exercise 2 . Write a c program to Find the length of a string using sizeof . <br>
+                </h4>
+
+
+
+
+             <h4>Note : If you have any doubts feel free to contact us If You Didnt understand any concept ..</h4>
+            </div>
+            <a  style="margin-left: 60%"  href="{% url 'modify_operator' %}" class="btn btn-secondary text-white btn-lg">Day 4-Modify-Operator</a>
+   
+            </div>
+          </div>
+         
+        </div>
+      </section>
+      
+
+   
+        
+</div>
+
+{% endblock %}

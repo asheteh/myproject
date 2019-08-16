@@ -1,0 +1,221 @@
+{% extends 'base_1.html' %}
+{% block title %} Control Statements in C - If Block | C Language Tutorial {% endblock %}
+
+{% block content %}
+<style>
+        p {
+          display: block;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          margin-left: 0;
+          margin-right: 0;
+          font-style: italic;
+          font-size: 15px;
+          
+        }
+        pre{
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            color: rgba(0,0,0,.9);
+            font-family: Consolas,monospace;
+            margin-bottom: 10px;
+            overflow: auto;
+            padding: 10px;
+            margin: 0px 0px 10px;
+            text-align: left;
+            
+
+        }
+        </style>
+    <!-- Breadcrumb -->
+    <section id="bc" class="mt-3">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'index' %}">
+                  <i class="fas fa-home"></i> Home</a>
+              </li>
+              <li class="breadcrumb-item active"> C Language</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+     
+    </div>
+    <section id="about" class="py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+                 
+             
+                <div style=" background-color: white; width: 800px;
+                border: 0.2px solid white;
+                padding: 50px;
+                margin: 20px; ">
+                <h3 style="color:black">C if statement:</h3> 
+                <p >
+                        The if statement allows you to control the execution of code based on a  particular condition. The syntax of the if statement is as follows:
+
+                      <br> <br>
+                        if(expression){ <br>
+                        /* unit of code to be executed */ <br>
+                        }
+                      
+                </p>
+              
+                <h3 style="color: black">Copy Below Links And Watch Lectures First :</h3> <br>
+                 
+                <h4 style="color:darkcyan">1. If In  C Part-1: https://youtu.be/ou2ZYkol4NI</h4>
+                <h4 style="color:darkcyan">2. If-else In  C Part-2: https://youtu.be/rbVzQk6wu90</h4>
+                <h4 style="color:darkcyan">3. Loop In  C Part-3: https://youtu.be/_2weEBxDTo8</h4>
+                <h4 style="color:darkcyan">4. While Loop In  C Part-4: https://youtu.be/dUvjIbwr6ZA</h4>
+                <h4 style="color:darkcyan">5. For Loop In  C Part-5:  https://youtu.be/_NZZ9Y-j_mw</h4>
+               
+
+                <h3 style="color:black">If  Examples:</h3> 
+                <p>
+                      Example : <br>
+                      1. #include <\stdio.h> <br>
+                      2. #include <\stdlib.h> <br>
+                        int main() <br>
+                        {<br>
+                            int x; <br>
+                            printf("Please enter a number:");<br>
+                            scanf ("%d",&x);<br>
+                            if(x > 0){ <br>
+                            printf("\nThe number %d is greater than 0",x);<br>
+                            } <br>
+                            return 0;<br>
+                        } <br> <br>
+                        The program asked users to enter a number. If the number is greater than zero, it displays a message showing that otherwise, it does nothing.
+                
+                
+                </p>
+
+               <h3 style="color:black">C if else statement :</h3> 
+               <p>
+                   
+                    Sometimes you want to execute a piece of code in case of the expression in the if statement evaluates to false. You can use the second form of the if statement which is known as if else statement. The following illustrates the syntax of the if else statement:
+                    <br> <br>
+                    if(expression){ <br>
+                      /* code block of if statement */ <br>
+                    } <br>
+                    else{ <br>
+                      /* code block of else statement */ <br>
+                    } <br>
+                    In Below program user is asked to enter the age and based on the input, the if..else statement checks whether the entered age is greater than or equal to 18. If this condition meet then display message “You are eligible for voting”, however if the condition doesn’t meet then display a different message “You are not eligible for voting”.
+                   <br>  <pre ><span >
+                        #include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+                        </span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+                        </span><span class="pun">{</span><span class="pln">
+                           </span><span class="kwd">int</span><span class="pln"> age</span><span class="pun">;</span><span class="pln">
+                           printf</span><span class="pun">(</span><span class="str">"Enter your age:"</span><span class="pun">);</span><span class="pln">
+                           scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">age</span><span class="pun">);</span><span class="pln">
+                           </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">age </span><span class="pun">&gt;=</span><span class="lit">18</span><span class="pun">)</span><span class="pln">
+                           </span><span class="pun">{</span><span class="pln">
+                            </span><span class="com">/* This statement will only execute if the
+                             * above condition (age&gt;=18) returns true
+                             */</span><span class="pln">
+                            printf</span><span class="pun">(</span><span class="str">"You are eligible for voting"</span><span class="pun">);</span><span class="pln">
+                           </span><span class="pun">}</span><span class="pln">
+                           </span><span class="kwd">else</span><span class="pln">
+                           </span><span class="pun">{</span><span class="pln">
+                            </span><span class="com">/* This statement will only execute if the
+                             * condition specified in the "if" returns false.
+                             */</span><span class="pln">
+                            printf</span><span class="pun">(</span><span class="str">"You are not eligible for voting"</span><span class="pun">);</span><span class="pln">
+                           </span><span class="pun">}</span><span class="pln">
+                           </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+                        </span><span class="pun">}</span></pre>
+            
+            
+            
+              </p>
+
+
+              <h3 style="color:black">Output of above Program:</h3> 
+              <p>
+                    <pre ><span class="typ">
+                        Enter</span><span class="pln"> your age</span><span class="pun">:</span><span class="lit">14</span><span class="pln">
+                        </span><span class="typ">You</span><span class="pln"> are </span><span class="kwd">not</span><span class="pln"> eligible </span><span class="kwd">for</span><span class="pln"> voting</span></pre>       
+            </p>
+
+
+             <h3 style="color:black">C Nested If..else statement:</h3> 
+             <p>
+                    When an if else statement is present inside the body of another “if” or “else” then this is called nested if else.
+                    <br> <br>
+                    Syntax of Nested if else statement:   
+                    
+                    <pre ><span class="kwd">
+                        if</span><span class="pun">(</span><span class="pln">condition</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                        </span><span class="com">//Nested if else inside the body of "if"</span><span class="pln">
+                        </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">condition2</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                           </span><span class="com">//Statements inside the body of nested "if"</span><span class="pln">
+                        </span><span class="pun">}</span><span class="pln">
+                        </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                           </span><span class="com">//Statements inside the body of nested "else"</span><span class="pln">
+                        </span><span class="pun">}</span><span class="pln">
+                    </span><span class="pun">}</span><span class="pln">
+                    </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                        </span><span class="com">//Statements inside the body of "else"</span><span class="pln">
+                    </span><span class="pun">}</span></pre>
+                    <br> <br>
+                    Example of Nested If Else :
+                     <br> <br>
+                    <pre><span class="com">
+                        #include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+                        </span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+                        </span><span class="pun">{</span><span class="pln">
+                           </span><span class="kwd">int</span><span class="pln"> var1</span><span class="pun">,</span><span class="pln"> var2</span><span class="pun">;</span><span class="pln">
+                           printf</span><span class="pun">(</span><span class="str">"Input the value of var1:"</span><span class="pun">);</span><span class="pln">
+                           scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">var1</span><span class="pun">);</span><span class="pln">
+                           printf</span><span class="pun">(</span><span class="str">"Input the value of var2:"</span><span class="pun">);</span><span class="pln">
+                           scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">var2</span><span class="pun">);</span><span class="pln">
+                           </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">var1 </span><span class="pun">!=</span><span class="pln"> var2</span><span class="pun">)</span><span class="pln">
+                           </span><span class="pun">{</span><span class="pln">
+                            printf</span><span class="pun">(</span><span class="str">"var1 is not equal to var2\n"</span><span class="pun">);</span><span class="pln">
+                            </span><span class="com">//Nested if else</span><span class="pln">
+                            </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">var1 </span><span class="pun">&gt;</span><span class="pln"> var2</span><span class="pun">)</span><span class="pln">
+                            </span><span class="pun">{</span><span class="pln">
+                                printf</span><span class="pun">(</span><span class="str">"var1 is greater than var2\n"</span><span class="pun">);</span><span class="pln">
+                            </span><span class="pun">}</span><span class="pln">
+                            </span><span class="kwd">else</span><span class="pln">
+                            </span><span class="pun">{</span><span class="pln">
+                                printf</span><span class="pun">(</span><span class="str">"var2 is greater than var1\n"</span><span class="pun">);</span><span class="pln">
+                            </span><span class="pun">}</span><span class="pln">
+                           </span><span class="pun">}</span><span class="pln">
+                           </span><span class="kwd">else</span><span class="pln">
+                           </span><span class="pun">{</span><span class="pln">
+                            printf</span><span class="pun">(</span><span class="str">"var1 is equal to var2\n"</span><span class="pun">);</span><span class="pln">
+                           </span><span class="pun">}</span><span class="pln">
+                           </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+                        </span><span class="pun">}</span></pre>
+                </p>
+
+                
+        
+
+
+             <h4>Note : Hope you guys understand very well if else <br>
+                Lets do some exercises on if else <br>
+                1.Write a C program to find maximum between two numbers. <br>
+                2.Write a C program to check whether a number is even or odd. <br>
+                3.Write a C program to check whether a character is alphabet or not. <br>
+                4.Write a C program to check whether a number is divisible by 5 and 11 or not. ..</h4> <br>
+            </div>
+            <a  style="margin-left: 60%"  href="{% url 'size_of' %}" class="btn btn-secondary text-white btn-lg">Day 4</a>
+   
+            </div>
+          </div>
+         
+        </div>
+      </section>
+      
+
+   
+        
+</div>
+
+{% endblock %}

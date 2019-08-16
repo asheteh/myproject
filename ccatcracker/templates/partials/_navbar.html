@@ -1,17 +1,56 @@
 {% load static %}
+<head>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        .navbar {
+          margin-bottom: 0px;
+          border-radius: 0px;
+        }
+
+        .logo {
+          width: 65px !important;
+         }
+        .nav-item active mr-3{
+          float: center;
+        }
+
+         .navbar-brand{
+           padding: 0px;
+           
+         }
+
+         @media (max-width: 768px) {
+          .nav > li{
+            text-align: center;
+            
+          }
+
+          
+
+          #navbarNavAltMarkup .register{
+              float: none !important;
+              margin: 0px auto;
+              width: 20%;
+          }
+          
+         }
+    </style>
+  </head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
    
     <div class="container">
       <a class="navbar-brand" href="{% url 'index' %}">
-        <img src="{% static '/img/ccat3.png' %}" class="logo" alt="">
+        <img src="{% static '/img/ccat7.png' %}" class="logo" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <ul class="navbar-nav">
-          <li
+        <ul class="nav navbar-nav">
+          <li 
             {% if '/' == request.path %}
               class="nav-item active mr-3"
             {% else %}
@@ -67,9 +106,27 @@
           >
           <a class="nav-link" href="{% url 'test' %}">TEST SERIES CCAT</a>
           </li>
+          <li 
+          {% if 'interview' in request.path %}
+              class="nav-item active mr-3"
+              {% else %}
+              class="nav-item mr-3"
+              {% endif %}          
+          >
+          <a class="nav-link" href="{% url 'interview' %}">Interview</a>
+          </li>
+          <li 
+          {% if 'questions' in request.path %}
+              class="nav-item active mr-3"
+              {% else %}
+              class="nav-item mr-3"
+              {% endif %}          
+          >
+          <a class="nav-link" href="{% url 'questions' %}">Questions</a>
+          </li>
           
         </ul>
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto float-right register">
             {% if user.is_authenticated %}
               <li
               {% if 'dashboard' in request.path %}
@@ -114,7 +171,7 @@
                   Login</a>
               </li>
             {% endif %}
-          </ul>s
+          </ul>
       </div>
     </div>
   </nav>

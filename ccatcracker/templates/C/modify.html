@@ -1,0 +1,283 @@
+{% extends 'base_1.html' %}
+{% block title %} Modify Operators in C | C Language Tutorial {% endblock %}
+
+{% block content %}
+<style>
+        p {
+          display: block;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          margin-left: 0;
+          margin-right: 0;
+          font-style: italic;
+          font-size: 15px;
+          
+        }
+        pre{
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            color: rgba(0,0,0,.9);
+            font-family: Consolas,monospace;
+            margin-bottom: 10px;
+            overflow: auto;
+            padding: 10px;
+            margin: 0px 0px 10px;
+            text-align: left;
+
+            
+
+        }
+        table {
+            table-layout: fixed;
+            border-collapse: collapse;
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+            min-width: 70%;
+            max-width: 100%;
+            vertical-align: initial;
+            overflow-x: auto;
+            display: block;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        </style>
+    <!-- Breadcrumb -->
+    <section id="bc" class="mt-3">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'index' %}">
+                  <i class="fas fa-home"></i> Home</a>
+              </li>
+              <li class="breadcrumb-item active"> C Language</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+     
+    </div>
+    <section id="about" class="py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+                 
+             
+                <div style=" background-color: white; width: 800px;
+                border: 0.2px solid white;
+                padding: 50px;
+                margin: 20px; ">
+                <h3 style="color:black">Modify operators in C Language:</h3> 
+                <p >
+                        Modify Operators in C Language :  Modify operators also called Unary operators or Increment and Decrement operators. This Post explain clearly how to evaluate expressions including modify operators.
+                       
+                      
+                </p>
+              
+                <h3 style="color: black">Copy Below Links And Watch Lectures First :</h3> <br>
+                 
+                <h4 style="color:black">1. Modify Operator In  C Part-1: https://youtu.be/-8XjFA0EyJQ</h4>
+                <h4 style="color:black">1. Modify Operator In  C Part-2: https://youtu.be/Xc74PL3NDCM</h4>
+               
+
+                <h3 style="color:black">C Arithmetic Operators :</h3> 
+                <p>
+                        An arithmetic operator performs mathematical operations such as addition, subtraction, multiplication, division etc on numerical values (constants and variables). <br> <br>
+                        <table style="width: 70%; margin-left: 15%; margin-right: 15%;">
+                                <tbody>
+                                <tr>
+                                <td style="border: 1px solid #000000; width: 59.7826%; text-align: center;">
+                                <div><strong>Arithmetic Operators/Operation</strong></div>
+                                </td>
+                                <td style="border: 1px solid #000000; width: 36.2174%; text-align: center;">
+                                <div style="text-align: center;"><strong>Example</strong></div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td style="border: 1px solid #000000; text-align: left; width: 59.7826%;">
+                                <div>+ (Addition)</div>
+                                </td>
+                                <td style="border: 1px solid #000000; width: 36.2174%;">
+                                <div style="text-align: left;"><span style="line-height: 19px;">A+B</span></div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td style="border: 1px solid #000000; text-align: left; width: 59.7826%;">
+                                <div>– (Subtraction)</div>
+                                </td>
+                                <td style="border: 1px solid #000000; width: 36.2174%;">
+                                <div style="text-align: left;">A-B</div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td style="border: 1px solid #000000; text-align: left; width: 59.7826%;">
+                                <div>* (multiplication)</div>
+                                </td>
+                                <td style="border: 1px solid #000000; width: 36.2174%;">
+                                <div style="text-align: left;">A*B</div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td style="border: 1px solid #000000; text-align: left; width: 59.7826%;">
+                                <div>/ (Division)</div>
+                                </td>
+                                <td style="border: 1px solid #000000; width: 36.2174%;">
+                                <div style="text-align: left;">A/B</div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td style="border: 1px solid #000000; text-align: left; width: 59.7826%;">
+                                <div>% (Modulus)</div>
+                                </td>
+                                <td style="border: 1px solid #000000; width: 36.2174%;">
+                                <div style="text-align: left;">A%B</div>
+                                </td>
+                                </tr>
+                                </tbody>
+                                </table>
+                </p>
+
+               <h3 style="color:black">Example 1: Arithmetic Operators :</h3> 
+               <p>
+                   <pre class="exec prettyprint linenums prettyprinted" style=""><ol class="linenums"><li class="L0"><code><span class="com">// Working of arithmetic operators</span></code></li><li class="L1"><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span></code></li><li class="L2"><code><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span></code></li><li class="L3"><code><span class="pun">{</span></code></li><li class="L4"><code><span class="pln">    </span><span class="kwd">int</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">9</span><span class="pun">,</span><span class="pln">b </span><span class="pun">=</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">;</span></code></li><li class="L5"><code><span class="pln">    </span></code></li><li class="L6"><code><span class="pln">    c </span><span class="pun">=</span><span class="pln"> a</span><span class="pun">+</span><span class="pln">b</span><span class="pun">;</span></code></li><li class="L7"><code><span class="pln">    printf</span><span class="pun">(</span><span class="str">"a+b = %d \n"</span><span class="pun">,</span><span class="pln">c</span><span class="pun">);</span></code></li><li class="L8"><code><span class="pln">    c </span><span class="pun">=</span><span class="pln"> a</span><span class="pun">-</span><span class="pln">b</span><span class="pun">;</span></code></li><li class="L9"><code><span class="pln">    printf</span><span class="pun">(</span><span class="str">"a-b = %d \n"</span><span class="pun">,</span><span class="pln">c</span><span class="pun">);</span></code></li><li class="L0"><code><span class="pln">    c </span><span class="pun">=</span><span class="pln"> a</span><span class="pun">*</span><span class="pln">b</span><span class="pun">;</span></code></li><li class="L1"><code><span class="pln">    printf</span><span class="pun">(</span><span class="str">"a*b = %d \n"</span><span class="pun">,</span><span class="pln">c</span><span class="pun">);</span></code></li><li class="L2"><code><span class="pln">    c </span><span class="pun">=</span><span class="pln"> a</span><span class="pun">/</span><span class="pln">b</span><span class="pun">;</span></code></li><li class="L3"><code><span class="pln">    printf</span><span class="pun">(</span><span class="str">"a/b = %d \n"</span><span class="pun">,</span><span class="pln">c</span><span class="pun">);</span></code></li><li class="L4"><code><span class="pln">    c </span><span class="pun">=</span><span class="pln"> a</span><span class="pun">%</span><span class="pln">b</span><span class="pun">;</span></code></li><li class="L5"><code><span class="pln">    printf</span><span class="pun">(</span><span class="str">"Remainder when a divided by b = %d \n"</span><span class="pun">,</span><span class="pln">c</span><span class="pun">);</span></code></li><li class="L6"><code><span class="pln">    </span></code></li><li class="L7"><code><span class="pln">    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></code></li><li class="L8"><code><span class="pun">}</span></code></li></ol></pre>  
+               </p>
+
+
+              <h3 style="color:black">Output :</h3> 
+              <p>
+                   
+                    <pre><samp>
+                            a+b = 13
+                            a-b = 5
+                            a*b = 36
+                            a/b = 2
+                            Remainder when a divided by b=1</samp></pre>
+
+                            The operators +, - and * computes addition, subtraction, and multiplication respectively as you might have expected.
+                            <br> <br>
+                            In normal calculation, 9/4 = 2.25. However, the output is 2 in the program.
+                            <br> <br>
+                            It is because both the variables a and b are integers. Hence, the output is also an integer. The compiler neglects the term after the decimal point and shows answer 2 instead of 2.25.
+                            <br> <br>
+                            The modulo operator % computes the remainder. When a=9 is divided by b=4, the remainder is 1. The % operator can only be used with integers.
+                                        
+            
+             </p>
+
+
+             <h3 style="color:black">C Increment and Decrement Operators : </h3> 
+             <p>
+                    CCAT always ask lots of confusing snippets on this operator so do lots of Practice for these all operators . <br>
+                    C programming has two operators increment ++ and decrement -- to change the value of an operand (constant or variable) by 1. <br> <br>
+
+                    Increment ++ increases the value by 1 whereas decrement -- decreases the value by 1. These two operators are unary operators, meaning they only operate on a single operand.       
+            
+            
+            </p>
+
+                
+            <h3 style="color:black">Example : Increment and Decrement Operators:</h3> 
+            <p>
+                <pre ><ol class="linenums"><li class="L0"><code><span class="com">// Working of increment and decrement operators</span></code></li><li class="L1"><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span></code></li><li class="L2"><code><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span></code></li><li class="L3"><code><span class="pun">{</span></code></li><li class="L4"><code><span class="pln">    </span><span class="kwd">int</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="pln"> b </span><span class="pun">=</span><span class="pln"> </span><span class="lit">100</span><span class="pun">;</span></code></li><li class="L5"><code><span class="pln">    </span><span class="kwd">float</span><span class="pln"> c </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10.5</span><span class="pun">,</span><span class="pln"> d </span><span class="pun">=</span><span class="pln"> </span><span class="lit">100.5</span><span class="pun">;</span></code></li><li class="L6"><code></code></li><li class="L7"><code><span class="pln">    printf</span><span class="pun">(</span><span class="str">"++a = %d \n"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">++</span><span class="pln">a</span><span class="pun">);</span></code></li><li class="L8"><code><span class="pln">    printf</span><span class="pun">(</span><span class="str">"--b = %d \n"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">--</span><span class="pln">b</span><span class="pun">);</span></code></li><li class="L9"><code><span class="pln">    printf</span><span class="pun">(</span><span class="str">"++c = %f \n"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">++</span><span class="pln">c</span><span class="pun">);</span></code></li><li class="L0"><code><span class="pln">    printf</span><span class="pun">(</span><span class="str">"--d = %f \n"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">--</span><span class="pln">d</span><span class="pun">);</span></code></li><li class="L1"><code></code></li><li class="L2"><code><span class="pln">    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></code></li><li class="L3"><code><span class="pun">}</span></code></li></ol></pre>
+           </p>
+
+           <h3 style="color:black">Output :</h3> 
+           <p>
+                
+                 <pre><samp>
+                        ++a = 11
+                        --b = 99
+                        ++c = 11.500000
+                        ++d = 99.500000
+                 </samp></pre>
+                 Here, the operators ++ and -- are used as prefixes. These two operators can also be used as postfixes like a++ and a-- . 
+                 There are two kinds of increment and decrement operator i.e prefix and postfix.
+
+
+                 <br> <br>
+                 If the operator is used before the variable i.e ++a then it is called prefix increment operator.
+                 <br> <br>
+                 If the operator is used after variable i.e a++ then it is called postfix increment operator.
+                 <br> <br>
+                 In the prefix operator, first 1 is added and then the value is assigned to the variable.
+                 <br> <br>    
+                
+                
+           <h3 style="color:black">Assignment Operator in C:</h3> 
+            <p>
+                    
+                    We have already used the assignment operator ( = ) several times before. Let’s discuss it here in detail.
+                    <br> <br>
+                    The assignment operator ( = ) is used to assign a value to the variable. Its general format is as follows:
+                    <br> <br>
+                    
+                    variable = right_side <br> <br>
+                    The operand on the left side of the assignment operator must be a variable and operand on the right-hand side must be a constant, variable or expression. Here are some examples:
+                    <br> <br>
+                    The operand on the left side of the assignment operator must be a variable and operand on the right-hand side must be a constant, variable or expression. Here are some examples:
+
+
+                    x = 18  // right operand is a constant <br> <br>
+                    y = x    // right operand is a variable<br> <br>
+                    z = 1 * 12 + x   // right operand is an expression<br> <br>
+                    The precedence of the assignment operator is lower than all the operators we have discussed so far and it associates from right to left.
+                    <br> <br>
+                    
+            </p>
+
+           <h3 style="color:black">Relational Operators :</h3> 
+            <p>
+                    Relational operators are used for comparison of two values. Let’s see them one by one:
+                    
+                    <br>   <br>1. ‘==’ operator checks whether the two given operands are equal or not. If so, it returns true. Otherwise it returns false. For example, 5==5 will return true.
+                    <br> <br> 2. ‘!=’ operator checks whether the two given operands are equal or not. If not, it returns true. Otherwise it returns false. It is the exact boolean complement of the ‘==’ operator. For example, 5!=5 will return false.
+                    <br> <br> 3. ‘>’ operator checks whether the first operand is greater than the second operand. If so, it returns true. Otherwise it returns false. For example, 6>5 will return true.
+                    <br> <br>4. ‘<‘ operator checks whether the first operand is lesser than the second operand. If so, it returns true. Otherwise it returns false. For example, 6 < 5 will return false.
+                    <br> <br>5. ‘>=’ operator checks whether the first operand is greater than or equal to the second operand. If so, it returns true. Otherwise it returns false. For example, 5>=5 will return true.
+                    <br> <br>6.  ‘<=’ operator checks whether the first operand is lesser than or equal to the second operand. If so, it returns true. Otherwise it returns false. For example, 5<=5 will also return true.       
+                    
+            
+            </p>
+
+            <h3 style="color:black">Logical Operators :</h3> 
+            <p>
+                    1.They are used to combine two or more conditions/constraints or to complement the evaluation of the original condition in consideration. They are described below:
+                    <br> <br>
+                    2.Logical AND: The ‘&&’ operator returns true when both the conditions in consideration are satisfied. Otherwise it returns false. For example, a && b returns true when both a and b are true (i.e. non-zero).
+                    <br> <br>3.Logical OR: The ‘||’ operator returns true when one (or both) of the conditions in consideration is satisfied. Otherwise it returns false. For example, a || b returns true if one of a or b is true (i.e. non-zero). Of course, it returns true when both a and b are true.
+                    <br> <br>4.Logical NOT: The ‘!’ operator returns true the condition in consideration is not satisfied. Otherwise it returns false. For example, !a returns true if a is false, i.e. when a=0.   
+
+            </p>
+
+             <h3 style="color:black">Bitwise Operators in C :</h3> 
+             <p>
+                    1. & (bitwise AND) Takes two numbers as operands and does AND on every bit of two numbers. The result of AND is 1 only if both bits are 1.
+                    <br> <br>2. | (bitwise OR) Takes two numbers as operands and does OR on every bit of two numbers. The result of OR is 1 if any of the two bits is 1.
+                    <br> <br>3. ^ (bitwise XOR) Takes two numbers as operands and does XOR on every bit of two numbers. The result of XOR is 1 if the two bits are different.
+                    <br> <br>4. << (left shift) Takes two numbers, left shifts the bits of the first operand, the second operand decides the number of places to shift.
+                    <br> <br>5. >> (right shift) Takes two numbers, right shifts the bits of the first operand, the second operand decides the number of places to shift.
+                    <br> <br>6. ~ (bitwise NOT) Takes one number and inverts all bits of it
+             </p>
+ 
+              <h4 style="color:black">Remember Practice above all operators very carefully I will provide lots of Snippet CCAT ask too much snippets on operators ... <br></h4>
+ 
+ 
+
+
+             <h4>Note : If you have any doubts feel free to contact us If You Didnt understand any concept ..</h4>
+            </div>
+            <a  style="margin-left: 60%"  href="{% url 'control_statement' %}" class="btn btn-secondary text-white btn-lg">Day 5</a>
+   
+            </div>
+          </div>
+         
+        </div>
+      </section>
+      
+
+   
+        
+</div>
+
+{% endblock %}

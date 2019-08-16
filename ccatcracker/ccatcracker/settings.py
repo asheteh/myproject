@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'pages',
+    'C',
     'payment',
     'OnlineTest',
     'accounts',
@@ -133,6 +134,13 @@ STATICFILES_DIRS =[
 ]
 
 # EMAIL CONFIG
+# EMAIL CONFIG
+# Email Config
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER='help.ccatcracker@gmail.com'
+EMAIL_HOST_PASSWORD='abhi.239'
+EMAIL_USE_TLS = True
 
 
 

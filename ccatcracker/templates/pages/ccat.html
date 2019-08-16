@@ -21,10 +21,15 @@
           </nav>
         </div>
       </section>
+      
+      {% include 'partials/_alerts.html' %}
+
       <section id="about" class="py-4">
             <div class="container">
               <div class="row">
                 <div class="col-md-8">
+                  
+                  
                   <h2>Search For The Perfect Study Material</h2>
                   <p class="lead">Checkout The Syllabus and Perfect notes to crack ccat with Good Rank.</p>
                 
@@ -35,6 +40,7 @@
                         Finally after completing study and videos which i have recommend in notes Before exam give
                         My practice online test i am sure Guys this is a very important test that will gain your confidence in exam. br
                         At least give 4 test each year i change data as per exam requirement so follow only material from this website .     </p>
+                        
                                 
                     <table style="width:100%">
                     <tr>
@@ -58,14 +64,25 @@
                         <td>1 Hour</td>
                     </tr>
                     </table>
+                   
+                      
+                        <h4 style="color: goldenrod">Subscribe ccatcracker.in to Get Daily Practice Questions For ccat </h4  >
+                          <h5> Enter Your Email Below We will Send you Daily Notification . You will get daily Coding Snippet as well as Aptitude and English Reasoning 
+                            Practice Questions Free . Also Will send Sample Study Material If you Like Buy Else Leave It. <br></h5>
+                        
+                       
                 </div>
             </section>
-
-              <!-- Work -->
-      <section id="work" class="bg-dark text-white text-center">
+     <section id="work" class="bg-dark text-white text-center">
            
-            <h4>Lets Checkout CCAT Section</h4>
            
+            <form action="{% url 'ccat_notify' %}" method="POST">
+                {% csrf_token %}
+                <h4>Enter Email To get Sample Study Material and Daily Practice Questions.</h4>
+                     E-mail: <input style="color: black" type="email" required name="email">
+                    <input style="color: green" type="submit">
+              </form>  
+              <h4>Lets Checkout CCAT Section</h4>
             <a href="{% url 'checkout' %}" class="btn btn-secondary text-white btn-lg">CCAT</a>
           </section>
     
@@ -77,11 +94,12 @@
                       <p class="lead">Check Out the study Material that notes are very relevent to exam nothing useless.</p>
                       
                       <p class="mt-4">If you click CCAT section you will get all material .That notes are created by me 
-                          I have completed CDAC 1 year ago . I saw how much peoples do struggle to get perfect notes unnecessary
+                          I have completed CDAC 3 year ago . I saw how much peoples do struggle to get perfect notes unnecessary
                         they waste lots of money for Pre-Dac Course . Thats why i have developed this website only for You Guys.
                         So stay with me and start to explore I always update new Material and Important Tips for how to success in CDAC.           </p>
                     </div>
                     </div>
+                   
                 </div>
                 
             
@@ -111,6 +129,7 @@
                       </p>
                     </div>
                     </div>
+                  
                 </div>
                 
             

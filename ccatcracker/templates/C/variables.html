@@ -1,0 +1,218 @@
+{% extends 'base_1.html' %}
+{% block title %} Variables in C | C Language Tutorial  {% endblock %}
+
+{% block content %}
+<style>
+        p {
+          display: block;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          margin-left: 0;
+          margin-right: 0;
+          font-style: italic;
+          font-size: 15px;
+          
+        }
+        pre{
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            color: rgba(0,0,0,.9);
+            font-family: Consolas,monospace;
+            margin-bottom: 10px;
+            overflow: auto;
+            padding: 10px;
+            margin: 0px 0px 10px;
+            text-align: left;
+            
+
+        }
+        </style>
+    <!-- Breadcrumb -->
+    <section id="bc" class="mt-3">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'index' %}">
+                  <i class="fas fa-home"></i> Home</a>
+              </li>
+              <li class="breadcrumb-item active"> C Language</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+     
+    </div>
+    <section id="about" class="py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+             
+                <div style=" background-color: white; width: 800px;
+                border: 0.2px solid white;
+                padding: 50px;
+                margin: 20px; ">
+                <h3 style="color:black">Variables in C Language ?  : </h3>
+
+                <p >
+                        When we want to store any information(data) on our computer/laptop, we store it in the computer's memory space. Instead of remembering the complex address of that memory space where we have stored our data, our operating system provides us with an option to create folders, name them, so that it becomes easier for us to find it and access it.
+
+                        Similarly, in C language, when we want to use some data value in our program, we can store it in a memory space and name the memory space so that it becomes easier to access it.
+                        
+                        The naming of an address is known as variable. Variable is the name of memory location. Unlike constant, variables are changeable, we can change value of a variable during execution of a program. A programmer can choose a meaningful variable name. Example : average, height, age, total etc.
+                </p>
+             
+                <h3 style="color: black">Copy Below Links And Watch Lectures First :</h3> <br>
+                 
+                <h4 style="color:rgb(189, 132, 47)">1. Variable In  C : https://youtu.be/rFnWoTnoC50</h4>
+                <h3 style="color:black">Datatype of Variable:</h3> 
+                <p >
+                        A variable in C language must be given a type, which defines what type of data the variable will hold.
+
+                        It can be:
+                        <ul >
+                                <li><code>char</code>: Can hold/store a character in it.</li>
+                                 <li><code>int</code>: Used to hold an integer.</li>
+                                <li><code>float</code>: Used to hold a float value.</li>
+                                <li><code>double</code>: Used to hold a double value.</li>
+                                <li><code>void</code></li>
+                        </ul>
+                      
+                </p>
+
+                <h3 style="color:black">Difference b/w variable declaration and definition:</h3> 
+                <p>
+                        Variable declaration refers to the part where a variable is first declared or introduced before its first use. Variable definition is the part where the variable is assigned a memory location and a value. Most of the times, variable declaration and definition are done together. <br>
+                       <br> Is it possible to have separate declaration and definition?
+                            It is possible in case of extern variables and functions. See question 1 of this for more details.
+               </p>
+
+               <h3 style="color:black">RULES FOR NAMING C VARIABLE :</h3> 
+               <p>
+                    1. Variable name must begin with letter or underscore. <br>
+                    2. Variables are case sensitive . <br>
+                    3. They can be constructed with digits, letters. <br>
+                    4. No special symbols are allowed other than underscore. <br>
+                    5. sum, height, _value are some examples for variable name. <br> <br>
+                    
+                    THERE ARE THREE TYPES OF VARIABLES IN C PROGRAM THEY ARE :<br>
+                    1.Local variable <br>
+                    2.Global variable <br>
+                    3.Environment variable <br>
+              </p>
+
+              <h3 style="color:black">Local Variable In  C :</h3> 
+              <p>
+                    <ul style="text-align: justify;">
+                            <li>The scope of local variables will be within the function only.</li>
+                            <li>These variables are declared within the function and can’t be accessed outside the function.</li>
+                            <li style="text-align: justify;"><span style="text-align: justify;">In the below example, m and n variables are having scope within the main function only.&nbsp;These are not visible to test function.</span></li>
+                            <li><span style="text-align: justify;">Like wise, a and b variables are having scope within the test function only. These are not visible to main function.</span><span style="font-family: 'Courier 10 Pitch', Courier, monospace; font-size: 11.2px; line-height: 18px; background-color: #f4f4f4;"><br>
+                            </span></li>
+                            </ul>        
+            
+            
+             </p>
+             
+             <h3 style="color:black"> Global Variable In  C  :</h3> 
+             <p>
+                    <ul style="text-align: justify;">
+                            <li>The scope of global variables will be throughout the program. These variables can be accessed from anywhere in the program.</li>
+                            <li>This variable is defined outside the main function. So that, this variable is visible to main function and all other sub functions.</li>
+                            </ul>
+           
+            </p>
+            
+            <h3 style="color:black"> Environment Variable In  C  :</h3> 
+            <p>
+            
+            
+                    <ul style="text-align: justify;">
+                            <li>The scope of global variables will be throughout the program. These variables can be accessed from anywhere in the program.</li>
+                            <li>This variable is defined outside the main function. So that, this variable is visible to main function and all other sub functions.</li>
+                            </ul>
+           
+            </p>
+          
+
+
+
+
+
+
+
+
+
+
+               <h3 style="color:black">Keywords :</h3> 
+               <p>
+                    Keywords are specific reserved words in C each of which has a specific feature associated with it. Almost all of the words which help us use the functionality of the C language are included in the list of keywords. So you can imagine that the list of keywords is not going to be a small one!
+                        <br> <br>
+                    There are a total of 32 keywords in C:
+                    <pre>   
+                            auto       break    case     char     const     continue
+                            default    do       double   else     enum      extern
+                            float      for      goto     if       int       long
+                            register   return   short    signed   sizeof    static
+                            struct     switch   typedef  union    unsigned  void
+                            volatile   while
+                     </pre>
+               </p>
+               
+               <h3 style="color:black">Const :</h3> 
+               <p>
+                    const can be used to declare constant variables. Constant variables are variables which, when initialized, can’t change their value. Or in other words, the value assigned to them cannot be modified further down in the program.
+                    <br>
+                    <br>
+                   <span style=" background-color: #e0e0e0;">  Syntax:  const data_type var_name = var_value; </span> 
+                    <br> <br>
+                    Note: Constant variables must be initialized during their declaration. const keyword is also used with pointers. Please refer the const qualifier in C for understanding the same.
+
+              </p>
+              <h3 style="color:black">Extern  :</h3> 
+              <p>
+                    extern simply tells us that the variable is defined elsewhere and not within the same block where it is used. Basically, the value is assigned to it in a different block and this can be overwritten/changed in a different block as well. So an extern variable is nothing but a global variable initialized with a legal value where it is declared in order to be used elsewhere. It can be accessed within any function/block. Also, a normal global variable can me made extern as well by placing the ‘extern’ keyword before its declaration/definition in any function/block. This basically signifies that we are not initializing a new variable but instead we are using/accessing the global variable only. The main purpose of using extern variables is that they can be accessed between two different files which are part of a large program.
+                    <br><br>
+                  <span style=" background-color: #e0e0e0;">  Syntax:  extern data_type var_name = var_value; </span> 
+                  
+             </p>
+              <br>
+              <h3 style="color:black">Static  :</h3> 
+              <p>
+                    static keyword is used to declare static variables, which are popularly used while writing programs in C language. Static variables have a property of preserving their value even after they are out of their scope! Hence, static variables preserve the value of their last use in their scope. So we can say that they are initialized only once and exist till the termination of the program. Thus, no new memory is allocated because they are not re-declared. Their scope is local to the function to which they were defined. Global static variables can be accessed anywhere within that file as their scope is local to the file. By default, they are assigned the value 0 by the compiler.   
+                    <br><br>
+                  <span style=" background-color: #e0e0e0;">  Syntax:  estatic data_type var_name = var_value; </span> 
+                  
+             </p>
+
+             <h3 style="color:black">Void  :</h3> 
+             <p>
+                    void is a special data type. But what makes it so special? void, as it literally means, is an empty data type. It means it has nothing or it holds no value. For example, when it is used as the return data type for a function it simply represents that the function returns no value. Similarly, when its added to a function heading, it represents that the function takes no arguments.
+                    Note: void also has a significant use with pointers. We will See void pointer in C for understanding the same.
+
+            </p>
+
+            
+            <h3 style="color:black">Typedef  :</h3> 
+            <p>
+                    typedef is used to give a new name to an already existing or even a custom data type (like a structure). It comes in very handy at times, for example in a case when the name of the structure defined by you is very long or you just need a short-hand notation of a per-existing data type.
+
+                                          
+           </p>
+
+             <h4>Note : If you have any doubts feel free to contact us If You Didnt understand any concept ..</h4>
+            </div>
+            <a  style="margin-left: 60%"  href="{% url 'library' %}" class="btn btn-secondary text-white btn-lg">Day-2-IDE-LIBRARY</a>
+   
+            </div>
+          </div>
+         
+        </div>
+      </section>
+      
+
+   
+        
+</div>
+
+{% endblock %}

@@ -33,8 +33,8 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="{% url 'index' %}">
-                  <i class="fas fa-home"></i> Home</a>
+                <a href="{% url 'modify_operator' %}">
+                  Home</a>
               </li>
               <li class="breadcrumb-item active"> C Language</li>
             </ol>
@@ -49,10 +49,7 @@
             <div class="col-md-8">
                  
              
-                <div style=" background-color: white; width: 800px;
-                border: 0.2px solid white;
-                padding: 50px;
-                margin: 20px; ">
+               
                 <h3 style="color:black">C if statement:</h3> 
                 <p >
                         The if statement allows you to control the execution of code based on a  particular condition. The syntax of the if statement is as follows:
@@ -193,19 +190,152 @@
                            </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
                         </span><span class="pun">}</span></pre>
                 </p>
+                <h4 style="color: blueviolet">Note : Hope you guys understand very well if else <br></h4>
+                  Lets do some exercises on if else <br> <br>
+                  <h5>1. Write a C program to find maximum between two numbers.</h5> <br>
+                  <h5>2. Write a C program to check whether a number is even or odd. </h5><br>
+                  <h5>3. Write a C program to check whether a character is alphabet or not. </h5><br>
+                   <h5>4. Write a C program to check whether a number is divisible by 5 and 11 or not. </h5> <br>
+            
+
+                <h3 style="color:black">Loops In C :</h3> 
+                <p>
+                  In any programming language including C, loops are used to execute a set of statements repeatedly until a particular condition is satisfied.
+                  Types of Loop : <br>
+                  There are 3 types of Loop in C language, namely: <br> <br>
+
+                  while loop <br>
+                  for loop <br>
+                  do while loop <br>
+                </p>
+                <h3 style="color:black">While Loop  :</h3> 
+                <p>
+                 
+                  while loop can be addressed as an entry control loop. It is completed in 3 steps.
+                    <br>
+                  Variable initialization.(e.g int x = 0;)  <br>
+                  condition(e.g while(x <= 10))  <br>
+                  Variable increment or decrement ( x++ or x-- or x = x + 2 ) <br>
+                  <h4>Example: Program to print first 10 natural numbers</h4>
+                  <pre ><code class=" language-clike">
+                    #include<span class="token operator">&lt;</span>stdio<span class="token punctuation">.</span>h<span class="token operator">&gt;</span>
+
+                    void <span class="token function">main</span><span class="token punctuation">(</span> <span class="token punctuation">)</span>
+                    <span class="token punctuation">{</span>
+                        int x<span class="token punctuation">;</span>
+                        x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                        <span class="token keyword">while</span><span class="token punctuation">(</span>x <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">{</span>
+                            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\t"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                            <span class="token comment" spellcheck="true">/* below statement means, do x = x+1, increment x by 1*/</span>
+                            x<span class="token operator">++</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span></code></pre>
+                </p>
+                <h3 style="color:black">for loop:</h3> 
+                <p>
+                    for loop is used to execute a set of statements repeatedly until a particular condition is satisfied. We can say it is an open ended loop.. General format is,
+                    <br><br>
+                    for(initialization; condition; increment/decrement) <br>
+                    { <br>
+                        statement-block; <br>
+                    } <br> <br>
+                    In for loop we have exactly two semicolons, one after initialization and second after the condition. In this loop we can have more than one initialization or increment/decrement, separated using comma operator. But it can have only one condition.
+
+                    The for loop is executed as follows: <br>
+
+                    It first evaluates the initialization code. <br>
+                    Then it checks the condition expression. <br>
+                    If it is true, it executes the for-loop body. <br>
+                    Then it evaluate the increment/decrement condition and again follows from step 2. <br>
+                    When the condition expression becomes false, it exits the loop. <br> <br>
+                    <h4>Program to print first 10 natural numbers : </h4><br> <br>
+                    <pre ><code class=" language-clike">
+                      #include<span class="token operator">&lt;</span>stdio<span class="token punctuation">.</span>h<span class="token operator">&gt;</span>
+
+                      void <span class="token function">main</span><span class="token punctuation">(</span> <span class="token punctuation">)</span>
+                      <span class="token punctuation">{</span>
+                          int x<span class="token punctuation">;</span>
+                          <span class="token keyword">for</span><span class="token punctuation">(</span>x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> x <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">;</span> x<span class="token operator">++</span><span class="token punctuation">)</span>
+                          <span class="token punctuation">{</span>
+                              <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\t"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                          <span class="token punctuation">}</span>
+                      <span class="token punctuation">}</span></code></pre>
+                  </p>
+                <h3 style="color:black">do while loop :</h3> 
+                <p>
+                    In some situations it is necessary to execute body of the loop before testing the condition. Such situations can be handled with the help of do-while loop. do statement evaluates the body of the loop first and at the end, the condition is checked using while statement. It means that the body of the loop will be executed at least once, even though the starting condition inside while is initialized to be false. General syntax is,
+                    <pre><code class=" language-clike"><span class="token keyword">
+                      do</span>
+                      <span class="token punctuation">{</span>
+                          <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+                          <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+                      <span class="token punctuation">}</span>
+                      <span class="token keyword">while</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span></code></pre>
+                </p>
+                
+                <br> <br>
+                <h4>Program to print first 10 multiples of 5 . :</h4>
+                <pre ><code class=" language-clike">#include<span class="token operator">&lt;</span>stdio<span class="token punctuation">.</span>h<span class="token operator">&gt;</span>
+
+                  void <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                  <span class="token punctuation">{</span>
+                      int a<span class="token punctuation">,</span> i<span class="token punctuation">;</span>
+                      a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+                      i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                      <span class="token keyword">do</span>
+                      <span class="token punctuation">{</span>
+                          <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\t"</span><span class="token punctuation">,</span> a<span class="token operator">*</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                          i<span class="token operator">++</span><span class="token punctuation">;</span>
+                      <span class="token punctuation">}</span> 
+                      <span class="token keyword">while</span><span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span></code></pre>
+
+                  <h3 style="color:black">Jumping Out of Loops:</h3> 
+                  <p >
+                      Sometimes, while executing a loop, it becomes necessary to skip a part of the loop or to leave the loop as soon as certain condition becomes true. This is known as jumping out of loop.
+                     <br> <br> 1) break statement : <br> 
+                                When break statement is encountered inside a loop, the loop is immediately exited and the program continues with the statement immediately following the loop.
+                        
+                  </p>
+                  <h3 style="color:black">continue statement:</h3> 
+                  <p >
+                         
+                      
+                      It causes the control to go directly to the test-condition and then continue the loop process. On encountering continue, cursor leave the current cycle of loop, and starts with the next cycle.
+                        
+                  </p>
+
+                   <h4 style="color: blueviolet">Lets Do Some exercises on loops dont copy code from google :</h4>
+                    
+                    <h5>1. Write a C program to find the sum of first 10 natural numbers </h5> <br><br>
+                    <h5>2. Write a program in C to display the cube of the number upto given an integer. <br>
+                        <br> Ex . <br>
+                          Input number of terms : 5  <br>
+                          Expected Output :  <br>
+                          Number is : 1 and cube of the 1 is :1  <br>
+                          Number is : 2 and cube of the 2 is :8  <br>
+                          Number is : 3 and cube of the 3 is :27  <br>
+                          Number is : 4 and cube of the 4 is :64  <br>
+                          Number is : 5 and cube of the 5 is :125 <br>
+                          Means you need to run any loop upto the give no . <br>
+                    </h5><br>
+                    <h5>3. Write a program in C to display the multiplication table of a given integer. Go to the editor
+                        </h5><br><br>
+
+                    <h5>4. Write a program in C to display the pattern like right angle triangle using an asterisk <br>
+                    
+                      The pattern like : <br>
+
+                      * <br>
+                      ** <br>
+                      *** <br>
+                      **** <br>
+                    
+                    </h5>
 
                 
-        
-
-
-             <h4>Note : Hope you guys understand very well if else <br>
-                Lets do some exercises on if else <br>
-                1.Write a C program to find maximum between two numbers. <br>
-                2.Write a C program to check whether a number is even or odd. <br>
-                3.Write a C program to check whether a character is alphabet or not. <br>
-                4.Write a C program to check whether a number is divisible by 5 and 11 or not. ..</h4> <br>
-            </div>
-            <a  style="margin-left: 60%"  href="{% url 'size_of' %}" class="btn btn-secondary text-white btn-lg">Day 4</a>
+            <a  style="margin-left: 60%"  href="{% url 'Array-In-C-Language-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Day 5</a>
    
             </div>
           </div>

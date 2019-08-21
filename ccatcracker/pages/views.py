@@ -8,6 +8,7 @@ from .models import Center,CCAT_Question
 from .models import Ranks,question,notify
 from .models import Send,Aptitude,SendEmail
 from django.contrib import messages, auth
+from django.core.paginator import EmptyPage,PageNotAnInteger,Paginator
 
 def index(request):
   
@@ -36,27 +37,29 @@ def ccat_notify(request):
       
         email = request.POST.get('email', '')
         send = [email]
-        try:
-            n = SendEmail(email=email)
-            n.save()
-            messages.success(request, 'You are now registered For Daily Updates ')
-            
-            
-        except:
-            messages.success(request,"This Email Already Exist If you didnt get email Contact Us .")
-        send_html_email(send, 'Welcome To ccatcracker ', 'ccat_mail.html', context)
-    return redirect('ccat')
+        
+        #n = SendEmail(email=email)
+        #n.save()
+        messages.success(request, 'You are now registered For Daily Updates ')
+        messages.success(request,"This Email Already Exist If you didnt get email Contact Us .")
+        #send_html_email(send, 'Welcome To ccatcracker ', 'ccat_mail.html', context)
+    return render(request,'pages/course.html')
 
 
 def interview(request):
     return render(request,'pages/interview.html')
 
+def crashcourse(request):
+    return render(request,'pages/ccat-course.html')
+
 def questions(request):
-    queryset_list =  question.objects.all();
-    apti_question = Aptitude.objects.all();
+    # retrive only latest question
+    queryset_list =  question.objects.order_by('-qno')[:1]
+   
+    apti_question = Aptitude.objects.order_by('-qno')[:1]
     context = {
        
-        'questions':queryset_list,
+        'listings':queryset_list,
         'apti':apti_question
        
     }
@@ -143,11 +146,43 @@ def rank(request):
     return render(request,'pages/get_college.html',context)
 
 
+def prev_questions(request):        
+    queryset_list =  question.objects.order_by('-qno');
+    paginator = Paginator(queryset_list,2)
+    page = request.GET.get('page')
+    paged_listings = paginator.get_page(page)
+
+    apti_question = Aptitude.objects.order_by('-qno')
+    context = {
+       
+        'listings':paged_listings,
+        'apti':apti_question
+       
+    }
+  
+
+    return render(request,'pages/previous_questions.html',context)
+
+
+
+
+
+
+
+
+
+
+
+
 
 # send html email
-def send_html_email(to_list, subject, template_name, context, sender='thinkgeek.testing@gmail.com'):
+def send_html_email(to_list, subject, template_name, context, sender='help@ccatcracker.in'):
     msg_html = render_to_string(template_name, context)
     msg = EmailMessage(subject=subject, body=msg_html, from_email=sender, bcc=to_list)
     msg.content_subtype = "html"  # Main content is now text/html
     #msg.attach_file('notes/aws-udemy.pdf')
-    return msg.send()
+    try:
+
+        return msg.send()
+    except:
+        return 1

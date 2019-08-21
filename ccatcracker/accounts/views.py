@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
 from payment.models import Orders
+from pages.models import Send
 
 def register(request):
   if request.method == 'POST':
@@ -34,6 +35,8 @@ def register(request):
           # messages.success(request, 'You are now logged in')
           # return redirect('index')
           user.save()
+          n = Send(email=email)
+          n.save()
           messages.success(request, 'You are now registered and can log in')
           return redirect('login')
     else:

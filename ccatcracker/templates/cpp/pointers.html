@@ -1,0 +1,267 @@
+{% extends 'base_1.html' %}
+{% block title %} This Pointer in C++ | C ++ Tutorial  {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> C++ Programming</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">this pointer in C++  : </h3> <br>
+               <p >
+                 
+                    this pointer is pointer that is accessible only inside the member functions of a class and points to the object who has called this member function.
+                    Let’s understand by an example, <br>
+
+
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+               <h5 style="color:green">1. this Pointer : https://youtu.be/wA8LriKDBAI</h5>
+               <h5 style="color:green">2. Private memeber functions  : https://youtu.be/8AT9JPS79ug</h5>
+                <br>
+
+
+            <p>
+            
+                <h4 style="color:green">Applications of this pointer : </h4> <br>
+                
+                <h5 style="color: brown">Method Chaining: </h5>
+                After returning the object from a function, a very useful application would be to chain the methods for ease and a cleaner code.
+                <br>
+                <br>
+                Example :
+                <br> <br>
+                <pre>
+                        obj->setX(15)->setY(15)->setZ(15);
+
+                </pre>
+                <br>
+                Here, the methods setX, setY, setZ are chained to the object, obj. This is possible because each method return *this pointer.
+                This is equivalent to :
+                 <br>
+                 <pre>
+                  obj->setX(15);
+                  obj->setY(15);
+                  obj->setZ(15);
+
+                 </pre>
+                    <br>
+                    <h5 style="color: brown">Distinguish Data Members : </h5>
+                     Another application of this pointer is distinguishing data members from local variables of member functions if they have same name. For example,
+                    <br> <br>
+                    Lets take an example 
+                    <br>
+            <pre>
+            #include &lt;iostream>
+            #include conio.h>
+            using namespace std;
+
+            class sample
+            {
+                int a,b;
+                public:
+                    void input(int a,int b)
+                    {
+                        this->a=a+b;
+                        this->b=a-b;
+                    }
+                    void output()
+                    {
+                        cout<<"a = "&lt;&lt;a&lt;&lt;endl<<"b = "&lt;&lt;b;
+                    }
+            };
+
+            int main()
+            {
+                sample x;
+                x.input(5,8);
+                x.output();
+                getch();
+                return 0;
+            }
+
+         </pre>
+        
+              <br>
+              Now see above code here we have declared a,b as member of class And
+              at the same time in same class we declare function input which takes 
+              same a,b args . now how my code ,compiler will know which a,b i want to use <br>
+              <br>
+              So thats why we use this pointer to  distinguish the local variable of input() data member of class, this pointer is used. When input() is called, the data of object inside it is represented as this->a and this->b while the local variable of function is represented simply as a and b.
+            <br>
+            <br>
+            <h5 style="color: brown">Output : </h5>
+        
+              <pre>
+                a = 13
+                b = -3
+        </pre>
+        <br>
+        <br>
+        <h5 style="color: brown">Return Object : </h5>
+        One of the important applications of using this pointer is to return the object it points. For example, the statement
+        <br> <br>
+        <pre>
+                return *this;
+        </pre>
+        <br>
+        inside a member function will return the object that calls the function. we will this in examples
+        
+        <br> <br>
+        <h5 style="color: brown">Write a C++ program to display the record of student with highest percentage. </h5>
+        <br><br>
+        <pre>
+        #include&lt;iostream&gt;
+        #include&lt;conio.h&gt;
+        using namespace std;
+        
+        class student
+        {
+            char name[100];
+            int age,roll;
+            float percent;
+            public:
+                void getdata()
+                {
+                    cout&lt;&lt;"Enter data"&lt;&lt;endl;
+                    cout&lt;&lt;"Name:";
+                    cin&gt;&gt;name;
+                    cout&lt;&lt;"Age:";
+                    cin&gt;&gt;age;
+                    cout&lt;&lt;"Roll:";
+                    cin&gt;&gt;roll;
+                    cout&lt;&lt;"Percent:";
+                    cin&gt;&gt;percent;
+                    cout&lt;&lt;endl;
+                }
+                student &amp; max(student &amp;s1,student &amp;s2)
+                {
+                    if(percent&gt;s1.percent &amp;&amp; percent&gt;s2.percent)
+                        return *this;
+                    else if(s1.percent&gt;percent &amp;&amp; s1.percent&gt;s2.percent)
+                        return s1;
+                    else if(s2.percent&gt;percent &amp;&amp; s2.percent&gt;s1.percent)
+                        return s2;
+                }
+                void display()
+                {
+                    cout&lt;&lt;"Name:"&lt;&lt;name&lt;&lt;endl;
+                    cout&lt;&lt;"Age:"&lt;&lt;age&lt;&lt;endl;
+                    cout&lt;&lt;"Roll:"&lt;&lt;roll&lt;&lt;endl;
+                    cout&lt;&lt;"Percent:"&lt;&lt;percent;            
+                }
+        };
+        
+        int main()
+        {
+            student s,s1,s2,s3;
+            s1.getdata();
+            s2.getdata();
+            s3.getdata();
+            s=s3.max(s1,s2);
+            cout&lt;&lt;"Student with highest percentage"&lt;&lt;endl;
+            s.display();
+            getch();
+            return 0;
+        }</pre>
+        <br>
+        <br>
+        A class student is created with data members name, roll, age and percent and member functons getdata(), max() and display(). Data for each student is entered by calling getdata() function. Then, max() function is called by object s3 and s2 and s1 are passed as parameter in the function. The value of percent is compared and the object with highest percent is returned. If the object calling the method has the highest percentage then, it is returned by using this pointer as,
+        <br> <br>
+        <pre>return *this; // see above prohram carefully </pre> <br>
+        <br>
+        <h5 style="color: brown">Output :</h5>
+        <pre>
+                Enter data
+                Name:aaa
+                Age:22
+                Roll:11
+                Percent:89
+                
+                Enter data
+                Name:bbb
+                Age:22
+                Roll:9
+                Percent:87
+               
+                
+                Student with highest percentage
+                Name:aaa
+                Age:22
+                Roll:11
+                Percent:89
+        </pre>
+        <br>
+      </p>
+            <h4 style="color: brown">Lets do some exercises : </h4> <br>
+            <h5 class="shead">1. Write a program in C++ to swap two numbers :  </h5> <br>
+                   <pre>
+                    Input 1st number : 25                 
+                    Input 2nd number : 39 
+                    After swapping the 1st number is : 39 
+                    After swapping the 2nd number is : 25
+                </pre>
+           <br> <br>
+           <h5 class="shead">2. Write C++ program to check year is leap or nor </h5>
+                <br>
+                <br>
+
+
+
+            <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             
+            <a  style="margin-left: 60%"  href="{% url 'array-in-cpp' %}" class="btn btn-secondary text-white btn-lg">Day-4-Part-2</a>
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

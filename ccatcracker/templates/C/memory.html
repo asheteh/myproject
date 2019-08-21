@@ -1,0 +1,341 @@
+{% extends 'base_1.html' %}
+{% block title %} Dynamic Memory Allocation | C Language Tutorial  {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'Pointers-In-C-Language-Tutorial' %}">
+              Previous</a>
+            </li>
+            <li class="breadcrumb-item active"> C Language</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+          
+               <h3 style="color:black">C Dynamic Memory Allocation  : </h3>
+               <p >
+                  An array is a collection of fixed number of values of a single type. That is, you need to declare the size of an array before you can use it.
+                  <br><br>
+                  Sometimes, the size of array you declared may be insufficient. To solve this issue, you can allocate memory manually during run-time. This is known as dynamic memory allocation in C programming.
+                  <br><br>
+                  There are 4 library functions defined  makes dynamic memory allocation in C programming. They are  : <br>
+                  1. malloc() <br>
+                  2. calloc() <br>
+                  3. realloc() <br>
+                  4. free()
+                  <br>
+                  <br>
+
+                  The process of allocating memory during program execution is called dynamic memory allocation.
+                  Lets Start to explore above 4 functions  : <br> <br>
+               </p>
+               <h3 style="color: black">Copy Below Links And Watch Lectures First :</h3>
+               <br>
+               <h4 style="color:blueviolet">1. Memory Allocation In  C Part 1: https://youtu.be/v49bwqQ4ouM</h4>
+               <h4 style="color:blueviolet">2. Memory Allocation In  C Part 2: https://youtu.be/7icNeEZ8PDo</h4>
+               <h4 style="color:blueviolet">3. Memory Allocation In  C Part 3: https://youtu.be/Zu4JWi4tkCg</h4>
+               <h4 style="color:blueviolet">3. Memory Allocation In  C Part 4:  https://youtu.be/pTXvkLlAm38</h4>
+               <br>
+            <p>
+                <h4>C malloc() :</h4>
+                The name "malloc" stands for memory allocation.
+                <br> <br>
+                The malloc() function reserves a block of memory of the specified number of bytes. And, it returns a pointer of type void which can be casted into pointer of any form.
+                <br> <br>
+                malloc” or “memory allocation” method is used to dynamically allocate a single large block of memory with the specified size. It returns a pointer of type void which can be cast into a pointer of any form.
+                <br> <br>
+                <h4>Syntax of malloc() : </h4>
+                <br>
+                <pre>
+                                    ptr = (cast-type*) malloc(byte-size)
+
+                </pre>
+                <h4>Example :</h4>
+                <pre>
+                                ptr = (int*) malloc(100 * sizeof(int));
+                                
+                </pre>
+                Considering the size of int is 4 bytes, this statement allocates 400 bytes of memory. And, the pointer ptr holds the address of the first byte in the allocated memory.
+                <br> <br>
+                ** Note : ** : However, if the space is insufficient, allocation fails and returns a NULL pointer.
+                <h4>Lets Take an Example :</h4>
+                <pre>
+                    int main()
+                    {
+                    char name[20];
+                    char *address;
+                    
+                    strcpy(name, "Harry Lee");
+                    address = (char*)malloc( 50 * sizeof(char) );  /* allocating memory dynamically  */
+                    strcpy( address, "Lee Fort, 11-B Sans Street");
+                    
+                    printf("Name = %s\n", name );
+                    printf("Address: %s\n", address );
+                    return 0;
+                    }
+
+                
+                </pre>
+
+                In the above example, we assigned and printed the name as we used to do till now. For address, we estimated that the number of characters should be around 50. So, the size of address will be 50 * sizeof(char).
+                <br> <br>
+                char *address → Here we declared a pointer to character for address without specifying how much memory is required.
+                <br> <br>
+                address = (char*)malloc( 50 * sizeof(char) ) → By writing this, we assigned a memory of '50 * sizeof(char)' bytes for address. We used (char*) to typecast the pointer returned by malloc to character.
+                <br> <br>
+                strcpy( address, "Lee Fort, 11-B Sans Street") → By writing this, finally we assigned the address.
+                <br> <br>
+
+            </p>
+              
+            <h3 style="color:black">C calloc() :</h3>
+            <p>
+                The name "calloc" stands for contiguous allocation.
+                <br> <br>
+                The malloc() function allocates a single block of memory. Whereas, calloc() allocates multiple blocks of memory and initializes them to zero.
+                <br> <br>
+                <h4>Syntax of calloc() :</h4>
+                <pre>
+                        ptr = (cast-type*)calloc(n, element-size);
+                </pre>
+                <h4>Example: </h4>
+                <pre>
+                        ptr = (float*) calloc(25, sizeof(float));
+                </pre> <br>
+                This statement allocates contiguous space in memory for 25 elements each with the size of float. <br> <br>
+                “calloc” or “contiguous allocation” method is used to dynamically allocate the specified number of blocks of memory of the specified type. It initializes each block with a default value ‘0’.
+
+                <h4>Lets take and example : </h4>
+                <pre>
+                        int main()
+                        {
+                            int n,i,*p;
+                            printf("Enter number of elements: ");
+                            scanf("%d",&n);
+                            p=(int*)calloc(n, sizeof(int));  //memory allocated using malloc
+                            if(p == NULL)
+                            {
+                                printf("memory cannot be allocated\n");
+                            }
+                            else
+                            {
+                              printf("Enter elements of array:\n");
+                              for(i=0;i&lt;n;++i)
+                              {
+                                scanf("%d",&*(p+i));
+                              }
+                              printf("Elements of array are\n");
+                              for(i=0;i&lt;n;i++)
+                              {
+                                printf("%d\n",*(p+i));
+                              }
+                            }
+                            return 0;
+                        }
+                </pre>
+                So, this is same as the example of malloc, with a difference in the syntax of calloc. Here we wrote (int*)calloc(n, sizeof(int)), where n is the number of elements in the integer array (5 in this case) and sizeof(int) is the size of each of that element. So the total size of the array is n * sizeof(int). <br>
+            </p>
+            <h3 style="color:black">C calloc() :</h3>
+            <p>
+                  The function strncmp compares between two strings, returning the number 0 if they are equal, or a different number if they are different. The arguments are the two strings to be compared, and the maximum comparison length. There is also an unsafe version of this function called strcmp, but it is not recommended to use it. For example: <br>
+                  <br>
+               <pre><code class="  language-c"><span class="token keyword">
+                        char</span> <span class="token operator">*</span> name <span class="token operator">=</span> <span class="token string">"John"</span><span class="token punctuation">;</span>
+
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">strncmp</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> <span class="token string">"John"</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello, John!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"You are not John. Go away.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                        </code></pre>
+            </p>
+               <h3 style="color:black">The realloc Function :</h3>
+               <p>
+                 
+                     Using the realloc() function, you can add more memory size to already allocated memory. It expands the current block while leaving the original content as it is. realloc stands for reallocation of memory.
+                        <br> <br>
+                     realloc can also be used to reduce the size of the previously allocated memory.
+                     <br> <br> 
+                     Syntax :
+                     <br>
+                     <pre>
+                           ptr = realloc (ptr,newsize);
+                     </pre>
+                     <br> 
+                     The above statement allocates a new memory space with a specified size in the variable newsize. After executing the function, the pointer will be returned to the first byte of the memory block. The new size can be larger or smaller than the previous memory. We cannot be sure that if the newly allocated block will point to the same location as that of the previous memory block. This function will copy all the previous data in the new region.
+                     <br> <br> Lets take an example : <br>
+                     <pre>
+                                    #include &lt;stdio.h&gt;
+                                    int main () {
+                                    char *ptr;
+                                    ptr = (char *) malloc(10);
+                                    strcpy(ptr, "Programming");
+                                    printf(" %s,  Address = %u\n", ptr, ptr);
+                                 
+                                    ptr = (char *) realloc(ptr, 20); //ptr is reallocated with new size
+                                    strcat(ptr, " In 'C'");
+                                    printf(" %s,  Address = %u\n", ptr, ptr);
+                                    free(ptr);
+                                    return 0;
+                                 } 
+                     </pre> <br> <br>
+                     <h4 style="color: burlywood">Whenever the realloc results in an unsuccessful operation, it returns a null pointer, and the previous data is also freed.</h4>
+               </p>
+               <h3 style="color:black"> calloc vs. malloc: Key Differences :</h3>
+               <p>
+                     The calloc function is generally more suitable and efficient than that of the malloc function. While both the functions are used to allocate memory space, calloc can allocate multiple blocks at a single time. You don't have to request for a memory block every time. The calloc function is used in complex data structures which require larger memory space.
+                        <br> <br>
+                     The memory block allocated by a calloc function is always initialized to zero while in malloc it always contains a garbage value.
+                     <br> <br>
+               </p>
+               <h3 style="color:black"> C free() :</h3> <br>
+               <p>
+                     Dynamically allocated memory created with either calloc() or malloc() doesn't get freed on their own. You must explicitly use free() to release the space.
+                     <br>
+
+                     Syntax is very simple : <br>
+                     <pre>
+                        free(ptr)
+                     </pre>
+                     <br>
+                     Above statement frees the space allocated in the memory pointed by ptr.
+                     <br> <br>
+                     Lets take and simple Programming example to understand better :
+                     <br> <br>
+                     <pre>
+                                 #include  &lt;stdio.h &gt;
+                                 #include  &lt;stdlib.h &gt;
+                                 int main()
+                                 {
+                                     int n, i, *ptr, sum = 0;
+                                     printf("Enter number of elements: ");
+                                     scanf("%d", &n);
+                                     ptr = (int*) malloc(n * sizeof(int));
+                                     if(ptr == NULL)                     
+                                     {
+                                         printf("Error! memory not allocated.");
+                                         exit(0);
+                                     }
+                                     printf("Enter elements: ");
+                                     for(i = 0; i < n; ++i)
+                                     {
+                                         scanf("%d", ptr + i);
+                                         sum += *(ptr + i);
+                                     }
+                                     printf("Sum = %d", sum);
+                                     free(ptr);
+                                     return 0;
+                                 }
+                     </pre>
+                  
+               </p>
+               <h3 style="color:black"> Some important differences  :</h3>
+               <p>
+                     <table>
+                          
+                           <tbody><tr>
+                              <th style="width: 50%;">malloc</th>
+                              <th style="width: 50%;">calloc</th>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p>The name <code>malloc</code> stands for <i>memory allocation</i>.</p>
+                              </td>
+                              
+                              <td>
+                                 <p>The name <code>calloc</code> stands for <i>contiguous allocation</i>.</p>
+                              </td>
+                           </tr>
+                           
+                           <tr>
+                              <td>
+                                 <p><code>void *malloc(size_t n)</code> returns a pointer to <code>n</code> bytes of uninitialized storage, or <code>NULL</code> if the request cannot be satisfied. If the space assigned by <code>malloc()</code> is overrun, the results are undefined.</p>
+                              </td>
+                              
+                              <td>
+                                 <p><code>void *calloc(size_t n, size_t size)</code> returns a pointer to enough free space for an array of <code>n</code> objects of the specified size, or <code>NULL</code> if the request cannot be satisfied. The storage is initialized to zero.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p><code>malloc()</code> takes one argument that is, <i>number of bytes</i>.</p>
+                              </td>
+                              
+                              <td>
+                                 <p><code>calloc()</code> take two arguments those are: <i>number of blocks</i> and <i>size of each block</i>.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p>syntax of <code>malloc()</code>:</p>
+                                 <p><code>void *malloc(size_t n);</code></p>
+                                 <p>Allocates <code>n</code> bytes of memory. If the allocation succeeds, a void pointer to the allocated memory is returned. Otherwise <code>NULL</code> is returned. </p><p>
+                              </p></td>
+                              
+                              <td>
+                                 <p>syntax of <code>calloc()</code>:</p>
+                                 <p><code>void *calloc(size_t n, size_t size);</code></p>
+                                 <p>Allocates a contiguous block of memory large enough to hold <code>n</code> elements of <code>size</code> bytes each. The allocated region is initialized to zero.</p><p>
+                              </p></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <p><code>malloc</code> is faster than <code>calloc</code>.</p>
+                              </td>
+                              
+                              <td>
+                                 <p><code>calloc</code> takes little longer than <code>malloc</code> because of the extra step of initializing the allocated memory by zero. However, in practice the difference in speed is very tiny and not recognizable.</p>
+                              </td>
+                           </tr>				
+                        </tbody></table>    
+               
+               
+               
+               </p>
+               <h4 style="color:black">Try to understand all above concepts exam will ask some tricky questions on it . <br> <br>
+                  
+                Like some complex snippets but if you are clear in your basic concepts you can solve very easily . <br>
+               </h4>
+               <br>
+
+             
+               <h4>Note : If you have any doubts feel free to contact us If You Didnt understand any concept ..</h4>
+           
+            <a  style="margin-left: 60%"  href="{% url 'File-Handling-In-C-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Day-10</a>
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

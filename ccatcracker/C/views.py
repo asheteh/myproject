@@ -11,8 +11,6 @@ def platform(request):
 def variables(request):
     return render(request,'C/variables.html')
 
-def functions(request):
-    return HttpResponse("HHHH")
 
 def library(request):
     return render(request,'C/library.html')
@@ -31,38 +29,38 @@ def modify(request):
 def if_else(request):
     return render(request,'C/if_else.html')
 
-def loop(request):
-    return HttpResponse("HHHH")
 
 def exercise(request):
     return HttpResponse("HHHH")
 
 def program(request):
-    return HttpResponse("HHHH")
+    return render(request,'C/program.html')
 
-def recurssion(request):
-    return HttpResponse("HHHH")
+
+def projects(request):
+    return render(request,'C/projects.html')
 
 
 def array(request):
-    return HttpResponse("HHHH")
+    return render(request,'C/array.html')
 
 def string(request):
-    return HttpResponse("HHHH")
+    return render(request,'C/string.html')
 
 def structure(request):
-    return HttpResponse("HHHH")
-
-def union(request):
-    return HttpResponse("HHHH")
+   return render(request,'C/structure.html')
 
 def pointers(request):
-    return HttpResponse("HHHH")
+    return render(request,'C/pointers.html')
 
 def memory_allocation(request):
-    return HttpResponse("HHHH")
+    return render(request,'C/memory.html')
+def typedef(request):
+    return render(request,'C/typedef.html')
 
 def some_extra(request):
-    return HttpResponse("HHHH")
+    return render(request,'C/some_extra.html')
 
+def files(request):
+    return render(request,'C/file.html')
 

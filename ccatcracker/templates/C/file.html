@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+{% block title %} File Input/Output in C | C Language Tutorials  {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'Memory-Allocation-In-C-Tutorial' %}">
+               Previous </a>
+            </li>
+            <li class="breadcrumb-item active"> C Language</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:black">File Handling In C  : </h3>
+               <p >
+                    A file represents a sequence of bytes on the disk where a group of related data is stored. File is created for permanent storage of data. It is a ready made structure.
+                    <br> <br>
+                    In C language, we use a structure pointer of file type to declare a file.
+                    <br> <br>
+
+               </p>
+               <h3 style="color: black">Copy Below Links And Watch Lectures First :</h3>
+               <br>
+               <h4 style="color:green">1. File Handling : https://youtu.be/_KW_YBTXhN0</h4>
+             
+               <br>
+            <p>
+                <h4>File functions  :</h4>
+                <br>
+                <h4 style="color:green">fopen() :</h4> <br>
+                C fopen is a C library function used to open an existing file or create a new file. <br>
+                <h4>Syntax :</h4>
+                <br>
+                <pre>
+                        FILE *fopen( const char * filePath, const char * mode );
+                </pre>
+                <br>
+                <h4>filePath: The first argument is a pointer to a string containing the name of the file to be opened.</h4>
+                <br>
+                <h4>mode: The second argument is an access mode.</h4> <br>
+                <table><tbody><tr><th>Mode</th><th>Description</th></tr><tr><td>r</td><td>Opens an existing text file.</td></tr><tr><td>w</td><td>Opens a text file for writing if the file doesn't exist then a new file is created.</td></tr><tr><td>a</td><td>Opens a text file for appending(writing at the end of existing file) and create the file if it does not exist.</td></tr><tr><td>r+</td><td>Opens a text file for reading and writing.</td></tr><tr><td>w+</td><td>Open for reading and writing and create the file if it does not exist. If the file exists then make it blank.</td></tr><tr><td>a+</td><td>Open for reading and appending and create the file if it does not exist. The reading will start from the beginning, but writing can only be appended.</td></tr></tbody></table>
+                <br>
+                <h4>Lets See an Example :</h4>
+                <br>
+                <pre>
+                        #include &lt;stdio.h&gt;
+
+                        int main()
+                        {
+                            FILE *fp;
+                            fp = fopen("fileName.txt","w");
+                            return 0; 
+                        }
+                </pre>
+                <br>
+                The above example will create a file called fileName.txt. 
+                <br>
+                The w means that the file is being opened for writing, and if the file does not exist then the new file will be created
+                <h4 style="color:green">fclose() :</h4> <br>
+                The fclose() function is used to close a file. The file must be closed after performing all the operations on it. The syntax of fclose() function is given below:
+                <br>
+                <h4>Syntax :</h4> <br>
+                <pre>
+                        fclose(fptr); //fptr is the file pointer associated with file to be closed.
+                </pre>
+                <br>
+                <h4 style="color:green">Reading and writing to a text file :</h4> <br>
+                For reading and writing to a text file, we use the functions fprintf() and fscanf().
+                <br> <br>
+                They are just the file versions of printf() and scanf(). The only difference is that, fprint and fscanf expects a pointer to the structure FILE.
+                <br>
+                <h4 style="color:green">Lets take ans example :</h4> <br>
+                <pre>
+                #include &lt;stdio.h&gt;
+                #include &lt;stdlib.h&gt;
+                int main()
+                {
+                int num;
+                FILE *fptr;
+                fptr = fopen("C:\\program.txt","w");
+                if(fptr == NULL)
+                {
+                    printf("Error!");   
+                    exit(1);             
+                }
+                printf("Enter num: ");
+                scanf("%d",&num);
+                fprintf(fptr,"%d",num);
+                fclose(fptr);
+                return 0;
+                }    
+                </pre><br>
+                <h4 style="color:green">Lets take an example fscanf() :</h4> <br>
+                <pre>
+                    #include &lt;stdio.h&gt;
+                    #include &lt;stdlib.h&gt;
+                    int main()
+                    {
+                    int num;
+                    FILE *fptr;
+                    if ((fptr = fopen("C:\\program.txt","r")) == NULL){
+                        printf("Error! opening file");
+                        // Program exits if the file pointer returns NULL.
+                        exit(1);
+                    }
+                    fscanf(fptr,"%d", &num);
+                    printf("Value of n=%d", num);
+                    fclose(fptr); 
+                    
+                    return 0;
+                    }
+               </pre>
+                This program reads the integer present in the program.txt file and prints it onto the screen.
+                <br><br>
+                If you successfully created the file from Example 1, running this program will get you the integer you entered.
+                <br><br>
+                Other functions like fgetchar(), fputc() etc. can be used in similar way. <br>
+                <h4 style="color:green">Search data using fseek() :</h4> <br>
+                If you have many records inside a file and need to access a record at a specific position, you need to loop through all the records before it to get the record.
+                <br><br>
+                This will waste a lot of memory and operation time. An easier way to get to the required data can be achieved using fseek().
+                <br><br>
+                As the name suggests, fseek() seeks the cursor to the given record in the file. <br>
+                <h4 style="color:green">Syntax of fseek() :</h4> <br>
+                <pre>
+                        fseek(FILE * stream, long int offset, int whence)
+                </pre>
+                <br>
+                The first parameter stream is the pointer to the file. The second parameter is the position of the record to be found, and the third parameter specifies the location where the offset starts.
+                <br>
+                <h4 style="color:green">SEEK_SET:</h4> 
+                Starts the offset from the beginning of the file. <br>
+                <h4 style="color:green">SEEK_END:</h4> 
+                Starts the offset from the end of the file. <br>
+                <h4 style="color:green">SEEK_CUR:</h4> 
+                Starts the offset from the current location of the cursor in the file. <br>
+                <h4 style="color:green">Example of fseek()</h4> <br>
+                <pre>
+                        struct threeNum
+                        {
+                           int n1, n2, n3;
+                        };
+                        int main()
+                        {
+                           int n;
+                           struct threeNum num;
+                           FILE *fptr;
+                           if ((fptr = fopen("C:\\program.bin","rb")) == NULL){
+                               printf("Error! opening file");
+                               // Program exits if the file pointer returns NULL.
+                               exit(1);
+                           }
+                           
+                           // Moves the cursor to the end of the file
+                           fseek(fptr, -sizeof(struct threeNum), SEEK_END);
+                           for(n = 1; n < 5; ++n)
+                           {
+                              fread(&num, sizeof(struct threeNum), 1, fptr); 
+                              printf("n1: %d\tn2: %d\tn3: %d\n", num.n1, num.n2, num.n3);
+                              fseek(fptr, -2*sizeof(struct threeNum), SEEK_CUR);
+                           }
+                           fclose(fptr); 
+                          
+                           return 0;
+                        }
+                </pre> <br>
+                This program will start reading the records from the file program.bin in the reverse order (last to first) and prints it.
+            </p>
+            <p>
+                <h4 style="color:black">Lets do some programming exercises : </h4> <br>
+                <br>
+                <h4 style="color:green">1.Write a program in C to write multiple lines in a text file. </h4> <br>
+                 <br>
+                 <h4 style="color:green">2. Write a program in C to count a number of words and characters in a file.  </h4> <br>
+                <br>
+                <h4 style="color:green">3. Write a program in C to replace a specific line with another text in a file </h4> <br>
+                <br>
+                <h4 style="color:green">4. Write a program in C to copy a file in another name </h4> <br>
+                <br>
+
+            </p>
+             
+               <h4>Note : If you have any doubts feel free to contact us If You Didnt understand any concept ..</h4>
+           
+            <a  style="margin-left: 60%"  href="{% url 'typedef-In-C-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Day-11</a>
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

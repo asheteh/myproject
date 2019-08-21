@@ -1,0 +1,138 @@
+{% extends 'base_1.html' %}
+{% block title %} Command Line Arguments in C | C Language Tutorial {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+               <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item active"> C Language</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:black">Command Line Argument in C: </h3>
+               <p >
+                    Command line argument is a parameter supplied to the program when it is invoked. Command line argument is an important concept in C programming. It is mostly used when you need to control your program from outside. Command line arguments are passed to the main() method.
+                    <h4 style="color: green">Syntax :</h4>
+                    <pre>
+                            int main(int argc, char *argv[])
+                    </pre>
+                    <br>
+                    Here argc counts the number of arguments on the command line and argv[ ] is a pointer array which holds pointers of type char which points to the arguments passed to the program.
+               </p>
+               <h3 style="color: black">Copy Below Links And Watch Lectures First :</h3>
+               <br>
+               <h4 style="color:green">1. Command-line-Tutorial : https://youtu.be/JArmogmRCcg</h4> <br>
+               
+               <h4 style="color:green">2. Command-line-Tutorial : https://youtu.be/u9ZGlYUGvVo</h4> <br>
+               
+               <h4 style="color:green">3. Command-line-Tutorial Class : https://youtu.be/hMw14zhETF8</h4> <br>
+
+              
+               <br>
+            <p>
+                <h4 style="color: black">Lets take an example for Command Line Argument :</h4> <br>
+                <br>
+                    <pre>
+                        #include &lt;stdio.h>
+                        #include &lt;conio.h>
+
+                        int main(int argc, char *argv[])
+                        {
+                            int i;
+                            if( argc >= 2 )
+                            {
+                                printf("The arguments supplied are:\n");
+                                for(i = 1; i < argc; i++)
+                                {
+                                    printf("%s\t", argv[i]);
+                                }
+                            }
+                            else
+                            {
+                                printf("argument list is empty.\n");
+                            }
+                            return 0;
+                        }
+                   </pre>
+                <br>
+                Remember that argv[0] holds the name of the program and argv[1] points to the first command line argument and argv[n] gives the last argument. If no argument is supplied, argc will be 1.
+                <br>
+                <h4 style="color:green">Lets take an another simple example : </h4> <br>
+                <pre>
+
+                    #include &lt;stdio.h>  
+                    void main(int argc, char *argv[] )  {  
+                    
+                    printf("Program name is: %s\n", argv[0]);  
+                    
+                    if(argc < 2){  
+                        printf("No argument passed through command line.\n");  
+                    }  
+                    else{  
+                        printf("First argument is: %s\n", argv[1]);  
+                    }  
+                    }      
+                </pre>  
+                
+                Now run above program from command prompt : 
+                <br>
+                abc.exe hello <br>
+                Remember we are passsing a string hello as command line args . 
+                
+                <h4 style="color: green">Output :</h4> <br>
+                Program name is: abc <br>
+                First argument is: hello
+                <br>
+                Remember args[0] is always name of your file . 
+                <br>
+                exam will ask simple snippet on this so remember these points <br>
+                
+           </p>
+            <p>
+              
+            </p>
+             
+               <h4>Note : If you have any doubts feel free to contact us If You Didnt understand any concept ..</h4>
+           
+            <a  style="margin-left: 60%"  href="{% url 'program-In-C-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Day-13</a>
+     
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

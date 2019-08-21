@@ -1,0 +1,158 @@
+{% extends 'base_1.html' %}
+{% block title %} typedef in C Part-1 | C Language Tutorial {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'File-Handling-In-C-Tutorial' %}">
+              Previous</a>
+            </li>
+            <li class="breadcrumb-item active"> C Language</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+            
+               <h3 style="color:black">typedef in C : </h3>
+               <p >
+                    typedef is a keyword used in C language to assign alternative names to existing datatypes. Its mostly used with user defined datatypes, when names of the datatypes become slightly complicated to use in programs. Following is the general syntax for using typedef,  
+                    <br>
+                    Lets take an simple example : <br>
+                    <pre>
+                            typedef unsigned long ulong;
+                    </pre>
+                    The above statement define a term ulong for an unsigned long datatype. Now this ulong identifier can be used to define unsigned long type variables.
+                    <br>
+
+               </p>
+               <h3 style="color: black">Copy Below Links And Watch Lectures First :</h3>
+               <br>
+               <h4 style="color:green">1. typedef : https://youtu.be/KcFuHLp85Jg</h4> <br>
+               
+               <h4 style="color:green">2. typedef : https://youtu.be/3_9_Vfdsq0s</h4> <br>
+               
+               <h4 style="color:green">3. Storage Class : https://youtu.be/eNH5KqzOM7c</h4> <br>
+
+               <h4 style="color:green">4. Storage Class : https://youtu.be/Ahgl3x_EP7o</h4> <br>
+             
+               <br>
+            <p>
+                <h4>Application of typedef :</h4>
+                <br>
+                typedef can be used to give a name to user defined data type as well. Lets see its use with structures.
+
+                <br>
+                <pre>
+                                        
+                    typedef struct
+                    {
+                        type member1;
+                        type member2;
+                        type member3;
+                    } type_name;
+                </pre>
+                <br>
+                Here type_name represents the stucture definition associated with it. Now this type_name can be used to declare a variable of this stucture type.
+                <br>
+                <h4 style="color: green">We can define Structure using typedef :</h4><br>
+                <pre>
+                    #include &lt;stdio.h&gt;
+                    #include &lt;string.h&gt;
+                    
+                    typedef struct employee
+                    {
+                        char name[50];
+                        int salary;
+                    }emp;
+                    
+                    void main( )
+                    {
+                        emp e1;
+                        printf("\nEnter Employee record:\n");
+                        printf("\nEmployee name:\t");
+                        scanf("%s", e1.name);
+                        printf("\nEnter Employee salary: \t");
+                        scanf("%d", &e1.salary);
+                        printf("\nstudent name is %s", e1.name);
+                        printf("\nroll is %d", e1.salary);
+                    }
+                </pre>
+                <h4 style="color: green">Use typedef and Pointers</h4><br>
+                typedef can be implemented for providing a pseudo name to pointer variables as well. In this below-mentioned code snippet, you have to use the typedef, as it is advantageous for declaring pointers.
+                <br>
+                <pre>
+                        int* a;
+                </pre>
+                <br>
+                The binding of pointer (*) is done to the right here. With this kind of statement declaration, you are in fact declaring an as a pointer of type int (integer).
+                <br>
+                <h4 style="color: green">Program of structure in C with the use of typedef:</h4><br> 
+                <pre>
+                    #include &lt;stdio.h&gt;
+                    #include&lt;string.h&gt;
+
+                    typedef struct professor
+                    {
+                        char p_name[50];
+                        int p_sal;
+                    } prof;
+
+                    void main(void)
+                    {
+                        prof pf;
+                        printf("\n Enter Professor details: \n  \n");
+                        printf("\n Enter Professor name:\t");
+                        scanf("% s", pf.p_name);
+                        printf("\n Enter professor salary: \t");
+                        scanf("% d", &pf.p_sal);
+                        printf("\n Input done ! ");
+                    }
+                </pre>
+                
+           </p>
+            <p>
+                <h4 style="color:green">Guys this topics from day 11 are just for your knowledge purpose 
+                    exam will not ask from this too much, but they may ask some snippets so just watch videos very carefully
+                    you can solve very easily objective questions   : </h4> <br>
+              
+            </p>
+             
+               <h4>Note : If you have any doubts feel free to contact us If You Didnt understand any concept ..</h4>
+            </div>
+            <a  style="margin-left: 60%"  href="{% url 'command-line-In-C-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Day-12</a>
+         
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

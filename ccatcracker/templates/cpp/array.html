@@ -1,0 +1,211 @@
+{% extends 'base_1.html' %}
+{% block title %} Array in C++ | C ++ Tutorial  {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> C++ Programming</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">C++ Arrays  : </h3> <br>
+               <p >
+                    In programming, one of the frequently arising problem is to handle numerous data of same type.
+                    <br> <br>
+                    Consider this situation, you are taking a survey of 100 people and you have to store their age. To solve this problem in C++, you can create an integer array having 100 elements.
+                    <br> <br>
+                    An array is a collection of data that holds fixed number of values of same type. For example: 
+                    <br> <br>
+                    <pre>
+                            int a[100];
+                    </pre>
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+                <h5 style="color:green">1. Array in C++ : https://youtu.be/Hu2tePjqcZ4</h5>
+                <h5 style="color:green">2. Array in C++  :https://youtu.be/PVrnazUTMm4</h5>
+                <br>
+
+
+            <p>
+            
+                <h4 style="color:green">How to declare an array in C++? : </h4> <br>
+                Simple lets check Syntax  : <br>
+                <br>
+                <pre>
+                        dataType arrayName[arraySize];
+                </pre>
+                
+                <h5 style="color: brown">Example : </h5>
+                <pre>
+                    int a[20]
+                    here int is data type
+                    a is array name 
+                    20 size array size 
+                </pre>
+
+                <br>
+                <h5 class="shead">How to access Elements of an Array ? </h5>
+                You can access elements of an array by using indices.
+                <br> <br>
+                Suppose you declared an array mark as above. The first element is mark[0], second element is mark[1] and so on.
+                <br> <br>
+                <h5 style="color: brown">Key Notes : Exam will ask Objective on these </h5>
+                Arrays have 0 as the first index not 1. In this example, mark[0] is the first element.<br><br>
+                <br><br>
+                If the size of an array is n, to access the last element, (n-1) index is used. In this example, mark[4] is the last element.
+                <br><br>
+                Suppose the starting address of mark[0] is 2120d. Then, the next address, a[1], will be 2124d, address of a[2] will be 2128d and so on. It's because the size of float is 4 bytes.
+                <br><br>
+                <h5 class="shead">How to initialize an array in C++ programming :</h5>
+                Lets take an example : <br> <br>
+                <pre>
+                        int mark[5] = {19, 10, 8, 17, 9}; 
+                        // This is called array initialize at the time declaration 
+                        Also there is another menthos :
+                        int mark[] = {19, 10, 8, 17, 9};
+                        // Means if we are initializing array at the time declaration
+                        no need to write size of array . 
+                </pre>
+                <br> <br>
+                Lets take an simple Programming example :
+                <br> <br>
+                <pre>
+                        int mark[5] = {19, 10, 8, 17, 9}
+                        // change 4th element to 9
+                        mark[3] = 9;
+                        // take input from the user and insert in third element
+                        cin >> mark[2];
+                        // take input from the user and insert in (i+1)th element
+                        cin >> mark[i];
+                        // print first element of the array
+                        cout << mark[0];
+                        // print ith element of the array
+                        cout >> mark[i-1];
+                </pre>
+
+                <br>
+                <h5 class="shead">C++ program to store and calculate the sum of 5 numbers entered by the user using arrays.</h5>
+                <br>
+                <pre>
+                #include &lt;iostream>
+                using namespace std;
+                int main() 
+                {
+                    int numbers[5], sum = 0;
+                    cout << "Enter 5 numbers: ";
+                    
+                    //  Storing 5 number entered by user in an array
+                    //  Finding the sum of numbers entered
+                    for (int i = 0; i < 5; ++i) 
+                    {
+                        cin >> numbers[i];
+                        sum += numbers[i];
+                    }
+                    
+                    cout << "Sum = " << sum << endl;  
+                    
+                    return 0;
+                }
+                </pre>
+                <br>
+                <h4 class="heading">Passing Array to a Function : </h4>
+                Arrays can be passed to a function as an argument. <br>
+                We will explore this by taking an example : 
+                <br>
+                <br>
+                <h5 style="color: brown">Write a C++ Program to display marks of 5 students by passing one-dimensional array to a function.</h5>
+                <pre>
+                    #include < iostream >
+                    using namespace std;
+                    void display(int marks[5]);
+                    int main()
+                    {
+                        int marks[5] = {88, 76, 90, 61, 69};
+                        display(marks);
+                        return 0;
+                    }
+                    void display(int m[5])
+                    {
+                        cout << "Displaying marks: "<< endl;
+                        for (int i = 0; i < 5; ++i)
+                        {
+                            cout << "Student "<< i + 1 <<": "<< m[i] << endl;
+                        }
+                    }
+                </pre>
+                <br> <br>
+                The argument marks in the above code represents the memory address of first element of array marks[5].
+                <br> <br>
+                And the formal argument int m[5] in function declaration converts to int* m;. This pointer points to the same address pointed by the array marks.
+                <br> <br>
+                That's the reason, although the function is manipulated in the user-defined function with different array name m[5], the original array marks is manipulated.
+                <br> <br>
+                C++ handles passing an array to a function in this way to save memory and time.
+                <br> <br>   
+            </p>
+            <h4 style="color: brown">Lets do some exercises : </h4> <br>
+            <h5 class="shead">1. Write a C++ program to find second largest element in an given array of integers :  </h5> <br>
+           
+           <h5 class="shead">2. Write C++ program to sort array in assending and descending order </h5>
+                <br>
+               
+            <h5 class="shead">3. Write a C++ program to find the two repeating elements in a given array of integers.</h5>
+            <br>
+
+
+            <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             
+            <a  style="margin-left: 60%"  href="{% url 'array-in-cpp' %}" class="btn btn-secondary text-white btn-lg">Day-5</a>
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

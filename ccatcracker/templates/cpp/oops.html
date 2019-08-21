@@ -1,0 +1,138 @@
+{% extends 'base_1.html' %}
+{% block title %} Object Oriented Programming | C ++ Tutorial | {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> C++ Programming</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">Introduction to OOPS in  C++  : </h3> <br>
+               <p >
+                    Object oriented programming is a way of solving complex problems by breaking them into smaller problems using objects. Before Object Oriented Programming (commonly referred as OOP), programs were written in procedural language, they were nothing but a long list of instructions.
+                   <br> <br> In Object oriented programming we write programs using classes and objects utilising features of OOPs such as abstraction, encapsulation, inheritance and polymorphism.
+               </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+               <h5 style="color:green">1. Introduction to OOPS : https://youtu.be/7BVt6OGfVfQ</h5>
+               <h5 style="color:green">2. Introduction to OOPS : https://youtu.be/5Y74odV3IAI</h5>
+               <h5 style="color:green">3. Introduction to OOPS : https://youtu.be/_cbfR690u74</h5>
+               <h5 style="color:green">4. Introduction to OOPS : https://youtu.be/mgU_ZAX7Gbs</h5>
+               <h5 style="color:green">5. Introduction to OOPS : https://youtu.be/nmq3PkD1gEU</h5>
+               
+             
+               <br>
+            <p>
+            
+                <h4 style="color:green">Class and Objects  :</h4> <br>
+            
+                A class is like a blueprint of data member and functions and object is an instance of class. For example, lets say we have a class Car which has data members (variables) such as speed, weight, price and functions such as gearChange(), slowDown(), brake() etc. Now lets say I create a object of this class named FordFigo which uses these data members and functions and give them its own values. Similarly we can create as many objects as we want using the blueprint(class).
+                <br> <br>
+                A Class is a user-defined data-type which has data members and member functions. <br>
+                 Data members are the data variables and member functions are the functions used to manipulate these variables and together these data members and member functions define the properties and behaviour of the objects in a Class. <br>
+                 In  of class Car, the data member will be speed limit, mileage etc and member functions can apply brakes, increase speed etc. <br>
+                 <br>
+                 For example : <br>
+                 Consider the Class of Cars. There may be many cars with different names and brand but all of them will share some common properties like all of them will have 4 wheels, Speed Limit, Mileage range etc. So here, Car is the class and wheels, speed limits, mileage are their properties. <br>
+                <h4 style="color: green">What is Objects ? : </h4> 
+                My name is Abhijeet, and I am an instance/object of class Male. When we say, Human Being, Male or Female, we just mean a kind, you, your friend,
+                me we are the forms of these classes. We have a physical existence while a class is just a logical definition. We are the objects.
+                <br> <br>
+                Lets take an example : <br> <br>
+        <pre>
+                class person 
+                { 
+                    char name[20]; 
+                    int id; 
+                public: 
+                    void getdetails(){} 
+                }; 
+                
+                int main() 
+                { 
+                person p; // p is a object  
+                }
+        </pre>
+                
+        </p>
+            <br>
+            <p>
+                <h4 style="color:green">Abstraction :</h4> <br>
+                
+               
+                Abstraction refers to showing only the essential features of the application and hiding the details. In C++, classes can provide methods to the outside world to access & use the data variables, keeping the variables hidden from direct access, or classes can even declare everything accessible to everyone, or maybe just to the classes inheriting it. This can be done using access specifiers.
+                <br> <br>
+                <h4 style="color: green">Take an real life example : </h4>
+                Suppose you are driving your car.., so when you are driving, at that time you only need to know about the basic functionalities of the car., like how steering works n all. And you are not going into the much detail about the internal working of the car. Same is in the case of programming, there are some information which is not important for users. So that kind of information is made private by the programmers. So in short, abstraction is a mechanism with the help of which programmers hide the unnecessary details from the users.
+                <br> 
+                <br>
+                <h4 style="color:green">Encapsulation  :</h4> <br>
+                Encapsulation is all about binding the data variables and functions together in class.
+                 
+                <br> <br>
+                <h4 style="color: green">Take an real life example : </h4>
+                For example, the pencil box which you use daily, that pencil box contains other things also like eraser, sharpner etc. Same in the case of programming,.the OOPS gives us the advantage of gathering the data and functions in the same box which is called “Class”.
+            
+                <br>
+                <br>
+                <h4 style="color: green">Inheritance : </h4> <br>
+                Inheritance is a way to reuse once written code again and again. The class which is inherited is called the Base class & the class which inherits is called the Derived class. They are also called parent and child class.
+                <br> <br>
+                <h4 style="color: green">Take an real life example : </h4>
+                when child takes birth it inherit some qualities from his parents. Same in the case of programming., the derived class takes some characteristics from the base class. The inheritance is beneficial for programming because with the help of this we can make our code as short as possible and there will be not any kind of redundancy.
+            </p>
+                <h4 style="color:green">Polymorphism In OOPS  :</h4> <br>
+                Typically the pen has a method Write() which implements the writing part. However this could vary depending on the type of pen used. Writing with a fountain pen is much different from writing with a sketch pen. I could use a sketch pen only for drawing and coloring, which I could not with an ordinary fountain pen. So here you have the pen implementing write in different ways, based on the kind of pen you use.
+                <br>
+                <br>
+                <h4 style="color: green">Take an real life example : </h4>
+                Let’s take an simple example, we use milk for drinking..,but milk can also be used to make curd, butter etc. So, the term polymorphism means to use something in different forms. In programming, to maintain the code and to maintain the simplicity of the code we use the concept of polymorphism. Very popular example of this is, “function overloading”, in which we use the same name but the operations are different.
+                <br> <br>   
+               <h4>Note : If you have any doubts feel free to contact us If you didnt understand any concept ..</h4>
+           
+               <h5 style="color: green">Note : Exam will ask maximum only thory and coceptual question for C++ in ccat exam . 
+                   So try to understand all concept and watch all videos which I have mentioned above ..  
+               </h5>
+            <a  style="margin-left: 60%"  href="{% url 'function-in-cpp' %}" class="btn btn-secondary text-white btn-lg">Day-2</a>
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

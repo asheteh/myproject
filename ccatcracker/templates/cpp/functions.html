@@ -1,0 +1,441 @@
+{% extends 'base_1.html' %}
+{% block title %} Function with default arguments in C++ | C ++ Tutorial  {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> C++ Programming</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">Lets start some basics concepts of C++  : </h3> <br>
+               <p >
+                  Todat we are going to learn some basic of c++ . <br>
+                  1. cin and cout                                                      <br>
+                  2. Manipulators in C++ <br>
+                  3. Reference data types <br>
+                  4. Function <br>
+                  5. Structure and class difference(exam will ask objective on this)<br>
+                  6. C++ Structure    <br>
+                  <br>
+
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+               <h5 style="color:green">1. Part 1  : https://youtu.be/pci97hk17rM</h5>
+               <h5 style="color:green">2. Part 2  : https://youtu.be/HvhxbpJYNM0</h5>
+               <h5 style="color:green">3. Part 3  : https://youtu.be/ALXaZ3A5rNs</h5>
+               <h5 style="color:green">4. Part 4  : https://youtu.be/l6rZ2YSQrh0</h5>
+               <h5 style="color:green">5. Part 5  : https://youtu.be/jyAyzvOvL-I</h5>
+
+               <h5 style="color:green">6. Part 6  : https://youtu.be/uxhaXnk3FOs</h5>
+               <h5 style="color:green">7. Part 7  : https://youtu.be/W1f3TelobMg</h5>
+               <h5 style="color:green">8. Part 8  : https://youtu.be/FslMc6k-ZB0</h5>
+                
+               
+
+               
+             
+               <br>
+            <p>
+            
+                <h4 style="color:green">Basic Input Using std::cin and Output Using std::cout :</h4> <br>
+                
+                
+                The cin object in C++ is an object of class istream. It is used to accept the input from the standard input device i.e. keyboard. It is associated with the standard C input stream stdin.
+                <br> <br>
+                The "c" in cin refers to "character" and 'in' means "input", hence cin means "character input".
+                <br> <br>
+                The cin object is used along with the extraction operator (>>) in order to receive a stream of characters. The general syntax is:
+                <br>
+        <pre>
+                cin >> varName;
+
+        </pre>
+               The extraction operator can be used more than once to accept multiple inputs as see example below :
+
+        <pre>
+                cin >> var1 >> var2 >> … >> varN;
+        </pre>
+        <br>
+        The cin object can also be used with other member functions such as getline(), read(), etc. Some of the commonly used member functions :
+        <br>
+
+        1. cin.get(char &ch): Reads an input character and store it in ch.
+        <br> <br>
+        2. cin.read(char *buffer, int n): 
+        Reads n bytes (or until the end of the file) from the stream into the buffer.
+        <br> <br>
+        3. cin.ignore(int n): Ignores the next n characters from the input stream.
+
+        <br> <br>
+        <h4 style="color: green">Lets  take simple coding example in C++ : </h4><br>     
+    <pre>
+    #include &lt;iostream>
+    using namespace std;
+    int main()
+    {
+        int x, y, z;
+        
+        /* For single input */
+        cout << "Enter a number: ";
+        cin >> x;
+        
+        /* For multiple inputs*/
+        cout << "Enter 2 numbers: ";
+        cin >> y >> z;
+        
+        cout << "Sum = " << (x+y+z);
+        return 0;
+    }
+    </pre>
+
+        <h4 style="color: green">Output</h4>
+        <pre>
+                Enter a number: 1
+                Enter 2 numbers: 2, 3
+                Sum = 6
+                So above program is just taking input from user using cin and storing 
+                in variable and then doing sum of all 3 and 
+                after that using cout priniting result on screen . 
+        </pre>
+        <br>
+        <br>
+        <h4 style="color: green">C++ Manipulators :</h4>
+        Manipulators are operators used in C++ for formatting output. The data is manipulated by the programmer’s choice of display.
+        <br><br>
+
+        <h5 style="color: green">1. endl Manipulator: </h5> 
+        This manipulator has the same functionality as the ‘n’ newline character.
+        <br>
+        <br>
+        cout << "Exforsys" << endl; 
+
+        endl used to print on new line .
+         <br>
+         <br>
+         <h5 style="color: green">2. setw Manipulator: </h5> 
+         This manipulator sets the minimum field width on output.
+         <br><br>
+         setw(x)
+         <br>
+         <br>
+        
+         <br>
+         <br>
+
+         <h5 style="color: green">3. setfill: </h5> 
+            <br>
+            setfill character is used in output insertion operations to fill spaces when results have to be padded to the field width.
+            <br>
+            <br>
+            <h5 style="color: green">Lets take an simple example</h5>
+       
+            <pre><div class="copy-btn"></div><span style="color:#004a43; ">
+                    #</span><span style="color:#004a43; ">include </span><span style="color:#800000; ">&lt;</span><span style="color:#40015a; ">iostream.h</span><span style="color:#800000; ">&gt;</span>
+                <span style="color:#004a43; ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include </span><span style="color:#800000; ">&lt;</span><span style="color:#40015a; ">iomanip.h</span><span style="color:#800000; ">&gt;</span>
+                    <span style="color:#800000; font-weight:bold; ">int</span> <span style="color:#400000; ">main</span><span style="color:#808030; ">(</span><span style="color:#808030; ">)</span>
+                    <span style="color:#800080; ">{</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">USING setw() ..............</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setw</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">10</span><span style="color:#808030; ">)</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#008c00; ">11</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setw</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">10</span><span style="color:#808030; ">)</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#008c00; ">2222</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setw</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">10</span><span style="color:#808030; ">)</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#008c00; ">33333</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setw</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">10</span><span style="color:#808030; ">)</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#008c00; ">4</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">USING setw() &amp; setfill() [type- I]...</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setfill</span><span style="color:#808030; ">(</span><span style="color:#0000e6; ">'0'</span><span style="color:#808030; ">)</span><span style="color:#800080; ">;</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setw</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">10</span><span style="color:#808030; ">)</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#008c00; ">11</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setw</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">10</span><span style="color:#808030; ">)</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#008c00; ">2222</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setw</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">10</span><span style="color:#808030; ">)</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#008c00; ">33333</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setw</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">10</span><span style="color:#808030; ">)</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#008c00; ">4</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">USING setw() &amp; setfill() [type-II]...</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setfill</span><span style="color:#808030; ">(</span><span style="color:#0000e6; ">'-'</span><span style="color:#808030; ">)</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setw</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">10</span><span style="color:#808030; ">)</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#008c00; ">11</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setfill</span><span style="color:#808030; ">(</span><span style="color:#0000e6; ">'*'</span><span style="color:#808030; ">)</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setw</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">10</span><span style="color:#808030; ">)</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#008c00; ">2222</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setfill</span><span style="color:#808030; ">(</span><span style="color:#0000e6; ">'@'</span><span style="color:#808030; ">)</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setw</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">10</span><span style="color:#808030; ">)</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#008c00; ">33333</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                        <span style="color:#603000; ">cout</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setfill</span><span style="color:#808030; ">(</span><span style="color:#0000e6; ">'#'</span><span style="color:#808030; ">)</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span style="color:#603000; ">setw</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">10</span><span style="color:#808030; ">)</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#008c00; ">4</span><span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span><span style="color:#800000; ">"</span><span style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+                        <span style="color:#800000; font-weight:bold; ">return</span> <span style="color:#008c00; ">0</span><span style="color:#800080; ">;</span>
+                    <span style="color:#800080; ">}</span>
+                </pre>
+                
+                <h4 style="color: green">Output : </h4>
+                <pre>
+                USING setw() ..............
+                        11
+                      2222
+                     33333
+                         4
+                USING setw() & setfill() [type- I]...
+                0000000011
+                0000002222
+                0000033333
+                0000000004
+                USING setw() & setfill() [type-II]...
+                --------11
+                ******2222
+                @@@@@33333
+                #########4
+                </pre>
+                
+               
+        
+            <br>
+            <p>
+                <h4 style="color:green"> References in C++ :</h4> <br>
+                References are like constant pointers that are automatically dereferenced. It is a new name given to an existing storage. So when you are accessing the reference, you are actually accessing that storage.
+                <br>
+                <br>
+                <pre>
+                        int main()
+                        { 
+                            int y=10;
+                            int &r = y;  // r is a reference to int y
+                            cout << r;
+                        }
+                </pre>
+                <h4 style="color: green">Difference between Reference and Ponters</h4>
+                <table >
+                        <thead><tr><th>References</th><th>Pointers</th></tr></thead>
+                        <tbody>
+                        <tr>
+                        <td>Reference must be initialized when it is created.</td>
+                        <td>Pointers can be initialized any time.</td>
+                        </tr>
+                        <tr>
+                        <td>Once initialized, we cannot reinitialize a reference.</td>
+                        <td>Pointers can be reinitialized any number of time.</td>
+                        </tr>
+                        <tr>
+                        <td>You can never have a NULL reference.</td>
+                        <td>Pointers can be NULL.</td>
+                        </tr>
+                        <tr>
+                        <td>Reference is automatically dereferenced.</td>
+                        <td><code>*</code> is used to dereference a pointer.</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                
+               <br> <br>
+                <h4 style="color: green">Const Reference: </h4>
+                Const reference is used in function arguments to prevent the function from changing the argument. <br>
+                <br> <br>
+                <pre>
+                        void f(const int& x)
+                        { 
+                            x++; 
+                        }   // ERROR
+                        
+                        int main()
+                        {
+                            int i=10;
+                            f(i);
+                        }
+                </pre> <br>
+                We cannot change the argument in the function because it is passed as const reference.
+                
+                <br> 
+                <br>
+                <h4 style="color:green">C++ Functions  :</h4> <br>
+                Depending on whether a function is predefined or created by programmer; there are two types of function:
+                <br><br>
+                Library Function <br>
+                User-defined Function <br>
+
+                <br>
+                <h4 class="heading">Library Function</h4>
+                Library functions are the built-in function in C++ programming.
+                <br> <br>
+                Programmer can use library function by invoking function directly; they don't need to write it themselves.
+                <br>
+                <br>
+                Lets take as simple example to understand : <br>
+                <pre>
+                     #include &lt;iostream>
+                    #include &lt;cmath>
+                    using namespace std;
+                    int main()
+                    {
+                        double number, squareRoot;
+                        cout << "Enter a number: ";
+                        cin >> number;
+                        // sqrt() is a library function to calculate square root
+                        squareRoot = sqrt(number);
+                        cout << "Square root of " << number << " = " << squareRoot;
+                        return 0;
+                    }
+                </pre>
+                <h4 class="heading">Output : </h4>
+                <pre>
+                        Enter a number: 36
+                        Square root of 36 = 6
+                </pre>
+                <br> <br>
+                In the example above, sqrt() library function is invoked to calculate the square root of a number.
+                <br> <br>
+                Notice code #include &lt;cmath> in the above program. Here, cmath is a header file. The function definition of sqrt()(body of that function) is present in the cmath header file.
+                <br> <br>
+                You can use all functions defined in cmath when you include the content of file cmath in this program using #include <cmath> .
+                
+                <h4 class="heading">User-defined Function : </h4>
+
+                C++ allows programmer to define their own function called as user defined functions.
+                <br> <br>
+                A user-defined function groups code to perform a specific task and that group of code is given a name(identifier).
+                <br> <br>
+                When the function is invoked from any part of program, it all executes the codes defined in the body of function.
+                <br> <br>
+                So as you know human can understand onlt after giving examples so lets do : <br>
+
+                <h5 style="color: #008c00">Write c++ program with user defined function to add two numbers ? </h5>
+                <br>
+                <pre>
+                    #include &lt;iostream>
+                    using namespace std;
+                    // Function prototype (declaration)
+                    int add(int, int);  // function declaration
+                    int main()
+                    {
+                        int num1, num2, sum;
+                        cout<<"Enters two numbers to add: ";
+                        cin >> num1 >> num2;
+                        // Function call
+                        sum = add(num1, num2);  // calling our add function 
+                        cout << "Sum = " << sum;   
+                        return 0;
+                    }
+                    // Function definition  
+                    int add(int a, int b)
+                    {
+                        int add;
+                        add = a + b;
+                        // Return statement
+                        return add;  // return sum of two numbers
+                    }
+                </pre>
+                  
+                <br>
+                <h5 style="color: #008c00">Output :</h5>
+                <pre>
+                        Enters two integers: 80
+                        2
+                        Sum = 82
+                </pre>
+                <br>
+               <h4 class="heading">Function prototype (declaration) : </h4>
+               If a user-defined function is defined after main() function, compiler will show error. It is because compiler is unaware of user-defined function, types of argument passed to function and return type.
+                <br> <br>
+                In C++, function prototype is a declaration of function without its body to give compiler information about user-defined function. Function prototype in the above example is:
+                <br> <br>
+
+                <pre>
+                        int add(int, int);
+                </pre>
+                <br>
+                so this is called function declaration please remember declaration and definition is both different <br>
+                we are declaring means just giving name of the function with args . <br>
+                <br> 
+                <h4 class="heading">Function Definition : </h4>
+                Function definition means we have full body of function means we writing our own code within {} brackets . <br>
+                <br>
+                <pre>
+                        int add(int a,int b)
+                        {
+                            int add;
+                            add = a + b;
+                            return add;
+                        }
+                        This is called definition of function also called define function  .
+                </pre>
+                <br> <br>
+                When the function is called, control is transferred to the first statement of the function body.
+                <br> <br>
+                Then, other statements in function body are executed sequentially.
+                <br> <br>
+                When all codes inside function definition is executed, control of program moves to the calling program.
+                <br> <br>
+
+                <h4 class="heading">Function Call :</h4>
+                When we make function call then control is transferred to our function first . <br>
+                In the above program, add(num1,num2); inside main() function calls the user-defined function.
+                <br> <br>
+                The function returns an integer which is stored in variable add.
+
+                <h4 style="color: green">Passing Arguments to Function : </h4>
+              
+                See our above program : <br>
+                In programming, argument (parameter) refers to the data which is passed to a function (function definition) while calling it.
+                <br> <br>
+                In the above example, two variables, num1 and num2 are passed to function during function call. These arguments are known as actual arguments.
+                <br> <br>
+                The value of num1 and num2 are initialized to variables a and b respectively. These arguments a and b are called formal arguments.
+                <br> <br>        
+                <h4 class="heading">Difference between Class and Structure : </h4>
+                <br>
+                <h4 class="heading">Class :</h4>
+                Class is a reference type and its object is created on Heap memory. <br><br>
+                Class can inherit the another class. <br><br>
+                Class can have constructor and destructor of all types.<br><br>
+                The member variable can be initialized directly. <br><br>
+                Class object cannot be created without using the new keyword, it means we have to use it. Eg: Demo obj=new Demo(); <br>
+                <br><br>
+                <h4 class="heading">Structure :</h4>
+                Structure is a value type that is why its object is created on Stack memory.                                               <br><br>                                                                 
+                Structure does not support the inheritance and cannot inherit another class.<br><br>
+                Structure can only have the parametrized constructor. it means a structure can not have the non-parametrized constructor,<br><br>
+                default constructor and destructor also.<br><br>
+                The member variable cannot be initialized directly.<br><br>
+                Structure object can be created without using the new keyword.(optional). Eg: Demo obj;<br><br>
+                <br>         
+            </p>
+            <h5 style="color: #008c00">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             
+            <a  style="margin-left: 60%"  href="{% url 'class-in-cpp' %}" class="btn btn-secondary text-white btn-lg">Day-3</a>
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

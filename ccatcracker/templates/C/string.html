@@ -1,0 +1,174 @@
+{% extends 'base_1.html' %}
+{% block title %} Strings - In - C | C Language Tutorial  {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'Array-In-C-Language-Tutorial' %}">
+              Previous</a>
+            </li>
+            <li class="breadcrumb-item active"> C Language</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+         
+               <h3 style="color:black">C – Strings and String functions   : </h3>
+               <p >
+                  String is an array of characters. In this guide, we learn how to declare strings, how to work with strings in C programming and how to use the pre-defined string handling functions.
+                  <br> <br>
+                  We will see how to compare two strings, concatenate strings, copy one string to another & perform various string manipulation operations. We can perform such operations using the pre-defined functions of “string.h” header file. In order to use these string functions you must include string.h file in your C program.
+               </p>
+               <br>
+               <h3 style="color: black">Copy Below Links And Watch Lectures First :</h3>
+               <br>
+               <h4 style="color:blueviolet">1. String In  C Part 1: https://youtu.be/Zs6eQaqMsgk</h4>
+               <h4 style="color:blueviolet">2. String In  C Part 2: https://youtu.be/AW3m7kdWvI8</h4>
+               <h4 style="color:blueviolet">3. String In  C Part 3: https://youtu.be/9633Qh2E9H8</h4>
+               <br>
+               </p>
+               <br>
+               <h3 style="color:black">Defining strings:</h3>
+               <p>
+                  Strings in C are actually arrays of characters. Although using pointers in C is an advanced subject, fully explained later on, we will use pointers to a character array to define simple strings, in the following manner:
+                  <br> <br>
+                  <span style="background-color: lightblue">char * name = "John Smith";  </span>  <br>
+                  This method creates a string which we can only use for reading. If we wish to define a string which can be manipulated, we will need to define it as a local character array:
+                  <br> <br>    
+                  <span style="background-color: lightblue">char name[] = "John Smith";  </span>  <br>
+                  This notation is different because it allocates an array variable so we can manipulate it. The empty brackets notation [] tells the compiler to calculate the size of the array automatically. This is in fact the same as allocating it explicitly, adding one to the length of the string: <br>
+                  <br>
+                  <span style="background-color: lightblue">
+                  char name[] = "John Smith"; <br>
+                  /* is the same as */ <br>
+                  char name[11] = "John Smith";  <br>   
+                  </span>  <br> <br>
+                  The reason that we need to add one, although the string John Smith is exactly 10 characters long, is for the string termination: a special character (equal to 0) which indicates the end of the string. The end of the string is marked because the program does not know the length of the string - only the compiler knows it according to the code. <br>
+               </p>
+               <h3 style="color:black">String Length :</h3>
+               <p>
+                  The function strncmp compares between two strings, returning the number 0 if they are equal, or a different number if they are different. The arguments are the two strings to be compared, and the maximum comparison length. There is also an unsafe version of this function called strcmp, but it is not recommended to use it. For example: <br>
+                  <br>
+               <pre><code class="  language-c"><span class="token keyword">
+                        char</span> <span class="token operator">*</span> name <span class="token operator">=</span> <span class="token string">"John"</span><span class="token punctuation">;</span>
+
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">strncmp</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> <span class="token string">"John"</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello, John!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"You are not John. Go away.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                        </code></pre>
+               </p>
+               <h3 style="color:black">String comparison :</h3>
+               <p>
+                  The for loop causes the process of asking for and receiving a student’s marks from the user to be repeated 30 times. The first time through the loop, i has a value 0, so the scanf() function will cause the value typed to be stored in the array element marks[0], the first element of the array. This process will be repeated until i becomes 29. This is last time through the loop, which is a good thing, because there is no array element like marks[30].
+                  <br> <br> 
+                  In scanf() function, we have used the "address of" operator (&) on the element marks[i] of the array. In so doing, we are passing the address of this particular array element to the scanf() function, rather than its value; which is what scanf() requires.
+                  <br> <br>
+               <pre><code class="  language-c"><span class="token keyword">
+                        for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;=</span> <span class="token number">29</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> 
+                        <span class="token punctuation">{</span> 
+                            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\nEnter marks "</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+                            <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>marks<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+                        <span class="token punctuation">}</span>
+                        <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+               </p>
+               <h3 style="color:black"> String Concatenation :</h3>
+               <p>
+                  The function 'strncat' appends first n characters of src string string to the destination string where n is min(n,length(src)); The arguments passed are destination string, source string, and n - maximum number of characters to be appended. For Example:
+                  <br> <br>
+               <pre><code class="  language-c"><span class="token keyword">
+                    char</span> dest<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"Hello"</span><span class="token punctuation">;</span>
+                    <span class="token keyword">char</span> src<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"World"</span><span class="token punctuation">;</span>
+                    <span class="token function">strncat</span><span class="token punctuation">(</span>dest<span class="token punctuation">,</span>src<span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span>dest<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token function">strncat</span><span class="token punctuation">(</span>dest<span class="token punctuation">,</span>src<span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span>dest<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    </code></pre>
+               </p>
+               <h4 style="color: blueviolet">Lets Do Some exercises on Strings  dont copy code from google :</h4>
+               <br>
+               <h5>
+                  1. C Program to Find the Frequency of Characters in a String . <br> <br>
+                  Input :
+                  Enter a string: This website is awesome. <br>
+                  Enter a character to find the frequency: e  <br> <br>
+                  Output : <br>
+                  Frequency of e = 4 <br>
+               </h5>
+               <br><br>
+               <h5>2. C Program to Sort Elements in Lexicographical Order (Dictionary Order) <br>
+                  <br> 
+                  Enter 5 words: <br> 
+                  C <br>
+                  Java
+                  <br>
+                  Python
+                  <br>
+                  JavaScript
+                  <br>
+                  PHP <br> <br>
+                  Output In lexicographical order: <br> <br>
+                  C <br>
+                  Java <br>
+                  JavaScript <br>
+                  PHP <br>
+                  Python <br> 
+               </h5>
+               <br>
+               <h5>3.  Write a program in C to separate the individual characters from a string.
+                  <br> <br>
+                  Input : ccatcracker  <br>
+                  <br> 
+                  Output : <br>
+                  c c a t c r a c k e r <br>
+               </h5>
+               <br><br>
+               <h5>4.  Write a program in C to count total number of vowel or consonant in a string.
+                  <br> <br>
+                  Input : Welcome to ccatcracker  <br>
+                  <br> 
+                  Output : <br> <br>
+                  The total number of vowel in the string is : 7 <br>
+                  The total number of consonant in the string is : 13  <br>
+               </h5>
+               <br><br>
+               <h4>Note : If you have any doubts feel free to contact us If You Didnt understand any concept ..</h4>
+           
+            <a  style="margin-left: 60%"  href="{% url 'Structure-In-C-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Day-7</a>
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

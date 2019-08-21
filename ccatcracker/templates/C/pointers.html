@@ -1,0 +1,329 @@
+{% extends 'base_1.html' %}
+{% block title %} Pointers - Pointer to Function | C Language Tutorial {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'Structure-In-C-Tutorial' %}">
+               Previous</a>
+            </li>
+            <li class="breadcrumb-item active"> C Language</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:black">Pointers in C Programming   : </h3>
+               <p >
+                  Very Very important topic for exam if you know pointers you can solve 40% exam questions very easily so dont miss anything practice too much . <br>
+                  In simple words, a pointer is an address. It is a derived data type that stores the memory address. A pointer can also be used to refer another pointer, function. A pointer can be incremented/ decremented, i.e., to point to the next/ previous memory location.
+                  <br>
+               </p>
+               <br>
+               <h3 style="color: black">Copy Below Links And Watch Lectures First :</h3>
+               <br>
+               <h4 style="color:blueviolet">1. Pointers In  C Part 1: https://youtu.be/sY-s7O0FiYE</h4>
+               <h4 style="color:blueviolet">2. Pointers In  C Part 2: https://youtu.be/Q_NQ9nikUOc</h4>
+               <h4 style="color:blueviolet">3. Pointers In  C Part 3: https://youtu.be/sj0g6rn-RSk</h4>
+               <h4 style="color:blueviolet">3. Pointers In  C Part 4:  https://youtu.be/82NrXp8RR0k</h4>
+               <br>
+               </p>
+               <br>
+               <h3 style="color:black">How does Pointer Work? :</h3>
+               <p>
+                  If we declare a variable v of type int, v will actually store a value. <br>
+                  <br>
+                  <span style="background-color: lightgray">int v = 0</span> 
+                  <br> <br>
+                  v is equal to zero now.
+                  <br>
+                  However, each variable, apart from value, also has its address (or, simply put, where it is located in the memory). The address can be retrieved by putting an ampersand (&) before the variable name.
+                  <span style="background-color: lightgray">&v</span> 
+                  <br> <br>
+                  If you print the address of a variable on the screen, it will look like a totally random number (moreover, it can be different from run to run).
+                  <br> <br>
+                  Let's try this in practice.<br> <br>
+               <pre>
+                            int main()
+                            {
+                                int v =0 ;
+                                printf("%d\n",&v);
+                                return 0;
+                            }
+                        </pre>
+               <br><br>
+               The output of this program is -480613588.
+               <br>
+               Now, what is a pointer? Instead of storing a value, a pointer will y store the address of a variable.
+               Int *y = &v;
+               </p>
+               <h3 style="color:black">Declaring a pointer :</h3>
+               <p>
+                  The pointer in c language can be declared using * (asterisk symbol). It is also known as indirection pointer used to dereference a pointer. <br>
+                  int *a;//pointer to int  <br><br>
+                  char *c;//pointer to char  <br> <br>
+                  Let's see the pointer example as explained for the above figure. <br>
+                  <br>
+               <pre>
+                     <div><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="datatypes">int</span><span>&nbsp;main(){&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;number=50;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="datatypes">int</span><span>&nbsp;*p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>p=&amp;number;<span class="comment">//stores&nbsp;the&nbsp;address&nbsp;of&nbsp;number&nbsp;variable&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>printf(<span class="string">"Address&nbsp;of&nbsp;p&nbsp;variable&nbsp;is&nbsp;%x&nbsp;\n"</span><span>,p);&nbsp;</span><span class="comment">//&nbsp;p&nbsp;contains&nbsp;the&nbsp;address&nbsp;of&nbsp;the&nbsp;number&nbsp;therefore&nbsp;printing&nbsp;p&nbsp;gives&nbsp;the&nbsp;address&nbsp;of&nbsp;number.&nbsp;&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>printf(<span class="string">"Value&nbsp;of&nbsp;p&nbsp;variable&nbsp;is&nbsp;%d&nbsp;\n"</span><span>,*p);&nbsp;</span><span class="comment">//&nbsp;As&nbsp;we&nbsp;know&nbsp;that&nbsp;*&nbsp;is&nbsp;used&nbsp;to&nbsp;dereference&nbsp;a&nbsp;pointer&nbsp;therefore&nbsp;if&nbsp;we&nbsp;print&nbsp;*p,&nbsp;we&nbsp;will&nbsp;get&nbsp;the&nbsp;value&nbsp;stored&nbsp;at&nbsp;the&nbsp;address&nbsp;contained&nbsp;by&nbsp;p.&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">return</span><span>&nbsp;0;&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include&lt;stdio.h&gt;
+                        int main(){
+                        int number=50;  
+                        int *p;    
+                        p=&amp;number;//stores the address of number variable  
+                        printf("Address of p variable is %x \n",p);  
+                        printf("Value of p variable is %d \n",*p); 
+                        return 0;
+                        }  
+                        </textarea></div>
+                        </pre>
+               <br> <br>
+               Output :
+               <pre>
+                            Address of number variable is fff4
+                            Address of p variable is fff4
+                            Value of p variable is 50
+                    </pre>
+               </p>
+               <h3 style="color:black">Reference operator (&) and Dereference operator (*) :</h3>
+               <p>
+                  & is called reference operator. It gives you the address of a variable.
+                  <br><br>
+                  Likewise, there is another operator that gets you the value from the address, it is called a dereference operator  *.
+                  <br><br>
+                  Below example clearly demonstrates the use of pointers, reference operator and dereference operator.
+                  <br><br>
+                  Note: The * sign when declaring a pointer is not a dereference operator. It is just a similar notation that creates a pointer.
+                  <br><br>
+               <h4>Example: How Pointer Works?</h4>
+               <br> <br> 
+               <pre>
+                                   # include stdio 
+                                    int main()
+                                    {
+                                       int* pc, c;
+                                       
+                                       c = 22;
+                                       printf("Address of c: %u\n", &c);
+                                       printf("Value of c: %d\n\n", c);
+                                       
+                                       pc = &c;
+                                       printf("Address of pointer pc: %u\n", pc);
+                                       printf("Content of pointer pc: %d\n\n", *pc);
+                                       
+                                       c = 11;
+                                       printf("Address of pointer pc: %u\n", pc);
+                                       printf("Content of pointer pc: %d\n\n", *pc);
+                                       
+                                       *pc = 2;
+                                       printf("Address of c: %u\n", &c);
+                                       printf("Value of c: %d\n\n", c);
+                                       return 0;
+                                    }
+                    </pre>
+               <h4>Output :</h4>
+               <pre>
+                            Address of c: 2686784
+                            Value of c: 22
+                            
+                            Address of pointer pc: 2686784
+                            Content of pointer pc: 22
+                            
+                            Address of pointer pc: 2686784
+                            Content of pointer pc: 11
+                            
+                            Address of c: 2686784
+                            Value of c: 2
+                    </pre>
+               <br>
+               <h4>Explanation of the program : </h4>
+               <br>
+               <span style="background-color: lightgray">1. int* pc, c;</span> <br>
+               Here, a pointer pc and a normal variable c, both of type int, is created. <br>
+               Since pc and c are not initialized at first, pointer pc points to either no address or a random address. And, variable c has an address but contains a random garbage value.
+               <br> <br>
+               <span style="background-color: lightgray">2. c = 22;</span> <br>
+               This assigns 22 to the variable c, i.e., 22 is stored in the memory location of variable c.
+               Note that, when printing &c (address of c), we use %u rather than %d since address is usually expressed as an unsigned integer (always positive).
+               <br> <br>
+               <span style="background-color: lightgray">3. pc = &c;</span> <br> <br>
+               his assigns the address of variable c to the pointer pc. <br>
+               You see the value of pc is same as the address of c and the content of pc is 22 as well.
+               <br> <br>
+               <span style="background-color: lightgray">4. c = 11;</span> <br> <br>
+               This assigns 11 to variable c. <br>
+               Since, pointer pc points to the same address as c, value pointed by pointer pc is 11 as well.
+               <br> <br>
+               <span style="background-color: lightgray">5. *pc = 2;;</span> <br> <br>
+               This change the value at the memory location pointed by pointer pc to 2. <br>
+               the address of the pointer pc is same as the address of c, value of c is also changed to 2. <br> <br>
+               <h4>Common mistakes when working with pointers :</h4>
+               Suppose, you want pointer pc to point to the address of c. Then, <br>
+               <br> 
+               <pre>
+                            int c, *pc;
+                            // Wrong! pc is address whereas, 
+                            // c is not an address.
+                            pc = c;  
+                            // Wrong! *pc is the value pointed by address whereas, 
+                            // &c is an address.
+                            *pc = &c; 
+                            // Correct! pc is an address and, 
+                            // &c is also an address.
+                            pc = &c; 
+                            // Correct! *pc is the value pointed by address and, 
+                            // c is also a value (not address).
+                            *pc = c;
+                    </pre>
+               </p>
+               <h3 style="color:black">C Pointers and Arrays:</h3>
+               <p>
+                  Now, check this simple program. This program prints address of each individual element of an array.
+                  <br> <br>
+               <pre>
+                                    #include 
+                                    int main()
+                                    {
+                                       int x[4];
+                                       int i;
+                                       for(i = 0; i < 4; ++i)
+                                       {
+                                          printf("&x[%d] = %u\n", i, &x[i]);
+                                       }
+                                       printf("Address of array x: %u", x);
+                                       return 0;
+                                    }
+                    </pre>
+               <h4>Output :</h4>
+               <pre>
+                            &x[0] = 1450734448
+                            &x[1] = 1450734452
+                            &x[2] = 1450734456
+                            &x[3] = 1450734460
+                            Address of array x: 1450734448
+                    </pre>
+               There is a difference of 4 bytes between two consecutive elements of array x. It is because the size of int is 4 bytes (on our compiler).
+               <br> <br>
+               Notice that, printing &x[0] and x gave us the same result.
+               <br> <br>
+               <h4>Relation between Arrays and Pointers : </h4>
+               Connsider an array : <br>
+               <br>
+               <pre>
+                            int x[4];
+                    </pre>
+               <br>
+               From the above example, it's clear that x and &x[0] both contains the same address. Hence, &x[0] is equivalent to x.
+               <br>
+               And, x[0] is equivalent to *x. <br>
+               Similarly,<br><br>
+               &x[1] is equivalent to x+1 and x[1] is equivalent to *(x+1).<br>
+               &x[2] is equivalent to x+2 and x[2] is equivalent to *(x+2).<br><br>
+               ...
+               Basically, &x[i] is equivalent to x+i and x[i] is equivalent to *(x+i).<br>
+               <h4>Pointers and Arrays :</h4>
+               <br>
+               <pre>
+                                    #include <stdio.h>
+                                    int main()
+                                    {
+                                      int i, x[6], sum = 0;
+                                      printf("Enter 6 numbers: ");
+                                      for(i = 0; i < 6; ++i)
+                                      {
+                                          scanf("%d", x+i);
+                                          sum += *(x+i);
+                                      }
+                                      printf("Sum = %d", sum);
+                                      return 0;
+                                    }
+                    </pre>
+               <br>
+               <h4>Output :</h4>
+               <br> 
+               <pre>
+                            Enter 6 numbers:  2
+                            3
+                            4
+                            4
+                            12
+                            4
+                           Sum = 29 
+                    </pre>
+               <br>
+               In most contexts, array names "decays" to pointers. In simple words, array names are converted to pointers. That's the reason why you can use pointer with the same name as array to manipulate elements of the array. However, you should remember that pointers and arrays are not same.
+               </p>
+               <h4 style="color: blueviolet">Lets Do Some exercises on Pointers  dont copy code from google :</h4>
+               <br>
+               <h5>
+                  1.Write a program in C to store n elements in an array and print the elements using pointe. <br> <br>
+                  <pre>
+                                Input  Data : 
+                                Input the number of elements to store in the array :5 
+                                Input 5 number of elements in the array : 
+                                element - 0 : 5 
+                                element - 1 : 7 
+                                element - 2 : 2 
+                                element - 3 : 9 
+                                element - 4 : 8 
+                                
+                                Output :
+                                
+                                 The elements you entered are :                                                                               
+                                 element - 0 : 5                                                                                              
+                                 element - 1 : 7                                                                                              
+                                 element - 2 : 2                                                                                              
+                                 element - 3 : 9                                                                                              
+                                 element - 4 : 8   
+                           </pre>
+               </h5>
+               <br><br>
+               <h5>
+                  2.  Write a program in C to print all permutations of a given string using pointers. <br>
+                  <pre>
+                            The permutations of the abcd  string are  :                                                                         
+                            abcd  abdc  acbd  acdb  adcb  adbc  
+                            bacd  badc  bcad  bcda  bdca  bdac  
+                            cbad  cbda  cabd  cadb  cdab  cdba  dbca 
+                            dbac  dcba  dcab  dacb  dabc
+                     </pre>
+               </h5>
+               <br>
+               <h4>Note : If you have any doubts feel free to contact us If You Didnt understand any concept ..</h4>
+          
+            <a  style="margin-left: 60%"  href="{% url 'Memory-Allocation-In-C-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Day-9</a>
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

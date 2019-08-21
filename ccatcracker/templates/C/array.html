@@ -1,0 +1,218 @@
+
+{% extends 'base_1.html' %}
+{% block title %} C Array  | C Language Tutorial {% endblock %}
+
+{% block content %}
+<style>
+        p {
+          display: block;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          margin-left: 0;
+          margin-right: 0;
+          font-style: italic;
+          font-size: 15px;
+          
+        }
+        pre{
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            color: rgba(0,0,0,.9);
+            font-family: Consolas,monospace;
+            margin-bottom: 10px;
+            overflow: auto;
+            padding: 10px;
+            margin: 0px 0px 10px;
+            text-align: left;
+            
+
+        }
+        </style>
+    <!-- Breadcrumb -->
+    <section id="bc" class="mt-3">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'control_statement' %}">
+                 Previous</a>
+              </li>
+              <li class="breadcrumb-item active"> C Language</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+     
+    </div>
+    <section id="about" class="py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+             
+              
+                <h3 style="color:black">Array in C Language   : </h3>
+
+                <p >
+
+                        Arrays are structures that hold multiple variables of the same data type. The first element in the array is numbered 0, so the last element is 1 less than the size of the array. An array is also known as a subscripted variable. Before using an array its type and dimension must be declared.
+                </p>
+                <br>
+             
+                <h3 style="color: black">Copy Below Links And Watch Lectures First :</h3> <br>
+                 
+                <h4 style="color:blueviolet">1. Array In  C Part 1: https://youtu.be/SPuS9UJF1lo</h4>
+                <h4 style="color:blueviolet">2. Array In  C Part 2: https://youtu.be/e22OJ6YkTRY</h4>
+                <h4 style="color:blueviolet">3. Array In  C Part 3: https://youtu.be/tCYlG065CxM</h4> <br>
+                </p>
+                 <br>
+                <h3 style="color:black">Array Declaration :</h3> 
+                <p>
+                       
+                        Like other variables an array needs to be declared so that the compiler will know what kind of an array and how large an array we want. <br>
+                        <pre ><code class="  language-c"><span class="token keyword">int</span> marks<span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span> <span class="token punctuation">;</span>
+                            <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                            <br>
+                            Here, int specifies the type of the variable, just as it does with ordinary variables and the word marks specifies the name of the variable. The [30] however is new. The number 30 tells how many elements of the type int will be in our array. This number is often called the "dimension" of the array. The bracket ( [ ] ) tells the compiler that we are dealing with an array.
+                            <br><br>
+                            Let us now see how to initialize an array while declaring it. Following are a few examples that demonstrate this.
+                            
+                            <br>
+                            <pre><code class="  language-c"><span class="token keyword">
+                                int</span> num<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token punctuation">}</span> <span class="token punctuation">;</span> 
+                                <span class="token keyword">int</span> n<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token punctuation">}</span> <span class="token punctuation">;</span> 
+                                <span class="token keyword">float</span> press<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">12.3</span><span class="token punctuation">,</span> <span class="token number">34.2</span> <span class="token operator">-</span><span class="token number">23.4</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">11.3</span> <span class="token punctuation">}</span> <span class="token punctuation">;</span>
+                                <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+                </p>
+
+               <h3 style="color:black">2. Accessing Elements of an Array :</h3> 
+               <p>
+                    Once an array is declared, let us see how individual elements in the array can be referred. This is done with subscript, the number in the brackets following the array name. This number specifies the element’s position in the array. All the array elements are numbered, starting with 0. Thus, marks [2] is not the second element of the array, but the third. <br>
+                    <pre class="line-numbers  language-c"><code class="  language-c"><span class="token keyword">int</span> valueOfSecondElement <span class="token operator">=</span> marks<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                        <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>   
+
+              </p>
+
+              <h3 style="color:black">3. Entering Data into an Array :</h3> 
+              <p>
+                
+                    The for loop causes the process of asking for and receiving a student’s marks from the user to be repeated 30 times. The first time through the loop, i has a value 0, so the scanf() function will cause the value typed to be stored in the array element marks[0], the first element of the array. This process will be repeated until i becomes 29. This is last time through the loop, which is a good thing, because there is no array element like marks[30].
+                    <br> <br> 
+                    In scanf() function, we have used the "address of" operator (&) on the element marks[i] of the array. In so doing, we are passing the address of this particular array element to the scanf() function, rather than its value; which is what scanf() requires.
+                    <br> <br>
+                    <pre><code class="  language-c"><span class="token keyword">
+                        for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;=</span> <span class="token number">29</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> 
+                        <span class="token punctuation">{</span> 
+                            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\nEnter marks "</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+                            <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>marks<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+                        <span class="token punctuation">}</span>
+                        <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+            
+            
+             </p>
+             
+             <h3 style="color:black"> 4. Reading Data from an Array :</h3> 
+             <p>
+                    The balance of the program reads the data back out of the array and uses it to calculate the average. The for loop is much the same, but now the body of the loop causes each student’s marks to be added to a running total stored in a variable called sum. When all the marks have been added up, the result is divided by 30, the number of students, to get the average.
+
+                    <br> <br>
+                    <pre><code class="  language-c"><span class="token keyword">
+                        for</span> <span class="token punctuation">(</span> i <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">29</span> <span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span>
+                        sum <span class="token operator">=</span> sum <span class="token operator">+</span> marks<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token punctuation">;</span> 
+                    avg <span class="token operator">=</span> sum <span class="token operator">/</span> <span class="token number">30</span> <span class="token punctuation">;</span> 
+                    printf <span class="token punctuation">(</span> <span class="token string">"\nAverage marks = %d"</span><span class="token punctuation">,</span> avg <span class="token punctuation">)</span> <span class="token punctuation">;</span>
+                    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+           
+            </p>
+            
+            <h3 style="color:black">5. Advantages of using an Array :</h3> 
+            <p>
+            
+                    1. Similar data types can be grouped together under one name. <br>
+                    2. for ex.- int a=1;int b=2;int c=3;int d=4;int e=5; could be represented as- int X[5]={1,2,3,4,5};
+                    <br>
+                    3. It allows random accessing of elements using indices which saves a huge time.
+                    <br>
+                     
+                    4. It can be used to implement other data structures like- stack,queues etc. <br>
+                    5. We can represent 2-D matrices using array. <br>
+            
+            </p>
+
+            <h3 style="color:black">Multidimensional arrays :</h3> 
+               <p>
+                    The simplest form of multidimensional array is the two-dimensional array. A two-dimensional array is, in essence, a list of one-dimensional arrays. To declare a two-dimensional integer array of size [x][y], you would write something as follows −
+                    <br> <br>
+                    type arrayName [x][y]; <br>
+                    Multidimensional arrays may be initialized by specifying bracketed values for each row. Following is an array with 3 rows and each row has 4 columns.
+                    <br> <br>
+                    <pre ><code class="  language-c"><span class="token keyword">
+                        int</span> a<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>  
+                        <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span> <span class="token punctuation">,</span>   <span class="token comment">/*  initializers for row indexed by 0 */</span>
+                        <span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">}</span> <span class="token punctuation">,</span>   <span class="token comment">/*  initializers for row indexed by 1 */</span>
+                        <span class="token punctuation">{</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">}</span>   <span class="token comment">/*  initializers for row indexed by 2 */</span>
+                     <span class="token punctuation">}</span><span class="token punctuation">;</span>
+                     <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+              
+                    <br> <br>
+                    The nested braces, which indicate the intended row, are optional. The following initialization is equivalent to the previous example −
+                    <br> <br>
+                    <span style="background-color:lightgray">int a[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11};</span> 
+                    </p>
+               
+                    <h4 style="color: blueviolet">Lets Do Some exercises on Arrays  dont copy code from google :</h4><br>
+                    
+                    <h5>1. Write a program in C to read n number of values in an array and display it in reverse order. <br>
+                        Input Data :  <br> <br>
+                            Input the number of elements to store in the array :3  <br> 
+                            Input 3 number of elements in the array : (taking input from user ) <br> <br>
+                            element - 0 : 2  <br>
+                            element - 1 : 5  <br>
+                            element - 2 : 7  <br> <br>
+                            Expected Output :  <br> <br>
+                            The values store into the array are :  <br> 
+                            2 5 7  <br>
+                            The values store into the array in reverse are :  <br>
+                            7 5 2  <br>
+                                                
+                    
+                    
+                    </h5> <br><br>
+                    <h5>2. Write a program in C to sort elements of array in ascending order. <br>
+                        <br> Ex . <br>
+                        Input Data : <br>
+                        Input the size of array : 5 <br>
+                        Input 5 elements in the array :  <br><br>
+                        element - 0 : 2 <br>
+                        element - 1 : 7 <br>
+                        element - 2 : 4 <br>
+                        element - 3 : 5 <br>
+                        element - 4 : 9 <br><br>
+                        Expected Output : <br><br>
+                        Elements of array in sorted ascending order: <br> 
+                        2 4 5 7 9
+                    </h5><br>
+                    <h5>3. Write a program in C to find the sum of all elements of the array .
+                        
+                    </h5><br><br>
+
+                    
+
+
+
+             <h4>Note : If you have any doubts feel free to contact us If You Didnt understand any concept ..</h4>
+           
+            <a  style="margin-left: 60%"  href="{% url 'String-In-C-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Day-6</a>
+   
+            </div>
+          </div>
+         
+        </div>
+      </section>
+      
+
+   
+        
+</div>
+
+{% endblock %}

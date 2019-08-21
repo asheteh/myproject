@@ -1,0 +1,257 @@
+{% extends 'base_1.html' %}
+{% block title %} Classes In C++ | Object Oriented Programming | C ++ Tutorial | {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: green;
+   }
+   .shead
+   {
+       color: green;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> C++ Programming</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">C++ Classes/Objects  : </h3> <br>
+               <p >
+                    Everything in C++ is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.
+                    <br> <br>
+                    Attributes and methods are basically variables and functions that belongs to the class. These are often referred to as "class members".
+                    <br> <br>
+                    A class is a user-defined data type that we can use in our program, and it works as an object constructor, or a "blueprint" for creating objects.   
+                    <br> <br>
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+                <h5 class="shead">1. Class In C++ : https://youtu.be/GOYEMyCoHCE</h5>
+                <h5 class="shead">2. Class In C++ : https://youtu.be/QmZuerApkOk</h5>
+                <h5 class="shead">3. Class In C++ : https://youtu.be/cLd1IwWCXZc</h5>
+                <h5 class="shead">4. Class In C++ : https://youtu.be/ss7NJ1r6XTA</h5>
+                <h5 class="shead">5. Class In C++ : https://youtu.be/LGGm8hqn9Z4</h5>
+                <h5 class="shead">6. Class In C++ : https://youtu.be/dAKEmNxicDU</h5>
+                <h5 class="shead">7. Class In C++ : https://youtu.be/FJA1Dnkurjo</h5>
+                <h5 class="shead">8. Class In C++ : https://youtu.be/3S_Dxf4e8Lw</h5>
+                
+            
+             
+               <br>
+            <p>
+            
+                <h4 style="color:black">How to define a class in C++?  :</h4> <br>
+                A class is defined in C++ using keyword class followed by the name of class.
+                <br> <br>
+                The body of class is defined inside the curly brackets and terminated by a semicolon at the end.
+                
+                <br> <br>
+                <pre>
+                        lass className
+                        {
+                        // some data
+                        // some functions
+                        };
+                </pre>
+                <br>
+               
+                Lets take an real programming example : <br> <br>
+                <pre>
+                   class some
+                   {
+                       private:
+                           int data1;
+                           float data2;  
+                       public:  
+                           void function1()
+                           {   data1 = 2;  } 
+                           float function2()
+                           { 
+                               data2 = 3.5;
+                               return data2;
+                           }
+                    };
+                </pre>
+                <br> <br>
+                So we have defined our class with name some <br><br>
+                data1 and data2 and the data members of some class  <br> <br>
+                function1() and function2()  are the member functions of some class .  <br> <br>
+
+                <h4 class="heading">What is Private and Public here ? :</h4>
+                The private keyword makes data and functions private. Private data and functions can be accessed only from inside the same class.
+                <br> <br>
+                The public keyword makes data and functions public. Public data and functions can be accessed out of the class.
+                <br> <br>
+                Here, data1 and data2 are private members where as function1() and function2() are public members.
+                <br> <br>
+                If you try to access private data from outside of the class, compiler throws error. This feature in OOP is known as data hiding. 
+                <br> <br>
+                That means you cant access data members outside class if they are declard as private . <br>
+
+                <h4 class="heading">C++ Objects : </h4>
+                When class is defined, only the specification for the object is defined; no memory or storage is allocated.(Remember this may be your objective question)
+                <br><br>
+                To use the data and access functions defined in the class, you need to create objects.
+                <br> <br>
+        <pre>
+            class Test
+            {
+                private:
+                    int data1;
+                    float data2;  
+                public:  
+                    void function1()
+                    {   data1 = 2;  } 
+                    float function2()
+                    { 
+                        data2 = 3.5;
+                        return data2;
+                    }
+               };
+            int main()
+            {
+                Test o1, o2;
+            }
+        </pre>
+        <br> <br>
+        Here ,two objects o1 and o2 of Test class are created.
+        <br> <br>
+        <h5 class="shead">How to access data member and member function in C++? </h5>
+        Now we have created o1,o2 as our objects so by using this objects we can call or access functions . <br>
+        <br>
+        <pre>
+                o2.function1(); 
+                // This will call function1
+        </pre> <br><br>
+        Similarly, the data member can be accessed as: <br> <br>
+        <pre>
+                o1.data2 = 5.5; // here we are assign 5.5 value to above data2 variable using object . <br>
+        </pre>
+        <br> <br>
+        It is important to note that, the private members can be accessed only from inside the class.
+        <br> <br>
+        So, you can use o2.function1(); from any function or class in the above example. However, the code o1.data2 = 5.5; should always be inside the class Test.
+        <br> <br>
+        Lets take an simple coding example to understand : <br>
+        <pre>
+                // Program to illustrate the working of objects and class in C++ Programming
+                #include &lt;iostream>
+                using namespace std;
+                class Test
+                {
+                    private:
+                        int data1;
+                        float data2;
+                    public:
+                       
+                       void insertIntegerData(int d)
+                       {
+                          data1 = d;
+                          cout << "Number: " << data1;
+                        }
+                       float insertFloatData()
+                       {
+                           cout << "\nEnter data: ";
+                           cin >> data2;
+                           return data2;
+                        }
+                };
+                 int main()
+                 {
+                      Test o1, o2;
+                      float secondDataOfObject2;
+                      o1.insertIntegerData(12);
+                      secondDataOfObject2 = o2.insertFloatData();
+                      cout << "You entered " << secondDataOfObject2;
+                      return 0;
+                 }
+        </pre>
+        <br> <br>
+        <h4 class="heading">Output : </h4>
+        <pre>
+                Number: 12
+                Enter data: 23.3
+                You entered 23.3
+        </pre>
+        <br><br>
+        In the above program, two data members data1 and data2 and two member functions insertIntegerData() and insertFloatData() are defined under Test class.
+        <br><br>
+        Two objects o1 and o2 of the same class are declared.
+        <br><br>
+        The insertIntegerData() function is called for the o1 object using: <br> <br>
+        Then, the insertFloatData() function for object o2 is called and the return value from the function is stored in variable secondDataOfObject2
+        <br> <br>
+        So remember one point we can create multiple objects for same class and use for different purpose . <br>
+        <br>
+        <h4 style="color: black">Lets do some Assignments  : </h4><br>
+        <h5 class="shead">1. Write a program in C++ to swap two numbers ? create swap function and call it from main function </h5>
+        <h5 class="shead">2.  Write a program in C++ to print the following pattern ?</h5>
+        <pre>
+                xxxxx                                                                                                        
+                x     x       x        x                                                                                      
+                x             x        x                                                                                      
+                x          xxxxxxx  xxxxxxx                                                                                   
+                x             x        x                                                                                      
+                x     x       x        x                                                                                      
+                xxxxx  
+        </pre>
+        <h5 class="shead">3. Write a C++ program to generate fibonacci series . </h5>
+        <h5 class="shead">4. Write  C++ program to create class to get and print details of a student . </h5>
+        <pre>
+            Output like  :
+            Enter name: Abhijeet
+            Enter roll number: 1
+            Enter total marks outof 500: 456
+            Student details:
+            Name:Abhijeet,Roll Number:1,Total:456,Percentage:91.2
+        </pre>
+    
+    </p>
+            <br>
+           
+               <h5 style="color: green">Note : Trust me if you watch videos you will get too much benefits while doing cdac .
+                   because people gets good ranks but they dont know in cpp while doing cdac thats why i have developed this website
+                   to prepare my students in such  a way that they will perform outstanding performance in cdac so dont miss anything everything is free here . ; 
+               </h5>
+            <a  style="margin-left: 60%"  href="{% url 'pointers-in-cpp' %}" class="btn btn-secondary text-white btn-lg">Day-4</a>
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

@@ -1,0 +1,238 @@
+{% extends 'base_1.html' %}
+{% block title %} C++ Introduction | C ++ Tutorial {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> C++ Programming</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">Introduction to  C++  : </h3> <br>
+               <p >
+                    C++ is a multi-paradigm programming language that supports object-oriented programming (OOP), created by Bjarne Stroustrup in 1983 at Bell Labs, C++ is an extension(superset) of C programming and the programs are written in C language can run in C++ compilers.
+
+               </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+               <h5 style="color:green">1. Introduction to C++ : https://youtu.be/l0qvxPPISuY</h5>
+               <h5 style="color:green">1. History of C++ : https://youtu.be/2DirmQuogsY</h5>
+               
+             
+               <br>
+            <p>
+              
+            <h4 style="color:green">Why to learn C++  :</h4> <br>
+                <p>
+                        C++ is used by many programmers of different types and coming from different fields. C++ is mostly used to write device driver programs, system software, and applications that depend on direct hardware manipulation under real-time constraints. It is also used to teach the basics of object-oriented features because it is simple and is also used in the fields of research.
+                        It is used to create general systems software, drivers for various computer devices, software for servers and software for specific applications and also widely used in the creation of video games.
+                </p>
+                <br>
+                <h4 style="color:green">Advantages of C++  :</h4> <br>
+                
+                <p>
+                        C++ is a highly portable language and is often the language of choice for multi-device, multi-platform app development.                                                         <br>
+                        C++ is an object-oriented programming language and includes classes, inheritance, polymorphism, data abstraction and encapsulation.<br>
+                        C++ has a rich function library.<br>
+                        C++ allows exception handling, and function overloading which are not possible in C.<br>
+                        C++ is a powerful, efficient and fast language. It finds a wide range of applications – from GUI applications to 3D graphics for games to real-time mathematical simulations.<br>
+               
+
+                </p>
+                <h4 style="color:green">Difference between C and C++  :</h4> <br>
+                <p>
+                        <table>
+                                <tbody>
+                                <tr style="background-color: rgb(244, 244, 248);">
+                                <th>Diff No
+                                </th>
+                                <th>
+                                <b>C</b>
+                                </th>
+                                <th>
+                                <b>C++</b>
+                                </th>
+                                </tr>
+                                <tr>
+                                <td>
+                                1
+                                </td>
+                                <td>
+                                C is a structural or procedural programming language.
+                                </td>
+                                <td>
+                                C++ is an object oriented programming language.
+                                </td>
+                                </tr>
+                                <tr style="background-color: rgb(244, 244, 248);">
+                                <td>
+                               
+                                2
+                                </td>
+                                <td>
+                                Functions are the fundamental building blocks.
+                                </td>
+                                <td>
+                                Objects are the fundamental building blocks.
+                                </td>
+                                </tr>
+                                <tr style="background-color: rgb(244, 244, 248);">
+                                <td>
+                                3
+                                </td>
+                                <td>
+                                In C, the data is not secured.
+                                </td>
+                                <td>
+                                Data is hidden and can’t be accessed by external functions.
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                4
+                                </td>
+                                <td>
+                                C follows top down approach.
+                                </td>
+                                <td>
+                                C++ follows bottom up approach
+                                </td>
+                                </tr>
+                                <tr style="background-color: rgb(244, 244, 248);">
+                                <td>
+                                5
+                                </td>
+                                <td>
+                                C uses scanf() and printf() function for standard input and output.
+                                </td>
+                                <td>
+                                C++ uses cin&gt;&gt; and cout&lt;&lt; for standard input and output.
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                6
+                                </td>
+                                <td>
+                                Variables must be defined at the beginning in the function.
+                                </td>
+                                <td>
+                                Variables can be defined anywhere in the function.
+                                </td>
+                                </tr>
+                                <tr style="background-color: rgb(244, 244, 248);">
+                                <td>
+                                7
+                                </td>
+                                <td>
+                                In C, namespace feature is absent.
+                                </td>
+                                <td>
+                                In C++, namespace feature is present (we will see later).
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                8
+                                </td>
+                                <td>
+                                C is a middle level language.
+                                </td>
+                                <td>
+                                C++ is a high level language.
+                                </td>
+                                </tr>
+                                <tr style="background-color: rgb(244, 244, 248);">
+                                <td>
+                                9
+                                </td>
+                                <td>
+                                Programs are divided into modules and functions.
+                                </td>
+                                <td>
+                                Programs are divided into classes and functions.
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                10
+                                </td>
+                                <td>
+                                C&nbsp;doesn’t&nbsp;support exception handling directly. Can be done by using some other functions.
+                                </td>
+                                <td>
+                                C++ supports exception handling. Done by using try and catch block.
+                                </td>
+                                </tr>
+                                <tr style="background-color: rgb(244, 244, 248);">
+                                <td>
+                                11
+                                </td>
+                                <td>
+                                Features like function overloading and operator overloading is not<br>
+                                present.
+                                </td>
+                                <td>
+                                C++ supports function overloading and operator overloading.
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                12
+                                </td>
+                                <td>
+                                C program file is saved with .C extension.
+                                </td>
+                                <td>
+                                C++ program file is saved with .CPP extension.
+                                </td>
+                                </tr>
+                                </tbody>
+                                </table>
+                </p>
+                <br>
+               
+               <h4>Note : If you have any doubts feel free to contact us If you didnt understand any concept ..</h4>
+           
+            <a  style="margin-left: 60%"  href="{% url 'oops-in-c++' %}" class="btn btn-secondary text-white btn-lg">Day-1</a>
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

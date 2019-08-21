@@ -3,15 +3,8 @@
 
 {% block content %}
 <style>
-        p {
-          display: block;
-          margin-top: 1em;
-          margin-bottom: 1em;
-          margin-left: 0;
-          margin-right: 0;
-          font-style: italic;
-          font-size: 20px;
-        }
+      
+      
         </style>
     <!-- Breadcrumb -->
     <section id="bc" class="mt-3">
@@ -19,7 +12,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="{% url 'index' %}">
+                <a href="{% url 'intro' %}">
                   <i class="fas fa-home"></i> Home</a>
               </li>
               <li class="breadcrumb-item active"> C Language</li>
@@ -31,18 +24,8 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8">
-              <h4>Learning Agenda  : </h4>
-              <p class="lead">Here I have Created 20 Pages for C preparation Please Read Instructions Carefully :</p>
-             
-              <p class="mt-4">
-                  <h5>1.There Are Almost 70 Video Lectures Which I will Provide Here .</h5>
-                  <h5>2.On Each Page I have Explain Theory .</h5>
-                  <h5>3.First Copy Links and Watch Video Which I Have Mention On Each Page .</h5>
-                  <h5>4.After Video Completed Come to same Page And Read Thoery Very Carefully Which Will help for CCAT Exam . </h5>
-                  <h5>5.Hope You Understand Learning Agenda Simply First Watch Video for each Page and Then Read Theory .</h5>
-                  <h5>6.Once All Lectures and Theory Completed Then Start Practice of coding on our ccat/questions section .</h5>
-                  <h5>7. Lets Start Try to complete This 20 Pages In 15 Days .. </h5>
-              </p>
+              
+            
             </div>
             
             </div>
@@ -53,37 +36,36 @@
     <section id="about" class="py-4">
         <div class="container">
           <div class="row">
-            <div class="col-md-8">
-             
-                <div style=" background-color: white; width: 800px;
-                border: 0.2px solid white;
-                padding: 50px;
-                margin: 20px; ">
-                <h2 >Learn C Introduction : </h2>
+              <div class="col-md-8">
+              
+           
+               
+                <h3 style="color: green">Learn C Introduction : </h3>
 
                 <p >C is a powerful general-purpose programming language. It is fast, portable and available in all platforms.
                     is a procedural programming language. It was initially developed by Dennis Ritchie between 1969 and 1973. It was mainly developed as a system programming language to write an operating system. The main features of C language include low-level access to memory, a simple set of keywords, and clean style, these features make C language suitable for system programmings like an operating system or compiler development.
                     Many later languages have borrowed syntax/features directly or indirectly from C language. Like syntax of Java, PHP, JavaScript and many other languages are mainly based on C language. C++ is nearly a superset of C language (There are few programs that may compile in C, but not in C++).
                 </p>
              
-                <h3 style="color: green">Copy Below Links And Watch Lectures First :</h3>
+                <h4 style="color: green">Copy Below Links And Watch Lectures First :</h4>
                  
-                <h4 style="color: dimgray">1. Introduction-Part-1 : https://youtu.be/si-KFFOW2gw</h4>
-                <h4 style="color: dimgray">2. Introduction-Part-2 : https://youtu.be/sB7YGSbAIvQ</h4>
+                <h4 style="color: dimgray;margin-left: 10%;">1. Introduction-Part-1 : https://youtu.be/si-KFFOW2gw</h4>
+                <h4 style="color: dimgray;margin-left: 10%;">2. Introduction-Part-2 : https://youtu.be/sB7YGSbAIvQ</h4>
 
                 <p >
                         As we studied earlier, 'C' is a base language for many programming languages. So, learning 'C' as the main language will play an important role while studying other programming languages. It shares the same concepts such as data types, operators, control statements and many more. 'C' can be used widely in various applications. It is a simple language and provides faster execution. There are many jobs available for a 'C' developer in the current market.
                     
                 </p>
-                <h3 style="color: green"> How 'C' Works? :</h3>
+                <h3 style="color: green;margin-left: 10%"></h3> How 'C' Works? :</h3>
                 <p>
                         C is a compiled language. A compiler is a special tool that compiles the program and converts it into the object file which is machine readable. After the compilation process, the linker will combine different object files and creates a single executable file to run the program. 
                         Nowadays, various compilers are available online, and you can use any of those compilers. The functionality will never differ and most of the compilers will provide the features required to execute both 'C' and 'C++' programs.
                 </p>
-            </div>
+          
             <a  style="margin-left: 60%"  href="{% url 'platform' %}" class="btn btn-secondary text-white btn-lg">Day-2</a>
-   
+          
             </div>
+            
           </div>
          
         </div>

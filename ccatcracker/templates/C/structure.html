@@ -1,0 +1,320 @@
+
+{% extends 'base_1.html' %}
+{% block title %} Structures in C | C Language Tutorial {% endblock %}
+
+{% block content %}
+<style>
+        p {
+          display: block;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          margin-left: 0;
+          margin-right: 0;
+          font-style: italic;
+          font-size: 15px;
+          
+        }
+        pre{
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            color: rgba(0,0,0,.9);
+            font-family: Consolas,monospace;
+            margin-bottom: 10px;
+            overflow: auto;
+            padding: 10px;
+            margin: 0px 0px 10px;
+            text-align: left;
+            
+
+        }
+        .codeblock {
+            width: 100%;
+            margin-bottom: 8px;
+            font-family: verdana;
+            padding-left: 0;
+            border-left: 4px solid #6b5;
+            -moz-box-shadow: 6px 3px 8px #d4d4d4;
+            -webkit-box-shadow: 6px 3px 8px #d4d4d4;
+            box-shadow: 6px 3px 8px #d4d4d4;
+        }
+        </style>
+    <!-- Breadcrumb -->
+    <section id="bc" class="mt-3">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'String-In-C-Tutorial' %}">
+                 Previous </a>
+              </li>
+              <li class="breadcrumb-item active"> C Language</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+     
+    </div>
+    <section id="about" class="py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+             
+                <h3 style="color:black">Structures in C   : </h3>
+
+                <p >
+                        What is a structure? <br> <br>
+                        A structure is a user defined data type in C/C++. A structure creates a data type that can be used to group items of possibly different types into a single type.
+                        How to create a structure? <br> <br>
+                        ‘struct’ keyword is used to create a structure. Following is an example.
+                        <br> <br>
+                        <div class="container">
+                                <div><code class="keyword bold">struct</code> <code class="plain">address </code></div>
+                                <div ><code class="plain">{ </code></div>
+                                <div ><code class="undefined spaces">&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">char</code> <code class="plain">name[50]; </code></div>
+                                <div ><code class="undefined spaces">&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">char</code> <code class="plain">street[100]; </code></div>
+                                <div ><code class="undefined spaces">&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">char</code> <code class="plain">city[50]; </code></div>
+                                <div ><code class="undefined spaces">&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">char</code> <code class="plain">state[20]; </code></div>
+                                <div ><code class="undefined spaces">&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">int</code> <code class="plain">pin; </code></div>
+                                <div ><code class="plain">};</code></div>
+                                </div>
+                </p>
+                <br>
+             
+                <h3 style="color: black">Copy Below Links And Watch Lectures First :</h3> <br>
+                 
+                <h4 style="color:blueviolet">1. Structure In  C Part 1: https://youtu.be/Ranc3VvjI88</h4>
+                <h4 style="color:blueviolet">2. Structure In  C Part 2: https://youtu.be/3LQTxwKZAOY</h4>
+                <h4 style="color:blueviolet">3. Structure In  C Part 3: https://youtu.be/rhC523vMSXQ</h4> 
+                <h4 style="color:blueviolet">4. Union In  C : https://youtu.be/T976YpsV62w</h4> <br>
+                </p>
+                 <br>
+                <h3 style="color:black">What is Structure :</h3> 
+                <p>
+                        Structure in c is a user-defined data type that enables us to store the collection of different data types. Each element of a structure is called a member. Structures ca; simulate the use of classes and templates as it can store various information
+                        <br> <br>
+                        The ,struct keyword is used to define the structure. Let's see the syntax to define the structure in c.
+                        <br> <br>
+                        <div ><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="keyword">struct</span><span>&nbsp;structure_name&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;data_type&nbsp;member1;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;data_type&nbsp;member2;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;data_type&nbsp;memeberN;&nbsp;&nbsp;</span></li><li class=""><span>};&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">struct structure_name 
+                                {
+                                    data_type member1;
+                                    data_type member2;
+                                    .
+                                    .
+                                    data_type memeberN;
+                                };
+                                </textarea></div>
+                    
+                
+                </p>
+
+               <h3 style="color:black">Declaring structure variable :</h3> 
+               <p>
+                  
+                    We can declare a variable for the structure so that we can access the member of the structure easily. There are two ways to declare structure variable:
+                    <br> <br>
+                    By struct keyword within main() function <br>
+                    By declaring a variable at the time of defining the structure. <br>
+                    1st way:<br> <br>
+                    
+                    Let's see the example to declare the structure variable by struct keyword. It should be declared within the main function.
+                    <br> <br>
+                    <span style="background-color: lightgray;">
+                            struct employee   <br>
+                            {  <br>
+                                 int id;  <br>
+                                char name[50];  <br>
+                                float salary;  <br>
+                            };  <br>
+                            
+                    </span>
+                    <br>
+                    write given code inside the main() function. <br> <br>
+                    struct employee e1, e2;  <br> <br>
+                    The variables e1 and e2 can be used to access the values stored in the structure. Here, e1 and e2 can be treated in the same way as the objects in C++ and Java. <br>
+                    <br>
+                    2nd way: <br> <br>
+
+                    Let's see another way to declare variable at the time of defining the structure. <br> <br>
+                    <span style="background-color: lightgray;">
+                            struct employee   <br>
+                            {  <br>
+                                 int id;  <br>
+                                char name[50];  <br>
+                                float salary;  <br>
+                            }e1,e2;  <br>
+                            
+                    </span>
+                    <br>
+                    Which approach is good ? <br> <br>
+                    If number of variables are not fixed, use the 1st approach. It provides you the flexibility to declare the structure variable many times.
+                    <br> <br>
+                    If no. of variables are fixed, use 2nd approach. It saves your code to declare a variable in main() function.
+                    <br> <br>
+
+                    <div class="codeblock"><div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div></div><ol start="1" class="dp-cpp"><li class="alt"><span><span class="preprocessor">#include&lt;stdio.h&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="preprocessor">#include&nbsp;&lt;string.h&gt;&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">struct</span><span>&nbsp;employee&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;&nbsp;<span class="datatypes">int</span><span>&nbsp;id;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="datatypes">char</span><span>&nbsp;name[50];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>}e1;&nbsp;&nbsp;<span class="comment">//declaring&nbsp;e1&nbsp;variable&nbsp;for&nbsp;structure&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="datatypes">int</span><span>&nbsp;main(&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="comment">//store&nbsp;first&nbsp;employee&nbsp;information&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;e1.id=101;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;strcpy(e1.name,&nbsp;<span class="string">"Sonoo&nbsp;Jaiswal"</span><span>);</span><span class="comment">//copying&nbsp;string&nbsp;into&nbsp;char&nbsp;array&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="comment">//printing&nbsp;first&nbsp;employee&nbsp;information&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;printf(&nbsp;<span class="string">"employee&nbsp;1&nbsp;id&nbsp;:&nbsp;%d\n"</span><span>,&nbsp;e1.id);&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;printf(&nbsp;<span class="string">"employee&nbsp;1&nbsp;name&nbsp;:&nbsp;%s\n"</span><span>,&nbsp;e1.name);&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">return</span><span>&nbsp;0;&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="Cpp" style="display: none;">#include&lt;stdio.h&gt;
+                            #include &lt;string.h&gt;  
+                            struct employee    
+                            {   int id;    
+                                char name[50];    
+                            }e1;  //declaring e1 variable for structure  
+                            int main( )  
+                            {  
+                            //store first employee information  
+                            e1.id=1;  
+                            strcpy(e1.name, "ccatcracker");//copying string into char array  
+                            //printing first employee information  
+                            printf( "employee 1 id : %d\n", e1.id);  
+                            printf( "employee 1 name : %s\n", e1.name);  
+                            return 0;
+                            }  
+                    </textarea></div>
+                    Output: <br> <br>
+
+                            employee 1 id : 1 <br>
+                            employee 1 name : ccatcracker <br>
+
+               </p>
+
+            
+          
+                    <h4 style="color: blueviolet">Lets Do Some exercises on Structure dont copy code from google :</h4><br>
+                    
+                    <h5>
+                        1. C Program to Store Information of a Student Using Structure . <br> <br>
+                        Format : <br><br>
+                        Enter information:<br>
+                        Enter name: abc<br>
+                        Enter roll number: 23<br>
+                        Enter marks: 34<br>
+                        Output :<br><br>
+                        Name: abc <br>
+                        Roll number: 23 <br>
+                        Marks: 34 <br>
+                    </h5> <br><br>
+
+
+                    <h5>Big Case Study Whatever we learnt so far will cover in this assignment : 
+                        <br> <br>
+                        2.Write a C program to keep records and perform statistical analysis for a class of 20 students. The information of each student contains ID, Name, Sex, quizzes Scores (2 quizzes per semester), mid-term score, final score, and total score. 
+                        The program will prompt the user to choose the operation of records from a menu as shown below: 
+                        <br>  <br>
+                       Structure of Your Code Will look Like :  <br>
+                        ============================================  <br>
+                                             Menu <br>
+                                             <br>
+                                             <br>
+                        ============================================ <br>
+                        1. Add student records <br>
+
+                        2. Delete student records <br>
+
+                        3. Update student records <br>
+
+                        4. View all student records <br>
+
+                        5. Calculate an average of a selected student’s scores <br>
+
+                        6. Show student who gets the max total score <br>
+
+                        7. Show student who gets the min total score <br>
+
+                        8. Find student by ID <br>
+
+                        9. Sort records by total scores  <br> <br>
+
+
+                        Enter your choice:4  <br>
+                        So I ennter choice is 4 so our code will display all students records ..  <br>
+                        Its really very tough assignment if you can solve this means you are at good position . <br>
+                        Try hard .. <br>
+                    </h5><br>
+                    <h3 style="color:black">What is Union  :</h3> 
+                    <p>
+                           
+                            Union is a user-defined type similar to a structure in C programming. We recommend you to learn about C structures before you check this article.
+
+                            We use union keyword to define unions. Here's an example:
+                            <br> <br>
+                            <pre>
+                                union car
+                                    {
+                                      char name[50];
+                                      int price;
+                                    };
+                            </pre> <br> <br>
+                            The above code defines a derived type union car.
+
+                    
+                    </p>
+                    <h3 style="color:black">Create union variables  :</h3> 
+                    <p>
+                            When a union is defined, it creates a user-defined type. However, no memory is allocated. To allocate memory for a given union type and work with it, we need to create variables.
+                            <br> <br>
+                            Here's how we create union variables:   <br> <br>
+                            <pre>
+                                union car
+                                    {
+                                      char name[50];
+                                      int price;
+                                    };
+                                    
+                                    int main()
+                                    {
+                                      union car car1, car2, *car3;
+                                      return 0;
+                                    }
+                            </pre> 
+                    </p>
+                    <h3 style="color:black">How to access members of a union?  :</h3> 
+                    <p>
+                           
+                            We use . to access normal variables of a union. To access pointer variables, we use -> operator.
+                            <br> <br>
+                            In the above example, <br> <br>
+                            
+                            price for car1 can be accessed using car1.price <br>
+                            price for car3 can be accessed using car3->price <br>
+                            
+                          
+
+                    
+                    </p>
+                    <h3 style="color:black">Difference between unions and structures  :</h3> 
+                    <p>
+                           
+                            Let's take an example to demonstrate the difference between unions and structures: <br> <br>
+                            <pre ><ol class="linenums"><li class="L0"><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span></code></li><li class="L1"><code><span class="kwd">union</span><span class="pln"> unionJob</span></code></li><li class="L2"><code><span class="pun">{</span></code></li><li class="L3"><code><span class="pln">   </span><span class="com">//defining a union</span></code></li><li class="L4"><code><span class="pln">   </span><span class="kwd">char</span><span class="pln"> name</span><span class="pun">[</span><span class="lit">32</span><span class="pun">];</span></code></li><li class="L5"><code><span class="pln">   </span><span class="kwd">float</span><span class="pln"> salary</span><span class="pun">;</span></code></li><li class="L6"><code><span class="pln">   </span><span class="kwd">int</span><span class="pln"> workerNo</span><span class="pun">;</span></code></li><li class="L7"><code><span class="pun">}</span><span class="pln"> uJob</span><span class="pun">;</span></code></li><li class="L8"><code></code></li><li class="L9"><code><span class="kwd">struct</span><span class="pln"> structJob</span></code></li><li class="L0"><code><span class="pun">{</span></code></li><li class="L1"><code><span class="pln">   </span><span class="kwd">char</span><span class="pln"> name</span><span class="pun">[</span><span class="lit">32</span><span class="pun">];</span></code></li><li class="L2"><code><span class="pln">   </span><span class="kwd">float</span><span class="pln"> salary</span><span class="pun">;</span></code></li><li class="L3"><code><span class="pln">   </span><span class="kwd">int</span><span class="pln"> workerNo</span><span class="pun">;</span></code></li><li class="L4"><code><span class="pun">}</span><span class="pln"> sJob</span><span class="pun">;</span></code></li><li class="L5"><code></code></li><li class="L6"><code><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span></code></li><li class="L7"><code><span class="pun">{</span></code></li><li class="L8"><code><span class="pln">   printf</span><span class="pun">(</span><span class="str">"size of union = %d bytes"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">sizeof</span><span class="pun">(</span><span class="pln">uJob</span><span class="pun">));</span></code></li><li class="L9"><code><span class="pln">   printf</span><span class="pun">(</span><span class="str">"\nsize of structure = %d bytes"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">sizeof</span><span class="pun">(</span><span class="pln">sJob</span><span class="pun">));</span></code></li><li class="L0"><code><span class="pln">   </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></code></li><li class="L1"><code><span class="pun">}</span></code></li></ol></pre>
+                            <br> <br>
+                            Output : 
+                            <br> <br>
+                            size of union = 32 <br>
+                            size of structure = 40 <br>
+
+                        <br>
+                        <h4>Why this difference in size of union and structure variables? </h4>
+                        <br> <br>
+                        The size of structure variable is 40 bytes. It's because: <br> <br>
+
+                        size of name[32] is 32 bytes <br>
+                        size of salary is 4 bytes <br>
+                        size of workerNo is 4 bytes <br>
+                        However, the size of union variable is 32 bytes. It's because the size of union variable will always be the size of its largest element. In the above example, the size of largest element (name[32]) is 32 byes.
+
+                    
+                    </p>
+             <h4>Note : If you have any doubts feel free to contact us If You Didnt understand any concept ..</h4>
+            
+            <a  style="margin-left: 60%"  href="{% url 'Pointers-In-C-Language-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Day-8</a>
+   
+            </div>
+          </div>
+         
+        </div>
+      </section>
+      
+
+   
+        
+</div>
+
+{% endblock %}

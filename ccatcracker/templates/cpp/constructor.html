@@ -1,0 +1,425 @@
+{% extends 'base_1.html' %}
+{% block title %} Constructor Destructor  in C++ | C ++ Tutorial  {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> C++ Programming</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">C++ Constructors : </h3> <br>
+               <p>
+                    A constructor is a special type of member function that initialises an object automatically when it is created.
+                    <br> <br>
+                    Compiler identifies a given member function is a constructor by its name and the return type.
+                    <br> <br>
+                    Constructor has the same name as that of the class and it does not have any return type. Also, the constructor is always public.   
+                    <br> <br>
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+                <h5 style="color:green">1. Constructor and Destructor in C++ : https://youtu.be/PVrnazUTMm4</h5>
+                <h5 style="color:green">2. Constructor and Destructor in C++ : https://youtu.be/OmqTPFCdC-w</h5>
+
+                <h5 style="color:green">1. Constructor and Destructor in C++ : https://youtu.be/V9sWulrIgl0</h5>
+                <h5 style="color:green">2. Constructor and Destructor in C++ : https://youtu.be/FDnvm5QAo1A</h5>
+
+                <h5 style="color:green">1. Constructor and Destructor in C++ : https://youtu.be/dcWTU5uRZrc</h5>
+                <h5 style="color:green">2. Constructor and Destructor in C++ : https://youtu.be/eQ9jj76eaqk</h5>
+                <br>
+
+
+            <p style="font-size: 18px">
+            
+                <h4 style="color:green">How constructor works? : </h4> <br>
+                Simple lets take an example   : <br>
+                <br>
+                <pre>
+                class temporary
+                {
+                private: 
+                    int x;
+                    float y;
+                public:
+                    // Constructor
+                    temporary(): x(1), y(2)
+                    {
+                        // Body of constructor
+                    }
+                    ... ..  ...
+                };
+
+                int main()
+                {
+                    Temporary t1;
+                    ... .. ...
+                }
+                </pre>
+
+                <br><br>
+                In above code temporary() is a constructor. 
+                <br> <br>
+                When an object of class temporary is created, the constructor is called automatically,
+                and x is initialized to 1 and y is initialized to 2.
+                <br> <br>
+                So this is the main purpose of constructor to initialize variable at the time of construction created . 
+                <br><br>
+
+                <h5 style="color: brown">Lets take an real life example of constructor : </h5>
+                <br>
+                Every single person in this world has a unique name. Persons name helps us to identify them. So, name is the class name for every person. for example my name is Abhijeet so Abhijeet is the name of my class.
+                <br> <br>
+                Class Abhijeet{<br>
+                    <br>
+                }<br>
+                <br>        
+                <br>  
+                Now, we can say my behaviour and nature is mentioned in this class and this class represents me.
+                <br>   <br>  
+                Now there is a situation when one person says my name, when he says “Abhijeet” I tried to figure out who is that person, I turned toward him and then asks him for what reason he is calling me.
+                <br>   <br>  
+                When that person says “Abhijeet”, he knowingly/unknowingly called default constructor Abhijeet. This default constructor defines my response that I did (as mentioned above).
+                <br>   <br>  
+                <h5 style="color: brown">Use of Constructor in C++ : </h5>
+                Suppose you are working on 100's of Person objects and the default value of a data member age is 0. Initialising all objects manually will be a very tedious task.
+                <br>   <br>  
+                Instead, you can define a constructor that initialises age to 0. Then, all you have to do is create a Person object and the constructor will automatically initialise the age.
+                <br>   <br>  
+                These situations arise frequently while handling array of objects.
+                <br>   <br>  
+                Also, if you want to execute some code immediately after an object is created, you  can place the code inside the body of the constructor.
+                <br>   <br>  
+
+                <h5 class="shead">Lets take an real life example </h5>
+
+                Consider Building is your class . Government by default gives few rules and regulations to be followed while constructing a building ,Default rules are your default constructors which are generated by compilers.
+                <br> <br>
+                Now the question is like what about the inner view of your building and other related features of building like total no.of rooms that can be created and so on are the features that a builder decides based on his Page on budget.so now adding up the no.of rooms for a particular type of building is some x and giving a detail of every feature is a User defined constructor which we need to write.
+                You can access elements of an array by using indices.
+                <br> <br>
+                <h5 style="color: brown">Lets Take an coding example : </h5> <br>
+                <pre>
+                    #include &lt;iostream>
+                    using namespace std;
+                    class Area
+                    {
+                    private:
+                    int length;
+                    int breadth;
+                    public:
+                    // Constructor
+                    Area(): length(5), breadth(2){ }
+                    void GetLength()
+                    {
+                    cout << "Enter length and breadth respectively: ";
+                    cin >> length >> breadth;
+                    }
+                    int AreaCalculation() {  return (length * breadth);  }
+                    void DisplayArea(int temp)
+                    {
+                    cout << "Area: " << temp;
+                    }
+                    };
+                    int main()
+                    {
+                    Area A1, A2;
+                    int temp;
+                    A1.GetLength();
+                    temp = A1.AreaCalculation();
+                    A1.DisplayArea(temp);
+                    cout << endl << "Default Area when value is not taken from user" << endl;
+                    temp = A2.AreaCalculation();
+                    A2.DisplayArea(temp);
+                    return 0;
+                    }
+                </pre>
+                <br>
+                <br>
+                <h5 class="shead">Explaination of the code :</h5>
+                class Area is created to handle area related functionalities. It has two data members length and breadth.
+                <br> <br>
+                A constructor is defined which initialises length to 5 and breadth to 2.
+                <br> <br>
+                We also have three additional member functions GetLength(), AreaCalculation() and DisplayArea() to get length from the user, calculate the area and display the area respectively.
+                <br> <br>
+                When, objects A1 and A2 are created, the length and breadth of both objects are initialized to 5 and 2 respectively, because of the constructor.
+                <br> <br>
+                Then, the member function GetLength() is invoked which takes the value of length and breadth from the user for object A1. This changes the length and breadth of the object A1.
+                <br> <br>
+                Then, the area for the object A1 is calculated and stored in variable temp by calling AreaCalculation() function and finally, it is displayed.
+                <br> <br>
+                For object A2, no data is asked from the user. So, the length and breadth remains 5 and 2 respectively.
+                <br> <br>
+                Then, the area for A2 is calculated and displayed which is 10.
+
+                <h5 class="shead">Output : </h5>
+                <pre>
+                        Enter length and breadth respectively: 6
+                        7
+                        Area: 42
+                        Default Area when value is not taken from user
+                        Area: 10
+                        
+                </pre>
+                <br> <br>
+                <h4 class="heading">Types of Constructors in C++ : </h4>
+                Constructors are of three types: <br>
+
+                    1. Default Constructor        <br>
+                    2. Parametrized Constructor<br>
+                    3. Copy COnstructor<br>
+                <br>
+                <h5 class="shead">1. Default Constructor : </h5>
+                Default constructor is the constructor which doesn't take any argument. It has no parameter. <br>
+                <br><pre>
+                        class Cube
+                        {
+                            public:
+                            int side;
+                            Cube()
+                            {
+                                side = 10;
+                            }
+                        };
+                        
+                        int main()
+                        {
+                            Cube c;
+                            cout << c.side;
+                        }
+
+                </pre>
+                <br>
+                In this case, as soon as the object is created the constructor is called which initializes its data members.
+                <br> <br>
+                A default constructor is so important for initialization of object members, that even if we do not define a constructor explicitly, 
+                the compiler will provide a default constructor implicitly.(Note this point defaulr constructor compiler will provide by default)
+                <br> <br>
+
+                <h5 class="shead">2. Parameterized Constructors : </h5>
+                These are the constructors with parameter. Using this Constructor you can provide different values to data members of different objects, by passing the appropriate values as argument.
+                <br><br>
+                <pre>
+                        class Cube
+                        {
+                            public:
+                            int side;
+                            Cube(int x)
+                            {
+                                side=x;
+                            }
+                        };
+                        
+                        int main()
+                        {
+                            Cube c1(1);
+                            Cube c2(2);
+                            Cube c3(3);
+                            cout << c1.side;
+                            cout << c2.side;
+                            cout << c3.side;
+                        }
+                </pre>
+                <br><br>
+                we have initialized 3 objects with user defined values. We can have any number of parameters in a constructor.
+                <br> <br>
+                Output :
+                <br>
+                <pre>
+                    1 <br>
+                    2 <br>
+                    3 <br>
+                </pre>
+                <h4 class="heading">Constructor Overloading in C++ : </h4>
+
+                Just like other member functions, constructors can also be overloaded. Infact when you have both default and parameterized constructors defined in your class you are having Overloaded Constructors, one with no parameter and other with parameter.
+                <br> <br>
+                <h5 class="shead">Lets take an example :</h5>
+                <pre>
+                        class Student
+                        {
+                            public:
+                            int rollno;
+                            string name;
+                            // first constructor
+                            Student(int x)
+                            {
+                                rollno = x;
+                                name = "None";
+                            }
+                            // second constructor
+                            Student(int x, string str)
+                            {
+                                rollno = x;
+                                name = str;
+                            }
+                        };
+                        
+                        int main()
+                        {
+                            // student A initialized with roll no 10 and name None
+                            Student A(10);
+                            
+                            // student B initialized with roll no 11 and name John
+                            Student B(11, "John");
+                        }
+                </pre>
+                <br>
+                <h5 style="color:green">Important Notes : </h5>
+                In above case we have defined two constructors with different parameters, hence overloading the constructors.
+                <br> <br>
+                One more important thing, if you define any constructor explicitly, then the compiler will not provide default constructor and you will have to define it yourself.
+                <br> <br>
+                In the above case if we write Student S; in main(), it will lead to a compile time error, because we haven't defined default constructor, and compiler will not provide its default constructor because we have defined other parameterized constructors.
+                <br> <br>
+
+                <h4 class="heading">Destructor In C++ :</h4>
+                Destructor is a special class function which destroys the object as soon as the scope of object ends. The destructor is called automatically by the compiler when the object goes out of scope.
+                <br> <br>
+                The syntax for destructor is same as that for the constructor, the class name is used for the name of destructor, with a tilde ~ sign as prefix to it.
+                <br> <br>
+                <h5 class="heading">Example to see how Constructor and Destructor are called </h5>
+
+                <pre>
+                        class A
+                        {
+                            // constructor
+                            A()
+                            {
+                                cout << "Constructor called";
+                            }
+                        
+                            // destructor
+                            ~A()
+                            {
+                                cout << "Destructor called";
+                            }
+                        };
+                        
+                        int main()
+                        {
+                            A obj1;   // Constructor Called
+                            int x = 1
+                            if(x)
+                            {
+                                A obj2;  // Constructor Called
+                            }   // Destructor Called for obj2
+                        } //  Destructor called for obj1
+                </pre>
+                <br>
+                <h5 class="shead">Output :</h5>
+                <br>
+                <pre>
+                        Constructor called
+                        Constructor called
+                        Destructor called
+                        Destructor called
+                </pre>
+                <br> <br>
+                When an object is created the constructor of that class is called. The object reference is destroyed when its scope ends, which is generally after the closing curly bracket } for the code block in which it is created.
+                <br> <br>
+                The object obj2 is destroyed when the if block ends because it was created inside the if block. And the object obj1 is destroyed when the main() function ends.
+
+                <br> <br>
+                <h5 class="shead">Important Properties of Destructor</h5>
+                The following properties of destructor:                                                 <br>
+                1. A destructor invoked implicitly by the compiler upon exit from the program.<br>
+                2. It is used to clean up the storage that is no longer accessible.<br>
+                3. It never takes any argument nor return any value.<br>
+<br><br>
+                It is a good practice to declare destructor in a program since it releases memory space for future use. Objects are destroyed in the reverse order of creation.
+                <br> <br>
+            </p>
+            <h4 style="color: brown">Lets do some exercises : </h4> <br>
+            <h5 class="shead">1. Write a C++ program to read seven numbers and sorts them in descending order :  </h5> <br>
+                <pre>
+                    Enter 7 numbers :
+                    2
+                    4
+                    6
+                    1
+                    7
+                    9
+                    8
+                    Output :
+                    9
+                    8
+                    7
+                    6
+                    4
+                    2
+                    1
+                </pre>
+           <h5 class="shead">2. Write a C++ program to which replace all the words "dog" with "cat" .</h5>
+                <br>
+                <pre>
+                    Input :
+
+                         The quick brown fox jumps over the lazy dog.
+                         You can assume that the number of characters 
+                         in a text is less than or equal to 1000.
+                    Output :
+                        The quick brown fox jumps over the lazy cat.
+                         You can assume that the number of characters 
+                         in a text is less than or equal to 1000.
+
+                </pre>
+                
+            
+
+            <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             
+            <a  style="margin-left: 60%"  href="{% url 'friend-function-in-cpp' %}" class="btn btn-secondary text-white btn-lg">Day-6</a>
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

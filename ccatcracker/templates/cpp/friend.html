@@ -1,0 +1,216 @@
+{% extends 'base_1.html' %}
+{% block title %} C++ friend Function and friend Classes| C ++ Tutorial  {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   .info
+   {
+       font-size: 30px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> C++ Programming</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">C++ friend Function and friend Classes : </h3> <br>
+               <p >
+                    
+                If a function is defined as a friend function then, the private and protected data of a class can be accessed using the function.
+                <br> <br>
+                For accessing the data, the declaration of a friend function should be made inside the body of the class (can be anywhere inside class either in private or public section) starting with keyword friend.
+                <br> <br>
+
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+                <h5 style="color:green">1. Friend Functions  in C++ : https://youtu.be/V-uIlFcTGdg</h5>
+                <h5 style="color:green">2. Friend Functions  in C++ : https://youtu.be/JY_tXO-wppk</h5>
+                <h5 style="color:green">3. Friend Functions  in C++ : https://youtu.be/noRJK8wU3BI</h5>
+                <h5 style="color:green">4. Friend Functions  in C++ : https://youtu.be/6jN_EVogZAA</h5>
+
+              
+              <br>
+            
+
+            <p style="color:#008c00">
+            
+                <h4 style="color:green">Declaration of friend function in C++ : </h4>
+                <br>
+                <pre>
+                    class class_name    
+                    {    
+                        friend data_type function_name(argument/s); 
+                                   // syntax of friend function.  
+                    };   
+                </pre>
+
+                <br>
+                In the above declaration, the friend function is preceded by the keyword friend. The function can be defined anywhere in the program like a normal C++ function. The function definition does not use either the keyword friend or scope resolution operator.
+                <br>
+                <br>
+                <h5 class="shead">Important Properties of friend functions in C++ :</h5>
+                <br>
+                The function is not in the scope of the class to which it has been declared as a friend.                                    <br>
+                It cannot be called using the object as it is not in the scope of that class.<br>
+                It can be invoked like a normal function without using the object.<br>
+                It cannot access the member names directly and has to use an object name and dot membership operator with the member name.<br>
+                It can be declared either in the private or the public part.<br>
+                                . 
+                <br> <br>
+                <h5 class="shead">Lets take an Coding Example : </h5>
+                <pre>
+                    /* C++ program to demonstrate the working of friend function.*/
+                    #include < iostream>
+                    using namespace std;
+                    class Distance
+                    {
+                        private:
+                            int meter;
+                        public:
+                            Distance(): meter(0) { }
+                            //friend function
+                            friend int addSix(Distance);
+                    };
+                    // friend function definition
+                    int addSix(Distance d)
+                    {
+                        //accessing private data from non-member function
+                        d.meter += 6;
+                        return d.meter;
+                    }
+                    int main()
+                    {
+                        Distance D;
+                        cout<<"Distance Is :  "<< addSix(D);
+                        return 0;
+                    }
+                    
+                </pre>
+                <br>
+                <h5 class="shead">Output :</h5>
+                <pre>
+                    Distance is : 6
+                </pre>
+                <br> <br>
+                Here, friend function addSix() is declared inside Distance class. So, the private data meter can be accessed from this function.
+                <br> <br>
+                Though this example gives you an idea about the concept of a friend function, it doesn't show any meaningful use.
+                <br> <br>
+                A more meaningful use would to when you need to operate on objects of two different classes. That's when the friend function can be very helpful.
+                <br> <br>
+                You can definitely operate on two objects of different classes without using the friend function but the program will be long, complex and hard to understand.
+                <br><br>
+
+                <h4 class="heading">friend Class in C++ Programming : </h4>
+                Similarly, like a friend function, a class can also be made a friend of another class using keyword friend. For example:
+                <br> <br>
+                When a class is made a friend class, all the member functions of that class becomes friend functions.
+                <br> <br>
+                In this program, all member functions of class B will be friend functions of class A. Thus, any member function of class B can access the private and protected data of class A. But, member functions of class A cannot access the data of class B.
+                <br> <br>
+                <h5 class="shead">Lets take an Example : </h5>
+                <pre>
+                    // friend class
+                    #include &lt;iostream>
+                    using namespace std;
+                    
+                    class Square;
+                    
+                    class Rectangle {
+                        int width, height;
+                      public:
+                        int area ()
+                          {return (width * height);}
+                        void convert (Square a);
+                    };
+                    
+                    class Square {
+                      friend class Rectangle;
+                      private:
+                        int side;
+                      public:
+                        Square (int a) : side(a) {}
+                    };
+                    
+                    void Rectangle::convert (Square a) {
+                      width = a.side;
+                      height = a.side;
+                    }
+                      
+                    int main () {
+                      Rectangle rect;
+                      Square sqr (4);
+                      rect.convert(sqr);
+                      cout << rect.area();
+                      return 0;
+                    }
+
+                </pre>
+                <br> <br>
+                <h4 class="heading">Code Explaination : </h4>
+                In this example, class Rectangle is a friend of class Square allowing Rectangle's member functions to access private and protected members of Square. More concretely, Rectangle accesses the member variable Square::side, which describes the side of the square.
+                <br> <br>
+                There is something else new in this example: at the beginning of the program, there is an empty declaration of class Square. This is necessary because class Rectangle uses Square (as a parameter in member convert), and Square uses Rectangle (declaring it a friend). 
+                <br> <br>
+                Friendships are never corresponded unless specified: In our example, Rectangle is considered a friend class by Square, but Square is not considered a friend by Rectangle. Therefore, the member functions of Rectangle can access the protected and private members of Square but not the other way around. Of course, Square could also be declared friend of Rectangle, if needed, granting such an access.
+                <br> <br>
+                Another property of friendships is that they are not transitive: The friend of a friend is not considered a friend unless explicitly specified.
+           
+           
+            </p>
+            
+            <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             
+            <a  style="margin-left: 60%"  href="{% url 'static-members-in-cpp' %}" class="btn btn-secondary text-white btn-lg">Day-6-B</a>
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

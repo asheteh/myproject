@@ -1,0 +1,232 @@
+{% extends 'base_1.html' %}
+{% block title %} Pure Virtual function, Abstract base class | C ++ Tutorial | | {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   .info
+   {
+       font-size: 30px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+  
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> C++ Programming</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">Virtual Class  in C++  :  </h3> <br>
+               <p >
+                Virtual base classes are used in virtual inheritance in a way of preventing multiple “instances” of a given class appearing in an inheritance hierarchy when using multiple inheritances.
+                <br> <br>
+                
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+
+               <h5 style="color:green">1. Virtual Class in C++ : https://youtu.be/i7IAXn7TMio</h5>
+               <h5 style="color:green">2. Virtual Class in C++ : https://youtu.be/oS3N7KTZzVs</h5>
+               <h5 style="color:green">3. Virtual Class in C++ : https://youtu.be/ABRn25V0C6A</h5>
+               <h5 style="color:green">4. Virtual Class in C++ : https://youtu.be/3InUMCqviv0</h5>
+             
+               
+               
+              <br>
+            
+
+            <p> 
+            
+                <h4 style="color:green">Why we need Virtual Class  : </h4>
+
+                the situation where we have one class A .This class is A is inherited by two other classes B and C. Both these class are inherited into another in a new class D
+                <br> <br>
+                           Class A -> B & C   <br>
+                           B & C ->  D <br>
+                            <br>
+                         So  data members/function of class A are inherited twice to class D.
+                        One through class B and second through class C. When any data / function member of class A is accessed by 
+                        an object of class D, ambiguity arises as to which data/function member would be called? One inherited through B or the other inherited through C. This confuses compiler and it displays error.
+                    <br>
+                    <br>
+                <h5 class="shead">Lets See an example :</h5>
+
+                <pre>
+                   #include < iostream> 
+                   using namespace std; 
+                      
+                    class A { 
+                    public: 
+                        void show() 
+                        { 
+                            cout << "Hello form A \n"; 
+                        } 
+                    }; 
+                      
+                    class B : public A { 
+                    }; 
+                      
+                    class C : public A { 
+                    }; 
+                      
+                    class D : public B, public C { 
+                    }; 
+                      
+                    int main() 
+                    { 
+                        D object; 
+                        object.show(); 
+                    } 
+                </pre>
+
+                <br>
+                <h5 class="shead">Output :</h5>
+                <pre>
+                    Compiler will get confuse and will throw ambiguity error . 
+                </pre>
+                               
+                <br>
+                To resolve this ambiguity when class A is inherited in both class B and class C, it is declared as virtual base class by placing a keyword virtual as :
+                <br> <br>
+                <h5 class="shead">Lets see how can we resolve this issue : </h5>
+
+                <pre>
+                    #include < iostream> 
+                    using namespace std; 
+                          
+                    class A { 
+                    public: 
+                        int a; 
+                        A() // constructor 
+                        { 
+                            a = 10; 
+                        } 
+                    }; 
+                      
+                    class B : public virtual A { 
+                    }; 
+                      
+                    class C : public virtual A { 
+                    }; 
+                      
+                    class D : public B, public C { 
+                    }; 
+                      
+                    int main() 
+                    { 
+                        D object; // object creation of class d 
+                        cout << "a = " << object.a << endl; 
+                      
+                        return 0; 
+                    } 
+
+                    Output :
+                    a = 10
+                </pre>     
+                <br>
+                <br>
+                <h5 class="shead">Explaination :</h5>
+                <br>
+                virtual can be written before or after the public. Now only one copy of data/function member will be copied to class C and class B and class A becomes the virtual base class.
+                Virtual base classes offer a way to save space and avoid ambiguities in class hierarchies that use multiple inheritances. When a base class is specified as a virtual base, it can act as an indirect base more than once without duplication of its data members. A single copy of its data members is shared by all the base classes that use virtual base.
+
+
+                <h4 class="shead">Lets do some Exercises on Inheritance : </h4>
+                <br>
+                <h5 style="color: brown">1. C++ program to read and print employee information using multiple inheritance. ?</h5>
+                <pre>
+                    Think how can u implement inheritance here . 
+                    Output looks like  : 
+
+                    Enter employee's basic info: 
+                    Enter Name: Abhijeet
+                    Enter Emp. Id: 1121
+                    Enter Gender: F
+                    Enter employee's department info: 
+                    Enter Department Name: Testing
+                    Enter assigned work: Test Game OEM
+                    Enter time in hours to complete work: 70
+
+
+                    Employee's Information is: 
+                    Basic Information...:
+                    Name: Abhijeet
+                    Employee ID: 1121
+                    Gender: F
+                
+                    Department Information...:
+                    Department Name: Testing
+                    Assigned Work: Test Game OEM
+                    Time to complete work: 70
+                
+                    Note : implement multiple Inheritance . 
+                </pre>
+                <br> <br>
+                <h5 style="color: brown">2. Hierarchical inheritance to get square and cube of a number program in C++ </h5>
+                <pre>
+                    Output :
+                    Enter an integer number: 10
+                    Square of 10 is: 100
+                    Enter an integer number: 20
+                    Cube   of 10 is: 8000
+                </pre>
+                <br> <br>
+
+            </p>
+            <h4 class="shead">Note : Exam will ask some tricky objective question on inheritance so 
+               watch all videos then you can solve any problem very easily . <br>
+            </h4>
+            <br> <br>
+            <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             <br> <br>
+            <a  style="margin-left: 60%"  href="{% url 'virtual-class-in-cpp' %}" class="btn btn-secondary text-white btn-lg">Last-Day</a>
+            <br> <br>
+          </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}s

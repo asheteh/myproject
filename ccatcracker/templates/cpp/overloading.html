@@ -1,0 +1,267 @@
+{% extends 'base_1.html' %}
+{% block title %} Operator Overloading in C++ Example 1 | C++ Tutorial | {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   .info
+   {
+       font-size: 30px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> C++ Programming</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">Operator Overloading in C++ :  </h3> <br>
+               <p >
+                    
+                    Very Important topic exam will 100 % ask objective on this so read carefully . <br>
+                    <br>
+                    The meaning of an operator is always same for variable of basic types like: int, float, double etc. For example: To add two integers, + operator is used.
+                    <br><br>
+                    However, for user-defined types (like: objects), you can redefine the way operator works. For example:
+                    <br><br>
+                    If there are two objects of a class that contains string as its data members. You can redefine the meaning of + operator and use it to concatenate those strings.
+                    <br><br>
+                    This feature in C++ programming that allows programmer to redefine the meaning of an operator (when they operate on class objects) is known as operator overloading. 
+            
+                <br> <br>
+              
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+                <h5 style="color:green">1. Operator Ovverloading  in C++ : https://youtu.be/vx-zQv6t8UY</h5>
+                <h5 style="color:green">2. Operator Ovverloading  in C++ : https://youtu.be/IN9bGoRjlBs</h5>
+                <h5 style="color:green">3. Operator Ovverloading  in C++ : https://youtu.be/Wyf52VN3lQA</h5>
+                <h5 style="color:green">4. Operator Ovverloading  in C++ : https://youtu.be/PoD10qspKrM</h5>
+                <h5 style="color:green">5. Operator Ovverloading  in C++ : https://youtu.be/wElBXMmgWzM</h5>
+               
+                
+              <br>
+            
+
+            <p>
+            
+                <h4 style="color:green">Why is operator overloading used? : </h4>
+                <br>
+                We can write any C++ program without the knowledge of operator overloading. 
+                However, operator operating are profoundly used by programmers to make program intuitive. For example,
+
+                We can replace the code like:
+                <br> <br>
+                <pre>
+                    calculation = add(multiply(a, b),divide(a, b));
+
+                    With  
+
+                    calculation = (a*b)+(a/b);
+                </pre>
+                <br>
+                <h4 class="heading">Lets take an example of coding :</h4>
+                <pre>
+                    #include < iostream>
+                    using namespace std;
+                    class Test
+                    {
+                       private:
+                          int no;
+                       public:
+                           Test(): no(5){}
+                           void operator ++() 
+                           { 
+                              no = no+1; 
+                           }
+                           void Display() { cout<<"no: "<< no; }
+                    };
+                    int main()
+                    {
+                        Test t;
+                        // this calls "function void operator ++()" function
+                        ++t;    
+                        t.Display();
+                        return 0;
+                    }
+                </pre>
+                <br>
+                <h5 class="shead">Output :</h5>
+                <pre>
+                        no : 6 
+                </pre>
+                <br> <br>
+                <h4 class="heading">Some Important Points to note : </h4>
+                Operator overloading allows you to redefine the way operator works for user-defined types only (objects, structures). It cannot be used for built-in types (int, float, char etc.).
+                <br> <br>
+                Two operators = and & are already overloaded by default in C++. For example: To copy objects of same class, you can directly use = operator. You do not need to create an operator function.
+                <br> <br>
+                Operator overloading cannot change the precedence and associatively of operators. However, if you want to change the order of evaluation, parenthesis should be used.
+                <br> <br>
+                There are 4 operators that cannot be overloaded in C++. They are :: (scope resolution), . (member selection), .* (member selection through pointer to function) and ?: (ternary operator).
+                <br> <br>
+                
+                <h4 class="heading">C++ Function Overloading : </h4>
+
+                In C++ programming, two functions can have same name if number and/or type of arguments passed are different.
+                <br> <br>
+                These functions having different number or type (or both) of parameters are known as overloaded functions. For example:
+                <br> <br>
+                Example :
+                <br> <br>
+
+                <pre>
+                    int test() { }
+                    int test(int a) { }
+                    float test(double a) { }
+                    int test(int a, double b) { }
+
+                </pre>
+                <br><br>
+
+                See above all functions habe same name but different args . <br> <br>
+                Means functions overloading is possible but we need to pass different args . 
+                <br> <br>
+                <h5 style="color: brown">Note :  the return type of all these 4 functions are not same. Overloaded functions may or may not have different return type but it should have different argument(s).</h5>
+                <br> <br>
+                <h5 class="shead">Lets take an small program : </h5>
+                <pre>
+                    #include < iostream>
+                    using namespace std;
+                     void display(int);
+                     void display(float);
+                     void display(int, float);
+                     int main() {
+                         int a = 15;
+                         float b = 0.5;
+                         display(a);    // see here a is int 
+                         display(b);    // here same function name with diff data type
+                         display(a, b); 
+                         return 0;
+                     }
+                     void display(int var) {
+                         cout << "Integer number: " << var << endl;
+                     }
+                     void display(float var) {
+                         cout << "Float number: " << var << endl;
+                     }
+                     void display(int var1, float var2) {
+                         cout << "Integer number: " << var1;
+                         cout << " and float number:" << var2;
+                     }
+                </pre>
+                <br>
+                <h5 class="shead">Output :</h5>
+                <pre>
+                    Integer number: 15
+                    Float number: 0.5
+                    Integer number: 15 and float number: 0.5
+                </pre>
+                <br> <br>
+                Here, the display() function is called three times with different type or number of arguments.
+                <br> <br>
+                The return type of all these functions are same but it's not necessary.
+                <br> <br>
+
+            </p>
+            <h5 class="shead">Lets do an very Imp excerices for exam (Objective questions) : </h5>
+            <br>
+            <h5 style="color: brown">1. Which of the following operator functions cannot be global, i.e., must be a member function.</h5>
+            <pre>
+                (A) new
+                (B) delete
+                (C) Converstion Operator
+                (D) All of the above
+
+                Answer : C 
+
+            </pre>
+            <br> 
+            <h5 style="color: brown">2. Which of the following operators should be preferred to overload as a global function rather than a member method?</h5>
+            <pre>
+                    (A) Postfix ++
+                    (B) Comparison Operator
+                    (C) Insertion Operator <<
+                    (D) Prefix++
+                    
+                    
+                    Answer: (C) 
+
+            </pre>
+            <h5 class="shead">3. How does C++ compiler differs between overloaded postfix and prefix operators? </h5>
+            <pre>
+                    (A) C++ doesn’t allow both operators to be overlaoded in a class
+                    (B) A postfix ++ has a dummy parameter
+                    (C) A prefix ++ has a dummy parameter
+                    (D) By making prefix ++ as a global function and postfix as a member function.
+
+
+                    Answer: (B) 
+
+
+            </pre>
+            <h5 class="shead">4. Which of the following operators cannot be overloaded ? </h5>
+            <pre>
+                    (A) . (Member Access or Dot operator)
+                    (B) ?: (Ternary or Conditional Operator )
+                    (C) :: (Scope Resolution Operator)
+                    (D) .* (Pointer-to-member Operator )
+                    (E) All of the above
+
+                    Answer: (E) 
+
+            </pre>
+            <br> <br>
+            <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             <br> <br>
+            <a  style="margin-left: 60%"  href="{% url 'Inheritance-in-cpp' %}" class="btn btn-secondary text-white btn-lg">Day-8</a>
+            <br> <br>
+          </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

@@ -1,0 +1,148 @@
+{% extends 'base_1.html' %}
+{% block title %} Constructor In  Inheritance in C++  | C++ Tutorial | {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   .info
+   {
+       font-size: 30px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+  
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> C++ Programming</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green"> Constructors In Inheritance in C++  :  </h3> <br>
+               <p >
+                Base class constructors are always called in the derived class constructors. Whenever you create derived class object, first the base class default constructor is executed and then the derived class's constructor finishes execution.
+                  
+                    <br> <br>
+              
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+
+               <h5 style="color:green">1. Inheritance   in C++ : https://youtu.be/TnC2iDaHnTE</h5>
+               <h5 style="color:green">2. Inheritance   in C++ : https://youtu.be/Fva8M10oGoA</h5>
+               <h5 style="color:green">3. Inheritance   in C++ : https://youtu.be/ABRn25V0C6A</h5>
+               <h5 style="color:green">4. Inheritance   in C++ : https://youtu.be/UtZUkmMZTCw</h5>
+               <h5 style="color:green">5. Inheritance   in C++ : https://youtu.be/04uRHxonfxo</h5>
+               
+               
+              <br>
+            
+
+            <p> 
+            
+                <h4 style="color:green">Important Points  : </h4>
+
+                Whether derived class's default constructor is called or parameterised is called, base class's default constructor is always called inside them.
+                <br> <br>
+                To call base class's parameterised constructor inside derived class's parameterised constructo, we must mention it explicitly while declaring derived class's parameterized constructor.
+                <br> <br>
+                Above videos are more than enough for this day . 
+                <br>
+
+                <h4 class="shead">Lets do some Exercises on Inheritance : </h4>
+                <br>
+                <h5 style="color: brown">1. C++ program to read and print employee information using multiple inheritance. ?</h5>
+                <pre>
+                    Think how can u implement inheritance here . 
+                    Output looks like  : 
+
+                    Enter employee's basic info: 
+                    Enter Name: Abhijeet
+                    Enter Emp. Id: 1121
+                    Enter Gender: F
+                    Enter employee's department info: 
+                    Enter Department Name: Testing
+                    Enter assigned work: Test Game OEM
+                    Enter time in hours to complete work: 70
+
+
+                    Employee's Information is: 
+                    Basic Information...:
+                    Name: Abhijeet
+                    Employee ID: 1121
+                    Gender: F
+                
+                    Department Information...:
+                    Department Name: Testing
+                    Assigned Work: Test Game OEM
+                    Time to complete work: 70
+                
+                    Note : implement multiple Inheritance . 
+                </pre>
+                <br> <br>
+                <h5 style="color: brown">2. Hierarchical inheritance to get square and cube of a number program in C++ </h5>
+                <pre>
+                    Output :
+                    Enter an integer number: 10
+                    Square of 10 is: 100
+                    Enter an integer number: 20
+                    Cube   of 10 is: 8000
+                </pre>
+                <br> <br>
+
+            </p>
+            <h4 class="shead">Note : Exam will ask some tricky objective question on inheritance so 
+               watch all videos then you can solve any problem very easily . <br>
+            </h4>
+            <br> <br>
+            <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             <br> <br>
+            <a  style="margin-left: 60%"  href="{% url 'virtual-class-in-cpp' %}" class="btn btn-secondary text-white btn-lg">Last-Day</a>
+            <br> <br>
+          </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}s

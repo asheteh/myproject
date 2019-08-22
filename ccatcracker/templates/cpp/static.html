@@ -1,0 +1,197 @@
+{% extends 'base_1.html' %}
+{% block title %} Static Data Members Example 1 | C ++ Tutorial  {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   .info
+   {
+       font-size: 30px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> C++ Programming</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">Static data member in C++ : </h3> <br>
+               <p >
+                    
+                When we declare a normal variable (data member) in a class, different copies of those data members create with the associated objects.
+                <br> <br>
+                In some cases when we need a common data member that should be same for all objects, we cannot do this using normal data members. To fulfill such cases, we need static data members
+                <br> <br>
+                <h5 class="shead">Declaration :</h5>
+                <pre>
+                  static data_type member_name;
+                  Example :
+                  static int a;
+                </pre><br>
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+                <h5 style="color:green">1. Static Members  in C++ : https://youtu.be/0ToUv0Mu3Qs</h5>
+                <h5 style="color:green">2. Static Members  in C++ : https://youtu.be/ms0oEkpOr1w</h5>
+                <h5 style="color:green">3. Static Members  in C++ : https://youtu.be/Yas2j1_xlOU</h5>
+                <h5 style="color:green">4. Constant Members  in C++ : https://youtu.be/lZjh-G8bt6g</h5>
+
+              
+              <br>
+            
+
+            <p>
+            
+                <h4 style="color:green">Static Member Functions in C++ : </h4>
+                <br>
+                By declaring a function member as static, you make it independent of any particular object of the class. A static member function can be called even if no objects of the class exist and the static functions are accessed using only the class name and the scope resolution operator (::)
+                <br> <br>
+                A static member function can only access static data member, other static member functions and any other functions from outside the class.
+                <br> <br>
+                Static member functions have a class scope and they do not have access to the this pointer of the class.
+                <br> <br>
+                <h5 class="shead">Lets take an example : </h5>
+                <br>
+
+                <pre>
+                    #include &lt;iostream>
+                    using namespace std;
+                     
+                    class Cube {
+                     private:
+                          int side; // normal data member
+                     public:
+                          static int objectCount;// static data member
+                          // Constructor definition
+                           Cube()
+                            {
+                             // Increase every time object is created
+                             objectCount++;
+                              }
+                              // creating a static function that returns static data member
+                              static int getCount() {
+                             return objectCount;
+                          }
+                    };
+                    // Initialize static member of class Box
+                    int Cube::objectCount = 0;
+                         
+                        int main(void) {
+                           Cube c1;
+                           // Object Count.
+                           cout << "Total objects: " << Cube::getCount() << endl;
+                         Cube c2;
+                           // Object Count.
+                           cout << "Total objects: " << Cube::getCount() << endl;
+                           return 0;
+                        }
+                </pre>
+
+                <br>
+                <h5 class="shead">Explaination : </h5>
+                If you check  above program we have created a static member function named getCount() which returns the static data member objectCount value. Since getCount is a static member function,
+                it can access only static data and can be directly called by using the scope resolution operator (::)
+
+                <br>
+                <br>
+                
+                <h5 style="color:brown">Note : A static member function is a special member function, which is used to access only static data members</h5>
+                
+                <h4 class="heading">Static Class Objects :</h4>
+                Static keyword works in the same way for class objects too. Objects declared static are allocated storage in static storage area, and have scope till the end of program.
+                <br> <br>
+                Static objects are also initialized using constructors like other normal objects. Assignment to zero, on using static keyword is only for primitive datatypes, not for user defined datatypes.
+                <br> <br>
+                <h5 class="shead">Lets take an example :</h5>
+                <pre>
+                  class Abc
+                  {
+                      int i;
+                      public:
+                      Abc()
+                      {
+                          i=0;
+                          cout << "constructor";
+                      }
+                      ~Abc()
+                      {
+                          cout << "destructor";
+                      }
+                  };
+                  
+                  void f()
+                  {
+                      static Abc obj;
+                  }
+                  
+                  int main()
+                  {
+                      int x=0;
+                      if(x==0)
+                      {
+                          f();
+                      }
+                      cout << "END";
+                  }
+
+                  Output :
+                  constructor END destructor .
+                </pre>
+                <br> <br>
+                You must be thinking, why was the destructor not called upon the end of the scope of if condition, where the reference of object obj should get destroyed. This is because object was static, which has scope till the program's lifetime, hence destructor for this object was called when main() function exits.
+
+              </p>
+            
+            <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             <br> <br>
+            <a  style="margin-left: 60%"  href="{% url 'overloading-in-cpp' %}" class="btn btn-secondary text-white btn-lg">Day-7</a>
+            <br> <br>
+          </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

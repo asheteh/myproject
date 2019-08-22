@@ -1,0 +1,539 @@
+{% extends 'base_1.html' %}
+{% block title %}  Inheritance in C++  | C++ Tutorial | {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   font-style: italic;
+   font-size: 15px;
+   }
+   .info
+   {
+       font-size: 30px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+  
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> C++ Programming</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green"> Inheritance in C++  :  </h3> <br>
+               <p >
+                    
+                    Inheritance is one of the key features of Object-oriented programming in C++. It allows user to create a new class (derived class) from an existing class(base class).
+                    <br> <br>
+                    The derived class inherits all the features from the base class and can have additional features of its own.   
+
+                    <br> <br>
+              
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+                <h5 style="color:green">1. Inheritance   in C++ : https://youtu.be/8fDao3MBbwk</h5>
+                <h5 style="color:green">2. Inheritance   in C++ : https://youtu.be/p75VeBnqmyQ</h5>
+                <h5 style="color:green">3. Inheritance   in C++ : https://youtu.be/rWT1TBYTwpc</h5>
+                <h5 style="color:green">4. Inheritance   in C++ : https://youtu.be/9koINmwq6a8</h5>
+                <h5 style="color:green">5. Inheritance   in C++ : https://youtu.be/R7uJLNq4Zls</h5>
+                <h5 style="color:green">6. Inheritance   in C++ : https://youtu.be/NIrWSggUUds</h5>
+                
+
+               
+                
+              <br>
+            
+
+            <p>
+            
+                <h4 style="color:green">Why inheritance should be used? : </h4>
+                <br>
+                Suppose, in your game, you want three characters - a guitar teacher, a cricketer and a businessman.
+                <br><br>
+                Since, all of the characters are persons, they can walk and talk. However, they also have some special skills. A Guitar teacher can teach Guitar, a Cricketer can play cricker and a businessman can run a business.
+                <br><br>
+                If we create three class : 
+                <br>
+                1. guitar <br>
+                2. cricker <br>
+                3. Buisenessman <br>
+
+                <br> <br>
+                In each of the classes, you would be copying the same code for walk and talk for each character.
+                <br> <br>
+                If you want to add a new feature - eat, you need to implement the same code for each character. This can easily become error prone (when copying) and duplicate codes.
+                <br> <br>
+                It'd be a lot easier if we had a Person class with basic features like talk, walk, eat, sleep, and add special skills to those features as per our characters. This is done using inheritance.
+                <br> <br>
+                Using inheritance, now you don't implement the same code for walk and talk for each class. You just need to inherit them.
+                <br> <br>
+                So, for Guitar teacher (derived class), you inherit all features of a Person (base class) and add a new feature Teachguitar. Likewise, for a cricketer, you inherit all the features of a Person and add a new feature PlayCricket   and so on.
+                <br> <br>
+                This makes your code cleaner, understandable and extendable.
+                <br> <br>
+                <h5 class="shead">Lets see how can we implement in C++</h5>
+                <br>
+                <pre>
+                        class Person 
+                        {
+                          ... .. ...
+                        };
+                        
+                        class GuitarTeacher : public Person 
+                        {
+                          ... .. ...
+                        };
+                        
+                        class Cricketer : public Person
+                        {
+                          .... .. ...
+                        };
+                </pre>
+                <br>
+                In the above example, class Person is a base class and classes GuitarTeacher and Cricketer are the derived from Person.
+                <br><br>
+                The derived class appears with the declaration of a class followed by a colon, the keyword public and the name of base class from which it is derived.
+                <br><br>
+                Since, GuitarTeacher and Cricketer are derived from Person, all data member and member function of Person can be accessible from them.
+                <br>
+                <br>
+                <h5 class="shead">Lets take an coding Example : </h5>
+                 <br>
+                 <pre>
+                    #include &lt;iostream>
+                    using namespace std;
+                    class Person
+                    {
+                         public:
+                            string profession;
+                            int age;
+                            Person(): profession("unemployed"), age(16) { }
+                            void display()
+                            {
+                                 cout << "My profession is: " << profession << endl;
+                                 cout << "My age is: " << age << endl;
+                                 walk();
+                                 talk();
+                            }
+                            void walk() { cout << "I can walk." << endl; }
+                            void talk() { cout << "I can talk." << endl; }
+                    };
+                    // GuitarTeacher class is derived from base class Person.
+                    class GuitarTeacher : public Person
+                    {
+                        public:
+                           void teachGuitar() { cout << "I can teach Guitar." << endl; }
+                    };
+                    // Cricketer class is derived from base class Person.
+                    class Cricketer : public Person
+                    {
+                        public:
+                           void playCricket() { cout << "I can play Cricket." << endl; }
+                    };
+                    int main()
+                    {
+                         GuitarTeacher teacher;
+                         teacher.profession = "Teacher";
+                         teacher.age = 23;
+                         teacher.display();
+                         teacher.teachGuitar();
+                         Cricketer Cricketer;
+                         Cricketer.profession = "Cricketer";
+                         Cricketer.age = 19;
+                         Cricketer.display();
+                         Cricketer.playFootball();
+                         return 0;
+                    }
+                
+             </pre>
+             <br>
+             <h5 class="shead">Output :</h5>
+             <pre>
+                     My profession is: Teacher
+                     My age is: 23
+                     I can walk.
+                     I can talk.
+                     I can teach Guitar.
+                     My profession is: Cricketer
+                     My age is: 19
+                     I can walk.
+                     I can talk.
+                     I can play Cricket.
+             </pre>
+             <br> 
+             <br>
+             <h5 class="shead">Explaination : </h5>
+                In this program, Person is a base class, while GuitarTeacher and Cricketer are derived from Person.
+                <br><br>
+                Person class has two data members - profession and age. It also has two member functions - walk() and talk().
+                <br><br>
+                Both GuitarTeacher and Cricketer can access all data members and member functions of Person.
+                <br><br>
+                However, GuitarTeacher and Cricketer have their own member functions as well: teachGuitar() and playFootball() respectively. These functions are only accessed by their own class.
+                <br><br>
+                In the main() function, a new GuitarTeacher object teacher is created.
+                <br><br>
+                Since, it has access to Person's data members, profession and age of teacher is set. This data is displayed using the display() function defined in the Person class. Also, the teachGuitar() function is called, defined in the GuitarTeacher class.
+                <br><br>
+                Likewise, a new Cricketer object Cricketer is also created. It has access to Person's data members as well, which is displayed by invoking the display() function. The playFootball() function only accessible by the Cricketer is called then after.
+                                
+                
+                <h4 class="heading">Types of Inheritance in C++:</h4>
+                
+                1) Single inheritance      <br>
+                2) Multilevel inheritance<br>
+                3) Multiple inheritance<br>
+                4) Hierarchical inheritance<br>
+                5) Hybrid inheritance<br>
+                <br>
+                <br>
+                <h5 style="color: brown">1. Single inheritance : </h5>
+                In Single inheritance one class inherits one class exactly. <br>
+                For example: Lets say we have class A and B <br>
+                <br>
+                <pre>
+                        B inherits A  // here A is base class and B is 
+                                      inheriting A properties
+                </pre>
+                <br>
+                <br>
+                <h5 class="shead">Lets take an simple example : </h5>
+                <pre>
+                    #include < iostream>
+                    using namespace std;
+                    class A {
+                    public:
+                      A(){
+                         cout<<"Constructor of A class"<< endl;
+                      }
+                    };
+                    class B: public A {
+                    public:
+                      B(){
+                         cout<<"Constructor of B class";
+                      }
+                    };
+                    int main() {
+                       //Creating object of class B
+                       B obj;
+                       return 0;
+                    }
+                </pre>
+                <br> 
+                <h5 class="shead">Output :</h5>
+                <br>
+                <pre>
+                        Constructor of A class
+                        Constructor of B class
+                </pre>
+
+                <br>
+                Did you notice we have creat B class objects then in output we got A class output first why ?
+                <br> <br>
+                Because B class extend A class so if we create object of B class then first A class Constructor will get call . <br>
+                <br>
+                Remember this point exam will ask objective on this . <br>
+                <br> <br>
+                <h5 style="color: brown">2)Multilevel Inheritance : </h5>
+
+                In this type of inheritance one class inherits another child class. 
+            
+                <br> <br>
+
+                Example :
+                <br>
+                <pre>
+                        C inherits B and B inherits A
+                </pre>
+                <h5 style="color: brown">Lets take real Example :</h5>
+                <pre>
+                    #include < iostream>
+                    using namespace std;
+                    class A {
+                    public:
+                      A(){
+                         cout<<"Constructor of A class"<< endl;
+                      }
+                    };
+                    class B: public A {
+                    public:
+                      B(){
+                         cout<<"Constructor of B class"<< endl;
+                      }
+                    };
+                    class C: public B {
+                    public:
+                      C(){
+                         cout<<"Constructor of C class"<< endl;
+                      }
+                    };
+                    int main() {
+                      //Creating object of class C
+                      C obj;
+                      return 0;
+                    }
+                </pre>
+                <br>
+                <h5 class="shead">Output :</h5>
+                <pre>
+                        Constructor of A class
+                        Constructor of B class
+                        Constructor of C class
+                </pre>
+
+                <br> <br>
+                <h5 class="shead">Explaination : </h5>
+                See above code properly : <br> <br>
+                Class A  - Base class  <br><br>
+                Class B  - inherit A (means it has all properties of A )<br><br>
+                Class C  - inherit B (Which inherit A means C has all properties of B and A )<br><br>
+                Thats why after creating object of C class first B class call from B class  A  class 
+                and thats why in our output first line is output from Class A  . 
+                <br><br>
+
+                <h5 style="color: brown">3. Multiple Inheritance : </h5>
+
+                In multiple inheritance, a class can inherit more than one class. This means that in this type of inheritance a single child class can have multiple parent classes.
+                <br> <br>
+                Example : <br>
+                <pre>
+                        C inherits A and B both
+                </pre>
+                <br>
+                <h5 class="shead">Lets take an simple Example : </h5>
+                <pre>
+                       #include < iostream>
+                       using namespace std;
+                       class A {
+                       public:
+                         A(){
+                            cout<<"Constructor of A class"<< endl;
+                         }
+                       };
+                       class B {
+                       public:
+                         B(){
+                            cout<<"Constructor of B class"<< endl;
+                         }
+                       };
+                       class C: public A, public B {
+                       public:
+                         C(){
+                            cout<<"Constructor of C class"<< endl;
+                         }
+                       };
+                       int main() {
+                          //Creating object of class C
+                          C obj;
+                          return 0;
+                       }
+                </pre>
+
+                <h5 class="shead">Output : </h5>
+                <pre>
+                        Constructor of A class
+                        Constructor of B class
+                        Constructor of C class
+                </pre>
+                <br> <br>
+                <h5 class="shead">Explaination :</h5>
+                Lets check above code carefully In Multilevel inheritance what happened  : <br> <br>
+                C->B->A  <br>
+                Means C inherit B and B inherit A  <br>
+                But in multiple inheritance B not extending A class (This is the main difference keep in mind)
+                But C class extend both A and B  . <br> <br>
+                So after Create object of C class it will call A and then B class . <br>
+                Thats why first is A output then B output . 
+
+                <br> <br>
+                Now I will give one excerices do a small change in above program : <br>
+                Replace : <br>
+                <span style="color:cadetblue"> class C: public A, public B   </span>
+                    <br>
+                With <br>
+                <span style="color: cadetblue"> class C: public B, public A </span> <br>
+                and lets what will be the output . this excerices for you solve it ..
+
+                <br> <br>
+                <h5 style="color: brown">4)Hierarchical Inheritance :</h5>
+                In this type of inheritance, one parent class has more than one child class. For example:
+                <br> <br>
+                <pre>
+                        Class B and C inherits class A
+                </pre>
+                <br>
+                <h5 class="shead">Lets see an Example :</h5>
+                <br>
+                <pre>
+                  #include < iostream> 
+                  using namespace std;
+                  
+                  class A //single base class
+                  {
+                      public:
+                      int x, y;
+                      void getdata()
+                      {
+                            cout << "\nEnter value of x and y:\n"; cin >> x >> y;
+                      }
+                  };
+                  class B : public A //B is derived from class base
+                  {
+                      public:
+                      void product()
+                      {
+                          cout << "\nProduct= " << x * y;
+                      }
+                  };
+                  class C : public A //C is also derived from class base
+                  {
+                      public:
+                      void sum()
+                      {
+                          cout << "\nSum= " << x + y;
+                      }
+                  };
+                  int main()
+                  {
+                      B obj1;          //object of derived class B
+                      C obj2;          //object of derived class C
+                      obj1.getdata();
+                      obj1.product();
+                      obj2.getdata();
+                      obj2.sum();
+                      return 0;
+                  }  //end of program
+                     
+                </pre>
+
+                  <br>
+                  <h5 class="shead">Output :</h5>
+                <pre>
+                  Enter value of x and y:
+                  2
+                  3
+                  Product= 6
+                  Enter value of x and y:
+                  2
+                  3
+                  Sum= 5
+                </pre>
+                <br>
+                <h5 class="shead">Explaination :</h5>
+               In this example, there is only one base class A from which two class B and C are derived.
+               <br><br>
+               Both derived class have their own members as well as base class members.
+               <br><br>
+               The product is calculated in the derived class B, whereas, the sum is calculated in the derived class C but both use the values of x and y from the base class.
+               <br><br>
+
+               <h5 style="color: brown">5. Hybrid (Virtual) Inheritance :</h5>
+               Hybrid Inheritance is implemented by combining more than one type of inheritance. For example: Combining Hierarchical inheritance and Multiple Inheritance.
+               <br> <br>
+               <h5 class="shead">Lets take an Example : </h5>
+                <pre>
+                     #include < iostream> 
+                     using namespace std; 
+                       
+                     // base class  
+                     class Vehicle  
+                     { 
+                       public: 
+                         Vehicle() 
+                         { 
+                           cout << "This is a Vehicle" << endl; 
+                         } 
+                     }; 
+                       
+                     //base class 
+                     class Fare 
+                     { 
+                         public: 
+                         Fare() 
+                         { 
+                             cout<<"Fare of Vehicle\n"; 
+                         } 
+                     }; 
+                       
+                     // first sub class  
+                     class Car: public Vehicle 
+                     { 
+                       
+                     }; 
+                       
+                     // second sub class 
+                     class Bus: public Vehicle, public Fare 
+                     { 
+                           
+                     }; 
+                       
+                     // main function 
+                     int main() 
+                     {    
+                         // creating object of sub class will 
+                         // invoke the constructor of base class 
+                         Bus obj2; 
+                         return 0; 
+                     } 
+                </pre>
+                <br>
+                <h5 class="shead">Output :</h5>
+                <pre>
+                  This is a Vehicle
+                  Fare of Vehicle
+                </pre>
+            </p>
+            <h4 class="shead">Note : Exam will ask some tricky objective question on inheritance so 
+               watch all videos then you can solve any problem very easily . <br>
+            </h4>
+            <br> <br>
+            <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             <br> <br>
+            <a  style="margin-left: 60%"  href="{% url 'constructor-In-inheritance-cpp' %}" class="btn btn-secondary text-white btn-lg">Day-9</a>
+            <br> <br>
+          </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}s

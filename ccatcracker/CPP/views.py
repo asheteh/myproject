@@ -42,3 +42,7 @@ def day9(request):
 
 def day10(request):
     return render(request,'cpp/virtual.html')
+
+
+def assignment(request):
+    return render(request,'cpp/assignment.html')

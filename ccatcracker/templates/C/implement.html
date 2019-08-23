@@ -1,0 +1,161 @@
+{% extends 'base_1.html' %}
+{% block title %} Single Linked List Implementation | Data Structures | | Data Structures Tutorial |  {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   
+   font-size: 17px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> Data Structure</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">Linked List Implementation  : </h3> <br>
+               <p >
+
+                Note : This all Tutorial for DAY 4 is only to gain your knowledge exam will not ask any coding question in ccat . If you dont want to learn you can skip this . 
+                <br>
+                I will highly recommend please dont skip this will help you a lot in future . <br>
+                <br>
+
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+                <h5 style="color:green">1. Linked List Implementation  : https://youtu.be/aPDSSycB0OQ</h5>
+                <h5 style="color:green">2. Linked List Implementation  : https://youtu.be/aTVSEEQXs-Y</h5> 
+                <h5 style="color:green">3. Linked List Implementation  : https://youtu.be/mCTSzm1YcfM</h5>
+                <h5 style="color:green">4. Linked List Implementation  : https://youtu.be/7CbmGKk6gsE</h5>
+                <h5 style="color:green">5. Linked List Implementation  : https://youtu.be/dR7v1sVX428</h5>
+                <h5 style="color:green">6. Linked List Implementation  : https://youtu.be/8Ug-a3IhUaE</h5>
+               
+                
+                <br>
+                <br>
+                <h3 class="heading">Lets Do some exercises  : </h3>
+                <br>
+                <h5 style="color: brown">1. What is the time complexity to count the number of elements in the linked list? </h5>
+                    <br>
+                <pre>
+                        a) O(1)
+                        b) O(logn)
+                        c) O(n)
+                        d) O(n2)
+
+                        Ans : c
+                        To count the number of elements, you have to traverse through 
+                        the entire list, hence complexity is O(n).
+                </pre>
+                <br> 
+                <h5 style="color: brown">2. What is the space complexity for deleting a linked list?</h5>
+                <br>
+                <pre>
+                        a) O(1)
+                        b) O(n)
+                        c) Either O(1) or O(n)
+                        d) O(logn)
+
+                        a
+                        You need a temp variable to keep track of current node,
+                        hence the space complexity is O(1).
+                </pre>
+                <br>
+                <h5 style="color: brown">3. Which of these is not an application of linked list? </h5>
+                <br>
+                <pre>
+                        a) To implement file systems
+                        b) For separate chaining in hash-tables
+                        c) To implement non-binary trees
+                        d) Random Access of elements
+
+                        Answer: c
+                        Explanation: When temp is equal to data, the position of data is returned.
+                </pre>
+                <br>
+                <h5 style="color: brown">4.  What kind of linked list is best to answer question like “What is the item at position n?” </h5>
+                <br>
+                <pre>
+                a) Singly linked list
+                b) Doubly linked list
+                c) Circular linked list
+                d) Array implementation of linked list
+
+                Ans : d
+            </pre>
+            <br>
+            <h5 style="color: brown">5. Linked lists are not suitable to for the implementation of?</h5>
+            <pre>
+                    a) Insertion sort
+                    b) Radix sort
+                    c) Polynomial manipulation
+                    d) Binary search
+
+                    Ans :  d
+                    Because it cant be implemented using linked list 
+            </pre>
+            <br> <br>
+            Note : Remmber ccat will ask question(data structure) like above which i gave 5 demo questions . 
+            <br> <br>
+            Dont worry we will cover lots of questions in our test series so dont forget to give test series . 
+            <br>
+            
+            
+                <p>
+            
+              
+
+    
+ <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             <br> <br>
+            <a  style="margin-left: 60%"  href="{% url 'Linked-List-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Day-2</a>
+            <br>  <br>
+
+        </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

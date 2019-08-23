@@ -64,3 +64,15 @@ def some_extra(request):
 def files(request):
     return render(request,'C/file.html')
 
+
+def ds(request):
+     return render(request,'C/ds.html')
+
+def linked_list(request):
+     return render(request,'C/ls.html')
+
+def queue(request):
+     return render(request,'C/queue.html')
+
+def implement(request):
+     return render(request,'C/implement.html')

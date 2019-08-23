@@ -1,0 +1,197 @@
+{% extends 'base_1.html' %}
+{% block title %} Queue | Data Structures Tutorial |  {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   
+   font-size: 17px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> Data Structure</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">Queue  : </h3> <br>
+               <p >
+                   
+                    A queue is a useful data structure in programming. It is similar to the ticket queue outside a cinema hall, where the first person entering the queue is the first person who gets the ticket.
+                    <br> <br>
+                    Queue follows the First In First Out(FIFO) rule - the item that goes in first is the item that comes out first too.
+                    <br> <br>
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+                <h5 style="color:green">1. Queue and Stack : https://youtu.be/gnYM_G1ILm0 </h5>
+                <h5 style="color:green">2. Queue and Stack : https://youtu.be/EXsR7HXlGLw </h5>
+                <h5 style="color:green">3. Queue and Stack : https://youtu.be/Ig34WPrgofI </h5>
+                <h5 style="color:green">4. Queue and Stack : https://youtu.be/9nEcSGdX5vY</h5>
+                <h5 style="color:green">5. Queue and Stack : https://youtu.be/OkkMub7pPBI</h5> 
+                <h5 style="color:green">6. Queue and Stack : https://youtu.be/aSnOCwWl56o</h5>
+                <h5 style="color:green">7. Queue and Stack : https://youtu.be/FuiT4Ghjyn0</h5>
+                
+                <br>
+                
+                <h4 style="color:green"> What Is Queue  : </h4> <br>
+            <p>
+                    In programming terms, putting an item in the queue is called an "enqueue" and removing an item from the queue is called "dequeue".
+
+                    <br> <br>
+                    Enqueue: Add element to end of queue .                           <br><br>
+                    Dequeue: Remove element from front of queue.<br><br>
+                    IsEmpty: Check if queue is empty.<br><br>
+                    IsFull: Check if queue is full.<br><br>
+                    Peek: Get the value of the front of queue without removing it. <br><br>
+                
+            
+
+            </p>
+            <br>
+            <h3 class="heading"> How Queue Works ?  : </h3>
+            <p>
+           
+                    Two pointers called FRONT and REAR are used to keep track of the first and last elements in the queue.
+                    <br> <br>
+                    When initializing the queue, we set the value of FRONT and REAR to -1.
+                    <br> <br>
+                    On enqueing an element, we increase the value of REAR index and place the new element in the position pointed to by REAR.
+                    <br> <br>
+                    On dequeueing an element, we return the value pointed to by FRONT and increase the FRONT index.
+                    <br> <br>
+                    Before enqueing, we check if queue is already full.
+                    <br> <br>
+                    Before dequeuing, we check if queue is already empty.
+                    <br> <br>
+                    When enqueing the first element, we set the value of FRONT to 0.
+                    <br> <br>
+                    When dequeing the last element, we reset the values of FRONT and REAR to -1.
+                    <br> <br>
+            <br> <br>
+            </p>
+
+            <h3 class="heading">Implementation using C programming :</h3>
+            <p>
+                <br>
+                <pre>
+                   #include&lt;stdio.h>
+                   #define SIZE 5
+                   void enQueue(int);
+                   void deQueue();
+                   void display();
+                   int items[SIZE], front = -1, rear = -1;
+                   int main()
+                   {
+                       //deQueue is not possible on empty queue
+                       deQueue();
+                       
+                       //enQueue 5 elements
+                       enQueue(1);
+                       enQueue(2);
+                       enQueue(3);
+                       enQueue(4);
+                       enQueue(5);
+                       
+                       //6th element can't be added to queue because queue is full
+                       enQueue(6);
+                       
+                       display();
+                       
+                       //deQueue removes element entered first i.e. 1
+                       deQueue();
+                       
+                       //Now we have just 4 elements
+                       display();
+                       
+                       return 0;
+                       
+                   }
+                   void enQueue(int value){
+                       if(rear == SIZE-1)
+                           printf("\nQueue is Full!!");
+                       else {
+                           if(front == -1)
+                               front = 0;
+                           rear++;
+                           items[rear] = value;
+                           printf("\nInserted -> %d", value);
+                       }
+                   }
+                   void deQueue(){
+                       if(front == -1)
+                           printf("\nQueue is Empty!!");
+                       else{
+                           printf("\nDeleted : %d", items[front]);
+                           front++;
+                           if(front > rear)
+                               front = rear = -1;
+                       }
+                   }
+                   void display(){
+                       if(rear == -1)
+                           printf("\nQueue is Empty!!!");
+                       else{
+                           int i;
+                           printf("\nQueue elements are:\n");
+                           for(i=front; i<=rear; i++)
+                               printf("%d\t",items[i]);
+                       }
+                   }
+                </pre>
+        </p>
+
+       
+
+    
+ <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             <br> <br>
+            <a  style="margin-left: 60%"  href="{% url 'Linked-List-Implementaion' %}" class="btn btn-secondary text-white btn-lg">Day-4</a>
+            <br>  <br>
+
+        </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

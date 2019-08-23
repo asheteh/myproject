@@ -19,4 +19,5 @@ urlpatterns = [
     #path('payment_test',views.payment_test,name='payment_test'),
     path('constructor-In-inheritance-cpp',views.day9,name='constructor-In-inheritance-cpp'),
     path('virtual-class-in-cpp',views.day10,name='virtual-class-in-cpp'),
+    path('vCPP-Program-Exercises',views.assignment,name='CPP-Program-Exercises'),
 ]

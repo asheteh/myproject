@@ -1,0 +1,185 @@
+{% extends 'base_1.html' %}
+{% block title %} Introduction to Data Structures through C | Data Structures Tutorial |  {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   
+   font-size: 17px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> Data Structure</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">Data Structure  : </h3> <br>
+               <p >
+                    A data structure is a special way of organizing and storing data in a computer so that it can be used efficiently. Array, LinkedList, Stack, Queue, Tree, Graph etc are all data structures that stores the data in a special way so that we can access and use the data efficiently. Each of these mentioned data structures has a different special way of organizing data so we choose the data structure based on the requirement, we will cover each of these data structures in a separate tutorials.
+
+
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+                <h5 style="color:green">1. Data Structure        : https://youtu.be/Db9ZYbJONHc</h5>
+                <h5 style="color:green">2. Data Structure Stack  : https://youtu.be/BrVZZZkkGGI</h5> 
+                <h5 style="color:green">2. Data Structure Stack  : https://youtu.be/Y1vSGA0jm5E</h5>
+                <h5 style="color:green">2. Data Structure Stack  : https://youtu.be/UYBYifvCey0</h5>
+                <h5 style="color:green">2. Data Structure Stack  : https://youtu.be/ugTUvNhHd9c</h5>
+                <br>
+                
+                
+            <p>
+            
+                <h4 style="color:green">Data Structure Types : </h4> <br>
+                1. Linear Data Structure <br>
+                2. Non-linear Data Structure <br>
+                <br> <br>
+                <h5 style="color: brown">
+                    1. Linear Data Structure :
+                </h5>
+                Elements of Linear data structure are accessed in a sequential manner, however the elements can be stored in these data structure in any order. Examples of linear data structure are: LinkedList, Stack, Queue and Array.
+                <br> <br>
+                <h5 style="color: brown">
+                        1. Non-Linear Data Structure :
+                </h5>
+                Elements of non-linear data structures are stores and accessed in non-linear order. Examples of non-linear data structure are: Tree and Graph
+                <br> <br>
+
+                
+            </p>
+            <br>
+            <h3 class="heading"> What Is Stack ? : </h3>
+            <p>
+            It is type of linear data structure.                                            <br> <br>
+            It follows LIFO (Last In First Out) property.<br> <br>
+            It has only one pointer TOP that points the last or top most element of Stack.<br> <br>
+            Insertion and Deletion in stack can only be done from top only.<br> <br>
+            Insertion in stack is also known as a PUSH operation.<br> <br>
+            Deletion from stack is also known as POP operation in stack.<br> <br>
+            Stack is said to be in Overflow state when it is completely full and is said to be in Underflow state if it is completely empty.
+
+            <br> <br>
+            </p>
+
+            <h3 class="heading">Applications Of Stack :</h3>
+            <p>
+            1. Conversion ofpolish notations                                    <br>
+                There are three types of notations:                          <br>        
+                > Infix notation - Operator is between the operands : x + y<br>
+                > Prefix notation - Operator is before the operands : + xy<br>
+                > Postfix notation - Operator is after the operands : xy +<br>
+<br>
+                Note : Exam will ask 2,3 objective on Prefix Postfix . <br>
+                <br>
+            2. To reverse a string
+                    A string can be reversed by using stack. The characters of string pushed on to the stack till the end of the string. The characters are popped and displays. Since the end character of string is pushed at the last, it will be printed first.
+                    <br> <br>
+            3. Recursion            <br> <br>
+           
+            4. Parsing<br> <br>
+           
+            5. Tree Traversals<br> <br>
+            </p>
+
+            <h3 class="heading">Algorithm for POP operation :</h3>
+            <p>
+            Now lets consider an example of  a stack is the pile of dinner plates that you encounter when you eat at the local cafeteria:
+             When you remove a plate from the pile, you take the plate on the top of the pile .  <br> <br>
+            
+            That means you did POP operation in programming sense . 
+            <br> <br>
+            Pop means retrieve data from array or list which is inserted at last . Thats why its called Last Input First Output . <br>
+            <br>
+           
+            For Implement Do following Steps  : <br>
+                <br>
+            1. Check if the stack is empty or not.                                                   <br>
+            2. If the stack is empty, then print error of underflow and exit the program.<br>
+            3. If the stack is not empty, then print the element at the top and decrement the top.<br>
+
+        </p>
+
+        <h3 class="heading">Algorithm for PUSH operation :</h3>
+        <p>
+        Now same above example . After finish your dinner you will keep that plates for wash . That means you are 
+        inserting data into stack . <br> <br>
+        For example first you keep your plate for wash ,
+        After than your brother keep plate obviously he will keep plate on above of your plate . 
+        <br> <br>
+        Hope you understand how PUSH works in stack PUSH means Insert data in array or list .  <br>
+
+       <br>
+       
+        For Implement Do following Steps  : <br>
+            <br>
+            1. Check if the stack is full or not.                                       <br>
+            2. If the stack is full, then print error of overflow and exit the program.<br>
+            3. If the stack is not full, then increment the top and add the element.<br>
+            <br>
+
+            <br>
+            <table >
+                    <tbody>
+                    <tr><th><div>Position of Top  </div></th><th><div>Status of Stack</div></th></tr>
+                    <tr><td><code>-1</code></td><td>Stack is Empty</td></tr>
+                    <tr><td><code>0</code></td><td>Only one element in Stack</td></tr>
+                    <tr><td><code>N-1</code></td><td>Stack is Full</td></tr>
+                    <tr><td><code>N</code></td><td>Overflow state of Stack</td></tr>
+                    </tbody>
+            </table>
+    </p><br> <br>
+
+    
+ <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             <br> <br>
+            <a  style="margin-left: 60%"  href="{% url 'Linked-List-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Day-2</a>
+            <br>  <br>
+
+        </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

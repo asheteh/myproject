@@ -169,60 +169,153 @@
                 <br>
                 virtual can be written before or after the public. Now only one copy of data/function member will be copied to class C and class B and class A becomes the virtual base class.
                 Virtual base classes offer a way to save space and avoid ambiguities in class hierarchies that use multiple inheritances. When a base class is specified as a virtual base, it can act as an indirect base more than once without duplication of its data members. A single copy of its data members is shared by all the base classes that use virtual base.
-
-
-                <h4 class="shead">Lets do some Exercises on Inheritance : </h4>
+                <br> <br>
+                The class A has just one data member a which is public. This class is virtually inherited in class B and class C. Now class B and class C becomes virtual base class and no duplication of data member a is done.
+                <h4 class="heading">Pure Virtual Functions in C++ :</h4>
                 <br>
-                <h5 style="color: brown">1. C++ program to read and print employee information using multiple inheritance. ?</h5>
+
+                Pure virtual Functions are virtual functions with no definition. They start with virtual keyword and ends with = 0. Here is the syntax for a pure virtual function,
+                <br>
                 <pre>
-                    Think how can u implement inheritance here . 
-                    Output looks like  : 
+                    virtual void f() = 0;
+                </pre>
+                <br>
+                A class with at least one pure virtual function or abstract function is called abstract class. We can't create an object of abstract class. Member functions of abstract class will be invoked by derived class object.
+                <br> <br>
+                <h5 class="shead">Lets take an Example : </h5>
+                <br>
+                <pre>
+                #include< iostream.h>
+                #include< conio.h>
+        
+               class BaseClass       //Abstract class
+               {
+        
+                      public:
+                       virtual void Display1()=0;     //Pure virtual function or abstract function
+                       virtual void Display2()=0;     //Pure virtual function or abstract function
+        
+                       void Display3()
+                       {
+                              cout<<"\n\tThis is Display3() method of Base Class";
+                       }
+        
+               };
+        
+               class DerivedClass : public BaseClass
+               {
+        
+                      public:
+                       void Display1()
+                       {
+                              cout<<"\n\tThis is Display1() method of Derived Class";
+                       }
+        
+                       void Display2()
+                       {
+                              cout<<"\n\tThis is Display2() method of Derived Class";
+                       }
+        
+               };
+        
+               void main()
+               {
+        
+                      DerivedClass D;
+        
+                      D.Display1();            // This will invoke Display1() method of Derived Class
+                      D.Display2();            // This will invoke Display2() method of Derived Class
+                      D.Display3();            // This will invoke Display3() method of Base Class
+        
+               }
+        
+            Output :
+         
+                       This is Display1() method of Derived Class
+                       This is Display2() method of Derived Class
+                       This is Display3() method of Base Class
+         
+                </pre> <br>
+                <h4 class="shead">Why we need a abstract class?: </h4>
+                <br>
+                Let’s understand this with the help of a real life example. Lets say we have a class Animal, animal sleeps, animal make sound, etc. For now I am considering only these two behaviours and creating a class Animal with two functions sound() and sleeping().
+                <br> <br>
+                Now, we know that animal sounds are different cat says “meow”, dog says “woof”. So what implementation do I give in Animal class for the function sound(), the only and correct way of doing this would be making this function pure abstract so that I need not give implementation in Animal class but all the classes that inherits Animal class must give implementation to this function. This way I am ensuring that all the Animals have sound but they have their unique sound.
 
-                    Enter employee's basic info: 
-                    Enter Name: Abhijeet
-                    Enter Emp. Id: 1121
-                    Enter Gender: F
-                    Enter employee's department info: 
-                    Enter Department Name: Testing
-                    Enter assigned work: Test Game OEM
-                    Enter time in hours to complete work: 70
-
-
-                    Employee's Information is: 
-                    Basic Information...:
-                    Name: Abhijeet
-                    Employee ID: 1121
-                    Gender: F
+                <br> <br>
+                <h5 class="shead">Lets take an example :</h5>
+                <br>
+                <pre>
+                #include&lt;iostream>
+                using namespace std;
+                class Animal{
+                public:
+                   //Pure Virtual Function
+                   virtual void sound() = 0;
                 
-                    Department Information...:
-                    Department Name: Testing
-                    Assigned Work: Test Game OEM
-                    Time to complete work: 70
-                
-                    Note : implement multiple Inheritance . 
+                   //Normal member Function
+                   void sleeping() {
+                      cout<<"Sleeping";
+                   }
+                };
+                class Dog: public Animal{
+                public:
+                   void sound() {
+                      cout<<"Woof"<< endl;
+                   }
+                };
+                int main(){
+                   Dog obj;
+                   obj.sound();
+                   obj.sleeping();
+                   return 0;
+                }
                 </pre>
                 <br> <br>
-                <h5 style="color: brown">2. Hierarchical inheritance to get square and cube of a number program in C++ </h5>
+                <h4 class="heading">Important Points :</h4>
+                <br>
+                1) As we have seen that any class that has a pure virtual function is an abstract class.  <br> <br>
+                2) We cannot create the instance of abstract class. For example: If I have written this line Animal obj; in the above program, it would have caused compilation error. <br> <br>
+                3) We can create pointer and reference of base abstract class points to the instance of child class. For example, this is valid: <br> <br>
                 <pre>
-                    Output :
-                    Enter an integer number: 10
-                    Square of 10 is: 100
-                    Enter an integer number: 20
-                    Cube   of 10 is: 8000
+                    Animal *obj = new Dog();
+                    obj->sound();
                 </pre>
+                <br>
+                4) Abstract class can have constructors. <br> <br>
+                5) If the derived class does not implement the pure virtual function of parent class then the derived class becomes abstract.
+                <br> <br>
+                Keep in mind exam will 100 % ask objective questions on these topics .
+
                 <br> <br>
 
+                <h4 class="heading">Abstraction : </h4>
+                Abstraction is a process of hiding the implementation from the user, only the functionality is exposed here. So you are aware only of what the application does, not how it does it.
+
+                <br> <br>
+
+                <h4 class="heading">Real life Example :</h4>
+                <br>
+                When you log into your email, compose and send a mail. Again there is a whole lot of background processing involved, verifying the recipient, sending request to the email server, sending your email. Here you are only interested in composing and clicking on the send button. What really happens when you click on the send button, is hidden from you.
+
+                <br>
+
+                <br>
+                <h5 style="color: brown">So thats it our CPP course is completed practise assignment which I gave 
+                    and do lots of coding . Dont forget to  be always active on ccatcracker I will start question 
+                    series very soon . 
+                </h5><br>
             </p>
-            <h4 class="shead">Note : Exam will ask some tricky objective question on inheritance so 
-               watch all videos then you can solve any problem very easily . <br>
-            </h4>
+            <h5 class="shead">Note : Exam will ask some  objective question on Abstraction and virtual Functions so 
+               watch all videos very carefully  then you can solve any problem very easily . <br>
+            </h5>
             <br> <br>
             <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
                 so you cant miss it . this Tutorial are very very great available on internet . Please let me 
                 know if you have any doubts 
             </h5>
              <br> <br>
-            <a  style="margin-left: 60%"  href="{% url 'virtual-class-in-cpp' %}" class="btn btn-secondary text-white btn-lg">Last-Day</a>
+            <a  style="margin-left: 60%"  href="{% url 'CPP-Program-Exercises' %}" class="btn btn-secondary text-white btn-lg">CPP-Programming-Assignment</a>
             <br> <br>
           </div>
       </div>

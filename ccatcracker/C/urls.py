@@ -22,6 +22,10 @@ urlpatterns = [
     path('command-line-In-C-Tutorial',views.some_extra,name='command-line-In-C-Tutorial'),
     path('program-In-C-Tutorial',views.program,name='program-In-C-Tutorial'),
     path('projects-In-C-Tutorial',views.projects,name='projects-In-C-Tutorial'),
+    path('Data-Structure-Tutorial',views.ds,name='Data-Structure-Tutorial'),
+    path('Linked-List-Tutorial',views.linked_list,name='Linked-List-Tutorial'),
+    path('Queue-Tutorial',views.queue,name='Queue-Tutorial'),
+    path('Linked-List-Implementaion',views.implement,name='Linked-List-Implementaion'),
     
     #path('payment_test',views.payment_test,name='payment_test'),
      

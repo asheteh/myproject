@@ -1,0 +1,361 @@
+{% extends 'base_1.html' %}
+{% block title %} Linked List using C ,C++,JAVA | Data Structures Tutorial |   {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   
+   font-size: 17px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> Data Structure</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">Linked Lists : </h3> <br>
+               <p >
+                   
+                    Linked List is a very commonly used linear data structure which consists of group of nodes in a sequence.
+                    <br> <br>
+                    Each node holds its own data and the address of the next node hence forming a chain like structure.
+                    <br> <br>
+                    Linked Lists are used to create trees and graphs.
+                    <br> <br>
+                </p>
+               <h4 style="color: black">Copy Below Links And Watch Lectures First :</h4>
+               <br>
+                <h5 style="color:green">1. Linked List   : https://youtu.be/eGnlKPCkAFY</h5>
+                <h5 style="color:green">2. Linked List   : https://youtu.be/o1QaGUEi6ew</h5> 
+                <h5 style="color:green">3. Linked List   : https://youtu.be/ZhC1soR0zno</h5>
+                <h5 style="color:green">4. Linked List   : https://youtu.be/roei8Vd5814</h5>
+                <h5 style="color:green">5. Linked List   : https://youtu.be/N_7lm7BBTpY</h5>
+
+                <h5 style="color:green">6. Linked List   : https://youtu.be/qIjIwHiwkBg</h5>
+                <h5 style="color:green">7. Linked List   : https://youtu.be/e7xUBwxOzpk</h5>
+                <br>
+                
+                
+          
+            
+                <h3 style="color:green">Application Of Linked List  : </h3> <br>
+                <p>
+                1. Linked lists are used to implement stacks, queues, graphs, etc.             <br>
+                2. Linked lists let you insert elements at the beginning and end of the list.<br>
+                3. In Linked Lists we don't need to know the size in advance.<br>
+                
+            </p>
+            <br>
+            <h3 class="heading"> Types of Linked Lists: </h3>
+            <p>
+          
+                1. Singly Linked List   <br>
+                2. Doubly Linked List<br>
+                3. Circular Linked List<br>
+            <br> <br>
+            </p>
+
+            <h3 class="heading">1. Singly Linked List :</h3>
+            <p>
+           
+                    The operations we can perform on singly linked lists are insertion, deletion and traversal.
+                    <br> <br>
+                    Singly linked lists contain nodes which have a data part as well as an address part i.e. next, which points to the next node in the sequence of nodes.
+                    <br> <br>
+                    node means for example consider 1 box is called node .  so we devide that box in two parts half part store data ,
+                    and another half part store address of next block . 
+
+                    <br> <br>
+                  
+            </p>
+
+            <h3 class="heading">2. Doubly Linked List :</h3>
+            <p>
+                    In a doubly linked list, each node contains a data part and two addresses, one for the previous node and one for the next node.
+                    <br> <br>
+                    Take same above example in doubly Linked list instead of two parts we have 3 parts of box .  <br> <br>
+                    That means our node (box) is divided in 3 parts : <br>
+                    1. Address (This address is for previous box(node))   <br>
+                    2. Data    <br>
+                    3. Address (This address is for next node)<br>
+                    <br>
+
+
+            </p>
+
+        <h3 class="heading">Circular Linked List :</h3>
+        <p>
+            
+                In circular linked list the last node of the list holds the address of the first node hence forming a circular chain.
+
+                <br> <br> 
+                This is same like singly list but main difference is last box address part connect first box (node) .
+                <br> <br>
+                The real life application where the circular linked list is used is our Personal Computers, where multiple applications are running. All the running applications are kept in a circular linked list and the OS gives a fixed time slot to all for running. The Operating System keeps on iterating over the linked list until all the applications are completed.
+                <br> <br>
+                Another example can be Multiplayer games. All the Players are kept in a Circular Linked List and the pointer keeps on moving forward as a player's chance ends.
+
+
+
+
+
+        </p><br> <br>
+        <h3 class="heading">Why Linked List? :</h3>
+        <br>
+        <p>
+                Arrays can be used to store linear data of similar types, but arrays have the following limitations.
+                <br> <br>
+                1. The size of the arrays is fixed: So we must know the upper limit on the number of elements in advance. Also, generally, the allocated memory is equal to the upper limit irrespective of the usage. 
+
+                <br> <br>
+
+                2. Insertion deletion operation is very costly in array  because we have to lots of shifting and if suppose size 
+                of array is too large its storing 1 lakh record then how worst it is for sort we have to shift 1 lakh times . <br>
+                <br> <br>
+                For example, in a system, if we maintain a sorted list of IDs in an array id[].
+                <br>
+                id[] = [1000, 1010, 1050, 2000, 2040].
+                <br>
+                And if we want to insert a new ID 1005, then to maintain the sorted order, we have to move all the elements after 1000 (excluding 1000).
+                <br> <br>
+
+                Note : Exam will not ask coding questions on data structure but you will get lots of benefits in CDAC so watch videos very carefully . 
+                <br> <br>
+
+                <h3 class="heading">Linked List vs. Array :</h3>
+
+                <p>
+                    Note : Exam will ask some objectives on this so read carefully . <br> <br>
+                    1. An array is the data structure that contains a collection of similar type data elements whereas the Linked list is considered as non-primitive data structure contains a collection of unordered linked elements known as nodes.
+                    <br> <br>
+                    2. In a linked list though, you have to start from the head and work your way through until you get to the fourth element.
+                    <br> <br>
+                    3. Accessing an element in an array is fast, while Linked list takes linear time, so it is quite a bit slower.
+                    <br> <br>
+                    4. In the array the elements belong to indexes, i.e., if you want to get into the fourth element you have to write the variable name with its index or location within the square bracket.
+                    <br> <br>
+                    5. Operations like insertion and deletion in arrays consume a lot of time. On the other hand, the performance of these operations in Linked lists is fast.
+                    <br> <br>
+                    6. Arrays are of fixed size. In contrast, Linked lists are dynamic and flexible and can expand and contract its size.
+                    <br> <br>
+                    7. In an array, memory is assigned during compile time while in a Linked list it is allocated during execution or runtime.
+                    <br> <br>
+                    9. Elements are stored consecutively in arrays whereas it is stored randomly in Linked lists.
+                    <br> <br>
+                    10. The requirement of memory is less due to actual data being stored within the index in the array. As against, there is a need for more memory in Linked Lists due to storage of additional next and previous referencing elements.
+                    <br> <br>
+                    11. In addition memory utilization is inefficient in the array. Conversely, memory utilization is efficient in the linked list
+                    <br> <br>
+        
+        
+                </p>
+                <h3 class="heading">Lets take an Programming example for singly list : </h3>
+                <p>
+                <br>
+                <h4 style="color: brown">Write C Program for Singly Linked List Insert, Delete, Display and Count </h4>
+                    <pre>
+                * Remember in c we have learned every thing so i hope you can very easily understand below code . *
+                * Its very easy what we did here for each operation created one function and from our switch case we are 
+                calling them . *  
+                
+                #include &lt;stdio.h>
+                #include &lt;malloc.h>
+                #include &lt;stdlib.h>
+                
+                struct node {
+                  int value;
+                  struct node *next;
+                };
+                
+                void insert();
+                void display();
+                void delete();
+                int count();
+                
+                typedef struct node DATA_NODE;
+                
+                DATA_NODE *head_node, *first_node, *temp_node = 0, *prev_node, next_node;
+                int data;
+                
+                int main() {
+                  int option = 0;
+                
+                  printf("Singly Linked List Example - All Operations\n");
+                
+                  while (option < 5) {
+                
+                    printf("\nOptions\n");
+                    printf("1 : Insert into Linked List \n");
+                    printf("2 : Delete from Linked List \n");
+                    printf("3 : Display Linked List\n");
+                    printf("4 : Count Linked List\n");
+                    printf("Others : Exit()\n");
+                    printf("Enter your option:");
+                    scanf("%d", &option);
+                    switch (option) {
+                      case 1:
+                        insert();
+                        break;
+                      case 2:
+                        delete();
+                        break;
+                      case 3:
+                        display();
+                        break;
+                      case 4:
+                        count();
+                        break;
+                      default:
+                        break;
+                    }
+                  }
+                
+                  return 0;
+                }
+                
+                void insert() {
+                  printf("\nEnter Element for Insert Linked List : \n");
+                  scanf("%d", &data);
+                
+                  temp_node = (DATA_NODE *) malloc(sizeof (DATA_NODE));
+                
+                  temp_node->value = data;
+                
+                  if (first_node == 0) {
+                    first_node = temp_node;
+                  } else {
+                    head_node->next = temp_node;
+                  }
+                  temp_node->next = 0;
+                  head_node = temp_node;
+                  fflush(stdin);
+                }
+                
+                void delete() {
+                  int countvalue, pos, i = 0;
+                  countvalue = count();
+                  temp_node = first_node;
+                  printf("\nDisplay Linked List : \n");
+                
+                  printf("\nEnter Position for Delete Element : \n");
+                  scanf("%d", &pos);
+                
+                  if (pos > 0 && pos <= countvalue) {
+                    if (pos == 1) {
+                      temp_node = temp_node -> next;
+                      first_node = temp_node;
+                      printf("\nDeleted Successfully \n\n");
+                    } else {
+                      while (temp_node != 0) {
+                        if (i == (pos - 1)) {
+                          prev_node->next = temp_node->next;
+                          if(i == (countvalue - 1))
+                          {
+                              head_node = prev_node;
+                          }
+                          printf("\nDeleted Successfully \n\n");
+                          break;
+                        } else {
+                          i++;
+                          prev_node = temp_node;
+                          temp_node = temp_node -> next;
+                        }
+                      }
+                    }
+                  } else
+                    printf("\nInvalid Position \n\n");
+                }
+                
+                void display() {
+                  int count = 0;
+                  temp_node = first_node;
+                  printf("\nDisplay Linked List : \n");
+                  while (temp_node != 0) {
+                    printf("# %d # ", temp_node->value);
+                    count++;
+                    temp_node = temp_node -> next;
+                  }
+                  printf("\nNo Of Items In Linked List : %d\n", count);
+                }
+                
+                int count() {
+                  int count = 0;
+                  temp_node = first_node;
+                  while (temp_node != 0) {
+                    count++;
+                    temp_node = temp_node -> next;
+                  }
+                  printf("\nNo Of Items In Linked List : %d\n", count);
+                  return count;
+                }
+            </pre>
+            <br> <br>
+            <h5 class="heading">Please watch videos first Mr. Srinivas teach data structure in such 
+                a way I never found teacher like him on internet . This will help you too much while doing CDAC . 
+
+            </h5>
+                <br> <br>
+                </p>
+        
+        
+        
+        
+        
+        
+        </p>
+
+
+
+    
+ <h5 style="color: brown">Note : Please dont skip any videos think like you are in classroom 
+                so you cant miss it . this Tutorial are very very great available on internet . Please let me 
+                know if you have any doubts 
+            </h5>
+             <br> <br>
+            <a  style="margin-left: 50%"  href="{% url 'Queue-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Day-3</a>
+            <br>  <br>
+
+        </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

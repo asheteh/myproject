@@ -26,6 +26,14 @@ urlpatterns = [
     path('Linked-List-Tutorial',views.linked_list,name='Linked-List-Tutorial'),
     path('Queue-Tutorial',views.queue,name='Queue-Tutorial'),
     path('Linked-List-Implementaion',views.implement,name='Linked-List-Implementaion'),
+    path('Tree-Data-Structure',views.tree,name='Tree-Data-Structure'),
+    path('OS-Tutorial',views.os,name='OS-Tutorial'),
+    path('Paging-Segementation-OS',views.paging,name='Paging-Segementation-OS'),
+    path('Difference-In-Os',views.diff,name='Difference-In-Os'),
+    
+
+    
+    
     
     #path('payment_test',views.payment_test,name='payment_test'),
      

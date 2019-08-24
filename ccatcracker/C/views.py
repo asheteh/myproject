@@ -76,3 +76,17 @@ def queue(request):
 
 def implement(request):
      return render(request,'C/implement.html')
+
+
+def tree(request):
+     return render(request,'C/tree.html')
+
+def os(request):
+     return render(request,'C/os.html')
+
+def paging(request):
+     return render(request,'C/paging.html')
+
+
+def diff(request):
+     return render(request,'C/dif.html')

@@ -1,0 +1,382 @@
+{% extends 'base_1.html' %}
+{% block title %} Operating System  | Operating System Tutorial {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   
+   font-size: 17px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> Operating System </li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green"> Operating System : </h3> 
+               <p >
+                 An operating system is a software which acts as an interface between the end user and computer hardware. Every computer must have at least one OS to run other programs. An application like Chrome, MS Word, Games, etc needs some environment in which it will run and perform its task.
+
+            </p>
+
+                <h3 class="heading">Types of Operating system : </h3>
+                
+                <p>
+                    Batch Operating System             <br>
+                    Multitasking/Time Sharing OS<br>
+                    Multiprocessing OS<br>
+                    Real Time OS<br>
+                    Distributed OS<br>
+                    Network OS<br>
+                    Mobile OS<br>
+                </p>
+            <h3 class="heading">1. Batch Operating System : </h3>
+                <p>
+                    A batch operating system is an operating system in which same type of processes are batched together for execution. Its a relatively faster system than traditional system.
+                    <br> <br>
+                    The user of a batch operating system never directly interacts with the computer. In this type of OS, every user prepares his or her job on an offline device like a punch card and submit it to the computer operator.
+                    <br>
+
+                </p>
+            <h3 class="heading">2. Multitasking/Time Sharing OS : </h3>
+                <p>
+                    Time sharing system is where each process is alloted a particular time span and the process has to finish its completion within that time span. If it is failed to complete its execution then CPU control goes to the immidiate next process.
+                    <br> <br>
+                    Time-sharing operating system enables people located at a different terminal(shell) to use a single computer system at the same time. The processor time (CPU) which is shared among multiple users is termed as time sharing.
+                    <br> <br>
+                </p>
+
+            <h3 class="heading">3. Real Time OS :</h3>
+            <p>
+                Real time system is defines as a data processing system in which each task has a deadline to complete. Real Time Operating System (RTOS) adheres to this deadline as missing a deadline can cause affects ranging from undesired to catastrophic. A real-time system has well-defined, fixed time constraints
+                <br> <br>
+                A real time operating system time interval to process and respond to inputs is very small. Examples: Military Software Systems, Space Software Systems.
+                <br> <br>
+            </p>
+              
+            <h3 class="heading">4. Distributed Operating System :</h3>
+            <p>
+                A distributed operating system is an extension of the network operating system that supports higher levels of communication and integration of the machines on the network.
+                <br> <br>
+                Distributed Operating System is a system where distributed applications are running on multiple computers linked by communication lines, such as high speed buses or telephone lines.Distributed systems use multiple central processors to serve multiple real time application andmultiple users . 
+                <br> <br>
+                
+                In simple words Distributed systems use many processors located in different machines to provide very fast computation to its users.
+                <br> <br>
+
+            </p>
+            <h3 class="heading">5. Network Operating System :</h3>
+            <p>
+                A network operating system, or NOS, is system software that is designed primarily to controls the various devices like printers, disk drives on a computer network and how they communicate with each other . 
+                <br> <br>
+                Network Operating System runs on a server. It provides the capability to serve to manage data, user, groups, security, application, and other networking functions. <br><br>
+
+            </p>
+            <h3 class="heading">Some Important Points : </h3>
+            <p>
+                An operating system is a software which acts as an interface between the end user and computer hardware
+                <br> <br>
+                Operating systems were first developed in the late 1950s to manage tape storage
+                <br> <br>
+                The kernel is the central component of a computer operating systems. The only job performed by the kernel is to the manage the communication between the software and the hardware
+                <br> <br>
+                Two most popular kernels are Monolithic and MicroKernels
+                <br> <br>
+                Process, Device, File, I/O, Secondary-Storage, Memory management are various functions of an Operating System
+                <br> <br>
+                Batch, Multitasking/Time Sharing, Multiprocessing, Real Time, Distributed, Network, Mobile are various types of Operating Systems
+                <br> <br>
+            </p>
+    
+            <h3 class="heading"> Inter-Process Communication : </h3>
+            <p>
+                Inter process communication is a mechanism which allows different processes to communicate and synchronize shared actions by using message passing and shared memory.
+                <br> <br>
+                This allows a program to handle many user requests at the same time. Since even a single user request may result in multiple processes running in the operating system on the user's behalf, the processes need to communicate with each other. The IPC interfaces make this possible. Each IPC method has its own advantages and limitations so it is not unusual for a single program to use all of the IPC methods
+                <br> <br>
+
+            </p>
+            <h3 class="heading">Types of Process :</h3>
+            <p>
+                Independent process. <br>
+                Co-operating process. <br>
+                <br>
+                An independent process is not affected by the execution of other processes while a co-operating process can be affected by other executing processes. Though one can think that those processes, which are running independently, will execute very efficiently but in practical, there are many situations when co-operative nature can be utilised for increasing computational speed, convenience and modularity. Inter process communication (IPC) is a mechanism which allows processes to communicate each other and synchronize their actions. The communication between these processes can be seen as a method of co-operation between them. Processes can communicate with each other using these two ways:
+                <br> <br>
+               <span style="color:brown">1. Shared Memory  </span> <br><br>
+               <span style="color:brown">2. Message passing </span>  <br><br>
+                An operating system can implement both method of communication.
+                <br> <br>
+                Communication between processes using shared memory requires processes to share some variable and it completely depends on how programmer will implement it. One way of communication using shared memory can be imagined like this:
+
+                <br> <br>
+                Suppose process1 and process2 are executing simultaneously and they share some resources or use some information from other process, process1 generate information about certain computations or resources being used and keeps it as a record in shared memory. When process2 need to use the shared information, it will check in the record stored in shared memory and take note of the information generated by process1 and act accordingly.
+                <br> <br>
+                Processes can use shared memory for extracting information as a record from other process as well as for delivering any specific information to other process. 
+
+                <br> <br>
+                For the communication between processes via message passing, processes communicate with each other without using any kind of of shared memory. If two processes p1 and p2 want to communicate with each other, they proceed as follow: 
+                <br> <br>
+                Establish a communication link (if a link already exists, no need to establish it again.) 
+                <br> <br>
+                Start exchanging messages using basic primitives.
+                <br> <br>
+                An IPC facility provides at least the two operations: 
+                <br> <br>
+                <span style="color: brown">1. send(message, destinaion) or send(message)</span> <br> <br>
+                <span style="color: brown">2. receive(message, host) or receive(message)</span>
+                <br> <br>
+                • Messages sent by a process can be of either fixed or variable size.                                                                                                                                                 <br> <br>
+                • If only fixed-sized messages can be sent, the system-level implementation is straight forward. However , it makes the task of programming more difficult. <br> <br>
+                • If it is variable-sized messages then it require a more complex system-level implementation, but the programming task becomes simpler. <br> <br>
+                • If processes P and Q want to communicate, they must send messages to and receive messages from each other, a communication link (such as shared memory, hardware bus, or network) must exist between them.<br> <br>
+
+
+            
+            
+            
+            </p>
+            <h3 class="heading">CPU scheduling : </h3>
+            <p>
+                CPU scheduling is a process which allows one process to use the CPU while the execution of another process is on hold(in waiting state) due to unavailability of any resource like I/O etc, thereby making full use of CPU. The aim of CPU scheduling is to make the system efficient, fast and fair.
+                <br> <br>
+                Whenever the CPU becomes idle, the operating system must select one of the processes in the ready queue to be executed. The selection process is carried out by the short-term scheduler (or CPU scheduler). The scheduler selects from among the processes in memory that are ready to execute, and allocates the CPU to one of them.
+                <br> <br>
+                The aim of CPU scheduling is to make the system efficient, fast and fair.
+                <br> <br>
+                Another component involved in the CPU scheduling function is the Dispatcher. The dispatcher is the module that gives control of the CPU to the process selected by the short-term scheduler. 
+                <br> <br>
+           
+           
+           
+           
+            </p>
+            <h3 class="heading">Different time in CPU scheduling :</h3>
+            <p>
+                <span style="color:brown">1. Arrival Time :</span> <br>
+                The time at which process enter the ready queue or state.    <br> 
+                Real life example —<br> 
+                Let’s say you go to the bank to deposit the money.<br> 
+                You enter the bank at 10 o’clock.<br> 
+                10 o’clock is your arrival time.<br>  <br>
+                <span style="color:brown">2. Burst Time (Duration time) :</span> <br>
+
+                The time required by a process to get executed on CPU.            <br>
+                Real life example — <br>
+                Actual time takes to deposit money to the cashier. <br>
+                If the cashier takes 15 minutes to update your bank balance. <br>
+                15 minutes is your Burst time. <br> <br>
+
+                <span style="color:brown">3. Completion time :</span> <br>
+                The time at which a process complete it’s execution.       <br>
+                Real life example — <br>
+                Let’s assume you come out at 11 o’clock from the bank. <br>
+                11 o’clock is your completion time. <br>
+                <br>
+                <span style="color:brown">4. TurnAround Time :</span> <br>
+                The amount of time taken to execute the particular process.           <br>
+                Real life example —<br>
+                Let’s say you enter the bank at 10 o’clock and exit at 11 o’clock.<br>
+                You spend 1 hour inside the bank.<br>
+                1 hour your turnaround time.<br>
+                Turnaround time = (completion time - arrival time)<br> <br>
+
+                <span style="color:brown">5. Waiting Time :</span> <br>
+                the amount of time a process has been waiting in the ready queue.                                                <br>
+                Real life example —<br>
+                Suppose you spend 1 hour inside the bank but your work is done in 15 minutes. 45 minutes is your waiting time.<br>
+                Waiting Time = (turnaround time - burst time)<br>
+                <br>
+                <span style="color:brown">6. Response Time :</span> <br>
+                The amount of time from when a request was submitted until the first response is produced.  <br>
+                Real life example —<br>
+                When you get the cashier first time. That is your response time.<br>
+                Response Time = (the time at which a process get the CPU first time - arrival time)         <br>  
+                <br>    
+
+            </p>
+            <h3 class="heading">Non-Preemptive Scheduling : </h3>
+            <p>
+                    Under non-preemptive scheduling, once the CPU has been allocated to a process, the process keeps the CPU until it releases the CPU either by terminating or by switching to the waiting state.
+
+                    <br> <br>
+                    Non-preemptive Scheduling is used when a process terminates, or a process switches from running to waiting state. In this scheduling, once the resources (CPU cycles) is allocated to a process, the process holds the CPU till it gets terminated or it reaches a waiting state. In case of non-preemptive scheduling does not interrupt a process running CPU in middle of the execution. Instead, it waits till the process complete its CPU burst time and then it can allocate the CPU to another process.
+                    <br> <br>
+            </p>
+            <h3 class="heading">Preemptive Scheduling :</h3>
+            <p>
+                    In this type of Scheduling, the tasks are usually assigned with priorities. At times it is necessary to run a certain task that has a higher priority before another task although it is running. Therefore, the running task is interrupted for some time and resumed later when the priority task has finished its execution. <br> <br>
+            </p>
+            <h3 class="heading">Difference between Preemptive Scheduling  and Non Preemptive Scheduling :</h3>
+            <p>
+                    1. In preemptive scheduling the CPU is allocated to the processes for the limited time whereas in Non-preemptive scheduling, the CPU is allocated to the process till it terminates or switches to waiting state.
+                    <br> <br>
+                    2. The executing process in preemptive scheduling is interrupted in the middle of execution when higher priority one comes whereas, the executing process in non-preemptive scheduling is not interrupted in the middle of execution and wait till its execution.
+                     <br> <br>
+                    3. In Preemptive Scheduling, there is the overhead of switching the process from ready state to running state, vise-verse, and maintaining the ready queue. Whereas in case of non-preemptive scheduling has no overhead of switching the process from running state to ready state.
+                    <br> <br>
+                    4. In preemptive scheduling, if a high priority process frequently arrives in the ready queue then the process with low priority has to wait for a long, and it may have to starve. On the other hands, in the non-preemptive scheduling, if CPU is allocated to the process having larger burst time then the processes with small burst time may have to starve.
+                        <br> <br>
+                    Preemptive scheduling attain flexible by allowing the critical processes to access CPU as they arrive into the ready queue, no matter what process is executing currently. Non-preemptive scheduling is called rigid as even if a critical process enters the ready queue the process running CPU is not disturbed.
+                    <br> <br>
+                    The Preemptive Scheduling has to maintain the integrity of shared data that’s why it is cost associative as it which is not the case with Non-preemptive Scheduling.
+                    <br> <br>
+                </p>
+                <h3 class="heading">Scheduling Criteria :</h3>
+
+                <p>
+                        There are many different criterias to check when considering the "best" scheduling algorithm, they are:
+                        <br> <br>
+                        <span style="color: brown">1. CPU Utilization :</span> <br>
+                        To make out the best use of CPU and not to waste any CPU cycle, CPU would be working most of the time(Ideally 100% of the time). Considering a real system, CPU usage should range from 40% (lightly loaded) to 90% (heavily loaded.)
+                        <br> <br>
+                        <span style="color: brown">2. Throughput :</span> <br>
+                        It is the total number of processes completed per unit time or rather say total amount of work done in a unit of time. This may range from 10/second to 1/hour depending on the specific processes.
+                        <br> <br>
+
+                        <span style="color: brown">3. Turnaround Time :</span> <br>
+                        It is the amount of time taken to execute a particular process, i.e. The interval from time of submission of the process to the time of completion of the process(Wall clock time).
+                        <br> <br>
+
+                        <span style="color: brown">4. Waiting Time :</span> <br>
+                        The sum of the periods spent waiting in the ready queue amount of time a process has been waiting in the ready queue to acquire get control on the CPU.
+                        <br> <br>
+                        <span style="color: brown">5. Load Average :</span> <br>
+                        It is the average number of processes residing in the ready queue waiting for their turn to get into the CPU.
+                        <br> <br>
+                        <span style="color: brown">6. Response Time :</span> <br>
+                        Amount of time it takes from when a request was submitted until the first response is produced. Remember, it is the time till the first response and not the completion of process execution(final response).
+                        <br> <br>
+                        In general CPU utilization and Throughput are maximized and other factors are reduced for proper optimization.
+                        <br> <br>
+
+                
+                </p>
+                <h3 class="heading">Scheduling Algorithms :</h3>
+                <p>
+                        To decide which process to execute first and which process to execute last to achieve maximum CPU utilisation, computer scientists have defined some algorithms, they are:
+
+                        <br> <br>
+
+                        <span style="color: brown">1. FCFS : </span> <br>
+                        First Come, First Served Scheduling (FCFS) Algorithm:This is the simplest CPU scheduling 
+                        algorithm. In this scheme, the process which requests the CPU first, that is allocated to the CPU 
+                        first. The implementation of the FCFS algorithm is easily managed with a FIFO queue. When a 
+                        process enters the ready queue its PCB is linked onto the rear of the queue. The average waiting 
+                        time under FCFS policy is quiet long. Consider the following example: 
+                        Process CPU time. 
+                        <br> <br>
+                        <pre>
+                                Process          CPU time
+                                P1                  5
+                                P2                  3
+                                P3                  2
+                                P4                  4
+
+                                
+                        </pre>
+                        <br>
+                        1. First Come First Serve, is just like FIFO(First in First out) Queue data structure, where the data element which is added to the queue first, is the one who leaves the queue first.
+                        <br> <br>
+                        2. A perfect real life example of FCFS scheduling is buying tickets at ticket counter.
+                        <br> <br>
+                        3. This is used in Batch Systems. 
+                        <br> <br>
+                        4. It's easy to understand and implement programmatically, using a Queue data structure, where a new process enters through the tail of the queue, and the scheduler selects process from the head of the queue.
+                        <br> <br>
+                </p>
+                <p>
+                        <span style="color: brown">Disadvantages : </span> <br>
+                        1. It is Non Pre-emptive algorithm, which means the process priority doesn't matter. 
+                        <br> <br>
+                        2. Not optimal Average Waiting Time. <br> <br>
+                        3. Resources utilization in parallel is not possible, which leads to Convoy Effect, and hence poor resource(CPU, I/O etc) utilization. <br> <br>
+                        Convoy Effect is a situation where many processes, who need to use a resource for short time are blocked by one process holding that resource for a long time
+                        <br> <br>
+
+                            
+                </p>
+
+                <p>
+                    <span style="color: brown">2. Shortest Job First(SJF) Scheduling :</span> <br>
+                    Shortest Job First scheduling works on the process with the shortest burst time or duration first.
+                    <br> <br>
+                    This is the best approach to minimize waiting time. <br>
+                    This is used in Batch Systems.<br>
+                    It is of two types:<br>
+                    Non Pre-emptive<br>
+                    Pre-emptive<br>
+                    <br>
+                    To successfully implement it, the burst time/duration time of the processes should be known to the processor in advance, which is practically not feasible all the time.
+                    <br> <br>
+                    This scheduling algorithm is optimal if all the jobs/processes are available at the same time. (either Arrival time is 0 for all, or Arrival time is same for all)
+                    <br> <br>
+                </p>
+                <p>
+                    <span style="color: brown">3. Priority Scheduling :</span>
+                    <br>
+                    Priority is assigned for each process. <br>
+                    Process with highest priority is executed first and so on. <br>
+                    Processes with same priority are executed in FCFS manner. <br>
+                    Priority can be decided based on memory requirements, time requirements or any other resource requirement. <br>
+
+                </p>
+                <p>
+                    <span style="color: brown">4. Round Robin Scheduling : </span>
+                    <br>
+                    A fixed time is allotted to each process, called quantum, for execution.<br>
+                    Once a process is executed for given time period that process is preemptied and other process executes for given time period. <br>
+                    Context switching is used to save states of preemptied processes.                                                                 <br>
+                    <br>
+                    </p>
+         <h5 style="color: brown">Note : Please read theory very carefully if you didnt understand any concept search it on google 
+            because only theory based objective questions will come in exam .
+            </h5>
+             <br> <br>
+            <a  style="margin-left: 40%"  href="{% url 'Paging-Segementation-OS' %}" class="btn btn-secondary text-white btn-lg">Day-2</a>
+            <br>  <br>
+
+        </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

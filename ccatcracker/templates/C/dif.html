@@ -1,0 +1,114 @@
+{% extends 'base_1.html' %}
+{% block title %} Differnce Paging And Segmentation In OS | Operating System Tutorial {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   
+   font-size: 17px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> Operating System </li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green">Fragmentation  : </h3> 
+
+               <p >
+                    Whenever a process is loaded or removed from the physical memory block, it creates a small hole in memory space which is called fragment. Due to fragmentation, the system fails in allocating the contiguous memory space to a process even though it have the requested amount of memory but, in a non-contiguous manner. 
+                    <br> <br>
+
+                
+                </p>
+            <h3 class="heading">Types of Fragmentation :</h3>
+            <p>
+                   1. Internal  Fragmentation  <br>
+                   2. External  Fragmentation  <br>
+                   <br>
+                   <span style="color: brown">1. Internal  Fragmentation :</span> <br>
+                   Internal fragmentation occurs when fixed sized memory blocks are allocated to the process without concerning about the size of the process . 
+                    <br>
+                   <br>
+                   Whenever a process request for the memory, the fixed sized block is allocated to the process. In case the memory assigned to the process is somewhat larger than the memory requested, then the difference between assigned and requested memory is the Internal fragmentation.
+                   <br> <br>
+                   <span style="color: brown">2. External  Fragmentation :</span> <br>
+                   External fragmentation occurs when the processes are allocated memory dynamically . 
+                   <br> <br>
+                   External fragmentation occurs when there is a sufficient amount of space in the memory to satisfy the memory request of a process. But the process’s memory request can not be satisfied as the memory available is in a non-contiguous manner. Either you apply first-fit or best-fit memory allocation strategy it will cause external fragmentation.
+
+                   <br> <br>
+                   When a process is loaded and removed from the memory the free space creates the hole in the memory space, and there are many such holes in the memory space, this is called External fragmentation. Although the first fit and best fit can affect the amount of external fragmentation, it can not be totally eliminated. Compaction may be the solution for external fragmentation.
+                   <br> <br>
+            </p>
+            <h3 class="heading">Contiguous Memory Allocation : </h3>
+            <p>
+                    The operating system and the user’s processes both must be accommodated in the main memory. Hence the main memory is divided into two partitions: at one partition the operating system resides and at other the user processes reside. In usual conditions, the several user processes must reside in the memory at the same time, and therefore, it is important to consider the allocation of memory to the processes.
+                    <br> <br>
+                    The Contiguous memory allocation is one of the methods of memory allocation. In contiguous memory allocation, when a process requests for the memory, a single contiguous section of memory blocks is assigned to the process according to its requirement.
+                    <br> <br>
+                    The contiguous memory allocation can be achieved by dividing the memory into the fixed-sized partition and allocate each partition to a single process only. But this will cause the degree of multiprogramming, bounding to the number of fixed partition done in the memory. The contiguous memory allocation also leads to the internal fragmentation.
+                    <br> <br>
+            
+            </p>
+            <h3 class="heading">Non-Contiguous Memory Allocation : </h3>
+            <p>
+                    The Non-contiguous memory allocation allows a process to acquire the several memory blocks at the different location in the memory according to its requirement. The noncontiguous memory allocation also reduces the memory wastage caused due to internal and external fragmentation. As it utilizes the memory holes, created during internal and external fragmentation.
+                    <br> <br>
+                    Paging and segmentation are the two ways which allow a process’s physical address space to be non-contiguous. In non-contiguous memory allocation, the process is divided into blocks (pages or segments) which are placed into the different area of memory space according to the availability of the memory.
+
+            </p>
+        <h5 class="heading">Thats it for OS . watch videos carefully I will update lots of objective questions
+            practice that one and dont forget to give my final test series on udemy . <br> <br>
+        </h5>
+         <h5 style="color: brown">Note : Please read theory very carefully if you didnt understand any concept search it on google 
+            because only theory based objective questions will come in exam .
+            </h5>
+             <br> <br>
+            <a  style="margin-left: 40%"  href="{% url 'Difference-In-Os' %}" class="btn btn-secondary text-white btn-lg">Last-Day</a>
+            <br>  <br>
+
+        </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

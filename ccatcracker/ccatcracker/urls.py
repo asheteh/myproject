@@ -21,6 +21,8 @@ urlpatterns = [
     path('test',views.test,name='test'),
     path('search',views.search,name='search'),
     path('rank',views.rank,name='rank'),
+    path('English-Tutorial',views.eng,name='English-Tutorial'),
+    path('Aptitude-Tutorial',views.apti,name='Aptitude-Tutorial'),
     path('payment/',include('payment.urls')),
     path('OnlineTest/',include('OnlineTest.urls')),
     path('accounts/',include('accounts.urls')),

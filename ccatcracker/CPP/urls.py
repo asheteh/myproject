@@ -5,7 +5,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    path('',views.cpp,name='intro'),
+    path('',views.cpp,name='cpp'),
     path('oops-in-c++',views.oops,name='oops-in-c++'),
     path('function-in-cpp',views.day2,name='function-in-cpp'),
     path('class-in-cpp',views.day3,name='class-in-cpp'),

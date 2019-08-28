@@ -1,6 +1,7 @@
 
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+from reportlab.pdfgen import canvas  
 
 def intro(request):
     return render(request,'C/intro.html')
@@ -90,3 +91,17 @@ def paging(request):
 
 def diff(request):
      return render(request,'C/dif.html')
+
+def network(request):
+     return render(request,'C/network.html')
+
+
+def download(request):
+
+     file_path = r'C:\\Users\\Abhijit.shete\\3D Objects\\ccatcracker\\ccatcracker\\notes\\OS.pdf'
+    
+     with open(file_path, 'rb') as fh:
+          response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+          response['Content-Disposition'] = 'inline; filename='+ r'C:\\Users\\Abhijit.shete\\3D Objects\\ccatcracker\\ccatcracker\\notes\\OS.pdf'
+          return response
+          

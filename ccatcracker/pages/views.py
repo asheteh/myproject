@@ -164,9 +164,11 @@ def prev_questions(request):
     return render(request,'pages/previous_questions.html',context)
 
 
+def eng(request):
+    return render(request,'pages/english.html')
 
-
-
+def apti(request):
+    return render(request,'pages/apti.html')
 
 
 

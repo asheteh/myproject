@@ -30,6 +30,8 @@ urlpatterns = [
     path('OS-Tutorial',views.os,name='OS-Tutorial'),
     path('Paging-Segementation-OS',views.paging,name='Paging-Segementation-OS'),
     path('Difference-In-Os',views.diff,name='Difference-In-Os'),
+    path('download',views.download,name='download'),
+    path('Networking-Tutorials',views.network,name='Networking-Tutorials'),
     
 
     

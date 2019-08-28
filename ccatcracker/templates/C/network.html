@@ -1,0 +1,95 @@
+{% extends 'base_1.html' %}
+{% block title %} Networking Tutorial | LAN MAN WAN OSI Layer | {% endblock %}
+{% block content %}
+<style>
+   p {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 0;
+   margin-right: 0;
+   
+   font-size: 17px;
+   }
+   pre{
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   color: rgba(0,0,0,.9);
+   font-family: Consolas,monospace;
+   margin-bottom: 10px;
+   overflow: auto;
+   padding: 10px;
+   margin: 0px 0px 10px;
+   text-align: left;
+   }
+   .heading
+   {
+       color: #008c00;
+   }
+   .shead
+   {
+       color: #008c00;
+   }
+</style>
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+                    <i class="fas fa-home"></i> Home</a></a>
+            </li>
+            <li class="breadcrumb-item active"> Networking </li>
+         </ol>
+      </nav>
+   </div>
+</section>
+</div>
+<section id="about" class="py-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+           
+               <h3 style="color:green"> Important Topics : </h3> 
+
+               <p >
+                Topology                                         <br>
+                OSI Layers compare with TCP/IP<br>
+                Internetworking & Networking devices<br>
+                Switching Techniques<br>
+                LAN, MAN, WAN<br>
+                Addressing (Class- A B C D E)<br>
+                Port Numbers (ftp,http,https,telnet,dns,pop)<br>
+                MAC Address<br>
+                IPV6 vs IPv4<br>
+                <br>
+
+            For all above topics I have very detail notes please click download button to download pdf of notes . <br>
+            <br>
+            Rememner exam will ask ip classification  question , which type of question exam will ask that I have covered in my test Udemy test series so 
+            dont miss that before exam it will really help you a lot . <br> <br>
+
+            In same pdf at the end I have added some imp differences for OS so read that one also very carefully . <br> 
+                
+                </p>
+          
+        <h5 class="heading">Thats it for Networking . Read my notes carefully I will update lots of objective questions
+            practice that one and dont forget to give my final test series on udemy . <br> <br>
+        </h5>
+         <h5 style="color: brown">Note : Please read theory very carefully if you didnt understand any concept search it on google 
+            because only theory based objective questions will come in exam .
+
+            </h5> 
+            <br> <br>
+            <a href="{% url 'download' %}"><button class="btn"><i class="fa fa-download"></i> Networking Notes</button></a>
+            <br> <br>
+            <a  style="margin-left: 40%"  href="{% url 'ccat_notify' %}" class="btn btn-secondary text-white btn-lg">Back-To-Home</a>
+            <br>  <br>
+
+        </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock %}

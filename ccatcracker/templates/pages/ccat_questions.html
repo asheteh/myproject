@@ -1,119 +1,149 @@
 {% extends 'base.html' %}
-
+<style>
+   div {
+   background-color: lightgrey;
+   width: 300px;
+   border: 15px solid green;
+   padding: 50px;
+   margin: 20px;
+   }
+   pre{
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    color: rgba(0,0,0,.9);
+    font-family: Consolas,monospace;
+    margin-bottom: 10px;
+    overflow: auto;
+    padding: 10px;
+    margin: 0px 0px 10px;
+    text-align: left;
+    }
+</style>
 {% block content %}
-
 <section id="bc" class="mt-3">
-    <div class="container">
+   <div class="container">
       <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="{% url 'index' %}">
-              <i class="fas fa-home"></i> Home</a>
-          </li>
-          <li class="breadcrumb-item active">CCAT</li>
-        </ol>
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+               <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item active">Questions</li>
+         </ol>
       </nav>
-    </div>
-  </section>
-  
-  <section id="about" class="py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <h3>  Questions Of The Day CCAT Will Start From 1 Sep 2019  </h3>
-          <p class="lead">What Exactly It means ? Whats the Benefit I will get from this ? .</p>
+   </div>
+</section>
+{% include 'partials/_alerts.html' %}
+<section id="about" class="py-4">
+   <div class="container">
+   <div class="row">
+     
+      {% if listings %}
+      <div style=" background-color: lightgrey; width: 800px;
+         border: 2px solid gray;
+         padding: 50px;
+         margin: 20px; ">
+         {% for list in listings %}
+         <h4>Day :  {{list.qno}} Programming Question <br> <br></h4>
+           <h5 style="color:darkcyan"> {{list.task}} </h5>
          
-          <p class="mt-4">
-            
-            <h4>Please Read this very carefully all your doubts will get resolved .. :</h4> <br>
-
-            <h5>1. Here We Will Update Daily 5-10 questions (Coding and Apti,English,Reasoning ) .</h5>
-            <h5>2. Just think if you solve from day 1 to ccat exam you will solve more than 500 Questions(Coding + Apti)</h5>
-            <h5>3. By doing this very small exercise you will be able to crack also You can solve ccat exam very easily .</h5>
-            <h5>4. I found hardly very few students will do that regularly but trust me guys all those student gets very great Rank who follow ccatctacker Instructions.</h5>
-            <h5>5. Remember One thing in cdac you dont have time for practise you will just finish subjects each 15 days ,
-                  at the end You will not able to solve simple coding also . 
-            
-            </h5>
-            <h5>6. Only Theory is not enough to crack ccat exam so you need a lot coding practise .</h5>
-            <h5>7. That's why we have created this website so solve only 5,10 Questions daily basis and see what the great benefit you will get at the end of cdac .</h5> 
-            <h5>8. So What are you thinking Work hard you will get Great Rank just staty with us here !!</h5><br>
-          </p>
-          <p class="lead">Which Language Can I use ? Whats the format of Questions ? .</p>
-          <p class="mt-4">
-                <h5>1. C,CPP Language  you can  you can use. </h5> 
-                <h5>2. Most Important you must able to solve problems thats it .</h5>
-                <h5>3. I will suggest  take our ccat course so you will get very perfect study Material . </h5> 
-                <h5>4. Daily You must have to solve apti coding question we will send Reminder Daily .</h5> 
-                <h5>5. We will start this program from 1St Sep 2019 until ccat Exam.</h5>
-               
-                <h5>  All The Best Guys </h5>
-
-            </p>
-        </div>
-        
-        </div>
-        {% if questions %}
-        <div style=" background-color: lightgrey; width: 800px;
-        border: 4px solid gray;
-        padding: 50px;
-        margin: 20px; ">
-      
-        {% for list in questions %}
-            <h4>Today's Question : <br>
-            {{list.qno}} .{{list.question}}</h4>
-             <br>
-             <br>
-             <p class="lead">Options  : <br>
-                 A. {{list.a}}  <br>
-                 B. {{list.b}} <br>
-                 C. {{list.c}} <br>
-                 D. {{list.d}} <br>
-             </p>
-            <p class="lead">Answer : <br>
-                {{list.ans}}
-            </p>
-            
-        {% endfor %}
-
-        {% endif %}
-            
-    </div>
-    
-    {% if apti %}
-    <div style=" background-color: lightgrey; width: 800px;
-    border: 4px solid gray;
-    padding: 50px;
-    margin: 20px; ">
-   
-    {% for list in apti %}
-        <h4>Today's Question : <br>
-         {{list.qno}}. {{list.apti_q}}</h4>
          <br>
-         <p class="lead">Options  : <br>
-             {{list.A}}  <br>
-             {{list.B}} <br>
-             {{list.C}} <br>
-             {{list.D}} <br>
-         </p>
-         
-        <p class="lead">Answer : <br>
-            {{list.ans}}
-        </p>
-        
-    {% endfor %}
+          <h4>Input Format :  </h4> <br>
+           <h5 style="color: darkcyan">{{list.inp}}</h5> <br>
 
-    {% endif %}
+           <h4>Output Format :  </h4> <br>
+           <h5 style="color: darkcyan">{{list.out}}</h5> <br>
+           <h4>Answer :  </h4> <br>
+          
+              {{list.ans|linebreaks}}
+          
+           
+          
         
-</div>
-       
+        
+     --------------------------------------------------------------------------------------
+         {% endfor %}
+         {% endif %}
+      </div>
+      {% if apti %}
+      <div style=" background-color: lightgrey; width: 800px;
+         border: 2px solid gray;
+         padding: 50px;
+         margin: 20px; ">
+         {% for list in apti %}
+         <h4>Day {{list.qno}} : Aptitude Question <br> <br>
+            {{list.apti_q}}
+         </h4>
+         <br>
+         <h4>Options  : </h4> <br>
+         <h5 style="color: darkcyan">
+            {{list.A}}  <br>
+            {{list.B}} <br>
+            {{list.C}} <br>
+            {{list.D}} <br>
+        </h5> <br>
+        <h4>Answer :   <br>
+         {{list.ans|linebreaks}}
+        </h4>
+        
+
+        -----------------------------------------------------------------------------------------------------------------------
+      
+        
+         {% endfor %}
+         {% endif %}
       </div>
     </div>
-  </section>
+  
+ </div>
+</div>
+</section>
 
-    
-      
-    
+    <div class="row">
+    <div class="col-md-12">
+      {% if listings.has_other_pages %}
+        <ul class="pagination">
+          {% if listings.has_previous %}
+            <li class="page-item">
+              <a href="?page={{listings.previous_page_number}}" class="page-link">&laquo;</a>
+            </li>
+          {% else %}
+            <li class="page-item disabled">
+              <a class="page-link">&laquo;</a>
+            </li>
+          {% endif %}
+          {% for i in listings.paginator.page_range %}
+            {% if listings.number == i %}
+              <li class="page-item active">
+                <a class="page-link">{{i}}</a>
+              </li>
+            {% else %}
+              <li class="page-item">
+                <a href="?page={{i}}" class="page-link">{{i}}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+          {% if listings.has_next %}
+            <li class="page-item">
+              <a href="?page={{listings.next_page_number}}" class="page-link">&raquo;</a>
+            </li>
+          {% else %}
+            <li class="page-item disabled">
+              <a class="page-link">&raquo;</a>
+            </li>
+          {% endif %}
+        </ul>
+      {% endif %}
+      </div>
+   </div>
 
-
+<!-- Work -->
+<section id="work" class="bg-dark text-white text-center">
+   <h3>Enter Email If You are new here So You will get Daily Notification Dont Forget any single Question:</h3>
+   <form action="{% url 'notify' %}" method="POST">
+      {% csrf_token %}
+      E-mail: <input style="color: black" type="email" name="email">
+      <input style="color: green" type="submit">
+   </form>
+</section>
 {% endblock %}

@@ -71,15 +71,21 @@ def ccat(request):
     return render(request,'pages/ccat.html')
 
 def ccat_questions(request):
-    queryset_list =  CCAT_Question.objects.filter(display__contains='Yes');
-   
+    queryset_list =  Aptitude.objects.order_by('-qno')
+    #queryset_list =  CCAT_Question.objects.filter(display__contains='Yes');
+    paginator = Paginator(queryset_list,4)
+    page = request.GET.get('page')
+    paged_listings = paginator.get_page(page)
+    apti_question = Aptitude.objects.order_by('-qno')
+
+
     context = {
        
-        'questions':queryset_list,
+        'listings':paged_listings,
        
        
     }
-    
+  
     return render(request,'pages/ccat_questions.html',context)
 
 def ads(request):
@@ -172,9 +178,12 @@ def apti(request):
 
 
 
+def dac_interview(request):
+    return render(request,'pages/dac.html')
 
 
-
+def bd_interview(request):
+    return render(request,'pages/bd.html')
 
 
 # send html email

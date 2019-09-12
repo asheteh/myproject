@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id="bc" class="mt-3">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'index' %}">
+                  <i class="fas fa-home"></i> Home</a>
+              </li>
+              <li class="breadcrumb-item active">Questions</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <section id="about" class="py-4">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8">
+                  <h4>Top 50 to 100 Questions on Each Important Subject :</h4>
+               
+                  <p>
+                    <h5 style="color: green;">Below Subjects will cover here </h5> <br>
+                    1. Data Structure  <br>
+                    2. C++ Programming <br>
+                    3. Java  <br> <br>
+
+                    80% companies will ask only above 3 subjects while Interview . 
+
+                  </p>
+                  <h5 style="color: green">Let's start Preparation :</h5>
+
+                </div>
+             
+                </div>
+              </div>
+              <br> <br>
+              <a  style="margin-left: 30%"  href="{% url 'dac_interview' %}" class="btn btn-secondary text-white btn-lg">Data Structure</a> <br> <br>
+   
+              <a  style="margin-left: 30%"  href="{% url 'big_data_interview' %}" class="btn btn-secondary text-white btn-lg">C++ Programming </a><br> <br>
+              
+              <a  style="margin-left: 30%"  href="{% url 'big_data_interview' %}" class="btn btn-secondary text-white btn-lg">Java Programming </a>
+              
+              
+            
+            </div>
+          </section>
+
+
+{% endblock %}

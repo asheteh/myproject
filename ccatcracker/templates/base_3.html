@@ -1,0 +1,45 @@
+
+{% load static %}
+<html lang="en">
+<head>
+ 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="">
+
+
+  <meta name="keywords" content="">
+
+
+  <link rel="stylesheet" href="{% static 'css/all.css' %}">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <!-- Custom -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <!--Lightbox-->
+  <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+
+
+  <title>{% block title %}{% endblock %}</title>
+  <body>
+      <body>
+
+          <!-- Top Bar -->
+
+          {% include 'partials/_topbar.html' %}
+           <!-- Nav Bar -->
+
+          {% include 'partials/_navbar.html' %}
+
+  <!-- Footer -->
+  {% block content %}{% endblock %}
+  {% include 'partials/_footbar.html' %}
+
+
+   <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+   <script src="{% static 'js/bootstrap.bundle.min.js' %)"></script>
+   <script src="{% static 'js/main.js' %} "></script>
+   <script src="{% static 'js/lightbox.min.js' %} "></script>
+  </body>
+</head>

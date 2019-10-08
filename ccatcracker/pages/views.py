@@ -5,14 +5,14 @@ from django.core.mail import send_mail, EmailMessage
 from django.template.loader import render_to_string
 from django.conf import settings
 from .models import Center,CCAT_Question
-from .models import Ranks,question,notify
+from .models import Ranks,question,notify,CCAT_Question
 from .models import Send,Aptitude,SendEmail
 from django.contrib import messages, auth
 from django.core.paginator import EmptyPage,PageNotAnInteger,Paginator
 
 def index(request):
   
-    return render(request,'pages/index.html')
+    return render(request,'pages/ind.html')
 
 def about(request):
     return render(request,'pages/about.html')
@@ -49,6 +49,20 @@ def ccat_notify(request):
 def interview(request):
     return render(request,'pages/interview.html')
 
+def section_b(request):
+    queryset_list =  CCAT_Question.objects.order_by('-qno')
+    #queryset_list =  CCAT_Question.objects.filter(display__contains='Yes');
+    paginator = Paginator(queryset_list,10)
+    page = request.GET.get('page')
+    paged_listings = paginator.get_page(page)
+    print(queryset_list)
+    context = {
+       
+        'listings':paged_listings,
+    }
+  
+    return render(request,'pages/objective.html',context)
+
 def crashcourse(request):
     return render(request,'pages/ccat-course.html')
 
@@ -73,7 +87,7 @@ def ccat(request):
 def ccat_questions(request):
     queryset_list =  Aptitude.objects.order_by('-qno')
     #queryset_list =  CCAT_Question.objects.filter(display__contains='Yes');
-    paginator = Paginator(queryset_list,4)
+    paginator = Paginator(queryset_list,10)
     page = request.GET.get('page')
     paged_listings = paginator.get_page(page)
     apti_question = Aptitude.objects.order_by('-qno')
@@ -184,6 +198,24 @@ def dac_interview(request):
 
 def bd_interview(request):
     return render(request,'pages/bd.html')
+
+def data_structure_interview(request):
+    return render(request,'pages/ds-interview.html')
+
+
+def cpp_interview(request):
+    return render(request,'pages/ds-interview.html')
+
+
+def java_interview(request):
+    return render(request,'pages/ds-interview.html')
+
+
+
+
+
+
+
 
 
 # send html email

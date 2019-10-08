@@ -1,0 +1,47 @@
+
+{% load static %}
+
+<!DOCTYPE HTML>
+<!--
+	Broadcast by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Broadcast by TEMPLATED</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1><a href="#">Learning <span>Funda</span></a></h1>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="{% url 'about' %}">Home</a></li>
+					<li><a href="{% url 'about' %}">Generic</a></li>
+					<li><a href="{% url 'about' %}">Elements</a></li>
+				</ul>
+			</nav>
+
+			
+                {% block content %}{% endblock %}
+                {% include 'partials/footer_new.html' %}
+        
+   <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+   <script src="{% static 'assets/js/jquery.scrolly.min.js' %)"></script>
+   <script src="{% static 'assets/js/skel.min.js' %} "></script>
+   <script src="{% static 'assets/js/util.js' %} "></script>
+   <script src="{% static 'assets/js/main.js' %} "></script>
+
+  
+  </body>
+</head>
+

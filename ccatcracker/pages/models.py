@@ -79,3 +79,9 @@ class CDAC2019Aug(models.Model):
         email = models.CharField(max_length=111,unique=True)
         status = models.CharField(max_length=111,default= 'New')    
         view = models.CharField(max_length=111,default= 'No')
+
+
+class DS(models.Model):
+    qno = models.IntegerField()
+    question = models.TextField(blank=True)
+    ans = models.TextField(blank=True)

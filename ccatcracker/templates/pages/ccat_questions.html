@@ -33,44 +33,20 @@
       </nav>
    </div>
 </section>
-{% include 'partials/_alerts.html' %}
+
 <section id="about" class="py-4">
    <div class="container">
    <div class="row">
+      <a style="margin-left: 30%"  href="{% url 'C-CPP-Objective-Questions' %}" class="btn btn-secondary text-white btn-lg">Section B Question</a><br> 
+      <br> <br>
      
       {% if listings %}
+     
       <div style=" background-color: lightgrey; width: 800px;
          border: 2px solid gray;
          padding: 50px;
          margin: 20px; ">
          {% for list in listings %}
-         <h4>Day :  {{list.qno}} Programming Question <br> <br></h4>
-           <h5 style="color:darkcyan"> {{list.task}} </h5>
-         
-         <br>
-          <h4>Input Format :  </h4> <br>
-           <h5 style="color: darkcyan">{{list.inp}}</h5> <br>
-
-           <h4>Output Format :  </h4> <br>
-           <h5 style="color: darkcyan">{{list.out}}</h5> <br>
-           <h4>Answer :  </h4> <br>
-          
-              {{list.ans|linebreaks}}
-          
-           
-          
-        
-        
-     --------------------------------------------------------------------------------------
-         {% endfor %}
-         {% endif %}
-      </div>
-      {% if apti %}
-      <div style=" background-color: lightgrey; width: 800px;
-         border: 2px solid gray;
-         padding: 50px;
-         margin: 20px; ">
-         {% for list in apti %}
          <h4>Day {{list.qno}} : Aptitude Question <br> <br>
             {{list.apti_q}}
          </h4>

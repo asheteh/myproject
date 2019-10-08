@@ -23,12 +23,20 @@ urlpatterns = [
     path('test',views.test,name='test'),
     path('search',views.search,name='search'),
     path('rank',views.rank,name='rank'),
+    path('C-CPP-Objective-Questions',views.section_b,name='C-CPP-Objective-Questions'),
     path('English-Tutorial',views.eng,name='English-Tutorial'),
     path('Aptitude-Tutorial',views.apti,name='Aptitude-Tutorial'),
+    path('Top-50-Interview-Questions-Data-Structure',views.data_structure_interview,name='Top-50-Interview-Questions-Data-Structure'),
+    path('cpp-interview-question',views.cpp_interview,name='cpp-interview-question'),
+    path('Top-50-Interview-Questions-Java',views.java_interview,name='Top-50-Interview-Questions-Java'),
+
+
+
     path('payment/',include('payment.urls')),
     path('OnlineTest/',include('OnlineTest.urls')),
     path('accounts/',include('accounts.urls')),
     path('CPP/',include('CPP.urls')),
+    path('music/',include('music.urls')),
     path('C/',include('C.urls')),
     path('admin/', admin.site.urls),
 ]

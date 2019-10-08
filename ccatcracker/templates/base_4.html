@@ -1,0 +1,64 @@
+
+{% load static %}
+
+<!DOCTYPE HTML>
+<!--
+	Broadcast by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Broadcast by TEMPLATED</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1><a href="#">Learning <span>Funda</span></a></h1>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="{% url 'about' %}">Home</a></li>
+					<li><a href="{% url 'about' %}">Generic</a></li>
+					<li><a href="{% url 'about' %}">Elements</a></li>
+				</ul>
+			</nav>
+
+			<!-- Banner -->
+			<!--
+				To use a video as your background, set data-video to the name of your video without
+				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+				formats to work correctly.
+			-->
+				<section id="banner" data-video="images/banner">
+					<div class="inner">
+						<header>
+							<h1>This is Free Learning Platoform </h1>
+							<p>Learn anything related to Music , Health and Fitness , Machine Learning <br />
+							 And CDAC Exam .</p>
+						</header>
+						<a href="#main" class="button big alt scrolly">Dignissim</a>
+					</div>
+
+				</section>
+                
+                {% block content %}{% endblock %}
+                {% include 'partials/footer_new.html' %}
+        
+   <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+   <script src="{% static 'assets/js/jquery.scrolly.min.js' %)"></script>
+   <script src="{% static 'assets/js/skel.min.js' %} "></script>
+   <script src="{% static 'assets/js/util.js' %} "></script>
+   <script src="{% static 'assets/js/main.js' %} "></script>
+
+  
+  </body>
+</head>
+

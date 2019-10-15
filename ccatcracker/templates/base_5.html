@@ -12,7 +12,9 @@
 		<title>Broadcast by TEMPLATED</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+		<script src ="{% static 'assets/js/jquery-2.0.0.min.js' %}"></script>
+		<script src ="{% static 'assets/js/ajax.js' %}"></script>
 	</head>
 	<body>
 
@@ -34,9 +36,10 @@
 			
                 {% block content %}{% endblock %}
                 {% include 'partials/footer_new.html' %}
-        
+	
+	
    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
-   <script src="{% static 'assets/js/jquery.scrolly.min.js' %)"></script>
+   <script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
    <script src="{% static 'assets/js/skel.min.js' %} "></script>
    <script src="{% static 'assets/js/util.js' %} "></script>
    <script src="{% static 'assets/js/main.js' %} "></script>

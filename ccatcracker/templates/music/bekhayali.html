@@ -1,0 +1,71 @@
+{% extends 'base_5.html' %}
+        <!-- Main -->
+{% block content %}
+    
+<!-- Main -->
+	<!-- Main -->
+    <div id="main">
+        
+     
+        <!-- One -->
+            <section class="wrapper style1">
+                <div class="inner">
+                    <header class="align-center">
+                        <h2>Search your Faviourite Songs</h2>
+                        <form method="post" action="#">   {% csrf_token %}
+                            <div class="row uniform">
+                                <div class="6u 12u$(small)">
+                                    <input type="text" name="search" id="search" value="" placeholder="Song Name  " />
+                                    <p id="search-results">
+
+
+                                    </p>
+                                </div>
+                                <div class="3u$ 12u$(small)">
+                                    <input type="submit" value="Search" class="fit" />
+                                </div>
+                            </div>
+                        </form>
+
+                    </header>
+                    <h2 id="content">Bekhayali Song Notation and Sargam</h2>
+					
+                    <p>
+                            Teri Mitti (Kesari) Song Harmonium Sargam, Notes in Hindi<br>
+                            Scale D#<br>
+                          
+                            Talwaaron Pe, Sar, Vaar Diye<br>
+                            सं सं संरें गं रें गं, रें सं, संरें गं रें गं<br>
+                            <br>
+                            Angaaron Mein Jism Jalaya Hai<br>
+                            गं गं गं रें रें सं सं, सं - निध- नि- स​-<br>
+                            <br>
+                            Tab Jaake, Kahin, Humne, Sar Pe<br>
+                            सं सं सं सं, सं संरेंसंरें, संनि धप-, नि नि स​<br>
+                            <br>
+                            Ye Kesari Rang Sajaya Hai<br>
+                            पनिसंरें, रें रें रें, रें गं- सं, सं- निध​- नि- स​-<br>
+                          
+                    </p>
+                       
+                </div>
+            </section>
+
+        <!-- Three -->
+            <section class="wrapper ">
+                <div class="inner">
+                    <header class="align-center">
+                        <h2>Aliquam ipsum purus dolor</h2>
+                        <p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
+                    </header>
+
+                    <!-- 3 Column Video Section -->
+                        
+                </div>
+                
+            </section>
+
+        </div>
+
+
+{% endblock %}

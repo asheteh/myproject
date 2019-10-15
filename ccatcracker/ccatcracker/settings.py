@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'pages',
     'C',
     'CPP',
+    'music',
     'payment',
     'OnlineTest',
     'accounts',
@@ -91,7 +92,12 @@ DATABASES = {
         'HOST' : 'localhost'
     }
 }
-
+'''
+  'NAME':'79OPHz18Rq',
+        'USER': '79OPHz18Rq',
+        'PASSWORD':'gdEjOMRxVl',
+        'HOST' : 'remotemysql.com'
+'''
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 

@@ -23,6 +23,7 @@ urlpatterns = [
     path('test',views.test,name='test'),
     path('search',views.search,name='search'),
     path('rank',views.rank,name='rank'),
+    path('C-CPP-Programming-Questions',views.coding,name='C-CPP-Programming-Questions'),
     path('C-CPP-Objective-Questions',views.section_b,name='C-CPP-Objective-Questions'),
     path('English-Tutorial',views.eng,name='English-Tutorial'),
     path('Aptitude-Tutorial',views.apti,name='Aptitude-Tutorial'),

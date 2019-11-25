@@ -1,80 +1,84 @@
-{% extends 'base_5.html' %}
+{% extends 'base_6.html' %}
+
         <!-- Main -->
 {% block content %}
+<style>
+h2{
+	
+		
+	
+		font: inherit;
+		vertical-align: baseline;
+		font-weight: 900;
+		line-height: 1.9;
+		font-family:  sans-serif;
+		margin: 0 0 1em 0;
+}
+form.example input[type=text] {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
+  }
+  
+  form.example button {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	background: blue;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
+	height: 45.5px;
+  }
+  
+  form.example button:hover {
+	background: darkslategray;
+  }
+  
+  form.example::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+  #content-wrap {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+</style>
+<div id="content-wrap">
+<section id="about" class="py-4">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-8" >
+			<h2>Search your Faviourite Songs</h2>
+			<form class="example" method="post" action="{% url 'song_list' %}">
+					{% csrf_token %}
+					<input type="text" name="query" id="search" value="" placeholder="Song Name" />
+			
+				<button type="submit"><i class="fa fa-search"></i></button>
+			  </form>
+			  <p id="search-results">
 
-<!-- Main -->
-	<!-- Main -->
-    <div id="main">
-        
-     
-        <!-- One -->
-            <section class="wrapper style1">
-                <div class="inner">
-                    <header class="align-center">
-                        <h2>Search your Faviourite Songs</h2>
-                        <form method="post" action="{% url 'song_list' %}">
-                                {% csrf_token %}
-                            <div class="row uniform">
-                                <div class="6u 12u$(small)">
-                                    <input type="text" name="query" id="search" value="" placeholder="Song Name" />
-                                    <p id="search-results">
 
-
-                                    </p>
-                                </div>
-                                <div class="3u$ 12u$(small)">
-                                    <input type="submit" value="Search" class="fit" />
-                                </div>
-                            </div>
-                        </form>
-                        
-
-                    </header>
-                    
-                    {% if songs %}
-                    <h3>Your search song</h3>
-                    {% for s in songs %}
-                        
-                            <ul>
-                                <li><a href= "{{s.link}}" class="link">{{s.song_name}} Super Hit Hindi Song {{s.year}} {{s.singer}}</a> </li>
-                            </ul>
-                            {% endfor %}
-                            {% endif %}
-                    <h3>2019 Hit Bollywood Songs</h3>
-								<div class="row">
-									<div class="6u 12u$(small)">
-
-										<h4>Bollywood 2019</h4>
-										<ul>
-											<li><a href="{% url 'ccat_notify' %}" class="link">Lal Ishq Notation and Sargam</a> </li>
-											<li><a href="{% url 'bekhayali-kabir-sing-2019-notation-sargam-tabs' %}" class="link">Bekhayali Notation and Sargam</a></li>
-											<li><a href="{% url 'ccat_notify' %}" class="link">Pachtaoge Notation and Sargam</a></li>
-                                        </ul>
-                                    
-                                    </div>
-
-								</div>
-            </div>
-    
-
-        </div>
-        </section>
-
-        <!-- Three -->
-            <section class="wrapper ">
-                <div class="inner">
-                    <header class="align-center">
-                        <h2>Aliquam ipsum purus dolor</h2>
-                        <p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
-                    </header>
-
-                    <!-- 3 Column Video Section -->
-                        
-                </div>
-                
-            </section>
-
-        </div>
-
+				</p>
+			  <br> <br>
+			  <h4>Bollywood 2019</h4>
+				<ul style="color: white;">
+					<li ><a  href="{% url 'ccat_notify' %}" class="link">Lal Ishq Notation and Sargam</a> </li>
+					<li ><a  href="{% url 'bekhayali-kabir-sing-2019-notation-sargam-tabs' %}" class="link">Bekhayali Notation and Sargam</a></li>
+					<li ><a  href="{% url 'ccat_notify' %}" class="link">Pachtaoge Notation and Sargam</a></li>
+                </ul>
+		</div>
+		
+		</div>
+	  </div>
+	</div>
+  </section>
+</div>
 
 {% endblock %}

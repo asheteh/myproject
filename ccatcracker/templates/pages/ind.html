@@ -1,122 +1,84 @@
-{% extends 'base_4.html' %}
+{% extends 'base_6.html' %}
+
         <!-- Main -->
 {% block content %}
-			<div id="main">
-
-			<!-- One -->
-				<section class="wrapper style1">
-					<div class="inner">
-						<header class="align-center">
-							<h2>Health And Fitness</h2>
-							<p>Very researched and detail health and fitness blog </p>
-						</header>
-						<!-- 2 Column Video Section -->
-							<div class="flex flex-2">
-								<div class="video col">
-									<div class="image fit">
-										
-										<div class="arrow">
-											<div class="icon fa-play"></div>
-										</div>
-									</div>
-									<p class="caption">
-										The best diet blogs 
-									</p>
-									<a href="generic.html" class="link"><span>Click Me</span></a>
-								</div>
-								<div class="video col">
-									<div class="image fit">
-										
-										<div class="arrow">
-											<div class="icon fa-play"></div>
-										</div>
-									</div>
-									<p class="caption">
-										The best fitness blogs
-									</p>
-									<a href="{% url 'ccat_notify' %}" class="link"><span>Click Me</span></a>
-								</div>
-							</div>
-					</div>
-				</section>
-
-			<!-- Two -->
-				<section class="wrapper style2">
-					<div class="inner">
-						<header>
-							<h2>Music Instruments Training</h2>
-							<p>Learn Guitar and Indian Bamboo Flute from Very beginnig to advance level .</p>
-						</header>
-						<!-- Tabbed Video Section -->
-							
-								<ul class="tab-list">
-									<li><a href="#" data-tab="tab-1" class="active">Guitar Training</a></li>
-									<li><a href="#" data-tab="tab-2">Indian Bamboo Flute Training</a></li>
-								
-									<li><a href="{% url 'music' %}" class="link"> Songs Notation and Sargam</a></li>
-								</ul>
-                       	     </div>
-					</div>
-                </section>
-
-			<!-- Three -->
-				<section class="wrapper ">
-					<div class="inner">
-						<header class="align-center">
-							<h2>CDAC CCAT Entrance Exam </h2>
-							<p>Free pre dac 45 days course.Cdac ccee ccat Interview</p>
-						</header>
-
-						<!-- 3 Column Video Section -->
-							<div class="flex flex-3">
-								<div class="video col">
-									<div class="image fit">
-										
-										<div class="arrow">
-											<div class="icon fa-play"></div>
-										</div>
-									</div>
-									<p class="caption">
-                                        Cdac ccat ccee Interview  preparation 
-                                        for Dac and Big data 
-									</p>
-									<a href="generic.html" class="link"><span>Click Me</span></a>
-								</div>
-								<div class="video col">
-									<div class="image fit">
-										
-										<div class="arrow">
-											<div class="icon fa-play"></div>
-										</div>
-									</div>
-									<p class="caption">
-                                        Machine Learning with Python from 
-                                        very basic to advance
-
-                                    </p>
-									<a href="generic.html" class="link"><span>Click Me</span></a>
-								</div>
-								<div class="video col">
-									<div class="image fit">
-										
-										<div class="arrow">
-											<div class="icon fa-play"></div>
-										</div>
-									</div>
-									<p class="caption">
-										Interview preparation top questions list 
-									</p>
-									<a href="generic.html" class="link"><span>Click Me</span></a>
-								</div>
-							</div>
-					</div>
-				</section>
-
-			</div>
-
+<style>
+h2{
 	
-		<!-- Scripts -->
+		
+	
+		font: inherit;
+		vertical-align: baseline;
+		font-weight: 900;
+		line-height: 1.9;
+		font-family:  sans-serif;
+		margin: 0 0 1em 0;
+}
+form.example input[type=text] {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
+  }
+  
+  form.example button {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	background: blue;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
+	height: 45.5px;
+  }
+  
+  form.example button:hover {
+	background: darkslategray;
+  }
+  
+  form.example::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+  #content-wrap {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+</style>
+<div id="content-wrap">
+<section id="about" class="py-4">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-8" >
+			<h2>Search your Faviourite Songs</h2>
+			<form class="example" method="post" action="{% url 'song_list' %}">
+					{% csrf_token %}
+					<input type="text" name="query" id="search" value="" placeholder="Song Name" />
 			
+				<button type="submit"><i class="fa fa-search"></i></button>
+			  </form>
+			  <p id="search-results">
 
-	</body>
+
+				</p>
+			  <br> <br>
+			  <h4>Bollywood 2019</h4>
+				<ul style="color: white;">
+					<li ><a  href="{% url 'ccat_notify' %}" class="link">Lal Ishq Notation and Sargam</a> </li>
+					<li ><a  href="{% url 'bekhayali-kabir-sing-2019-notation-sargam-tabs' %}" class="link">Bekhayali Notation and Sargam</a></li>
+					<li ><a  href="{% url 'ccat_notify' %}" class="link">Pachtaoge Notation and Sargam</a></li>
+                </ul>
+		</div>
+		
+		</div>
+	  </div>
+	</div>
+  </section>
+</div>
+
 {% endblock %}

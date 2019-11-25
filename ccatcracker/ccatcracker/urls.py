@@ -32,7 +32,7 @@ urlpatterns = [
     path('Top-50-Interview-Questions-Java',views.java_interview,name='Top-50-Interview-Questions-Java'),
 
 
-
+ 
     path('payment/',include('payment.urls')),
     path('OnlineTest/',include('OnlineTest.urls')),
     path('accounts/',include('accounts.urls')),

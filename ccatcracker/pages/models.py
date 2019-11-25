@@ -3,7 +3,7 @@ from django.db import models
 
 class Center(models.Model):
     center_name = models.CharField(max_length=100,blank=True)
-    city = models.CharField(max_length=100)
+    city = models.CharField(max_length=100,default="S")
     address = models.CharField(max_length=100)
     course = models.CharField(max_length=111)
     description = models.TextField(blank=True)

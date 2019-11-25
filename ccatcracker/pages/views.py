@@ -63,18 +63,34 @@ def section_b(request):
   
     return render(request,'pages/objective.html',context)
 
+
+def coding(request):
+    queryset_list =  question.objects.order_by('-qno');
+    #queryset_list =  CCAT_Question.objects.filter(display__contains='Yes');
+    paginator = Paginator(queryset_list,10)
+    page = request.GET.get('page')
+    paged_listings = paginator.get_page(page)
+   
+    context = {
+       
+        'listings':paged_listings,
+    }
+  
+    return render(request,'pages/coding.html',context)
+
+
 def crashcourse(request):
     return render(request,'pages/ccat-course.html')
 
 def questions(request):
     # retrive only latest question
-    queryset_list =  question.objects.order_by('-qno')[:1]
    
-    apti_question = Aptitude.objects.order_by('-qno')[:1]
+   
+    apti_question = Aptitude.objects.order_by('-qno')[:5]
     context = {
        
-        'listings':queryset_list,
-        'apti':apti_question
+       
+        'listings':apti_question
        
     }
     return render(request,'pages/questions.html',context)
@@ -167,18 +183,19 @@ def rank(request):
 
 
 def prev_questions(request):        
-    queryset_list =  question.objects.order_by('-qno');
-    paginator = Paginator(queryset_list,2)
+    queryset_list =  Aptitude.objects.order_by('-qno')
+    #queryset_list =  CCAT_Question.objects.filter(display__contains='Yes');
+    paginator = Paginator(queryset_list,10)
     page = request.GET.get('page')
     paged_listings = paginator.get_page(page)
-
     apti_question = Aptitude.objects.order_by('-qno')
     context = {
        
         'listings':paged_listings,
-        'apti':apti_question
+       
        
     }
+  
   
 
     return render(request,'pages/previous_questions.html',context)

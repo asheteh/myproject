@@ -1,7 +1,7 @@
 {% if songs.count > 0 %}
                     
 {% for s in songs %}
-    <a href= "{{s.link}}" class="link">{{s.song_name}} </a> <br>
+    <a href= "{% url 'bekhayali-kabir-sing-2019-notation-sargam-tabs' %}" class="link">{{s.song_name}} </a> <br>
       
 {% endfor %}
 

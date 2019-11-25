@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+<style>
+   div {
+   background-color: lightgrey;
+   width: 300px;
+   border: 15px solid green;
+   padding: 50px;
+   margin: 20px;
+   }
+</style>
+{% block content %}
+{% include 'partials/_alerts.html' %}
+<section id="about" class="py-4">
+   <div class="container">
+   </div>
+</section>
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+               <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item active">Questions</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+<section id="about" class="py-4">
+   <div class="container">
+   <div class="row">
+   <div class="col-md-8">
+   <a href="{% url 'C-CPP-Programming-Questions' %}" class="btn btn-secondary text-white btn-sm" >CDAC Progamming Qustions</a>
+   <br> <br>
+   <h4>Result : <br> <br> </h4>
+   {% if listings %}
+   {% for list in listings %}
+    <h4><strong>Your Score Is : {{list.marks}} Out of 100 .</strong> </h4>
+   
+
+   {% endfor %}
+   {% endif %}
+   
+
+  </div>
+</div>
+
+</section>
+<!-- Work -->
+<script>
+      var data = new Array();
+ function f1()
+ {
+   var rates = document.getElementById('r1').value;
+   data.push(rates)
+   console.log(data)
+
+ }
+ console.log(data)
+</script>
+{% endblock %}

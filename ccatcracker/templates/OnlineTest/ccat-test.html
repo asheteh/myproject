@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+<style>
+   div {
+   background-color: lightgrey;
+   width: 300px;
+   border: 15px solid green;
+   padding: 50px;
+   margin: 20px;
+   }
+</style>
+{% block content %}
+<body onload="countdown()">
+   
+</body>
+{% include 'partials/_alerts.html' %}
+<section id="about" class="py-4">
+   <div class="container">
+   </div>
+</section>
+<section id="bc" class="mt-3">
+   <div class="container">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+               <a href="{% url 'index' %}">
+               <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item active">Questions</li>
+         </ol>
+      </nav>
+   </div>
+</section>
+
+<section id="about" class="py-4">
+   <div class="container">
+   <div class="row">
+   <div class="col-md-8">
+</div>
+</div>
+</div>
+</section>
+<section id="about" class="py-4">
+    <div class="container">
+       <div class="row">
+
+          <div class="col-md-8">
+               <div class="div-test-instruction">
+                     <p  style="font-size: 16; color:brown">Instruction:</p>
+                     <ul style="font-size: 16;">
+                     <li class="mx-red mx-bold">This is a FREE online test. DO NOT pay money to anyone to attend this test.</li>
+                     <li>You Must have to login first before start test . </li>
+                     <li>Total number of questions : <b>100</b>.</li>
+                     <li>Time alloted : <b>100</b> minutes.</li>
+                     <li>Each question carry 1 mark, no negative marks.</li>
+                     <li>DO NOT refresh the page.</li>
+                     <li>You can see only current question. Once submit dont press back button your new answer will not consider.</li>
+                     <li>For each question there is timer of 1 min try to solve within 1 min after that answer will not consider .</li>
+                     <li>50 question for Section A and remaining 50 for Section B</li>
+                     <li>Don't copy questions try to solve yourself.</li>
+                     <li>Give test until you will not get above 70 </li>
+                     <li>All the best :-).</li>
+                     </ul>
+                  </div>
+                 <ul>
+                    <br>
+                 <li><a href="{% url 'CDAC-CCAT-DEC-2019-Test1' %}"><strong>CCAT-DEC-2019 Test 1 </strong></a></li> <br> 
+                 <li><a href="{% url 'CDAC-CCAT-DEC-2019-Test2' %}"><strong>CCAT-DEC-2019 Test 2 </strong></a></li> <br> 
+                 
+              </ul>
+
+            
+          </div>
+          
+       </div>
+       <h4> <strong>Prepare For CCAT Exam :</strong></h4>  
+       <p style="font-size: 16;">
+         Here you will get The best pre dac 45 days free course .
+
+       </p>
+       <p style="font-size: 16;">
+            CDAC C-CAT 2019 – Centre for Development of Advanced Computing (C-DAC) has started registration  <br> C-DAC’s Common Admission Test (C-CAT) 2019,      
+            for admission in February 2020 batch. 
+       </p>
+       <p style="font-size: 16;">
+            The exam will be held December 8 and 15 and the last date to apply is November 27, 2019. <br> CDAC C-CAT is
+            a computer based exam, which is conducted for admission of candidates PG Diploma in 13 courses.
+       </p>
+       <p style="font-size: 16;">
+           
+            The exam is conducted twice a year, in December 
+            for February batch admission and in June for August batch admission.  <br> The candidates who qualify the exam are called for the counselling round. 
+            Check CDAC C-CAT 2019 exam date, course, <br> registration details, and more information from this page.
+      
+      </p> <br> <br>
+      <pre>
+            <h4>Quick Links</h4>
+            <ul><li><a href="{% url 'ccat_notify' %}">CCAT Preparation</a></li>
+            <li><a href="{% url 'ccat_questions' %}">CCAT Questions</a></li>
+            <li><a href="{% url 'C-CPP-Objective-Questions' %}" >CCAT Section B Question</a></li>
+            <li><a href="{% url 'ccat_notify' %}">CCAT 2019 Syllabus</a></li>
+            <li><a href="{% url 'English-Tutorial' %}">CCAT English Preparation</a></li>
+            <li><a href="{% url 'Aptitude-Tutorial' %}">CCAT Aptitude Preparation</a></li>
+            <li><a href="{% url 'intro' %}">CCAT C Language Preparation</a></li>
+            <li><a href="{% url 'cpp' %}">CCAT C++ Language Preparation</a></li>
+            <li><a href="{% url 'Data-Structure-Tutorial' %}">CCAT Data Structure Preparation</a></li>
+
+            <li><a href="{% url 'OS-Tutorial' %}">CCAT Operating System Preparation</a></li>
+            
+         </ul>
+      </pre>
+   </div>
+   
+   
+   
+   
+    </div>
+ </section>
+{% endblock %}
+
+ 

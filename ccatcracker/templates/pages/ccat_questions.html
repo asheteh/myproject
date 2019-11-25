@@ -53,7 +53,7 @@
      
       
             {% for list in listings %}
-
+            <script>myfun();</script>
             <table class="bix-tbl-container" cellspacing="0" cellpadding="0" border="0" width="100%">
             <tbody>
                <tr>
@@ -104,8 +104,17 @@
               >
                   {{list.ans|linebreaks}}
               </pre>
-           
-                  
+            <script>
+              function myfun(){
+                
+                var a = '{{list.qno}}';
+
+
+              }
+            </script>
+              
+
+          
                   
                {% endfor %}
                {% endif %}

@@ -12,4 +12,10 @@ class Songs(models.Model):
     
     
 
+class Sargam(models.Model):
+    song_name = models.TextField(blank=True)
+    sargam = models.TextField(blank=True)
+   
+    
+    
 

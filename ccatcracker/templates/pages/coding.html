@@ -52,13 +52,13 @@
      
       
             {% for list in listings %}
-
+            
             <table class="bix-tbl-container" cellspacing="0" cellpadding="0" border="0" width="100%">
             <tbody>
                <tr>
-                  <td class="bix-td-qno" rowspan="2" valign="top" align="left" > {{list.qno}}.&nbsp;&nbsp;&nbsp;</td>
+                  <td class="bix-td-qno" rowspan="2" valign="top" align="left" > {{list.qno}}.&nbsp;</td>
                   <td class="bix-td-qtxt" valign="top">
-                  <span style="color:brown;">{{list.question|linebreaks}}</span>
+                  {{list.task|linebreaks}}
                   </td>
                </tr>
                <tr>
@@ -66,21 +66,14 @@
                      <table class="bix-tbl-options" id="tblOption_434" border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tbody>
                            <tr>
-                              <td  style="padding-top: .40em;" width="1%" ><a id="lnkOptionLink_A_434" href="javascript: void 0;">A.</a></td> 
-                              <td  style="padding-top: .40em;" width="99%" id="tdOptionDt_A_434">&nbsp;&nbsp;{{list.a}}</td>
+                              <td  style="padding-top: .40em;" width="1%" ><a id="lnkOptionLink_A_434" href="javascript: void 0;">Input .</a></td> 
+                              <td  style="padding-top: .40em;" width="99%" id="tdOptionDt_A_434">&nbsp;&nbsp;{{list.inp}}</td> <br>
                            </tr>
                            <tr>
-                              <td  style="padding-top: .2em;" width="1%" id="tdOptionNo_B_434"><a id="lnkOptionLink_B_434" href="javascript: void 0;">B.</a></td>
-                              <td  style=" padding-top: .5em;" width="99%" id="tdOptionDt_B_434">&nbsp;&nbsp;{{list.b}}</td>
+                              <td  style="padding-top: .2em;" width="1%" id="tdOptionNo_B_434"><a id="lnkOptionLink_B_434" href="javascript: void 0;">Output.</a></td>
+                              <td  style=" padding-top: .5em;" width="99%" id="tdOptionDt_B_434">&nbsp;&nbsp;{{list.out}}</td>
                            </tr>
-                           <tr>
-                              <td  style="padding-top: .40em;" width="1%" id="tdOptionNo_C_434"><a id="lnkOptionLink_C_434" href="javascript: void 0;">C.</a></td>
-                              <td  style=" padding-top: .5em;" width="99%" id="tdOptionDt_C_434">&nbsp;&nbsp;{{list.c}}</td>
-                           </tr>
-                           <tr>
-                              <td  style="padding-top: .40em;" width="1%" id="tdOptionNo_D_434"><a id="lnkOptionLink_D_434" href="javascript: void 0;">D.</a></td>
-                              <td  style=" padding-top: .5em;" width="99%" id="tdOptionDt_D_434">&nbsp;&nbsp;{{list.d}}</td>
-                           </tr> <br>
+                          
                            <tr> 
                              <td style=" padding-top: .40em;" width="1%"> <br> 
                               
@@ -92,7 +85,7 @@
                   </tr>
                 </tbody>
               </table>
-              <pre style="margin-left: 40px;
+              <pre style="margin-left: 35px;
            
               border: 1px dashed #93b7d5;
               background-color: #f8f8f8;
@@ -100,6 +93,8 @@
               width: auto;
               margin-top: 10px;
               margin-bottom: 10px;
+              font-size: 16px;
+              font-style: italic;
               ">
                   {{list.ans|linebreaks}}</span>
               </pre>

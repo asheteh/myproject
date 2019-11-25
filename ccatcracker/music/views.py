@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Songs
+from .models import Sargam
 
 def music(request):
     
@@ -14,8 +14,8 @@ def song_list(request):
         if request.method == 'POST':
             song = request.POST.get('search', '')
            
-            result = Songs.objects.filter(song_name__iregex=r'['+song+']')
-            text = Songs.objects.filter(song_name__contains=song)
+            result = Sargam.objects.filter(song_name__iregex=r'['+song+']')
+            text = Sargam.objects.filter(song_name__iexact =song)
            
 
             context={
@@ -32,7 +32,7 @@ def search(request):
             song = request.POST['search_text']
             
           
-            text = Songs.objects.filter(song_name__iregex=r'['+song+']')
+            text = Sargam.objects.filter(song_name__icontains=song)[:5]
 
            
      return render(request,'music/ajax_search.html',{'songs':text})

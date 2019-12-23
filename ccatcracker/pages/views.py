@@ -12,7 +12,7 @@ from django.core.paginator import EmptyPage,PageNotAnInteger,Paginator
 
 def index(request):
   
-    return render(request,'pages/ind.html')
+    return render(request,'pages/index.html')
 
 def about(request):
     return render(request,'pages/about.html')

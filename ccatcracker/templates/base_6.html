@@ -1,11 +1,11 @@
-
 {% load static %}
 <html lang="en">
 
 <head>
     <link rel="icon" href= "{% static '/img/ccat9.png' %}" type="image/gif" >
  
-  <meta charset="UTF-8">
+    
+  <meta charset="ANSI">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'css/all.css' %}">
   <!-- Bootstrap -->
@@ -18,12 +18,13 @@
   <script src ="{% static 'js/jquery-2.0.0.min.js' %}"></script>
   <script src ="{% static 'assets/js/ajax.js' %}"></script>
   
+  <title>{% block title %}{% endblock %}</title>
   <body style>
      
        
           <!-- Top Bar -->
 
-          {% include 'partials/top.html' %}
+          {% include 'partials/_topbar.html' %}
            <!-- Nav Bar -->
 
           {% include 'partials/nav.html' %}

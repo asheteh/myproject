@@ -1,14 +1,13 @@
 
 {% extends 'base_6.html' %}
 
-<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-        <!-- Main -->
+    <!-- Main -->
 {% block content %}
 <style>
 h2{
 	
 		
-	
+        color: red;
 		font: inherit;
 		vertical-align: baseline;
 		font-weight: 900;
@@ -52,20 +51,20 @@ form.example input[type=text] {
     padding-bottom: 50px;
 }
 </style>
-<section style="background-color: black;">  
+<section style="background-color: black;">    
 <div id="content-wrap"></div>
 <section id="about" class="py-4">
 	<div class="container">
 	  <div class="row">
 		<div class="col-md-8" >
 			<h2 style="color: white;">Search your Faviourite Songs</h2>
-			<form class="example" method="POST" action="{% url 'song_list' %}">
+			<form class="example" method="POST" action="{% url 'chord_list' %}">
 					{% csrf_token %}
-					<input type="text" name="query" id="search" value="" placeholder="Song Name" />
+					<input type="text" name="query" id="searchsong" value="" placeholder="Song Name" />
 			
 				<button type="submit"><i class="fa fa-search"></i></button>
 			  </form>
-			  <p id="search-results"  style="background:black;">
+			  <p id="search-results"> 
 
 
 				</p>
@@ -82,8 +81,8 @@ form.example input[type=text] {
 	<div class="container">
 	  <div class="row">
 
-			{% if listings %}
-			{% for list in listings %}
+			{% if songs %}
+			{% for list in songs %}
 
 			 <!-- Listing 1 -->
 		  <div class="col-md-6 col-lg-4 mb-4">
@@ -92,7 +91,7 @@ form.example input[type=text] {
 				<div class="card-body">
 				  <div class="listing-heading text-center">
 					  <h4>Sargam and Notation</h4>
-					<a href="{% url list.url %}">{{list.song_names}}</a>
+					<a href="#">{{list.song_names}}</a>
 					</div>
 				  <hr>
 			</div>
@@ -108,5 +107,4 @@ form.example input[type=text] {
 		  {% endif %}
 		</section> 
 		
-	</section>
 {% endblock %}

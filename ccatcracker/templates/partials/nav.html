@@ -56,25 +56,25 @@
               class="nav-item mr-3"
             {% endif %}          
           >
-            <a class="nav-link" href="{% url 'index' %}">Home</a>
+            <a class="nav-link" href="{% url 'music' %}">Home</a>
           </li>
           <li 
-          {% if 'ccee' in request.path %}
+          {% if 'music' in request.path %}
             class="nav-item active mr-3"
             {% else %}
             class="nav-item mr-3"
             {% endif %}          
             >
-            <a class="nav-link" href="{% url 'ccee' %}">Sargam</a>
+            <a class="nav-link" href="{% url 'sargam' %}">Sargam</a>
           </li>
           <li
-          {% if 'cdac' in request.path %}
+          {% if 'guitar' in request.path %}
             class="nav-item active mr-3"
             {% else %}
             class="nav-item mr-3"
             {% endif %}          
           >
-            <a class="nav-link" href="{% url 'cdac' %}">Guitar</a>
+            <a class="nav-link" href="{% url 'guitar' %}">Guitar</a>
 
         </li>
           

@@ -1,0 +1,129 @@
+
+{% extends 'base_6.html' %}
+
+{% block title %}{{songs.0.song_names}} {% endblock %}
+
+<meta name="keywords" content="Hindi songs 2019 ,sargam & notations,notes of songs,chords hindi songs,english songs 2019,2020,chords in hindi,hindi chords">
+        <!-- Main -->
+{% block content %}
+<style>
+h2{
+	
+		
+	
+		font: inherit;
+		vertical-align: baseline;
+		font-weight: 900;
+		line-height: 1.9;
+		font-family:  sans-serif;
+		margin: 0 0 1em 0;
+}
+form.example input[type=text] {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
+  }
+  
+  form.example button {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	background: blue;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
+	height: 45.5px;
+  }
+  
+  form.example button:hover {
+	background: darkslategray;
+  }
+  
+  form.example::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+  #content-wrap {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+</style>
+ 
+<section style="background-image: url(../static/img/images.jpg);background-repeat: no-repeat;background-attachment: fixed;background-size: cover;">    
+<div id="content-wrap">
+<section id="about" class="py-4" >
+
+
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-8" >
+			<h2 style="color: white;">Search your Faviourite Songs</h2>
+			<form class="example" method="post" action="{% url 'chord_list' %}">
+					{% csrf_token %}
+					<input type="text" name="query" id="searchsong" value="" placeholder="Song Name" />
+			
+				<button type="submit"><i class="fa fa-search"></i></button>
+			  </form>
+			  <p id="search-results">
+
+
+				</p>
+			  <br> <br>
+			  <h4 style="color:white;">Your Search Song : </h4> <br>
+              {% if songs %}
+              {% for p in songs %} 
+              <h5 style="color:white;">
+                    {{p.sargam|linebreaks}}    
+			  </h5>
+              {% endfor %}
+			  {% endif %} <br> <br>
+			  <h2 style="color: white;">You may also like this :</h2>
+<section id="listings" class="py-4">
+		<div class="container">
+		  <div class="row">
+	
+				{% if lists %}
+				{% for list in lists %}
+	
+				 <!-- Listing 1 -->
+			  <div class="col-md-6 col-lg-4 mb-4">
+				  <div class="card listing-preview">
+					
+					<div class="card-body">
+					  <div class="listing-heading text-center">
+						  <h4>Sargam	 and Notation</h4>
+						<a href="{{list.url}}">{{list.song_names}}</a>
+						</div>
+					  <hr>
+				</div>
+			</div>
+		</div>
+	
+				{% endfor %}
+	
+			  {% else %}
+			  <div class="col-md-12">
+				<p>No Listings Available</p>
+			  </div>
+			  {% endif %}
+			</section> 
+			
+</section>	
+			
+			
+		</div>
+			
+		</div>
+	  </div>
+	</div>
+  </section>
+</div>
+
+{% endblock %}

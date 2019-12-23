@@ -1,0 +1,167 @@
+
+{% extends 'base_6.html' %}
+
+<!-- Main -->
+{% block content %}
+<style>
+h2{
+
+    
+    color: red;
+    font: inherit;
+    vertical-align: baseline;
+    font-weight: 900;
+    line-height: 1.9;
+    font-family:  sans-serif;
+    margin: 0 0 1em 0;
+}
+form.example input[type=text] {
+padding: 10px;
+font-size: 17px;
+border: 1px solid grey;
+float: left;
+width: 80%;
+background: #f1f1f1;
+}
+
+form.example button {
+float: left;
+width: 20%;
+padding: 10px;
+background: blue;
+color: white;
+font-size: 17px;
+border: 1px solid grey;
+border-left: none;
+cursor: pointer;
+height: 45.5px;
+}
+
+form.example button:hover {
+background: darkslategray;
+}
+
+form.example::after {
+content: "";
+clear: both;
+display: table;
+}
+#content-wrap {
+padding-top: 50px;
+padding-bottom: 50px;
+}
+</style>
+<section style="background-color: black;">    
+<div id="content-wrap"></div>
+<section id="about" class="py-4">
+<div class="container">
+  <div class="row">
+    <div class="col-md-8" >
+        <h2 style="color: white;">Search your Faviourite Songs</h2>
+        <form class="example" method="POST" action="{% url 'chord_list' %}">
+                {% csrf_token %}
+                <input type="text" name="query" id="searchsong" value="" placeholder="Song Name" />
+        
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          <p id="search-results"> 
+
+
+            </p>
+          <br> <br>
+        
+    </div>
+    
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+<section id="about" class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>How to find Tabs & Chords of any songs :</h2>
+       
+        <p style="color: #f1f1f1; font-size:15.5px;">
+          It is a bit of talent and a bit of practice. Borderline is that it is a skill which can be acquired over time. Transcribing music is very similar to be able to hear a foreign language and understand it properly. Do you remember when you watch your first foreign language movie, and you were not able to understand it fully, may be due to the fact you didn't know the language, or you didn't grasped the accent. Writing tabs for a song is similar.  
+          <br> <br>
+          You cannot write tabs for a song for which you don't have the sufficient vocabulary, and you don't understand the proper accents. <br>
+          The straight forward answer to your question is - ear training. Before we reach the "how to" part, you should be knowing that there are 7 distinct swaras. Two of them remain fixed, whereas the rest five occur in the form of two variants. I give below a brief portrayal of how they occur in an octave.
+          <br> <br>
+                  
+          Now lets simplify this all a bit more by taking analogy of learning a language.                     <br>
+          Language has alphabets, music has pitches, intervals and beats,...<br>
+          Language has words, music has scales, patterns, chords,  double stops, rhythm,...<br>
+          Language has phrases, music has licks and riffs, or musical phrases...<br>
+          Language has accents, music has vibrato, bending, slides, trills, legato, pinch, staccato...<br>
+       <br>
+       Now coming back to how to learn finding tabs for songs, following are the tips -
+       Learn to differentiate between pitches and intervals, train your ear. You need not to be perfect at getting the absolute pitch correct, as that is a rare talent, but you should be able to tell the differentiate between distinct sounds. This is the phase when you learn alphabets.
+
+       <br> <br>
+       Learn scales, scale patterns, play them over and over, use different kind of rhythms, play your scales and patterns over different kind of beats This is your learning the words phase.
+       <br>
+     
+       Gradually do transition to the phrases. Learn licks, learn songs by someone's help or using tabs given by others.
+        Now work on your accents like vibrato, bending etc.
+      <br>
+      Remember all this time you are building your vocabulary. Over the time you'll realise when you listen to a song there are some pieces which you can relate to, something you already know about. If that happens you are on the right track. Keep working on your alphabets in parallel. Unlike normal language you don't need to "understand" all the alphabets to actually play instrument. 
+
+      <br>
+      You just press some key, or play some pattern and it sounds good. So you need to work on your basic entities even if you are playing good enough. May be your are playing good enough but you are not able to tell that you are playing good enough. An example is, if you are not trained to recognise sounds, you won't be able to tell if your instruments get out of tune intermittently. So you need to keep working on your ear.
+      <br> <br>
+      While you are going through all this, start with some simple songs which are not very fast, and trying to find tabs for that. Start by internalising the tune of the song. You should be able to sing the perfectly either vocally or in your mind, so that you have a reference which you can match to. While you hum the song in your mind, differentiate between the changes. Try to find out when is tune changing. when the pitch is going high and when it is going low.
+      <br>
+      
+      <br>
+      Recognise the first note, by trial and error. For every consecutive note, try to guess what it's interval relative to previous note. Exercise this thing may be only for one line. Increase this to multiple lines over the time. you can ignore the accents for now. After finding out the few notes say 7-8 notes, you will be able to judge the scale and key of notes. It'll help you to limit your set of notes you need to look into. Once you are able to figure out the basic tune of a song, then start figuring out the accents. How actually the note was played. Was it a slide from a lower note, or a bend release from a higher note. If you have practices lots of licks and phrases already, you'll able to guess the notes very fast based on your familiarity of note groups. It all works similar to listening to a new language and able to understand each and every word.
+      <br> <br>
+      Practice is a big key here. But follow the idea about what are the basic component of music. If you can recognise basic components, you can eventually transcribe the full song accurately. So make your knowledge of basics components strong. That'll your arsenal.
+
+      <br> <br>
+
+    </p>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="listings" class="py-4">
+<div class="container">
+  <div class="row">
+
+        {% if songs %}
+        {% for list in songs %}
+
+         <!-- Listing 1 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                  <h4>Sargam and Notation</h4>
+                  
+                <a href="{% url list.url %}">{{list.song_names}}</a>
+                </div>
+              <hr>
+        </div>
+    </div>
+</div>
+
+        {% endfor %}
+
+      {% else %}
+      <div class="col-md-12">
+        <p>No Listings Available</p>
+      </div>
+      {% endif %}
+    </section> 
+    
+
+
+</section>
+{% endblock %}

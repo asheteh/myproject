@@ -1,11 +1,16 @@
-
+from django.contrib.sitemaps.views import sitemap
 from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls import url
 from pages import views
+from .sitemap import StaticViewSitemap
+sitemaps = {
+    'static': StaticViewSitemap
+}
 urlpatterns = [
     url(r'^$',views.index,name='index'),
     #path('ads',views.ads,name='ads'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     url(r'^ads\.txt',views.ads,name='ads'),
     path('about',views.about,name='about'),
     path('ccat',views.ccat,name='ccat'),
@@ -38,6 +43,7 @@ urlpatterns = [
     path('accounts/',include('accounts.urls')),
     path('CPP/',include('CPP.urls')),
     path('music/',include('music.urls')),
+    path('guitar/',include('guitar.urls')),
     path('C/',include('C.urls')),
     path('admin/', admin.site.urls),
 ]

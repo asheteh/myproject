@@ -1,0 +1,201 @@
+
+{% extends 'base_6.html' %}
+
+<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <!-- Main -->
+{% block content %}
+<style>
+h2{
+	
+	font: inherit;
+	vertical-align: baseline;
+	font-weight: 910;
+	line-height: 4.9;
+	font-family:  sans-serif;
+	color: red;
+}
+form.example input[type=text] {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
+  }
+  
+  form.example button {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	background: blue;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
+	height: 45.5px;
+  }
+  
+  form.example button:hover {
+	background: darkslategray;
+  }
+  
+  form.example::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+  #content-wrap {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+</style>
+<section style="background-color: black;">    
+<div id="content-wrap"></div>
+<section id="about" class="py-4">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-8" >
+			<h2 style="color: white;">Search your Faviourite Songs</h2>
+			<form class="example" method="POST" action="{% url 'song_list' %}">
+					{% csrf_token %}
+					<input type="text" name="query" id="search" value="" placeholder="Song Name" />
+			
+				<button type="submit"><i class="fa fa-search"></i></button>
+			  </form>
+			  <p id="search-results">
+
+
+				</p>
+			  <br> <br>
+			
+		</div>
+		
+		</div>
+	  </div>
+	</div>
+  </section>
+</div>
+
+<section id="about" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>How to find sargam & notation of any songs :</h2>
+         
+          <p style="color: #f1f1f1; font-size:15.5px;">
+                To be able to recognize the notes in a song, you must first know that there are 12 notes various combinations of which essentially comprise any song in the world. Having asked this question, I believe you to be a student of music and expect you to have atleast a basic knowledge of music theory. With that in hand, I want to assure you that within a time of a month or two, you can start feeling more confident, but, if and only if you follow the instructions below. The things that I am going to write down are not secret. What it takes to reach your goal is nothing but your determination, practice and learning to reveal that secret.
+                <br> <br>
+                Let's concentrate now. <br>
+                    The straight forward answer to your question is - ear training. Before we reach the "how to" part, you should be knowing that there are 7 distinct swaras. Two of them remain fixed, whereas the rest five occur in the form of two variants. I give below a brief portrayal of how they occur in an octave.
+
+                    <br> <br>
+                    
+                            Sa - Shadaj (सा - षडज)   <br>
+                            Re - Rishabh (रे - ऋषभ) <br>
+                            Ga - Gandhar (ग - गांधार) <br>
+                            Ma - Madhyam (म - मध्यम) <br>
+                            Pa - Pancham (प - पंचम) <br>
+                            Dha - Dhaivat (ध - धैवत) <br>
+                            Ni - Nishad (नी - निषाद) <br>
+				 <br>
+				 Out of the seven, Sa and Pa have fixed positions; Re, Ga, Dha and Ni can be both shuddh (natural) and komal (flat); Ma can be shuddh and tivra (sharp). In total they become 12. These are referred to as chal swar (volatile notes) and achal swar (fixed notes). Clearly, Sa and Pa sit in the latter.
+				<br> <br>
+				Now, to begin with one must know that the different notes are situated at different distances from the root note. To understand this, let's take example of a harmonium. Take the first black key (pehli kaali/ kaali ek, C# note) as the root note. Starting from there,
+				<br>
+				the 1st, 3rd, 5th, 6th, 8th, 10th and 12th notes will give you all the shuddh swaras.    <br>
+				the 2nd, 4th, 9th and 11th will be the komal swaras. <br>
+				the 7th note will give tivra ma. <br>
+				<br>
+				Let's try and understand how one can teach his ears to identify the notes without playing an instrument.
+				<br>
+				For this, first of all you need a tanpura . <br>
+				When you are ready with your tanpura playing by your side, listen to it carefully. Let your ears submerge into the sound. Let yourself interlise the ambience. Do this for few minutes. Focus on Sa. Now, sing Sa gently in full volume with mouth easily wide open; no stress on your body. Try to inhale from your nose and exhale from your mouth. This will help you build stamina and give you a better voice texture. Do it for some 15 minutes (atleast) before heading further. After this you will be practicing some alankars. There can be innumerable alankars. To start, do this:
+				<br> <br>
+				Sa                             <br>
+				Sa Re Sa<br>
+				Sa Re Ga Re Sa<br>
+				Sa Re Ga Ma Ga Re Sa<br>
+				Sa Re Ga Ma Pa Ma Ga Re Sa<br>
+
+				<br>
+				Similarly, do this:           <br>
+ 
+				Pa <br>
+				Pa Ma Pa <br>
+				Pa Ma Ga Ma Pa <br>
+				Pa Ma Ga Re Ga Ma Pa <br>
+				Pa Ma Ga Re Sa Re Ga Ma Pa <br>
+				Then, <br>
+
+				Pa <br>
+				Pa Dha Pa <br>
+				Pa Dha Ni Dha Pa <br>
+				Pa Dha Ni Sa Ni Dha Pa <br>
+				And finally, <br>
+				Sa <br>
+				Sa Ni Sa <br>
+				Sa Ni Dha Ni Sa <br>
+				Sa Ni Dha Pa Dha Ni Sa <br>
+				<br>
+				Don't haste when you practice. Think every time you hit a note. Try to judge whether you are producing it right.
+				You can practice any alankar you want. Practicing alankars will train your ears to recognize the sound as musical notes. Gradually you will develop a sense to do what your question asks. While practising, please do not use a harmonium. Taking help from harmonium will only bring dispare. As a must, you should go to your music teacher for verifying if what you are doing is correct. If you honestly spend atleast an hour each morning and evening everyday practising, you will surely progress extensively very soon. Moreover, practising bandishes and ragas will also help a great deal, but, only alongwith the above exercise.
+				<br> <br>
+				As I said you can practice any alankar of your choice, I am giving here a little complex structure for your reference. This structure has been in our indian classical music system for thousands of years. It is called as merukhand/mirkhand/ khandmeru due to it's structural appearance. It's a huge structure very small part of which I am giving down here. 
+				<br> <br>
+
+				Sa Re Ga, Sa Ga Re, Re Sa Ga, Re Ga Sa, Ga Sa Re, Ga Re Sa                                             <br>
+				Re Ga Ma, Re Ma Ga, Ga Re Ma, Ga Ma Re, Ma Re Ga, Ma Ga Re<br>
+				(Follow the pattern 123, 132, 213, 231, 312, 321 to derive the rest part until the higher Sa and back)<br>
+				Dha Ni Sa•, Dha Sa• Ni, Ni Dha Sa•, Ni Sa• Dha, Sa• Dha Ni, Sa• Ni Dha<br>
+
+				This is the aaroh. Avroh can be similarly derived as well. I am giving the first part:  <br>
+ <br>
+				Sa• Ni Dha, Sa• Dha Ni, Ni Dha Sa•, Ni Sa• Dha, Dha Sa• Ni, Dha Ni Sa• <br>
+				(Sa• denotes the upper octave/ higher Sa). <br>
+							
+				In nutshell, the above explanation is about developing an understanding of the distance of notes from the root note and the places where they situate. Any song is created using only these 12 notes. Doing alankars will make you more familiar with them. You can use all types of swaras interchangeably to understand things more deeply. Try using the 10 thaats for this purpose.
+				<br> <br>
+				They are:  <br>
+
+				Bilawal (all shuddh swaras)            <br>
+				Kalyan (only ma tivra) <br>
+				Kafi (ga and ni komal) <br>
+				Bhairavi (re, ga, dha, ni komal) <br>
+				Asavari (ga, dha, ni komal) <br>
+				Todi (re, ga, dha komal, ma tivra) <br>
+				Purvi (re, dha komal, ma tivra) <br>
+				Marva (re komal, ma tivra) <br>
+				Bhairav (re, dha komal) <br>
+				Khamaj (ni komal) <br>
+				<br>
+				Perfection comes with time. Don't dishearten yourself. It will take time to become a part of your behaviour. Rushing will bring nothing. Stay calm and keep practicing.
+				<br>
+			
+			</p> <br>
+			<h2>How to Play Flute With a Metronome</h2>
+			<p style="color: #f1f1f1; font-size:15.5px;">
+
+				Learning how to play the flute with a metronome isn’t as complicated as it may sound. The metronome is a device you can view as your friend. It will help you gain the skills you need to become a well settled musician.
+				<br> <br>
+				The metronome helps you feel a steady beat. This is especially helpful to new learning-musicians because it’s not always a natural-born talent. As it clicks away, you can teach your body to feel the rhythm by tapping your toe, nodding your head, waving your hands, or any other body movement. Doing this enough times will eventually soak in, and you’ll be able to use the evenly-spaced moments in all of your music playing. Irregular beats go against our human nature, so gaining this particular skill is verrrry important.
+				<br> <br>
+				1. Start by setting the metronome at a slow pace. The smaller the number, the farther apart the beats are (slow). The higher numbers will sound a speedier beat. All clicks are perfectly evenly spaced. This is the talent of the metronome.
+				<br> <br>
+				2. Use your body to practice tapping out the beats at the precise moment the metronome clicks. Can you do it? Some people can, and some people have to learn this one. Once you can keep a steady beat with your body, you can enjoy dance class more. 😉  And it’s time to play your instrument with the metronome and see what comes of it.
+				<br> <br>
+				3. Keep the beat slow and play short notes (stay on the same note at first) that land EXACTLY when the click happens. This is the skill. One note per beat. (beat=click in this instance) Playing a note on the click will be considered the ‘downbeat’ in this exercise.
+				<br> <br> 
+	
+
+			</p>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+
+		
+</section>
+{% endblock %}

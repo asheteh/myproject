@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'C',
     'CPP',
     'music',
+    'guitar',
     'payment',
     'OnlineTest',
     'accounts',
@@ -46,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'widget_tweaks',
     'django.contrib.humanize',
+    'django.contrib.sitemaps',
+    
 
 ]
 
@@ -72,6 +75,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'pages.context_processors.tags'
             ],
         },
     },

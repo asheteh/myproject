@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import Songs
+from .models import Sargams
 
-admin.site.register(Songs)
+admin.site.register(Sargams)

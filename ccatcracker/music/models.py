@@ -15,7 +15,7 @@ class Songs(models.Model):
 class Sargam(models.Model):
     song_names = models.TextField(blank=True)
     sargam = models.TextField(blank=True)
-   
+    
     
     
 
@@ -23,6 +23,8 @@ class Sargams(models.Model):
     song_names = models.TextField(blank=True)
     sargam = models.TextField(blank=True)
     url = models.TextField(blank=True)
+    def __str__(self):
+        return self.song_names
    
     
 

@@ -4221,3 +4221,31 @@ def Tumhe_Apna_Banane_Ka_Guitar_Tabs___Lead___Hate_Story_3___Abhijeet(request):
     lists = chord.objects.filter(song_names__icontains='n')[:10]
     context={'songs' : text,'lists':lists}
     return render(request,'music/song.html',context)
+
+def theres(request):
+    lists = chord.objects.filter(song_names__icontains='love')[:10]
+    context={'lists':lists}
+    return render(request,'guitar/theres.html',context)
+
+def janiye(request):
+    lists = chord.objects.filter(song_names__icontains='love')[:10]
+    context={'lists':lists}
+    return render(request,'guitar/janiye.html',context)
+
+
+def sleep(request):
+    lists = chord.objects.filter(song_names__icontains='hum')[:10]
+    context={'lists':lists}
+    return render(request,'guitar/sleep.html',context)
+
+
+def pal(request):
+    lists = chord.objects.filter(song_names__icontains='tum')[:10]
+    context={'lists':lists}
+    return render(request,'guitar/pal.html',context)
+
+
+def yaad(request):
+    lists = chord.objects.filter(song_names__icontains='piya')[:10]
+    context={'lists':lists}
+    return render(request,'guitar/yaad.html',context)

@@ -1154,7 +1154,13 @@ class StaticViewSitemap(Sitemap):
 'wolves-selena-gomez-marshmello',
 'wheels-on-the-bus-melanie-martinez-piano-notes',
 'ab-tere-bin-hindi-song-piano-notes-in-harmonium-sargam',
-'tum-par-hum-hai-atke-pagalpanti-sargam-notes'
+'tum-par-hum-hai-atke-pagalpanti-sargam-notes',
+'theres-nothing-holdin-me-back-chords',
+'dil-jaaniye-guitar-chords-tabs',
+'sam-smith/how-do-you-sleep-chords-tabs',
+'pal-pal-dil-ke-paas-guitar-chords-tabs',
+'yaad-piya-ki-neha-kakkar-guitar-chords',
+
 
 ]
        

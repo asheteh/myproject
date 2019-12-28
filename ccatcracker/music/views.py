@@ -2473,4 +2473,4 @@ def ab_tere(request):
 def atake(request):
 	lists = Sargams.objects.filter(song_names__icontains='tum')[:10]
 	context={'lists':lists}
-	return render(request,'music/s.html',context)
+	return render(request,'music/atake.html',context)

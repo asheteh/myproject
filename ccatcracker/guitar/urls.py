@@ -703,6 +703,12 @@ urlpatterns = [
     path('Eagles---Hotel-California-Chords---Abhijeet',views.Eagles___Hotel_California_Chords___Abhijeet,name='Eagles---Hotel-California-Chords---Abhijeet'),
     path('Jeff-Buckley---Hallelujah-Chords---Abhijeet',views.Jeff_Buckley___Hallelujah_Chords___Abhijeet,name='Jeff-Buckley---Hallelujah-Chords---Abhijeet'),
     path('Ed-Sheeran---Photograph-Chords---Abhijeet',views.Ed_Sheeran___Photograph_Chords___Abhijeet,name='Ed-Sheeran---Photograph-Chords---Abhijeet'),
+    path('theres-nothing-holdin-me-back-chords',views.theres,name='theres-nothing-holdin-me-back-chords'),
+    path('dil-jaaniye-guitar-chords-tabs',views.janiye,name='dil-jaaniye-guitar-chords-tabs'),
+    path('sam-smith/how-do-you-sleep-chords-tabs',views.sleep,name='sam-smith/how-do-you-sleep-chords-tabs'),
+    path('pal-pal-dil-ke-paas-guitar-chords-tabs',views.pal,name='pal-pal-dil-ke-paas-guitar-chords-tabs'),
+    path('yaad-piya-ki-neha-kakkar-guitar-chords',views.yaad,name='yaad-piya-ki-neha-kakkar-guitar-chords'),
+
 
 
 ]

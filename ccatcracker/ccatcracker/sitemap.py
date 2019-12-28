@@ -1150,7 +1150,13 @@ class StaticViewSitemap(Sitemap):
 'Paging-Segementation-OS',
 'Difference-In-Os',
 'Networking-Tutorials',
-        ]
+'theres-nothing-holdin-me-back-shawn-mendes-sargam-notes',
+'wolves-selena-gomez-marshmello',
+'wheels-on-the-bus-melanie-martinez-piano-notes',
+'ab-tere-bin-hindi-song-piano-notes-in-harmonium-sargam',
+'tum-par-hum-hai-atke-pagalpanti-sargam-notes'
+
+]
        
         return urls
                  

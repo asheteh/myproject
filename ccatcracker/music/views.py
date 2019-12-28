@@ -2443,3 +2443,34 @@ def Aaja_aaja_mai_hu_pyaar_tera___Notes___Sargam(request):
 	context={'songs' : text,'lists':lists}
 	return render(request,'music/songs.html',context)
 
+def saajan_mera(request):
+	text = Sargams.objects.filter(id__iexact =771)
+	lists = Sargams.objects.filter(song_names__icontains='d')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/songs.html',context)
+
+def Theres_Nothing(request):
+	lists = Sargams.objects.filter(song_names__icontains='dil')[:10]
+	context={'lists':lists}
+	return render(request,'music/theres_nothing.html',context)
+
+
+def wolves(request):
+	lists = Sargams.objects.filter(song_names__icontains='hum')[:10]
+	context={'lists':lists}
+	return render(request,'music/wolves.html',context)
+
+def wheels(request):
+	lists = Sargams.objects.filter(song_names__icontains='hum')[:10]
+	context={'lists':lists}
+	return render(request,'music/wheels.html',context)
+
+def ab_tere(request):
+	lists = Sargams.objects.filter(song_names__icontains='tere')[:10]
+	context={'lists':lists}
+	return render(request,'music/tere.html',context)
+
+def atake(request):
+	lists = Sargams.objects.filter(song_names__icontains='tum')[:10]
+	context={'lists':lists}
+	return render(request,'music/s.html',context)

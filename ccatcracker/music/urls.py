@@ -408,6 +408,12 @@ urlpatterns = [
     path('Aane-wala-pal-jane-wala-hai---Notes---Sargam',views.Aane_wala_pal_jane_wala_hai___Notes___Sargam,name='Aane-wala-pal-jane-wala-hai---Notes---Sargam'),
     path('Aa-jaane-ja---Notes---Sargam',views.Aa_jaane_ja___Notes___Sargam,name='Aa-jaane-ja---Notes---Sargam'),
     path('Aaja-aaja-mai-hu-pyaar-tera---Notes---Sargam',views.Aaja_aaja_mai_hu_pyaar_tera___Notes___Sargam,name='Aaja-aaja-mai-hu-pyaar-tera---Notes---Sargam'),
+    path('saajan-mera-us-paar-hai-sargam-notes',views.saajan_mera,name='saajan-mera-us-paar-hai-sargam-notes'),
+    path('theres-nothing-holdin-me-back-shawn-mendes-sargam-notes',views.Theres_Nothing,name='theres-nothing-holdin-me-back-shawn-mendes-sargam-notes'),
+    path('wolves-selena-gomez-marshmello',views.wolves,name='wolves-selena-gomez-marshmello'),
+    path('wheels-on-the-bus-melanie-martinez-piano-notes',views.wheels,name='wheels-on-the-bus-melanie-martinez-piano-notes'),
+    path('ab-tere-bin-hindi-song-piano-notes-in-harmonium-sargam',views.ab_tere,name='ab-tere-bin-hindi-song-piano-notes-in-harmonium-sargam'),
+    path('tum-par-hum-hai-atke-pagalpanti-sargam-notes',views.atake,name='tum-par-hum-hai-atke-pagalpanti-sargam-notes'),
 
 ]
 

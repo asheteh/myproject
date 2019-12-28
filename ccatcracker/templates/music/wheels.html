@@ -1,0 +1,176 @@
+{% extends 'base_6.html' %}
+{% block title %}Wheels on the Bus (Melanie Martinez) Piano Notes |Sargam  {% endblock %}
+<!-- Main -->
+{% block content %}
+<style>
+	h2{
+	font: inherit;
+	vertical-align: baseline;
+	font-weight: 900;
+	line-height: 1.9;
+	font-family:  sans-serif;
+	margin: 0 0 1em 0;
+	}
+	form.example input[type=text] {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
+	}
+	form.example button {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	background: blue;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
+	height: 45.5px;
+	}
+	form.example button:hover {
+	background: darkslategray;
+	}
+	form.example::after {
+	content: "";
+	clear: both;
+	display: table;
+	}
+	#content-wrap {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	}
+</style>
+<meta name="twitter:title" content="Wheels on the Bus (Melanie Martinez) Sargam Notes"/><meta name="twitter:description" content="Wheels on the Bus (Melanie Martinez) Sargam Notes Available On Sargam Book. Easy Harmonium Notes For Beginners. Easy Harmonium Notes On Sargam Book."/>
+<meta name="keywords"  content="wheels on the bus,melanie martinez,sargam notes,sargam notes harmonium,sargam notes in hindi pdf,sargam notes for hindi songs flute,sargam notes on harmonica" />
+<section style="background-color: black;">
+	<div id="content-wrap">
+	<section id="about" class="py-4" >
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8" >
+					<h2 style="color: white;">Search your Faviourite Songs</h2>
+					<form class="example" method="post" action="{% url 'chord_list' %}">
+						{% csrf_token %}
+						<input type="text" name="query" id="searchsong" value="" placeholder="Song Name" />
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</form>
+					<p id="search-results">
+					</p>
+					<br> <br>
+					<h4 style="color:white;">Your Search Song : </h4>
+					<br>
+					<p style="color: #f1f1f1;">
+                        
+                        I’m just looking out the window and it’s cold outside,     <br>       
+                        B- B-A-B-A-B-D, B-D DEB-B-, <br>
+                         <br>
+                       There are two boys yelling behind me and I’m terrified, <br>
+                       B-DB-D DEB- DGEDEB-D, <br>
+                        <br>
+                       Counting trees as they pass me by, <br>
+                       EDE EDEB-B-, <br>
+                        <br>
+                       And I’m trying not to look across the aisle, <br>
+                       B-A-B-D, B-A-B-A-B-A-B-D, <br>
+                        <br>
+                       Cause Maya’s letting Dan put his hand up her skirt, <br>
+                       B-DEB-B- A- A-G-E-, <br>
+                        <br>
+                       And she’s got her hand down his pants, <br>
+                       B-DEB-B- A- A-G-E-, <br>
+                        <br>
+                       I know the driver sees it, <br>
+                       G-G-GF#G DEB-, <br>
+                        <br>
+                       I know he’s peeking in the rearview mirror, <br>
+                       GF#G DEB-, G-GF#G DEB-, <br>
+                        <br>
+                       He says nothing, <br>
+                       DCB-A-, <br>
+                        <br>
+                       Trying to ignore it, it’s fucking boring, <br>
+                       GF#G DEB-, G-GF#G DEB-, <br>
+                        <br>
+                       I’m quietly observing‚ I’m saying nothing, <br>
+                       G-GF#G DEB-, DCB-A-, <br>
+                        <br>
+                        <br>
+                     <strong style="color: brown;">Just try by yourself for next para its almost same .</strong> <br> <br>
+                     <strong style="color: blueviolet;">Hindi Notations for same Song:</strong> <br> <br>
+                       I’m just looking out the window and it’s cold outside, <br>
+                       ni, ni dha ni dha ni Re, ni Re, Re Re Ga ni ni, <br>
+                         <br>
+                       There are two boys yelling behind me and I’m terrified, <br>
+                       ni Re ni Re, Re Ga ni, Re Pa Ga Re Ga ni Re, <br>
+                        <br>
+                       Counting trees as they pass me by, <br>
+                       Ga Re Ga, Ga Re Ga ni ni, <br>
+                        <br>
+                       And I’m trying not to look across the aisle, <br>
+                       ni dha ni Re, ni dha ni dha ni dha ni Re, <br>
+                        <br>
+                       Cause Maya’s letting Dan put his hand up her skirt, <br>
+                       ni Re Ga ni ni, dha, dha pa ga, <br>
+                        <br>
+                       And she’s got her hand down his pants, <br>
+                       ni Re Ga ni ni, dha, dha pa ga, <br>
+                        <br>
+                       I know the driver sees it, <br>
+                       pa pa Pa Ma(t) Pa, Re Ga ni, <br>
+                        <br>
+                       I know he’s peeking in the rearview mirror, <br>
+                       Pa Ma(t) Pa, Re Ga ni, pa Pa Ma(t) Pa, Re Ga ni, <br>
+                        <br>
+                       He says nothing, <br>
+                       Re Sa ni dha, <br>
+                        <br>
+                       Trying to ignore it, it’s fucking boring, <br>
+                       Pa Ma(t) Pa, Re Ga ni, pa Pa Ma(t) Pa, Re Ga ni, <br>
+                        <br>
+                       I’m quietly observing‚ I’m saying nothing, <br>
+                       pa Pa Ma(t) Pa, Re Ga ni, Re Sa ni dha, <br>
+					</p> <br>
+					<br> <br>
+					<h2 style="color: white;">You may also like this :</h2>
+					<br>
+					<section id="listings" class="py-4">
+						<br>
+						<div class="container">
+							<br>
+							<div class="row">
+								<br>
+								{% if lists %} <br>
+								{% for list in lists %} <br>
+								<!-- Listing 1 --> <br>
+								<div class="col-md-6 col-lg-4 mb-4">
+									<br>
+									<div class="card listing-preview">
+										<br>
+										<div class="card-body">
+											<div class="listing-heading text-center">
+												<h4>Sargam	 and Notation</h4>
+												<a href="{{list.url}}">{{list.song_names}}</a>
+											</div>
+											<hr>
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+								{% else %}
+								<div class="col-md-12">
+									<p>No Listings Available</p>
+								</div>
+								{% endif %}
+					</section>
+	</section>
+	</div>
+	</div>
+	</div>
+	</div>
+</section>
+</div>
+{% endblock %}

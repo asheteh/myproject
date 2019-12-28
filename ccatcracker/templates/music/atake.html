@@ -1,0 +1,157 @@
+{% extends 'base_6.html' %}
+{% block title %}Tum Par Hum Hai Atke (Pagalpanti) Sargam Notes | Paghalpanti {% endblock %}
+<!-- Main -->
+{% block content %}
+<style>
+
+	h2{
+	font: inherit;
+	vertical-align: baseline;
+	font-weight: 900;
+	line-height: 1.9;
+	font-family:  sans-serif;
+	margin: 0 0 1em 0;
+	}
+	form.example input[type=text] {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
+	}
+	form.example button {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	background: blue;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
+	height: 45.5px;
+	}
+	form.example button:hover {
+	background: darkslategray;
+	}
+	form.example::after {
+	content: "";
+	clear: both;
+	display: table;
+	}
+	#content-wrap {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	}
+</style>
+<meta name="description" content="Ab Tere Bin song from the movie Aashiqui is a sad composition of musicians Nadeem &amp; Shravan. Its lyrics are nicely written by Sameer and sung by Kumar sanu."/>
+<meta name="keywords" content="ab tere bin song notes, ab tere bin harmonium sargam, kumar sanu song notes, best kumar sanu song notes, king sanu piano notes, aashiqui moive song notes, nadeem sharvan song notes, harmonium sargam notes, 90s song notes, online harmonium lesson, online harmonium sargam, best harmonium lesson, full keyboard piano notes, online piano notes, online music sheet, kumar sanu song harmonium sargam, lyricist sameer song, hindi old song notes, bollywood song notes, hindi song sargam notes"/>
+
+<section style="background-color: black;">
+	<div id="content-wrap">
+	<section id="about" class="py-4" >
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8" >
+					<h2 style="color: white;">Search your Faviourite Songs</h2>
+					<form class="example" method="post" action="{% url 'chord_list' %}">
+						{% csrf_token %}
+						<input type="text" name="query" id="searchsong" value="" placeholder="Song Name" />
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</form>
+					<p id="search-results">
+					</p>
+					<br> <br>
+					<h4 style="color:white;">Tum Par Hum Hai Atke (Pagalpanti) Sargam Notes </h4>
+					<br>
+					<p style="color: #f1f1f1;">
+                        Haan Karti Ho Rani Kyun Itne Bahane,                           <br>           
+                        MA, MA PA PA, GA(k), GA(k) MA MA, <br>
+                        MA, MA PA PA, GA(k), GA(k) MA MA, <br>
+                         <br>
+                        Arre Hum To Kasam Se Hai Tere Deewane, <br>
+                        MA MA, MA PA PA, GA(k), GA(k) RE(k) RE(k) SA, <br>
+                        GA(k) RE(k) SA RE(k), SA Ni(k) Ni(k), <br>
+                         <br>
+                        Haan Karti Ho Rani Kyun Itne Bahane, <br>
+                        MA, MA PA PA, GA(k) GA(k) MA MA, <br>
+                        MA, MA PA PA, GA(k) GA(k) MA MA <br>
+                          <br>
+                        Arre Hum To Kasam Se Hai Tere Deewane, <br>
+                        MA MA, MA PA PA, GA(k), GA(k) RE(k) RE(k) SA, <br>
+                        GA(k) RE(k) SA RE(k), SA Ni(k) Ni(k), <br>
+                         <br>
+                        Kyuki Tum Par Hum Hai <br>
+                        NI(k) NI(k), Ni(k) Pa Pa Ni(k) <br>
+                        Ni(k) Ni(k) Ni(k) SA <br>
+                         <br>
+                        Bada Majboot Jod Hai Tutega Nhi <br>
+                        Tum Par Hum Hai Hum Atke Yara <br>
+                        Ni(k) Pa Pa Ni(k), Ni(k) Ni(k) Ni(k) SA <br>
+                        SA GA(k) GA(k), GA(k) MA GA(k) RE <br>
+                         <br>
+                        Dil Bhi Maare Jhatke Ho <br>
+                        MA GA(k) RE SA Ni(k) SA <br>
+                        GA(k) RE(k) SA <br>
+                         <br>
+                        Kyun-Ki Tum Ho Hatke <br>
+                        Dha(k) Dha(k) Ni(k) SA <br>
+                        RE(k) RE(k) SA Ni(k) <br>
+                         <br>
+                        Arre Bachke Rehna <br>
+                        Ma Ma, Ma Ni(k) Ni(k) Dha(k) <br>
+                        Dha(k) Pa Pa Ma <br>
+                         <br>
+                        Pyar Mein Pad Jaye Na Tujhko Fatke Ho <br>
+                        Ga(k) Ma Dha(k) Dha(k) Pa Pa Ma Ma Ga(k) <br>
+                        Re(k) Ma Ma Ga(k) Re(k) Sa ni(k), Re(k) Re(k) Sa <br>
+                         <br>
+                        Kyun Mere Pichhe Bhatke <br>
+                        dha(k) dha(k) dha(k), ni(k) Sa <br>
+                        Re(k) Re(k) Sa ni(k) <br>
+                         <br> <br>
+                    <strong style="color: brown;">Note : Hope you understood start of song now just try to explore next 2 para of songs by yourself try to find notes by yourself.
+                        If you want to learn how to find notes of any song read this blog : <a href="{%url 'sargam' %}">CLick here</a>
+                    </strong>
+					</p>
+					<br> <br>
+					<h2 style="color: white;">You may also like this :</h2>
+					<br>
+					<section id="listings" class="py-4">
+						<br>
+						<div class="container">
+							<br>
+							<div class="row">
+								<br>
+								{% if lists %} <br>
+								{% for list in lists %} <br>
+								<!-- Listing 1 --> <br>
+								<div class="col-md-6 col-lg-4 mb-4">
+									<br>
+									<div class="card listing-preview">
+										<br>
+										<div class="card-body">
+											<div class="listing-heading text-center">
+												<h4>Sargam	 and Notation</h4>
+												<a href="{{list.url}}">{{list.song_names}}</a>
+											</div>
+											<hr>
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+								{% else %}
+								<div class="col-md-12">
+									<p>No Listings Available</p>
+								</div>
+								{% endif %}
+					</section>
+	</section>
+	</div>
+	</div>
+	</div>
+	</div>
+</section>
+</div>
+{% endblock %}

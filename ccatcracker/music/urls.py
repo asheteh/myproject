@@ -414,6 +414,11 @@ urlpatterns = [
     path('wheels-on-the-bus-melanie-martinez-piano-notes',views.wheels,name='wheels-on-the-bus-melanie-martinez-piano-notes'),
     path('ab-tere-bin-hindi-song-piano-notes-in-harmonium-sargam',views.ab_tere,name='ab-tere-bin-hindi-song-piano-notes-in-harmonium-sargam'),
     path('tum-par-hum-hai-atke-pagalpanti-sargam-notes',views.atake,name='tum-par-hum-hai-atke-pagalpanti-sargam-notes'),
+    path('ja-ja-ja-sargam-notes-gajendra-verma',views.jaja,name='ja-ja-ja-sargam-notes-gajendra-verma'),
+    path('shankara-re-shankara-sargam-notes-tanhaji',views.shankara,name='shankara-re-shankara-sargam-notes-tanhaji'),
+    path('ho-ja-rangeela-re-sargam-notes-bhangra-paa-le',views.rangeela,name='ho-ja-rangeela-re-sargam-notes-bhangra-paa-le'),
+    path('bijli-ki-taar-sargam-notes-tony-kakkar',views.bijji,name='bijli-ki-taar-sargam-notes-tony-kakkar'),
+    path('baby-bewafa-sargam-notes-goldie-sohel',views.baby,name='baby-bewafa-sargam-notes-goldie-sohel'),
 
 ]
 

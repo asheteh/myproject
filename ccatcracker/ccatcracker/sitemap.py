@@ -1160,6 +1160,11 @@ class StaticViewSitemap(Sitemap):
 'sam-smith/how-do-you-sleep-chords-tabs',
 'pal-pal-dil-ke-paas-guitar-chords-tabs',
 'yaad-piya-ki-neha-kakkar-guitar-chords',
+'shankara-re-shankara-sargam-notes-tanhaji',
+'ja-ja-ja-sargam-notes-gajendra-verma',
+'ho-ja-rangeela-re-sargam-notes-bhangra-paa-le',
+'bijli-ki-taar-sargam-notes-tony-kakkar',
+'baby-bewafa-sargam-notes-goldie-sohel'
 
 
 ]

@@ -2474,3 +2474,29 @@ def atake(request):
 	lists = Sargams.objects.filter(song_names__icontains='tum')[:10]
 	context={'lists':lists}
 	return render(request,'music/atake.html',context)
+
+def jaja(request):
+	lists = Sargams.objects.filter(song_names__icontains='dil')[:10]
+	context={'lists':lists}
+	return render(request,'music/jaja.html',context)
+
+def shankara(request):
+	lists = Sargams.objects.filter(song_names__icontains='yar')[:10]
+	context={'lists':lists}
+	return render(request,'music/shankara.html',context)
+
+def rangeela(request):
+	lists = Sargams.objects.filter(song_names__icontains='hum')[:10]
+	context={'lists':lists}
+	return render(request,'music/rangeela.html',context)
+
+def bijji(request):
+	lists = Sargams.objects.filter(song_names__icontains='mile')[:10]
+	context={'lists':lists}
+	return render(request,'music/bijji.html',context)
+
+	
+def baby(request):
+	lists = Sargams.objects.filter(song_names__icontains='deewani')[:10]
+	context={'lists':lists}
+	return render(request,'music/baby.html',context)

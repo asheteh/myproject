@@ -1,0 +1,152 @@
+{% extends 'base_6.html' %}
+{% block title %}Ja Ja Ja Sargam Notes Gajendra Verma | Sargams notes {% endblock %}
+<!-- Main -->
+{% block content %}
+<style>
+
+	h2{
+	font: inherit;
+	vertical-align: baseline;
+	font-weight: 900;
+	line-height: 1.9;
+	font-family:  sans-serif;
+	margin: 0 0 1em 0;
+	}
+	form.example input[type=text] {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
+	}
+	form.example button {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	background: blue;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
+	height: 45.5px;
+	}
+	form.example button:hover {
+	background: darkslategray;
+	}
+	form.example::after {
+	content: "";
+	clear: both;
+	display: table;
+	}
+	#content-wrap {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	}
+</style>
+<meta name="twitter:description" content="Ja Ja Ja Sargam Notes Gajendra Verma . Ja Ja Ja Easy Harmonium Notes For Beginners. Ja Ja Ja Easy Harmonium Notes ."/><meta name="twitter:image" content="https://www.sargambook.com/wp-content/uploads/2020/01/Ja-Ja-Ja-Sargam-Notes-Gajendra-Verma.jpg"/><meta name="author" content="Titiksha"/><meta name="description"  content="Ja Ja Ja Sargam Notes Gajendra Verma Available On ccatcracker. Ja Ja Ja Easy Harmonium Notes For Beginners. Ja Ja Ja Easy Harmonium Notes On ccatcracker." /><meta name="keywords"  content="ja ja ja,sargam notes,gajendra verma,classical music education,indian classical music,music notes,harmonium notes,sargam riyaz notes" />
+<section style="background-color: black;">
+	<div id="content-wrap">
+	<section id="about" class="py-4" >
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8" >
+					<h2 style="color: white;">Search your Faviourite Songs</h2>
+					<form class="example" method="post" action="{% url 'chord_list' %}">
+						{% csrf_token %}
+						<input type="text" name="query" id="searchsong" value="" placeholder="Song Name" />
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</form>
+					<p id="search-results">
+					</p>
+					<br> <br>
+					<h4 style="color:white;">Ja Ja Ja Sargam Notes Gajendra Verma </h4>
+					<br>
+					<p style="color: #f1f1f1;">
+                        Chahegi Jab Milne Ko Aayegi                           <br>                   
+                        SA SA SA SA, SA RE RE SA, SA Ni Ni<br>
+                        <br>
+                        Chahegi Jab Paas Bulayegi<br>
+                        SA SA SA SA, SA RE RE SA, SA Ni Ni<br>
+                        <br>
+                        Kabhi Main Kon Ho Jaunga<br>
+                        SA SA SA SA, SA RE RE SA, SA Ni Ni<br>
+                        <br>
+                        Kabhi Phir Pyaar Jataegi<br>
+                        SA SA SA SA, SA RE RE SA, SA Ni Ni<br>
+                        <br>
+                        Aise Ehsaan Gina Ke<br>
+                        SA SA SA, SA RE RE SA, RE GA RE GA<br>
+                        <br>
+                        Baat Kare Munh Ko Bana Ke<br>
+                        SA SA SA, SA RE RE SA, RE GA RE GA<br>
+                        <br>
+                        Achchha Bhala Tha Main Akela<br>
+                        SA SA SA SA, SA RE RE SA, SA Ni Ni Dha<br>
+                        <br>
+                        Galti Ki Dil Ko Laga Ke<br>
+                        SA SA SA SA, SA RE RE SA, SA Ni Ni Dha<br>
+                        <br>
+                        Ho Ab Tere Zaalim Saare<br>
+                        PA PA PA MA, GA RE, GA RE SA Ni<br>
+                        <br>
+                        Iraade Samajh Chuka<br>
+                        Ni SA RE GA, SA SA SA Ni Ni Dha<br>
+                        <br>
+                        Main Jitna Bhi Jhel Saka<br>
+                        PA PA PA MA, GA RE, GA RE SA Ni<br>
+                        <br>
+                        Main Utna Jhel Chuka',<br>
+                        Ni SA RE GA, SA SA SA Ni Ni Dha',<br>
+                        <br>
+                        <br>
+                        
+                        Ja Ja Ja, Mujhe Na Dikha       <br>
+                        Ye Ishq Tera, Ye Pyaar Tera <br>
+                        Jaa Jaa Jaa, Main Nai Karna <br>
+                        Ye Ishq Tera, Ye Pyaar Tera <br> <br>
+                    <strong style="color: brown;">Note : Hope you understood start of song now just try to explore next 2 para of songs by yourself try to find notes by yourself.
+                        If you want to learn how to find notes of any song read this blog : <a href="{%url 'sargam' %}">CLick here</a>
+                    </strong>
+					</p>
+					<br> <br>
+					<h2 style="color: white;">You may also like this :</h2>
+					<br>
+					<section id="listings" class="py-4">
+						<br>
+						<div class="container">
+							<br>
+							<div class="row">
+								<br>
+								{% if lists %} <br>
+								{% for list in lists %} <br>
+								<!-- Listing 1 --> <br>
+								<div class="col-md-6 col-lg-4 mb-4">
+									<br>
+									<div class="card listing-preview">
+										<br>
+										<div class="card-body">
+											<div class="listing-heading text-center">
+												<h4>Sargam	 and Notation</h4>
+												<a href="{{list.url}}">{{list.song_names}}</a>
+											</div>
+											<hr>
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+								{% else %}
+								<div class="col-md-12">
+									<p>No Listings Available</p>
+								</div>
+								{% endif %}
+					</section>
+	</section>
+	</div>
+	</div>
+	</div>
+	</div>
+</section>
+</div>
+{% endblock %}

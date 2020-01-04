@@ -1,0 +1,156 @@
+{% extends 'base_6.html' %}
+{% block title %}Shankara Re Shankara Sargam Notes Tanhaji | Sargams notes {% endblock %}
+<!-- Main -->
+{% block content %}
+<style>
+
+	h2{
+	font: inherit;
+	vertical-align: baseline;
+	font-weight: 900;
+	line-height: 1.9;
+	font-family:  sans-serif;
+	margin: 0 0 1em 0;
+	}
+	form.example input[type=text] {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
+	}
+	form.example button {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	background: blue;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
+	height: 45.5px;
+	}
+	form.example button:hover {
+	background: darkslategray;
+	}
+	form.example::after {
+	content: "";
+	clear: both;
+	display: table;
+	}
+	#content-wrap {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	}
+</style>
+<meta name="twitter:description" content="Ja Ja Ja Sargam Notes Gajendra Verma . Ja Ja Ja Easy Harmonium Notes For Beginners. Ja Ja Ja Easy Harmonium Notes ."/><meta name="twitter:image" content="https://www.sargambook.com/wp-content/uploads/2020/01/Ja-Ja-Ja-Sargam-Notes-Gajendra-Verma.jpg"/><meta name="author" content="Titiksha"/><meta name="description"  content="Ja Ja Ja Sargam Notes Gajendra Verma Available On ccatcracker. Ja Ja Ja Easy Harmonium Notes For Beginners. Ja Ja Ja Easy Harmonium Notes On ccatcracker." /><meta name="keywords"  content="ja ja ja,sargam notes,gajendra verma,classical music education,indian classical music,music notes,harmonium notes,sargam riyaz notes" />
+<section style="background-color: black;">
+	<div id="content-wrap">
+	<section id="about" class="py-4" >
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8" >
+					<h2 style="color: white;">Search your Faviourite Songs</h2>
+					<form class="example" method="post" action="{% url 'chord_list' %}">
+						{% csrf_token %}
+						<input type="text" name="query" id="searchsong" value="" placeholder="Song Name" />
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</form>
+					<p id="search-results">
+					</p>
+					<br> <br>
+					<h4 style="color:white;">Shankara Re Shankara Sargam Notes Tanhaji </h4>
+					<br>
+					<p style="color: #f1f1f1;">                                   
+                        Dhoom!,                                                     <br>      
+
+                        Dam Dam Dam Dam Dam Damak <br>
+                        Dha(k) Ma(t) Ma(t), Ma(t) Dha(k) Dha(k) Dha(k) <br>
+                        Dha(k) Dha(k) Dha(k) Dha(k) <br>
+                         <br>
+                        Dam Dam Dam Dam Dam Damak <br>
+                        Dha(k) Ma(t) Ma(t), Ma(t) Dha(k) Dha(k) Dha(k) <br>
+                        Dha(k) Dha(k) Dha(k) Dha(k) <br>
+                         <br>
+                        Shankara <br>
+                        GA(k) GA(k) GA(k) <br>
+                         <br>
+                        Shankara Re Shankara Re              <br>
+                        Ma(t) Ma(t) Ma(t) Dha(k) <br>
+                        Dha(k) Dha(k) Ni(k) Dha(k) Ma(t) <br>
+                         <br>
+                        Shankara Re Shankara                   <br>
+                        Ni(k) N (k) RE(k) Ni(k) Ni(k) Dha(k) <br>
+                        Dha(k) Dha(k) Dha(k) <br>
+                         <br>
+                        Dam Dam Dam Dam Dam Dam Damak                 <br>
+                        Dha(k) Ma(t) Ma(t), Ma(t) Dha(k) Dha(k) Dha(k) <br>
+                        Dha(k) Dha(k) Dha(k) Dha(k) <br>
+                          <br>
+                        Dam Dam Dam Dam Dam Dam Damak                    <br>
+                        Dha(k) Ma(t) Ma(t), Ma(t) Dha(k) Dha(k) Dha(k) <br>
+                        Dha(k) Dha(k) Dha(k) Dha(k) <br>
+                         <br>
+                        Shankara Re Shankara Re       <br>
+                        Ma(t) Ma(t) Ma(t) Dha(k) <br>
+                        Dha(k) Dha(k) Ni(k) Dha(k) Ma(t) <br>
+                          <br>
+                        Shankara Re Shankara..               <br>
+                        Ni(k) Ni(k) RE(k) Ni(k) Ni(k) Dha(k) <br>
+                        Dha(k) Dha(k) Dha(k) <br>
+                         <br>
+                        Boojh Boojh Boojh Dhar-Pakad <br>
+                        Boojh Boojh Pakad Pakad Pakad <br>
+                        Shankara Re Shankara Re <br>
+                        Shankara Re Shankara.. <br>
+                         <br>
+                        Chand Chatur Si Khopdi Mein <br>
+                        Rakht Ka Diya Jala <br>
+                        Chand Chatur Si Khopdi Mein <br>
+                        Rakht Ka Diya Jala <br> <br>
+                    <strong style="color: brown;">Note : Hope you understood start of song now just try to explore next 2 para of songs by yourself try to find notes by yourself.
+                        If you want to learn how to find notes of any song read this blog : <a href="{%url 'sargam' %}">CLick here</a>
+                    </strong>
+					</p>
+					<br> <br>
+					<h2 style="color: white;">You may also like this :</h2>
+					<br>
+					<section id="listings" class="py-4">
+						<br>
+						<div class="container">
+							<br>
+							<div class="row">
+								<br>
+								{% if lists %} <br>
+								{% for list in lists %} <br>
+								<!-- Listing 1 --> <br>
+								<div class="col-md-6 col-lg-4 mb-4">
+									<br>
+									<div class="card listing-preview">
+										<br>
+										<div class="card-body">
+											<div class="listing-heading text-center">
+												<h4>Sargam	 and Notation</h4>
+												<a href="{{list.url}}">{{list.song_names}}</a>
+											</div>
+											<hr>
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+								{% else %}
+								<div class="col-md-12">
+									<p>No Listings Available</p>
+								</div>
+								{% endif %}
+					</section>
+	</section>
+	</div>
+	</div>
+	</div>
+	</div>
+</section>
+</div>
+{% endblock %}

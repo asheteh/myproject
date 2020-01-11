@@ -12,8 +12,8 @@ urlpatterns = [
     #path('ads',views.ads,name='ads'),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     url(r'^ads\.txt',views.ads,name='ads'),
-    path('about',views.about,name='about'),
-    path('ccat',views.ccat,name='ccat'),
+    path('ccat-predac-course-pune',views.about,name='ccat-predac-course-pune'),
+    path('cdac-c-cat',views.ccat,name='cdac-c-cat'),
     path('interview',views.interview,name='interview'),
     path('dac_interview',views.dac_interview,name='dac_interview'),
     path('big_data_interview',views.bd_interview,name='big_data_interview'),
@@ -35,6 +35,19 @@ urlpatterns = [
     path('Top-50-Interview-Questions-Data-Structure',views.data_structure_interview,name='Top-50-Interview-Questions-Data-Structure'),
     path('cpp-interview-question',views.cpp_interview,name='cpp-interview-question'),
     path('Top-50-Interview-Questions-Java',views.java_interview,name='Top-50-Interview-Questions-Java'),
+    path('cdac-courses',views.other,name='cdac-courses'),
+    path('dmc-cdac-course',views.dmc,name='dmc-cdac-course'),
+    path('iot-cdac-course',views.iot,name='iot-cdac-course'),
+    path('desd-cdac-course',views.desd,name='desd-cdac-course'),
+    path('dittis-cdac-course',views.dittis,name='dittis-cdac-course'),
+    path('hpcsa-cdac-course',views.hpcsa,name='hpcsa-cdac-course'),
+    path('vlsi-cdac-course',views.vlsi,name='vlsi-cdac-course'),
+    path('ai-cdac-course',views.ai,name='ai-cdac-course'),
+    path('cdac-c-cat-syllabus',views.syllabus,name='cdac-c-cat-syllabus'),
+    path('cdac-c-cat-result',views.result,name='cdac-c-cat-result'),
+    path('cdac-c-cat-admit-card',views.admit,name='cdac-c-cat-admit-card'),
+
+
 
 
  

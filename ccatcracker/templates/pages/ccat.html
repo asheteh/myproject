@@ -1,152 +1,592 @@
 {% extends 'base.html '%}
-
+{% block title %}CDAC C-CAT 2019 - Application Form ,Cutoff, Counselling, Seat Allotment{% endblock %}
 {% block content %}
 <style>
-        table, th, td {
-          border: 1px solid black;
-          border-collapse: collapse;
-        }
-        p{
-          font-family: sans-serif
-        }
-
-
-
-      </style>
-   <!-- Breadcrumb -->
-   <section id="bc" class="mt-3">
-        <div class="container">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="{% url 'index' %}">
-                  <i class="fas fa-home"></i> Home</a>
-              </li>
-              <li class="breadcrumb-item active">CCAT</li>
-            </ol>
-          </nav>
-        </div>
-      </section>
-      
-      {% include 'partials/_alerts.html' %}
-
-      <section id="about" class="py-4">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-8">
-                  
-                  <h2>Search For The Perfect Study Material</h2>
-                  <p class="lead">Checkout The Syllabus and Perfect notes to crack ccat with Good Rank.</p>
-                
-                  <p class="mt-4">Hey Guys Please read this Very carefully . <br>
-                        Before going to ccat exam first follow all the process which i Had mentioned. <br>
-                        First read syllabus . <br>
-                        Second Read my notes very carefully.If you follow my notes you can easily solve 80% quetions. <br>
-                        Finally after completing study and videos which i have recommend in notes Before exam give
-                        My practice online test i am sure Guys this is a very important test that will gain your confidence in exam. br
-                        At least give 4 test each year i change data as per exam requirement so follow only material from this website .     </p>
-                        
-                                
-                    <table style="width:100%">
-                    <tr>
-                        <th>Sections</th>
-                        <th>Topics</th> 
-                        <th>Time</th>
-                    </tr>
-                    <tr>
-                        <td>Section A</td>
-                        <td>English Aptitude & Reasoning</td>
-                        <td>1 Hour</td>
-                    </tr>
-                    <tr>
-                        <td>Section B</td>
-                        <td>C ,C++ ,Data Structre,Operating System,Networking</td>
-                        <td>1 Hour</td>
-                    </tr>
-                    <tr>
-                       <td>Section C</td>
-                        <td>Computer Architecture,Digital Electronics,Microprocessors</td>
-                        <td>1 Hour</td>
-                    </tr>
-                    </table>
-                   
-                      
-                        <h4 style="color: goldenrod">Subscribe ccatcracker.in to Get Daily Practice Questions For ccat </h4  >
-                          <h5> Enter Your Email Below We will Send you Daily Notification . You will get daily Coding Snippet as well as Aptitude and English Reasoning 
-                            Practice Questions Free . Also Will send Sample Study Material If you Like Buy Else Leave It. <br></h5>
-                        
-                       
-                </div>
-            </section>
-     <section id="work" class="bg-dark text-white text-center">
-           
-           
-            <form action="{% url 'ccat_notify' %}" method="POST">
-                {% csrf_token %}
-                <h4>Enter Email To get Sample Study Material and Daily Practice Questions.</h4>
-                     E-mail: <input style="color: black" type="email" required name="email">
-                    <input style="color: green" type="submit">
-              </form>  
-              <h4>Lets Checkout CCAT Section</h4>
-            <a href="{% url 'checkout' %}" class="btn btn-secondary text-white btn-lg">CCAT</a>
-          </section>
-    
-        <section id="about" class="py-4">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-8">
-                  <h3>Do not join any Pre-Dac Course Guys Don't waste your money. </h3  >
-                      <p class="lead">Check Out the study Material that notes are very relevent to exam nothing useless.</p>
-                      
-                      <p class="mt-4">If you click CCAT section you will get all material .That notes are created by me 
-                          I have completed CDAC 3 year ago . I saw how much peoples do struggle to get perfect notes unnecessary
-                        they waste lots of money for Pre-Dac Course . Thats why i have developed this website only for You Guys.
-                        So stay with me and start to explore I always update new Material and Important Tips for how to success in CDAC.           </p>
-                    </div>
-                    </div>
-                   
-                </div>
-                
-                
-            
-        </section>
-
-        
-        <section id="about" class="py-4">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-8">
-                  
-                       <h3>Do You Know ? What Pre-Dac Coacing Will provide ?. </h3>
-                      <p class="lead">Please read below instruction about predac course .</p>
-                      
-                      <p class="mt-4">
-                        1. I joined Pre-Dac Course by paying almost 12k for only 2 month in 2017. <br>
-                        2. I will not take name but I hope you guys underastand very famous Pre-Dac In Pune. <br>
-                        3. I Got rank 2300 . I am saying everything honestly because I dont want you guys also wate that huge money. <br>
-                        4. In Pre Dac first 20 days C langugae . <br>
-                        4. Next 20 days Data Structure and C++ <br>
-                        5. Only 3 days Aptitude . <br>
-                        6. 10 days OS and Networking <br>
-                        7. Thats it guys this is syllabus provided by pre dac .Nothing Extra. <br>
-                        8. I have analyzed all this problem and thats why i have developed this website only for ccat . <br>
-                        9. We are here 24*7 for any guidence you guys required just email us . <br>
-                       10. I developed study material if you follow that i will give gurantee guys without investing huge amount you will get good rank. <br>
-                       11. After completing my notes and videos  go for test series . Dont think about 600 Rs . Guys this test series i developed very similar to main ccat exam. <br>
-                       12. You will get clear idea about how quetions will come in exam . In same ccat format I developed Test series. <br>
-                       13. All the best Guys !!!! Just Stay on ccatcracker and get great success in CDAC Journey .. <br>
-                      </p>
-                    </div>
-                    </div>
-                  
-                </div>
-                
-            
-        </section>
-
-
-
-
-
-
+	table,th{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	}
+	td {
+	border: 1px solid #ddd;
+	padding: 4px;
+	}
+	p{
+	font-family: sans-serif
+	}
+	tr:nth-child(even){background-color: #f2f2f2;}
+	tr:hover {background-color: #ddd;}
+	.div1 {
+	width: 300px;
+	height: 100px;
+	border: 1px solid black;
+	padding: 1px;
+	}
+</style>
+<!-- Breadcrumb -->
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="{% url 'index' %}">
+					<i class="fas fa-home"></i> Home</a>
+				</li>
+				<li class="breadcrumb-item active"> CCAT</li>
+			</ol>
+		</nav>
+	</div>
+</section>
+<section id="about" class="py-4" style="background-color:#f7f7f7">
+	<div class="container" style="background-color: white;">
+		<h3> <strong>CDAC C-CAT Application Form 2019</strong>  </h3>
+		<br> <br>
+		<p style="font-size: 17px;"> 
+			<strong>CDAC C-CAT Syllabus 2019</strong> 
+			The Centre for Development of Advanced Computing (CDAC) determines the Common Admission Test (C-CAT) 2019 syllabus.
+			All the subjects and topics which are covered in the exam are mentioned in the CDAC CCAT syllabus 2019. 
+			The syllabus of CDAC C-CAT 2019 differs for various PG diploma courses. Since the CDAC 2019 was conducted on December 8 and 15,
+			2019, it is essential for candidates to be well versed with the CDAC CCAT 2019 syllabus so that their preparation can be completed on time. Knowing the CDAC C-CAT syllabus 2019 allows candidates to prepare efficiently and prevent wasting their time on insignificant topics. Along with the syllabus, the reference books for various subjects are given below for the candidates’ convenience. Scroll down the article below to know more about the syllabus of CDAC C-CAT 2019.
+		</p>
+		<br>
+		<h3><strong>CDAC CCAT Application Form Dates</strong></h3>
+		<br> <br>
+		<table>
+			<tbody>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;"><strong>Events</strong></p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;"><strong>Dates</strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr">CDAC C-CAT December 2019 advertisement</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">October 30, 2019</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Release of CDAC C-CAT Application Form 2019</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">October 30, 2019</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Last date for CDAC C-CAT registration</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">November 27, 2019</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p style="text-align: justify;">CDAC C-CAT online exam December 2019</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">December 8 and 15, 2019</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br> <br> <br>
+		<h3><strong>CDAC C-CAT Eligibility Criteria 2019</strong></h3>
+		<br> <br>
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						<p><strong>S.No.</strong></p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;"><strong>Course name</strong></p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;"><strong>Eligibility Requirements</strong></p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;"><strong>Minimum marks</strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">1</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Applicable to all</p>
+					</td>
+					<td class="tbl-cell-border1" colspan="2">
+						<p dir="ltr" style="text-align: justify;">Graduate in engineering or equivalent (e.g. BE/ BTech/ 4-year BSc Engg/ DoEACC B Level/ AMIE) in IT/ Computer Science/ Telecommunications/ Electronics/ Electrical/ Instrumentation</p>
+						<br>
+						<p dir="ltr" style="text-align: justify;">OR</p>
+						<p dir="ltr" style="text-align: justify;">Postgraduate degree in engineering sciences with the corresponding basic degree (e.g. MSc in IT, Computer Science, Electronics)</p>
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1" colspan="4">
+						<p dir="ltr" style="text-align: justify;"><strong>CATEGORY I (Section A in C-CAT)</strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">2</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Post Graduate Diploma in Geoinformatics</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Postgraduate degree in Applied Sciences/ Geology/ Geography/ Mathematics/ Physics/ Computational Sciences or allied areas</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">50%</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1" colspan="4">
+						<p dir="ltr" style="text-align: justify;"><strong>CATEGORY II (Sections A+B in C-CAT)</strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">3</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Post Graduate Diploma in HPC System Administration</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Postgraduate degree in Mathematics or allied areas</p>
+						<p dir="ltr" style="text-align: justify;">OR</p>
+						<p dir="ltr" style="text-align: justify;">MCA</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">55%</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">4</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Post Graduate Diploma in Mobile Computing</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Postgraduate degree in Mathematics or allied areas</p>
+						<p dir="ltr" style="text-align: justify;">OR</p>
+						<p dir="ltr" style="text-align: justify;">MCA</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">50%</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">5</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Post Graduate Diploma in System Software Development</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Postgraduate degree in Mathematics or allied areas</p>
+						<p dir="ltr" style="text-align: justify;">OR</p>
+						<p dir="ltr" style="text-align: justify;">MCA</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">55%</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">6</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Post Graduate Diploma in Big Data Analytics</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">MCA</p>
+						<p dir="ltr" style="text-align: justify;">OR</p>
+						<p dir="ltr" style="text-align: justify;">Graduate in any discipline of Engineering or equivalent</p>
+						<p dir="ltr" style="text-align: justify;">OR</p>
+						<p dir="ltr" style="text-align: justify;">Postgraduate degree in Physics/ Mathematics/ Statistics/ MBA systems or allied areas</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">55%</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">7</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Post Graduate Diploma in IT Infrastructure, Systems &amp; Security</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Postgraduate degree in Mathematics or allied areas</p>
+						<p dir="ltr" style="text-align: justify;">OR</p>
+						<p dir="ltr" style="text-align: justify;">MCA</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">55%</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">8</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Post Graduate Diploma in Advanced Computing</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">MCA, MCM</p>
+						<p dir="ltr" style="text-align: justify;">OR</p>
+						<p dir="ltr" style="text-align: justify;">Graduate in any discipline of Engineering or equivalent</p>
+						<p dir="ltr" style="text-align: justify;">OR</p>
+						<p dir="ltr" style="text-align: justify;">Postgraduate degree in Physics/ Computer Sciences/ Mathematics or allied areas</p>
+						<p dir="ltr" style="text-align: justify;">OR</p>
+						<p dir="ltr" style="text-align: justify;">Postgraduate degree in Management with graduation in Science/ Computer Applications/ IT</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">50%</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">9</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Post Graduate Diploma in Internet of Things</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">MCA</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">55%</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1" colspan="4">
+						<p dir="ltr" style="text-align: justify;"><strong>CATEGORY III (Sections A+B+C in C-CAT)</strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">10</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Post Graduate Diploma in Biomedical Instrumentation &amp; Health Informatics</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">BE in Biomedical or related fields</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">55%</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">11</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Post Graduate Diploma in VLSI Design</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">-</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">55%</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">12</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">Post Graduate Diploma in Embedded Systems Design</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">-</p>
+					</td>
+					<td class="tbl-cell-border1">
+						<p dir="ltr" style="text-align: justify;">55%</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br> <br>
+		<h3><strong>Steps to fill CDAC C-CAT Application Form 2019</strong></h3>
+		<p style="font-size: 17px;">
+			The process of CDAC registration followed by filling the CDAC C-CAT 2019 Application Form December 2019 is a multi-level process. The steps provided below are to be followed by aspirants:
+			<br> <br>
+		</p>
+		<a href="cdac.in"><strong>Visit the official website of CDAC </strong></a> <br> <br>
+		<h3><strong>Follow Below Steps :</strong></h3>
+		<br> <br>
+		<h4><strong>Step 1- CDAC C-CAT Registration</strong></h4>
+		<br>
+		<p style="font-size: 17px;">
+			<strong>The CDAC C-CAT 2019 registration</strong>  is the first step while applying for the entrance examination. Candidates are required to fill in some generic details. The process will end up with formation of CDAC C-CAT application form number and password. Candidates are advised to note down these two as they are crucial for CDAC login in future.
+			<br> <br>
+		</p>
+		<h4><strong>Step 2- Selection of CDAC Courses</strong></h4>
+		<br>
+		<p
+			style="font-size: 17px;">
+			In this step, candidates are required for <strong>CDAC</strong>  login using their form number and password formed at the time of <strong>CDAC C-CAT registration</strong> . Herein, they have to enter some personal as well as professional details. Candidates are also required to carefully select the category of CDAC PG Diploma courses as well because no second chance will be provided to change the same.
+			<br>  <br>
+			1. Candidates applying for Category 1 are only eligible for PG-DGi.
+			<br> <br>
+			2. Category 2 candidates are eligible for courses under both category 1 as well as category 2 respectively.
+			<br> <br>
+			3. Eligible candidates selecting the Category 3 can apply for all PG Diploma courses mentioned in Category 3.
+			<br><br>
+		</p>
+		<h4><strong>Step 3- Uploading photograph</strong></h4>
+		<br>
+		<p style="font-size: 17px;">
+			The next step of <strong>CDAC C-CAT application form</strong>  December 2019 requires the respective candidates to upload their passport size photograph. It must be assured by aspirants that they upload a picture which is clear and their face is visible enough for recognition by concerned authorities.
+		</p>
+		<br> <br>
+		<h4><strong>Step 4- Payment of examination fee</strong></h4>
+		<br>
+		<p style="font-size: 17px;;">
+			The application fee for  <strong> CDAC C-CAT application form</strong> 2019 varies according to the category of course selected by candidates as well as the computer system opted for, i.e personal laptop or that of examination centre. Hence, the examination fee for CDAC C-CAT 2019 is as follows:
+			<br> <br>
+		<table>
+			<tbody>
+				<tr>
+					<td class="tbl-cell-border1" style="width: 21.7626%;">
+						<p dir="ltr" style="text-align: justify;"><strong>Category of Course</strong></p>
+					</td>
+					<td class="tbl-cell-border1" style="width: 22.1223%;">
+						<p dir="ltr" style="text-align: justify;"><strong>CDAC C-CAT Papers</strong></p>
+					</td>
+					<td class="tbl-cell-border1" style="width: 56.1151%;">
+						<p dir="ltr" style="text-align: justify;"><strong>Examination fee </strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td class="tbl-cell-border1" style="width: 21.7626%;">
+						<p dir="ltr" style="text-align: justify;">I</p>
+						<p dir="ltr" style="text-align: justify;">II</p>
+						<p dir="ltr" style="text-align: justify;">III</p>
+					</td>
+					<td class="tbl-cell-border1" style="width: 22.1223%;">
+						<p dir="ltr" style="text-align: justify;">A</p>
+						<p dir="ltr" style="text-align: justify;">A+B</p>
+						<p dir="ltr" style="text-align: justify;">A+B+C</p>
+					</td>
+					<td class="tbl-cell-border1" style="width: 56.1151%;">
+						<p dir="ltr" style="text-align: justify;">Rs. 1350/-</p>
+						<p dir="ltr" style="text-align: justify;">Rs. 1550/-</p>
+						<p dir="ltr" style="text-align: justify;">Rs. 1750/-</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</p>
+		<br> <br>
+		<h4><strong>Final- Selection of city and date of C-CAT exam December 2019</strong></h4>
+		<p style="font-size: 17px;"> <br> 
+			After payment of application fee, the candidates have to complete CDAC C-CAT application December 2019 form by selecting the city and date of examination. As C-CAT exam is conducted for two days in a session, candidates have to select the exam day while filling the CDAC C-CAT application form 2019. It may be noted that the availability of a particular exam centre depends upon the capacity therein, and if the seats are filled, then further applicants will not be able to select such of exam cities as it will not show in the drop down menu itself.
+			<br> <br>
+			After successful completion of CDAC C-CAT application form 2019, candidates are advised to download and take 2-3 prints of the same for future reference.
+		</p>
+		<br> <br>
+		<h4><strong>CDAC C-CAT Exam Cities</strong></h4>
+		<br>
+		<table>
+			<tbody>
+				<tr >
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Agartala</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Jaipur</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Navi Mumbai</span></span></p>
+					</td>
+				</tr>
+				<tr >
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Ahmedabad</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Vijayawada</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">New Delhi</span></span></p>
+					</td>
+				</tr>
+				<tr >
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Allahabad</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Karad</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Noida</span></span></p>
+					</td>
+				</tr>
+				<tr >
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Bengaluru</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Kochi</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Patna</span></span></p>
+					</td>
+				</tr>
+				<tr >
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Bhubaneswar</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Kolkata</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Pune</span></span></p>
+					</td>
+				</tr>
+				<tr >
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Chennai</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Lucknow</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Raipur</span></span></p>
+					</td>
+				</tr>
+				<tr >
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Guwahati</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Mohali</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Ranchi</span></span></p>
+					</td>
+				</tr>
+				<tr >
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Gwalior</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Mumbai</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Silchar</span></span></p>
+					</td>
+				</tr>
+				<tr >
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Hyderabad</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Nagpur</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Solapur</span></span></p>
+					</td>
+				</tr>
+				<tr >
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Indore</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Nashik</span></span></p>
+					</td>
+					<td   >
+						<p  ><span style="color: rgb(0, 0, 0);"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Thiruvananthapuram</span></span></p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+<!-- Work -->
+<section id="about" class="py-4" style="background-color:#f7f7f7">
+	<div class="container" style="background-color: white;">
+		<h4><strong>You may also like :</strong></h4>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>Pre Dac Course</strong></h4>
+						CDAC ccat free pre dac course 45 days you can check here..<br>
+						<a href="{% url 'ccat-predac-course-pune' %}">Pre Dac</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>CDAC C-CAT Syllabus 2019</strong></h4>
+						CDAC C-CAT Syllabus 2019 - you can check here.. <br>
+						<a href="{% url 'cdac-c-cat-syllabus' %}">Syllabus</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong> CDAC C-CAT Admit Card 2019 </strong></h4>
+						CDAC C-CAT Admit Card 2019- The Authorities has released CDAC ... <br>
+						<a href="{% url 'cdac-c-cat-admit-card' %}">Admit Card </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>CDAC C-CAT Result 2019</strong></h4>
+						CDAC C-CAT Result & Rank 2019 - The Centre for Development of... <br>
+						<a href="{% url 'cdac-c-cat-result' %}">CCAT Result </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>CDAC C-CAT Cut-Off</strong></h4>
+						CDAC C-CAT Cut-Off 2019- You can check latest cutoff for CDAC here .. <br>
+						<a href="{% url 'cdac' %}">Cut-Off</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>CDAC C-CAT Test Seties</strong></h4>
+						CDAC C-CAT Mock Test 2019- free 2 mock test for both section.. <br>
+						<a href="{% url 'onlinetest' %}">Mock Test</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 {% endblock %}

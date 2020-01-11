@@ -1,0 +1,314 @@
+{% extends 'base.html '%}
+{% block title %} cdac course pune DITTIS {% endblock %}
+{% block content %}
+<style>
+  p {
+        font-size: 17px;
+  }
+  * {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 700px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 700px;
+}
+.tabcontents {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 100%;
+  border-left:  1px solid #ccc;
+ 
+}
+</style>
+ <!-- Showcase -->
+ <section id="showcase" style="background-image: url(../static/img/ccee.jpg);background-attachment: fixed;">
+        <div class="container text-center">
+          <div class="home-search p-5">
+            <div class="overlay p-5">
+              <h1 class="display-4 mb-4">
+                Search Centers Course Wise
+              </h1>
+            
+              <p class="lead">Please enter course name and city you will get list of cdac center</p>
+              <div class="search">
+                <form action="{% url 'search' %}">
+                  <!-- Form Row 1 -->
+                  <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label class="sr-only">Course</label>
+                        <select name="course" class="form-control">
+                          <option selected="true" disabled="disabled">Courses (All)</option>
+                          <option value="DAC">DAC</option>
+                          <option value="Big Data">Big Data</option>
+                          <option value="IOT">IOT</option>
+                          <option value="VLSI">VLSI</option>
+                          <option value="HPCSA">HPCSA</option>
+                        </select>
+                    </div>
+    
+    
+                    <div class="col-md-6 mb-3">
+                      <label class="sr-only">City</label>
+                      <select name="city" class="form-control">
+                        <option selected="true" disabled="disabled">City (All)</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkatta">Kolkatta</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Noida">Noida</option>
+                      </select>
+                    </div>
+                  </div>
+               
+                  </div>
+                  <button class="btn btn-secondary btn-block mt-4" type="submit">Search Center</button>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+        </div>
+      </section>
+      <section id="about" class="py-4" style="background-color:#f7f7f7">
+        <div class="container" style="background-color: white;">
+         
+              <h3> <strong>DITTIS Course Details</strong></h3>
+
+              <div class="tab">
+               
+                <button class="tablinks" onclick="openCity(event, 'Paris')">Fees</button>
+                <button class="tablinks" onclick="openCity(event, 'London')"id="defaultOpen">Syllabus</button>
+                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Placement</button>
+                <button class="tablinks" onclick="openCity(event, 'main')">Job Profile</button>
+                <button class="tablinks" onclick="openCity(event, 'center')">Best Centers</button>
+                <button class="tablinks" onclick="openCity(event, 'out')">Course Outcome</button>
+                <button class="tablinks" onclick="openCity(event, 'other')">Other Courses</button>
+              </div>
+              
+              <div id="London" class="tabcontent">
+                <h3 style="color: black;">DITTIS</h3>
+                <p style="font-size: 12px;"> <strong>
+                   <br> <br> Fundamentals of Computer Networksc80 Hours  
+                   <br> <br> Concepts of Operating System and Administration 210 Hours  
+                   <br> <br> Security Concepts 170 Hours  
+                   <br> <br> Network Defense and Countermeasures (NDC) 70 Hours  
+                   <br> <br> Cyber Forensics 30 Hours  
+                   <br> <br> PKI 50 Hours  
+                   <br> <br> IT Infrastructure Management 90 Hours  
+                   <br> <br> Effective Communication 50 Hours  
+                   <br> <br> Aptitude & General English 50 Hours  
+                   <br> <br> Project 100 Hours  
+                
+                </strong>
+                 </p> <br>
+              </div>
+              
+              <div id="Paris" class="tabcontent">
+                <h3>Fees</h3>
+                <p style="font-size: 12px;;"> <strong>
+                  The total fees of the course is Rs. 90,000/- plus Goods and Service Tax (GST) currently 18%.   <br>
+                    <br>
+                  The course fees has to be paid in two installment as per the schedule. <br>                     <br>
+                  First installment is Rs. 10,000/- plus Goods and Service Tax (GST) currently 18%. <br> <br>
+                  Second installment is Rs. 80,000/- plus Goods and Service Tax (GST) currently 18%. <br> <br>
+                </strong></p> 
+              </div>
+              
+              <div id="Tokyo" class="tabcontent">
+                <h3>Placement</h3>
+                <p style="font-size: 12px;"> <strong>
+                  Overall placement for DITTIS course is Good
+                  <br> <br>
+                  No of interview calls are depends on your ccee exam score. <br>  <br>
+                  <a href="{%url 'ccee' %}">CCEE</a>
+                  <br> <br>
+                  Colleges For DITTIS : <br> <br>
+                                    
+                  1. CDAC ACTS Pune <br> <br>
+                  2. IACSD Pune <br> <br>
+                  3. CDAC ACTS Banglore <br> <br>
+                 
+           
+                </strong> 
+                
+                </p>
+              </div>
+              <div id="main" class="tabcontent">
+                <h3>Job Profile In DITTIS</h3>
+                <p style="font-size: 12px;"> <strong>
+                  Network Engineer <br> <br>
+                  System Administrator <br> <br>
+                  Security Engineer <br> <br>
+                  <br> To explore the fundamental concepts of Cyber Security
+                  <br> <br> To develop in-depth knowledge and understanding of the Intrusion Detection and Prevention domain.
+                  <br> <br> To learn to analyze the threats detection techniques.
+                  <br> <br> To understand the Concepts of Data Centre Management.
+                  <br> <br> To learn & use various techniques for Ethical Hacking and Cyber Forensics.
+                  <br> <br> To understand the applications security implementation.
+                  <br> <br> To analyze and solve problems conceptually and practically from diverse industries, such as government manufacturing, retail, education, banking/ finance, healthcare and pharmaceutical.
+                
+                </strong> 
+                
+                </p>
+              </div>
+              <div id="center" class="tabcontent">
+                <h3>Centers  for DITTIS</h3>
+                <p style="font-size: 12px;"> <strong>
+                    1. CDAC ACTS Pune <br> <br>
+                    2. IACSD Pune <br> <br>
+                    3. CDAC ACTS Banglore <br> <br>
+                 
+                </strong> 
+                
+                </p>
+              </div>   
+              <div id="other" class="tabcontent">
+                <h3>Other CDAC Courses</h3>
+                <p style="font-size: 12px;"> <strong>
+                  <a href="{%url 'cdac-courses' %}"> DBDA (Big Data Analytics)</a> <br> <br>
+                 <a href="{%url 'dmc-cdac-course' %}"> DMC  (Mobile Computing) </a> <br> <br>
+                 <a href="{%url 'iot-cdac-course' %}">IOT  </a><br> <br>
+                 <a href="{%url 'hpcsa-cdac-course' %}">HPCSA </a> <br> <br>
+                 <a href="{%url 'ai-cdac-course' %}"> AI </a> <br> <br>
+                 <a href="{%url 'vlsi-cdac-course' %}"> VLSI </a> <br> <br>
+                 <a href="{%url 'desd-cdac-course' %}"> DESD </a><br> <br>
+                 <a href="{%url 'dittis-cdac-course' %}"> DITTIS </a> <br> <br>
+                  <br>
+                 
+                </strong> 
+                
+                </p>
+              </div>   
+              <div id="out" class="tabcontent">
+                <h3>After Course Complete :</h3>
+                <p style="font-size: 12px;"> <strong>  
+               
+                   <br> <br> After doing this course students can work as:
+
+                   <br> <br> System Administrator
+                   <br> <br> Network Security Professional
+                   <br> <br> Web Security Tester
+                   <br> <br> Information Security Analysts
+                  
+                </strong> 
+                
+                </p>
+              </div>           
+              <script>
+              function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+              }
+              
+              // Get the element with id="defaultOpen" and click on it
+              document.getElementById("defaultOpen").click();
+              </script>
+          
+            
+          
+        
+        </div>
+      </section> 
+      <section id="about" class="py-4" style="background-color:#f7f7f7;">
+        <div class="container" style="background-color: white; border: 1px solid #ccc; ">
+  
+          <h3><strong>DITTIS Eligibility:</strong></h3>
+           <p>
+           <br> <br> Graduate in Engineering (10+2+4 or 10+3+3 years) in IT / Computer Science / Electronics / Telecommunications / Electrical / Instrumentation. OR MSc/MS (10+2+3+2 years) in Computer Science, IT, Electronics. 
+           <br> <br> Mathematics in 10+2 (exempted for candidates with Diploma + Engineering) OR
+           <br> <br> Post Graduate in Mathematics or allied areas,  OR
+           <br> <br> MCA
+           <br> <br> The candidates must have secured a minimum of 55% marks in their qualifying examination.
+           </p> <br> <br>
+          
+          
+        </div>
+      </section>
+
+    
+      <section id="services" class="py-5 bg-secondary text-white">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-md-4">
+                <i class="fas fa-comment fa-4x mr-4"></i>
+                <hr>
+                <h3>About Us</h3>
+                <p>Hey guys this is the website I have developed to all those students wants
+                  to success in cdac from start to end here you will find everything regarding CDAC.
+                </p>
+              </div>
+
+             
+              <div class="col-md-4">
+                  <i class='fas fa-laptop-code' style='font-size:48px'></i>
+                <hr>
+                <h3>Test Series</h3>
+                <p>This online test series i have designed for ccat exam you will feel like you are 
+                  giving ccat exam after taking this test you will feel confident for exam. I recommend
+                  you guys at leaset give 2,3 test before exam my quetions are very relevent to ccat. 
+                </p>
+              </div>
+              <div class="col-md-4">
+                <i class="fas fa-suitcase fa-4x mr-4"></i>
+                <hr>
+                <h3>Contact Us</h3>
+                <p>This is the website only to clear doubts of all the students so feel free to contact us at any time for anything 
+                  regarding cdac.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+{% endblock %}

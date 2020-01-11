@@ -1,0 +1,365 @@
+{% extends 'base.html '%}
+{% block title %} cdac course pune DBDA {% endblock %}
+{% block content %}
+<style>
+	p {
+	font-size: 17px;
+	}
+	* {box-sizing: border-box}
+	body {font-family: "Lato", sans-serif;}
+	/* Style the tab */
+	.tab {
+	float: left;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+	width: 30%;
+	height: 700px;
+	}
+	/* Style the buttons inside the tab */
+	.tab button {
+	display: block;
+	background-color: inherit;
+	color: black;
+	padding: 22px 16px;
+	width: 100%;
+	border: none;
+	outline: none;
+	text-align: left;
+	cursor: pointer;
+	transition: 0.3s;
+	font-size: 17px;
+	}
+	/* Change background color of buttons on hover */
+	.tab button:hover {
+	background-color: #ddd;
+	}
+	/* Create an active/current "tab button" class */
+	.tab button.active {
+	background-color: #ccc;
+	}
+	/* Style the tab content */
+	.tabcontent {
+	float: left;
+	padding: 0px 12px;
+	border: 1px solid #ccc;
+	width: 70%;
+	border-left: none;
+	height: 700px;
+	}
+	.tabcontents {
+	float: left;
+	padding: 0px 12px;
+	border: 1px solid #ccc;
+	width: 100%;
+	border-left:  1px solid #ccc;
+	}
+</style>
+<!-- Showcase -->
+<section id="showcase" style="background-image: url(../static/img/ccee.jpg);background-attachment: fixed;">
+	<div class="container text-center">
+		<div class="home-search p-5">
+			<div class="overlay p-5">
+				<h1 class="display-4 mb-4">
+					Search Centers Course Wise
+				</h1>
+				<p class="lead">Please enter course name and city you will get list of cdac center</p>
+				<div class="search">
+					<form action="{% url 'search' %}">
+						<!-- Form Row 1 -->
+						<div class="form-row">
+							<div class="col-md-6 mb-3">
+								<label class="sr-only">Course</label>
+								<select name="course" class="form-control">
+									<option selected="true" disabled="disabled">Courses (All)</option>
+									<option value="DAC">DAC</option>
+									<option value="Big Data">Big Data</option>
+									<option value="IOT">IOT</option>
+									<option value="VLSI">VLSI</option>
+									<option value="HPCSA">HPCSA</option>
+								</select>
+							</div>
+							<div class="col-md-6 mb-3">
+								<label class="sr-only">City</label>
+								<select name="city" class="form-control">
+									<option selected="true" disabled="disabled">City (All)</option>
+									<option value="Pune">Pune</option>
+									<option value="Mumbai">Mumbai</option>
+									<option value="Kolkatta">Kolkatta</option>
+									<option value="Banglore">Banglore</option>
+									<option value="Noida">Noida</option>
+								</select>
+							</div>
+						</div>
+				</div>
+				<button class="btn btn-secondary btn-block mt-4" type="submit">Search Center</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+</div>
+</div>
+</section>
+<section id="about" class="py-4" style="background-color:#f7f7f7">
+	<div class="container" style="background-color: white;">
+		<h3> <strong>DBDA Course Details</strong></h3>
+		<div class="tab">
+			<button class="tablinks" onclick="openCity(event, 'Paris')">Fees</button>
+			<button class="tablinks" onclick="openCity(event, 'London')"id="defaultOpen">Syllabus</button>
+			<button class="tablinks" onclick="openCity(event, 'Tokyo')">Placement</button>
+			<button class="tablinks" onclick="openCity(event, 'main')">Job Profile</button>
+			<button class="tablinks" onclick="openCity(event, 'center')">Best Centers</button>
+			<button class="tablinks" onclick="openCity(event, 'out')">Course Outcome</button>
+			<button class="tablinks" onclick="openCity(event, 'other')">Other Courses</button>
+		</div>
+		<div id="London" class="tabcontent">
+			<h3 style="color: black;">DBDA</h3>
+			<p style="font-size: 12px;">
+				<strong> 
+				Linux Programming and Cloud Computing 80 Hours                              <br> <br>
+				Python Programming and Advanced Analytics 90 Hours   <br> <br>
+				Object Oriented Programming with Java 880 Hours   <br> <br>
+				Statistical Analysis with R 70 Hours   <br> <br>
+				Data Collection & DBMS (Principles,Tools & Platforms) 70 Hours   <br> <br>
+				Cloud Computing & HPC Applications 40 Hours   <br> <br>
+				Big Data Technologies 140 Hours   <br> <br>
+				Data Visualization - Analysis and Reporting 50 Hours   <br> <br>
+				Practical Machine Learning 100 Hours   <br> <br>
+				Aptitude and General English 50 Hours   <br> <br>
+				Effective Communication 50 Hours   <br> <br>
+				Project  120 Hours <br> <br>
+				</strong> 
+			</p>
+			<br>
+		</div>
+		<div id="Paris" class="tabcontent">
+			<h3>Fees</h3>
+			<p style="font-size: 12px;;"> <strong>
+				The total fees of the course is Rs. 90,000/- plus Goods and Service Tax (GST) currently 18%.   <br>
+				<br>
+				The course fees has to be paid in two installment as per the schedule. <br>                     <br>
+				First installment is Rs. 10,000/- plus Goods and Service Tax (GST) currently 18%. <br> <br>
+				Second installment is Rs. 80,000/- plus Goods and Service Tax (GST) currently 18%. <br> <br>
+				</strong>
+			</p>
+		</div>
+		<div id="Tokyo" class="tabcontent">
+			<h3>Placement</h3>
+			<p style="font-size: 12px;"> <strong>
+				Overall placement for Big data course is not like DAC . <br><br>
+				As big data is very large technology and Practically companies <br>
+				will not give preference to fresher for big data AI. <br> <br>
+				But you will get good calls because of CDAC so it depends on your performance .  <br> <br>
+				Average placement for DBDA top college is above 70% . <br> <br> 
+				No of interview calls are depends on your ccee exam score. <br>  <br>
+				<a href="{%url 'ccee' %}">CCEE</a>
+				<br> <br>
+				Top 5 Colleges For Placement : <br> <br>
+				1. CDAC ACTS Pune <br>                           <br>
+				2. Sunbeam Pune <br> <br>
+				3. IACSD Akurdi  <br> <br>
+				4. VITA Mumbai <br> <br>
+				5. Knowledge Park Banglore <br> <br>
+				</strong> 
+			</p>
+		</div>
+		<div id="main" class="tabcontent">
+			<h3>Job Profile In DAC</h3>
+			<p style="font-size: 12px;"> <strong>
+				Java  Developer <br>        <br>
+				Python developer <br> <br>
+				Big data developer <br> <br>
+				Software Developer <br> <br>
+				Testing Engineer <br> <br>
+				<br>
+				Post Graduate Diploma in Big Data Analytics (PG-DBDA) has the following focus:     <br>
+				<br>
+				1. To explore the fundamental concepts of big data analytics <br>
+				2. To develop in-depth knowledge and understanding of the big data analytic domain. <br>
+				3. To learn to analyze the big data using intelligent techniques. <br>
+				4. To understand the various search methods and visualization techniques. <br>
+				5. To learn to use various techniques for mining data stream. <br>
+				6. To understand the applications using Map Reduce Concepts <br>
+				7. To learn Cloud Computing, accessing resources and services needed to perform functions with dynamically changing needs. <br>
+				</strong> 
+			</p>
+		</div>
+		<div id="center" class="tabcontent">
+			<h3>Best Center  for DBDA</h3>
+			<p style="font-size: 12px;"> <strong>
+				1. CDAC ACTS Pune <br>                           <br>
+				2. Sunbeam Pune <br> <br>
+				3. IACSD Akurdi  <br> <br>
+				4. VITA Mumbai <br> <br>
+				5. Knowledge Park Banglore <br> <br>
+				</strong> 
+			</p>
+		</div>
+		<div id="other" class="tabcontent">
+			<h3>Other CDAC Courses</h3>
+			<p style="font-size: 12px;"> <strong>
+				<a href="{%url 'cdac-courses' %}"> DBDA (Big Data Analytics)</a> <br> <br>
+				<a href="{%url 'dmc-cdac-course' %}"> DMC  (Mobile Computing) </a> <br> <br>
+				<a href="{%url 'iot-cdac-course' %}">IOT  </a><br> <br>
+				<a href="{%url 'hpcsa-cdac-course' %}">HPCSA </a> <br> <br>
+				<a href="{%url 'ai-cdac-course' %}"> AI </a> <br> <br>
+				<a href="{%url 'vlsi-cdac-course' %}"> VLSI </a> <br> <br>
+				<a href="{%url 'desd-cdac-course' %}"> DESD </a><br> <br>
+				<a href="{%url 'dittis-cdac-course' %}"> DITTIS </a> <br> <br>
+				</strong> 
+			</p>
+		</div>
+		<div id="out" class="tabcontent">
+			<h3>After Course Complete :</h3>
+			<p style="font-size: 12px;"> <strong>  
+				After completing this courses students shall be expert in following things: <br> <br>
+				Big Data tools, Big Data Querying Tools, such as Pig, Hive, and Impala, park                                                                   <br> <br>
+				Integration of data from multiple data sources <br> <br>
+				NoSQL databases, such as Hbase, MongoDB <br> <br>
+				Knowledge of various ETL techniques and Implementing ETL Process Monitoring performance and advising any necessary infrastructure changes <br> <br>
+				Developing reports, dashboards using D3 & Tableau <br> <br>
+				Big Data Development <br> <br>
+				Business Analyst <br> <br>
+				</strong> 
+			</p>
+		</div>
+		<script>
+			function openCity(evt, cityName) {
+			  var i, tabcontent, tablinks;
+			  tabcontent = document.getElementsByClassName("tabcontent");
+			  for (i = 0; i < tabcontent.length; i++) {
+			    tabcontent[i].style.display = "none";
+			  }
+			  tablinks = document.getElementsByClassName("tablinks");
+			  for (i = 0; i < tablinks.length; i++) {
+			    tablinks[i].className = tablinks[i].className.replace(" active", "");
+			  }
+			  document.getElementById(cityName).style.display = "block";
+			  evt.currentTarget.className += " active";
+			}
+			
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+		</script>
+	</div>
+</section>
+<section id="about" class="py-4" style="background-color:#f7f7f7;">
+	<div class="container" style="background-color: white; border: 1px solid #ccc; ">
+		<h3> <strong>DBDA Eligibility :</strong></h3>
+		<p> 
+			Graduate in Engineering (10+2+4 or 10+3+3 years) in IT / Computer Science / Electronics / Telecommunications / Electrical / Instrumentation. OR MSc/MS (10+2+3+2 years) in Computer Science, IT, Electronics.    <br> <br>
+			Mathematics in 10+2 (exempted for candidates with Diploma + Engineering) OR <br> <br>
+			Post Graduate Degree in Engineering Sciences with corresponding basic degree (e.g. MSc in Computer Science, IT, Electronics)    OR <br> <br>
+			4-year Graduation in Bioinformatics, OR <br> <br>
+			Post Graduate Degree in Mathematics / Statistics / Physics / MBA Systems,   OR <br> <br>
+			MCA <br> <br>
+			Note: The candidates must have secured a minimum of 55% marks in their qualifying examination <br> <br>
+		</p>
+		<h3> <strong>Detail Syllabus :</strong></h3>
+		<p style="font-size: 15px;">
+		<h4><strong>Linux & Cloud Programming : </strong></h4>
+		Linux History and Operation, Installing and Configuring Linux, Shells, Commands, and Navigation, Common Text Editors, Administering Linux, Introduction to Users and Groups, Linux shell scripting
+		<br>  <br>
+		<strong> Introduction to Cloud Computing: </strong>  Definition, Characteristics, Components, Cloud provider, SAAS, PAAS, IAAS and other Organizational scenarios of clouds, Administering & Monitoring cloud services, benefits and limitations, Deploy application over cloud. Comparison among SAAS, PAAS, IAAS, Cloud computing platforms: Infrastructure as service: Amazon EC2, Platform as Service: Google App Engine, Microsoft Azure Utility Computing, Elastic Computing, SLA, clusters, cloud analytics, challenges of cloud environment, HPC in the cloud
+		<br><br>
+		<strong>Parallel Processing Concepts:</strong>  Physical Organization and building blocks of High Performance Computing Systems, Processors and Multi-Core Architectures, Vector processing, Super-scalar, In-order execution, Instruction-Level Parallelism etc., FMA, 32 and 64 bit types, ISA, Accelerators such as GPGPUs and Xeon Phi. Threads and Processes, Multi-processing OS, Parallel I/O, General concepts
+		<br> <br>
+		<strong>Parallel Programming Models and Parallel Algorithms Design:</strong>  Application domains of HPC, Decomposition Techniques: Data parallelism, Functional parallelism, Divide and Conquer etc., Characteristics of Tasks and Interactions, Mapping Techniques for Load Balancing, Methods for Containing Interaction Overheads, Granularity of parallelism, Programming OpenMP
+		<br> <br>
+		<h4><strong>Python Programming and Advanced Analytics : </strong></h4>
+		Introduction to Python, Basic Syntax, Data Types, Variables, Operators, Input/output, Flow of Control (Modules, Branching), If, If- else, Nested if-else, Looping, For, While, Nested loops, Control Structure, Break, Continue, Pass, Strings and Tuples, Accessing Strings, Basic Operations, String slices, Working with Lists, Introduction, Accessing list, Operations, Function and Methods, Files, Modules, Dictionaries, Functions and Functional Programming, Declaring and calling Functions, Declare, assign and retrieve values from Lists, Introducing Tuples, Accessing tuples, Visualising using  matplotlib, seaborn
+		<br> <br>
+		<strong> Advanced Python:</strong> Object Oriented, OOPs concept, Class and object, Attributes, Inheritance, Overloading, Overriding, Data hiding, Operations Exception, Exception Handling, Except clause, Try-finally clause, User Defined Exceptions, Data wrangling, Data cleaning
+		<br> <br>
+		<strong>Python Libraries </strong>  pandas, numpy, scipy, scrapy, plotly, selenium, beautiful soup
+		<br> <br>
+		<strong>Advanced Analytics: </strong> Introduction to Business Analytics using some case studies, Making Right Business Decisions based on data, Exploratory Data Analysis - Visualization and Exploring Data, Descriptive Statistical Measures, Probability Distribution and Data, Sampling and Estimation, Statistical Interfaces, Predictive modeling and analysis, Regression Analysis, Forecasting Techniques, Simulation and Risk Analysis, Optimization, Linear, Non linear, Integer, Decision Analysis, Strategy and Analytics, Text analytics, NLP, Social network analysis, web scrapping, Dimensionality issues, Ridge & lasso regression, bias/variance trade off, density, PCA, FA, feature selection, Bagging and boosting, Simulation : Monte carlo
+		<br> <br>
+		<strong> Overview of Factor Analysis, Directional Data Analytics, Functional Data Analysis</strong>
+		<br> <br> <br>
+		<h4><strong> Object Oriented Programming with Java 8</strong></h4>
+		Oops Concepts, Data Types, Operators and Language, Constructs, Inner Classes and Inheritance, Interface and Package, Exceptions, Collections, Threads, Java.lang, Java.util, Java.awt, Java.io , Java Persistent, Servlets, Java Virtual Machine, Lambda Expressions, Introduction of JDBC API
+		<br> <br> <br>
+		<h4><strong> Statistical Analysis with R : </strong></h4>
+		<strong> Probability & Statistics: </strong>  Introduction to Statistics- Descriptive Statistics, Summary Statistics Basic probability theory, Statistical Concepts (uni-variate and bi-variate sampling, distributions, re-sampling, statistical Inference, prediction error), Probability Distribution (Continuous and discrete- Normal, Bernoulli, Binomial, Negative Binomial, Geometric and Poisson distribution) , Bayes’ Theorem, Central Limit theorem, Data Exploration & preparation, Concepts of Correlation, Regression, Covariance, Outliers etc.
+		<br> <br>
+		<strong>R Programming: </strong> Introduction & Installation of R, R Basics, Finding Help, Code Editors for R, Command Packages, Manipulating and Processing Data in R, Reading and Getting Data into R, Exporting Data from R, Data Objects-Data Types & Data Structure. Viewing Named Objects, Structure of Data Items, Manipulating and Processing Data in R (Creating, Accessing , Sorting data frames, Extracting, Combining, Merging, reshaping data frames), Control Structures, Functions in R (numeric, character, statistical), working with objects, Viewing Objects within Objects, Constructing Data Objects, Building R Packages, Running and Manipulating Packages, Non parametric Tests- ANOVA, chi-Square, t-Test, U-Test,Interactive reporting with R markdown, Introduction to Rshiny 
+		<br> <br> <br>
+		<h4> <strong>Data Collection & DBMS (Principles,Tools & Platforms)</strong></h4>
+		Database Concepts (File System and DBMS), Database Storage Structures (Tablespace, Control files, Data files), Structured and Unstructured data, SQL Commands (DDL, DML & DCL), data collection. the tools And how data can be gathered in a systematic fashion, Dataware Housing concept , No-SQL, Data Models - XML, working with MongoDB), Cassendra- overview, architecture, comparison with MongoDB, graph databases, in-memory databases
+		<br> <br>
+		Tools - OLTP and OLAP, data preparation and cleaning techniques <br> <br>
+		<h4><strong> Cloud Computing & HPC Applications</strong></h4>
+		<strong>Introduction to Cloud Computing: </strong> Definition, Characteristics, Components, Cloud provider, SAAS, PAAS, IAAS and other Organizational scenarios of clouds, Administering & Monitoring cloud services, benefits and limitations, Deploy application over cloud. Comparison among SAAS, PAAS, IAAS, Cloud computing platforms: Infrastructure as service: Amazon EC2, Platform as Service: Google App Engine, Microsoft Azure Utility Computing, Elastic Computing, SLA, clusters, cloud analytics, challenges of cloud environment, HPC in the cloud
+		<br> <br>
+		<strong>Parallel Processing Concepts:</strong>  Physical Organization and building blocks of High Performance Computing Systems, Processors and Multi-Core Architectures, Vector processing, Super-scalar, In-order execution, Instruction-Level Parallelism etc., FMA, 32 and 64 bit types, ISA, Accelerators such as GPGPUs and Xeon Phi. Threads and Processes, Multi-processing OS, Parallel I/O, General concepts
+		<br> <br>
+		<strong>Parallel Programming Models and Parallel Algorithms Design:</strong>  Application domains of HPC, Decomposition Techniques: Data parallelism, Functional parallelism, Divide and Conquer etc., Characteristics of Tasks and Interactions, Mapping Techniques for Load Balancing, Methods for Containing Interaction Overheads, Granularity of parallelism, Programming OpenMP
+		<br> <br> <br>
+		<h4> <strong>Big Data Technologies</strong></h4>
+		<strong> Introduction to Big Data-</strong> Big data definition, enterprise / structured data, social / unstructured data, unstructured data needs for analytics, What is Big Data, Big Deal about Big Data, Big Data Sources, Industries using Big Data, Big Data challenges.
+		<br> <br>
+		<strong>Hadoop: </strong> Introduction of Big data programming-Hadoop, History of Hadoop, The ecosystem and stack, The Hadoop Distributed File System (HDFS), Components of Hadoop, Design of HDFS, Java interfaces to HDFS, Architecture overview, Development Environment, Hadoop distribution and basic commands, Eclipse development, The HDFS command line and web interfaces, The HDFS Java API (lab), Analyzing the Data with Hadoop, Scaling Out, Hadoop event stream processing, complex event processing, MapReduce Introduction, Developing a Map Reduce Application, How Map Reduce Works, The MapReduce Anatomy of a Map Reduce Job run, Failures, Job Scheduling, Shuffle and Sort, Task execution, Map Reduce Types and Formats, Map Reduce Features, Real-World MapReduce,
+		<br> <br>
+		<strong>Hadoop ETL:</strong>  Hadoop ETL Development, ETL Process in Hadoop, Discussion of ETL functions, Data Extractions, Need of ETL tools, Advantages of ETL tools.
+		<br> <br>
+		<strong>Introduction to HIVE :</strong>  Programming with Hive: Data warehouse system for Hadoop, Optimizing with Combiners and Partitioners (lab), Bucketing, More common algorithms: sorting, indexing and searching (lab), Relational manipulation: map-side and reduce-side joins (lab), evolution, purpose and use
+		<br> <br>
+		<strong> Map Reduce: </strong>Overview and concepts, interface to HDFS (HTTP, CLI and Java API), high availability and Name Node federation, Map Reduce developing and deploying programs, optimization techniques, Map Reduce Anatomy, Data flow framework programming Map Reduce best practices and debugging, Introduction to Hadoop ecosystem, integration R with Hadoop
+		<br> <br>
+		<strong> HBase: </strong>Overview, comparison and architecture, java client API, CRUD operations and security
+		<br> <br>
+		<strong>Programming Pig: </strong>  Engine for executing data flows in parallel on Hadoop: Overview, comparison and architecture, Latin scripting and statements, data types, UDF’s, built in functions and use cases
+		<br> <br>
+		<strong>Hadoop Environment: </strong> Setting up a Hadoop Cluster, Cluster specification, Cluster Setup and Installation, Hadoop Configuration, Security in Hadoop, Administering Hadoop, HDFS – Monitoring & Maintenance, Hadoop benchmarks, Hadoop in the cloud.
+		<br> <br>
+		<strong>Introduction to Apache Spark and Use Cases :</strong> <br>
+		Apache Spark APIs for large-scale data processing: Overview, Linking with Spark, Initializing Spark, Resilient Distributed Datasets (RDDs), External Datasets, RDD Operations, Passing Functions to Spark, Working with Key-Value Pairs, Shuffle operations, RDD Persistence, Removing Data, Shared Variables, Deploying to a Cluster Spark Streaming, Spark MLlib and ML APIs, Spark Data Frames/Spark SQL, Integration of Spark and Kafka, Mapreduce, mongodb with spark
+		<br> <br>
+		<br>
+		<h4> <strong> Data Visualization - Analysis and Reporting</strong></h4>
+		Business Intelligence- requirements, content and managements, information Visualization, Data analytics Life Cycle, Analytic Processes and Tools, Analysis vs. Reporting, Modern Data Analytic Tools, Visualization Techniques, Visual Encodings, Visualization algorithms, Data collection and binding, Cognitive issues, Interactive visualization, Visualizing big data – structured vs unstructured, Visual Analytics, Geomapping, Dashboard Design
+		<br> <br> <br>
+		<h4> <strong>Practical Machine Learning</strong> </h4>
+		Supervised and Unsupervised Learning , Uses of Machine learning , Clustering, K means, Hierarchical Clustering, Decision Trees, Classification problems, Bayesian analysis and Naïve bayes classifier, Random forest, Gradient boosting Machines, Association rules learning, Apriori and FP-growth algorithms, Support vector Machines, Linear and Non liner classification,  ARIMA, Neural Networks and its application, Neural Net & its applications, deep learning algorithms, KNN, NLP, NLTK, ML modeling using Scikit learn, AI and its application
+        <br> <br> <br>
+        <h4> <strong>How to Prepare for DBDA interview :</strong></h4>
+        <strong>DBDA Interview Preparation Course Free :</strong> <br> <br>
+        <a href="{%url 'interview' %}">Interview Preparation</a>
+		</p>
+	</div>
+</section>
+<br> <br>
+<section id="services" class="py-5 bg-secondary text-white">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-4">
+				<i class="fas fa-comment fa-4x mr-4"></i>
+				<hr>
+				<h3>About Us</h3>
+				<p>Hey guys this is the website I have developed to all those students wants
+					to success in cdac from start to end here you will find everything regarding CDAC.
+				</p>
+			</div>
+			<div class="col-md-4">
+				<i class='fas fa-laptop-code' style='font-size:48px'></i>
+				<hr>
+				<h3>Test Series</h3>
+				<p>This online test series i have designed for ccat exam you will feel like you are 
+					giving ccat exam after taking this test you will feel confident for exam. I recommend
+					you guys at leaset give 2,3 test before exam my quetions are very relevent to ccat. 
+				</p>
+			</div>
+			<div class="col-md-4">
+				<i class="fas fa-suitcase fa-4x mr-4"></i>
+				<hr>
+				<h3>Contact Us</h3>
+				<p>This is the website only to clear doubts of all the students so feel free to contact us at any time for anything 
+					regarding cdac.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

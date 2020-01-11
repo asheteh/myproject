@@ -67,16 +67,16 @@
             class="nav-item mr-3"
             {% endif %}          
           >
-            <a class="nav-link" href="{% url 'about' %}">About</a>
+            <a class="nav-link" href="{% url 'ccat-predac-course-pune' %}">Pre-dac</a>
           </li>
           <li 
-          {% if 'ccat' in request.path %}
+          {% if 'cdac-c-cat' in request.path %}
             class="nav-item active mr-3"
             {% else %}
             class="nav-item mr-3"
             {% endif %}          
           >
-            <a class="nav-link" href="{% url 'ccat' %}">CCAT</a>
+            <a class="nav-link" href="{% url 'cdac-c-cat' %}">CCAT</a>
 
           </li>
           <li 

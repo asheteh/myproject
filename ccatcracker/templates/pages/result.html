@@ -1,0 +1,153 @@
+{% extends 'base.html '%}
+{% block title %}CDAC C-CAT 2019 - Result ,Cutoff, Counselling, Seat Allotment{% endblock %}
+{% block content %}
+<style>
+	table,th{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	}
+	td {
+	border: 1px solid #ddd;
+	padding: 5px;
+	}
+	p{
+	font-family: sans-serif
+	}
+	tr:nth-child(even){background-color: #f2f2f2;}
+	tr:hover {background-color: #ddd;}
+	.div1 {
+	width: 300px;
+	height: 100px;
+	border: 1px solid black;
+	padding: 1px;
+	}
+</style>
+<!-- Breadcrumb -->
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="{% url 'index' %}">
+					<i class="fas fa-home"></i> Home</a>
+				</li>
+				<li class="breadcrumb-item active">CDAC C-CAT Syllabus</li>
+			</ol>
+		</nav>
+	</div>
+</section>
+<section id="about" class="py-4" style="background-color:#f7f7f7">
+	<div class="container" style="background-color: white;">
+		<h3> <strong>CDAC C-CAT Result 2020</strong>  </h3>
+		<br> <br>
+		<p style="font-size: 17px;"> 
+           <strong>CDAC C-CAT Result 2019 </strong> - The Centre for Development of Advanced Computing (CDAC) has announced the first round of CDAC seat allotment on January 8 for counselling held between Dec 27 and Jan 6, 2020. The allotted candidates can pay the first instalment of fee till January 16, 2020. The authorities had declared Computerized Common Admission Test (C-CAT) result for upcoming session on December 27, 2019 at 6 pm. They released the CDAC C-CAT result 2019 in online mode and candidates are required to login using their application form number and password. The result of CDAC C-CAT 2019 is displayed in the form of rank card which must be downloaded for future reference. Those who appear for more than one section will be assigned multiple ranks. As the CDAC C-CAT exam result is announced, candidates now have to participate in the online counselling round. According to their preferences and ranks secured, candidates will be provided with courses and training centres accordingly. The article below deals with all the aspects related to CDAC C-CAT result 2019.
+        </p>
+		<br>
+        <h3><strong>CDAC C-CAT 2019 Result: Important Dates</strong></h3> <br>
+        <table><tbody><tr><td   ><p dir="ltr"   ><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"><strong>Events</strong></span></p></td><td   ><p dir="ltr"   ><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"><strong>Dates </strong></span></p></td></tr><tr   ><td   ><p dir="ltr"   ><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">CDAC C-CAT 2019</span></p></td><td   ><p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;">December 8 and 15, 2019</p></td></tr><tr   ><td   ><p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;"><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">Declaration of CDAC C-CAT result 2019</span></p></td><td   ><p dir="ltr"   ><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">December 27, 2019</span></p></td></tr><tr   ><td   ><p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;">Online selection of course and centre</p></td><td   ><p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;">December 27 to January 6, 2019</p></td></tr><tr><td class="tbl-cell-border1">Declaration of seat allocation for first round</td><td class="tbl-cell-border1">January 8, 2020</td></tr><tr><td class="tbl-cell-border1">Last date to pay first instalment for candidates<br>(seat allocation of first round)</td><td class="tbl-cell-border1">January 16, 2020 (Till 5 pm)</td></tr><tr><td class="tbl-cell-border1">Declaration of seat allocation for second round</td><td class="tbl-cell-border1">January 21, 2019</td></tr><tr><td class="tbl-cell-border1">Last date to pay first instalment for candidates<br>(seat allocation of second round)</td><td class="tbl-cell-border1">January 28, 2020 (Till 5 pm)</td></tr><tr   ><td   ><p dir="ltr"   >Payment of caution deposit;<br>online selection of course and centre for second counselling</p></td><td   ><p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;">January 30 to February 5, 2020</p></td></tr><tr><td class="tbl-cell-border1">Declaration of seat allocation for third round<br>(based on second counselling)</td><td class="tbl-cell-border1">February 7, 2020</td></tr><tr><td class="tbl-cell-border1">Last date of payment (for balance course fee)</td><td class="tbl-cell-border1">February 14, 2020<br></td></tr><tr><td class="tbl-cell-border1">Registration of students at the training centres</td><td class="tbl-cell-border1">February 17, 2020<br></td></tr><tr><td class="tbl-cell-border1">Commencement of Course</td><td class="tbl-cell-border1">February 18, 2020<br></td></tr></tbody></table>
+        <br> <br>
+        <h3><strong>CDAC C-CAT Counselling and seat allocation 2019</strong></h3>
+        <p style="font-size: 17px;">
+        After the declaration of CDAC C-CAT result, it is being followed by the counselling process. The counselling of CDAC CCAT 2019 is being conducted in online mode only wherein candidates need their form number and password to lock their choices of courses and training centres. Candidates are being allocated seats strictly according to the order of their preferences and ranks. A candidate who does not get his/ her first preference can try again for the next round of CDAC C-CAT counselling 2019. However, a candidate cannot opt for a lower preferred choice if he/ she bags the higher preference in any round of <strong>CDAC C-CAT 2019 counselling</strong> .
+    
+    </p> <br>
+    <h3><strong>CDAC C-CAT 2019 Cutoff</strong></h3>
+    <br>
+    <p style="font-size: 17px;">
+
+        Each candidate has been awarded a rank according to his/ her performance in section A/ A+B/ A+B+C. Candidates who qualify more than one sections are given multiple ranks.
+        <br> <br>
+        As per that rank you have to fill CDAC Admission form . Cut off for each batch will vary as per ranks but it will be standard for some best colleges. <br> 
+        <br>
+        <strong>
+        ACTS      <br>
+        Sunbeam <br>
+        IACSD <br>
+        VITA <br>
+        Kharghar <br>
+        KP <br>
+        <br>
+    </strong>
+        Detail Cut-Off you can check on the same website : <br> <br>
+        <a href="{% url 'cdac' %}"><strong>CDAC C-CAT Cut-Off 2019</strong></a>
+
+    </p>
+    
+    </div>
+</section>
+<!-- Work -->
+<section id="about" class="py-4" style="background-color:#f7f7f7">
+	<div class="container" style="background-color: white;">
+		<h4><strong>You may also like :</strong></h4>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>Pre Dac Course</strong></h4>
+						CDAC ccat free pre dac course 45 days you can check here..<br>
+						<a href="{% url 'ccat-predac-course-pune' %}">Pre Dac</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>CDAC C-CAT Syllabus 2019</strong></h4>
+						CDAC C-CAT Syllabus 2019 - you can check here.. <br>
+						<a href="{% url 'cdac-c-cat-syllabus' %}">Syllabus</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong> CDAC C-CAT Admit Card 2019 </strong></h4>
+						CDAC C-CAT Admit Card 2019- The Authorities has released CDAC ... <br>
+						<a href="{% url 'cdac-c-cat-admit-card' %}">Admit Card </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>CDAC C-CAT Result 2019</strong></h4>
+						CDAC C-CAT Result & Rank 2019 - The Centre for Development of... <br>
+						<a href="{% url 'cdac-c-cat-result' %}">CCAT Result </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>CDAC C-CAT Cut-Off</strong></h4>
+						CDAC C-CAT Cut-Off 2019- You can check latest cutoff for CDAC here .. <br>
+						<a href="{% url 'cdac' %}">Cut-Off</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>CDAC C-CAT Test Seties</strong></h4>
+						CDAC C-CAT Mock Test 2019- free 2 mock test for both section.. <br>
+						<a href="{% url 'onlinetest' %}">Mock Test</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

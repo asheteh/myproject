@@ -1,0 +1,395 @@
+{% extends 'base.html '%}
+{% block title %} cdac course pune DMC {% endblock %}
+{% block content %}
+<style>
+  p {
+        font-size: 17px;
+  }
+  * {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 700px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 700px;
+}
+.tabcontents {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 100%;
+  border-left:  1px solid #ccc;
+ 
+}
+</style>
+ <!-- Showcase -->
+ <section id="showcase" style="background-image: url(../static/img/ccee.jpg);background-attachment: fixed;">
+        <div class="container text-center">
+          <div class="home-search p-5">
+            <div class="overlay p-5">
+              <h1 class="display-4 mb-4">
+                Search Centers Course Wise
+              </h1>
+            
+              <p class="lead">Please enter course name and city you will get list of cdac center</p>
+              <div class="search">
+                <form action="{% url 'search' %}">
+                  <!-- Form Row 1 -->
+                  <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label class="sr-only">Course</label>
+                        <select name="course" class="form-control">
+                          <option selected="true" disabled="disabled">Courses (All)</option>
+                          <option value="DAC">DAC</option>
+                          <option value="Big Data">Big Data</option>
+                          <option value="IOT">IOT</option>
+                          <option value="VLSI">VLSI</option>
+                          <option value="HPCSA">HPCSA</option>
+                        </select>
+                    </div>
+    
+    
+                    <div class="col-md-6 mb-3">
+                      <label class="sr-only">City</label>
+                      <select name="city" class="form-control">
+                        <option selected="true" disabled="disabled">City (All)</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkatta">Kolkatta</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Noida">Noida</option>
+                      </select>
+                    </div>
+                  </div>
+               
+                  </div>
+                  <button class="btn btn-secondary btn-block mt-4" type="submit">Search Center</button>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+        </div>
+      </section>
+      <section id="about" class="py-4" style="background-color:#f7f7f7">
+        <div class="container" style="background-color: white;">
+         
+              <h3> <strong>DMC Course Details</strong></h3>
+
+              <div class="tab">
+               
+                <button class="tablinks" onclick="openCity(event, 'Paris')">Fees</button>
+                <button class="tablinks" onclick="openCity(event, 'London')"id="defaultOpen">Syllabus</button>
+                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Placement</button>
+                <button class="tablinks" onclick="openCity(event, 'main')">Job Profile</button>
+                <button class="tablinks" onclick="openCity(event, 'center')">Best Centers</button>
+                <button class="tablinks" onclick="openCity(event, 'out')">Course Outcome</button>
+                <button class="tablinks" onclick="openCity(event, 'other')">Other Courses</button>
+              </div>
+              
+              <div id="London" class="tabcontent">
+                <h3 style="color: black;">DMC</h3>
+                <p style="font-size: 12px;"> <strong>
+                    OOPs with C++ Programming 60 Hours               <br> <br>
+                    Algorithm & Data Structures 60 Hours   <br> <br>
+                    OS Concepts 40 Hours   <br> <br>
+                    Introduction to DBMS 40 Hours   <br> <br>
+                    Java Programming-I( Core Java) 70 Hours   <br> <br>
+                    Java Programming-II(Advanced Java) 80 Hours   <br> <br>
+                    iOS Programming 114 Hours   <br> <br>
+                    Android Programming 116 Hours   <br> <br>
+                    Hybrid Mobile Apps Programming 80 Hours   <br> <br>
+                    Effective Communication 50 Hours   <br> <br>
+                    Aptitute & General English 50 Hours   <br> <br>
+                    Project  120 Hours <br> <br>
+                
+                
+                </strong>
+                 </p> <br>
+              </div>
+              
+              <div id="Paris" class="tabcontent">
+                <h3>Fees</h3>
+                <p style="font-size: 12px;;"> <strong>
+                  The total fees of the course is Rs. 90,000/- plus Goods and Service Tax (GST) currently 18%.   <br>
+                    <br>
+                  The course fees has to be paid in two installment as per the schedule. <br>                     <br>
+                  First installment is Rs. 10,000/- plus Goods and Service Tax (GST) currently 18%. <br> <br>
+                  Second installment is Rs. 80,000/- plus Goods and Service Tax (GST) currently 18%. <br> <br>
+                </strong></p> 
+              </div>
+              
+              <div id="Tokyo" class="tabcontent">
+                <h3>Placement</h3>
+                <p style="font-size: 12px;"> <strong>
+                  Overall placement for DMC course is Very Low compared
+                  to other courses. <br> <br>
+                  No of interview calls are depends on your ccee exam score. <br>  <br>
+                  <a href="{%url 'ccee' %}">CCEE</a>
+                  <br> <br>
+                  Colleges For DMC : <br> <br>
+                                    
+                  1. Sunbeam Pune <br> <br>
+                 
+                 <strong>Personally I will not recommend this course you will get very rare chance for placement with good packages so please go for DAC ,DBDA </strong>
+
+                </strong> 
+                
+                </p>
+              </div>
+              <div id="main" class="tabcontent">
+                <h3>Job Profile In DMC</h3>
+                <p style="font-size: 12px;"> <strong>
+                  Java  Developer <br>        <br>
+                  Android developer <br> <br>
+                  IOS developer <br> <br>
+                  Software Engineer <br> <br>
+                  Testing Engineer <br> <br>
+                  <br>
+                 
+                </strong> 
+                
+                </p>
+              </div>
+              <div id="center" class="tabcontent">
+                <h3>Only 1 Center  for DMC</h3>
+                <p style="font-size: 12px;"> <strong>
+                 Sunbeam Pune 
+                  <br>
+                 
+                </strong> 
+                
+                </p>
+              </div>   
+              <div id="other" class="tabcontent">
+                <h3>Other CDAC Courses</h3>
+                <p style="font-size: 12px;"> <strong>
+                  <a href="{%url 'cdac-courses' %}"> DBDA (Big Data Analytics)</a> <br> <br>
+                 <a href="{%url 'dmc-cdac-course' %}"> DMC  (Mobile Computing) </a> <br> <br>
+                 <a href="{%url 'iot-cdac-course' %}">IOT  </a><br> <br>
+                 <a href="{%url 'hpcsa-cdac-course' %}">HPCSA </a> <br> <br>
+                 <a href="{%url 'ai-cdac-course' %}"> AI </a> <br> <br>
+                 <a href="{%url 'vlsi-cdac-course' %}"> VLSI </a> <br> <br>
+                 <a href="{%url 'desd-cdac-course' %}"> DESD </a><br> <br>
+                 <a href="{%url 'dittis-cdac-course' %}"> DITTIS </a> <br> <br>
+                  <br>
+                 
+                </strong> 
+                
+                </p>
+              </div>   
+              <div id="out" class="tabcontent">
+                <h3>After Course Complete :</h3>
+                <p style="font-size: 12px;"> <strong>  
+               
+                    After completion of course students will be able to acquire the following skills: <br> <br>
+                    Design and build advanced native apps on Android and iOS platform,work with cross-functional teams to define, design, and ship  new features, unit-test code for sturdiness, including edge cases, usability, and general reliability. Identify and correct bottlenecks and  fix bugs,continuously discover, evaluate, and implement new technologies to maximize development efficiency.
+                    <br> <br>
+                    Design and build Hybrid mobile apps through HTML5, CSS, and JavaScript web standards. <br> <br>
+                    Analyse and explain the behaviour of programs involving the fundamental program constructs, Design and implement a class based on  attributes and behaviours of objects. Design and implement components like: Session, Entity, EJBs. Understand the multi-tier  architecture of web-based enterprise applications using Enterprise JavaBeans. Integrate Servlets, JSPs with EJB and Databases in J2EE  application. 
+                     <br> <br>
+                  
+                </strong> 
+                
+                </p>
+              </div>           
+              <script>
+              function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+              }
+              
+              // Get the element with id="defaultOpen" and click on it
+              document.getElementById("defaultOpen").click();
+              </script>
+          
+            
+          
+        
+        </div>
+      </section> 
+      <section id="about" class="py-4" style="background-color:#f7f7f7;">
+        <div class="container" style="background-color: white; border: 1px solid #ccc; ">
+  
+          <h3><strong>DMC Eligibility:</strong></h3>
+           <p>
+            Graduate in Engineering (10+2+4 or 10+3+3 years) in IT / Computer Science / Electronics / Telecommunications / Electrical / Instrumentation.  <br>
+            OR MSc/MS (10+2+3+2 years) in Computer Science, IT, Electronics.  <br>
+            Mathematics in 10+2 (exempted for candidates with Diploma + Engineering) OR <br>
+            Post Graduate Degree in Engineering Sciences with corresponding basic degree (e.g. MSc in Computer Science, IT, Electronics) OR <br>
+            Post Graduate Degree in Mathematics or allied areas, OR <br>
+            MCA <br>
+            The candidates must have secured a minimum of 50% marks in their qualifying examination. <br>
+           </p> <br> <br>
+           <h3> <strong>Detail Syllabus :</strong></h3> <br>
+           <p style="font-size: 15px;">
+             <h4><strong>OOPs with C++ Programming:</strong></h4>
+            Revision of C Programming, Pointers, Functions (Call by value and reference), Recursion, Arrays using Pointers, Structures, Union, Enumeration and Typedef, File handling,Discussion on Object oriented concepts:Classes and Objects, Access Specifiers, Overloading, Inheritance, Polymorphism,Beginning with C++,C++ Tokens, Initialization, C++ Operators,Static Members, Constant Members,Expressions,Control Structure,Functions in C++,Constructors, Encapsulating into an object,Destructors,Associations, Inner Classes,Memory Management and pointers,Inheritance, Virtual Functions, Polymorphism,Interfaces,Exception Handling,Managing Console I/O operations,Working with files,Basic concepts of Test-driven development and Unit testing.
+            <br> <br>
+            <h4><strong>Algorithm & Data Structures</strong></h4>
+            Introduction to STL (Standard Type Libraries), Define the problem, Identify the problem, Introduction to Problem Solving, Problem solving basics, Defining creativity v/s innovation, Find Creative Solutions using creativity tools
+            <br> <br>
+            Effective problem solving approaches, Critical thinking and information analysis, Brainstorming, Reverse Brainstorming, Imagineering, Mind Mapping, Six Thinking Hats: A Tool to Strengthen Critical Thinking, Collaboration, , Communication, and Creativity Skills, Analyzing the situation, Gathering information, Identifying solution criteria, Decision Making Methods, Charts and Diagrams, Applying outcome-based thinking
+            <br> <br>
+            Evaluate and Select solution :Pro’s and Con’s, Force field analysis, Feasibility/Capability Analysis, Decision analysis, evaluating problems, Choosing among alternatives, Qualitative analysis, discussing qualitative analysis techniques, Establishing objectives, Assigning weight to objectives in order to make the best decision, Creating a satisfaction scale to choose between alternatives, Implementing Decisions , Create an action plan, Break solution into action steps, Prioritize actions and assign roles (setting priorities for taking action), Follow-up at milestones
+            <br> <br>
+           <strong>Algorithm & Data Structures: </strong>   Introductory Concepts, Algorithm Constructs, OO design: Abstract Data Types (ADTs)
+            <br> <br>
+           <strong>Basic Data Structures: </strong> Arrays, Stacks, Queues, Linked lists
+            <br> <br>
+            Trees and hierarchical orders
+            <br> <br>
+            Introduction to trees, Abstract trees, Tree traversals, Binary trees, Search trees, AVL trees
+            <br> <br>
+            Searching & sorting algorithms: Objectives of Searching, The Sequential Search, The Binary Search, Introduction to sorting, Insertion sort, Bubble sort, Heap sort, Merge sort, Quick sort
+            <br> <br>
+           <strong>Graph algorithms:</strong>  Introduction to graph theory, Graph data structures, Graph traversals
+            <br> <br>
+           <strong>Algorithm design: </strong> Introduction to algorithm design techniques, Greedy algorithms, Divide-and-conquer algorithms, Dynamic programming, Backtracking algorithms, Branch-and-bound algorithms, stochastic algorithms, Analysis of different Algorithms, Complexity, Application of Data structures
+            <br> <br>
+            <h4><strong>OS Concepts</strong></h4>
+            Operating System Concepts,What is an OS,Processes, Scheduling & Synchronization,Memory management,Virtual Memory and Paging,Linux Shell Programming
+            <br> <br>
+            <h4><strong> Introduction to DBMS</strong></h4>
+            Need of RDBMS,Client/Server Computing,Codd’s Rules,Data Models, Normalization Techniques,ER Diagrams,Data Flow Diagrams ,SQL: DDL, DML, DCL,Sub query,Joins,SQL Functions,Stored Procedures,NoSql concepts,Introduction to MongoDB
+            <br><br>
+            <h4><strong> Java Programming-I( Core Java)</strong></h4>
+            Introduction to Java Language and its features,JDK , JRE & JVM,JVM Architecture Overview,The first Java Program,Data types, Variables, Constants, operators, Control Statements (if, for, while, switch etc.),Classes in java,Constructors,  instance data and methods, the new operator,Methods, overloading, parameter passing, objects as parameters,Memory management, garbage collection,The this facility, static data and methods, block, scope, lifetime,JDK tools (Java Compiler, Java Runtime, Java Debugger, Java doc),
+          <br>
+          <br>  Packages,Access Control Rules,Types of Inheritance ,IS A Relationship,Inheritance & Polymorphism,Create Emp based organization structure having suitable sub types & tester classes,Tester classes & core organization classes must be in separate packages.
+<br>
+          <br>  Compile Time Polymorphism,Run time Polymorphism (Dynamic method Dispatch),Abstract Classes ,Final keyword,Interfaces,Dynamic method dispatch using Interfaces.
+<br>
+          <br>  Inner classes,Exception Handling,Exception class inheritance hierarchy,Try, catch ,  finally , throw , throws,Custom exception classes,The java. Lang package, Object, Number, Math, System,The String class,Wrapper classes,The java.util Package,,ArrayList,LinkedList,Vector,HashSet,LinkedHashSet,TreeSet,HashMap,TreeMap
+<br>
+          <br>  Introduction to Generics,Generic classes &  interfaces ,Wildcard syntax,Inheritance in Generics,The Java2 Collection Framework,List , Set & Map Functionality,Sorting using Natural Ordering & Custom Ordering
+<br>
+          <br>  The java.io Package,Byte Streams and Unicode Character Streams,File Handling,BufferedReader,PrintWriter streams,Persistence of objects,Object Serialization & de serialization
+          <br>  Multithreaded programming in Java,Multitasking --Process Based Vs Thread Based,Thread state transitions,The Thread class & its API,The Runnable interface,Thread synchronization techniques,Applying thread safety to Collection framework classes.
+<br>
+          <br>  Introduction to Java Network Programming,Inet Address,Socket, and ServerSocket,Attaching suitable data streams & data transfer,Developing multi threaded server for handling concurrent clients.
+          <br>  Reflection Overview,Annotation Overview, Database Access Methods , JDBC, driver &  architecture,The java.sql package ,Driver Manager, Connection, Statement, PreparedStatement,  Result Set,CallableStatement ,Stored procedure & functions,Scrollable ResultSet,Writing multi tiered DB applications (Use DAO & DTO layers),Handling BLOB to store & retrieve binary content
+          <br> <br>
+          <h4><strong>Java Programming-II(Advanced Java)</strong></h4>
+         <br> Introduction to JSON,Advantages of JSON,Parsing API,Java to JSON & JSON to Java conversion,Handling JSON types.<br>
+          
+         <br> Servlets : Dynamic Content Generation,Advantages of Servlets over CGI ,The Servlet interface,The HttpServlet, HttpServletRequest, HttpServletResponse classes,Exception Handling & Integration with DB using J2EE layers (DAO & DTO)
+         <br> 
+         <br> Session,Session Management,Session Tracking with ,Cookies,HttpSession API,Page Navigation Techniques,Send Redirect,Request Dispatcher
+         <br> 
+         <br> JSP: Separating UI from Content generation code,MVC architecture ,Life cycle of a JSP page,Directives, Implicit  Objects, Scriptlets, Expressions & Expression Language
+         <br> 
+         <br> Scope, Java Beans,JSP Using Java Beans actions,Session Tracking, JSP standard Actions, Java Server Pages Standard Tag Library (JSTL),Design a complete web application using JSP-Java Bean -DAO -DTO Layers
+         <br> Introduction to Hibernate Framework,ORM Concept,JPA,Hibernate Architecture,Configuration details,SessionFactory & Hibernate Session,Hibernate annotation support using JPA,Hibernate ID generators,DB Dialects,Creating layered Hibernate based Java SE application (Hibernate Based DAO + JPA Entities)
+         <br> DB Transaction management,Hibernate Session CRUD API,openSession vs getCurrentSession ,Entity Life cycle consisting of Transient, Persistent , Detached & Removed states.
+         <br> 
+         <br> Advanced Hibernate Topics,Hibernate Caching,HQL,Association between Entities,One –One,One –Many,Many-One,Many-Many,Entity Types Vs Value Types,Mapping between Entity & Value Types,Criteria Queries,Named Queries
+         <br> Spring Framework Overview:Why Spring,Overview of Spring 4 Modules, Inversion Of Control (IoC),
+         <br> Dependency Injection, Spring Beans life cycle, Scopes of spring beans,XML Based configuration,Creating Spring Based Java SE Application in Eclipse using STS plugin
+         <br> 
+         <br> Spring Core Container:Setter Based Dependency Injection,Constructor Based DI,Factory Method Based DI,Combining DI Techniques,Autowiring vs Explicit wiring, Autowiring By Name & Type,AutoWiring by constructor,Collection handling,Annotation Based configuration
+         <br> 
+         <br> MVC Architecture,Implement MVC based web application using Servlet,JSP & Java Bean
+         <br> 
+         <br> Spring Web MVC:Spring MVC Flow,HandlerMapping , ViewResolver & DispatcherServlet,Spring Controller Beans,RequestMapping annotation,RequestHandling Methods,Conversion & Validation,Complete web application using Controller, Service & DTO layers. 
+         <br> Spring Hibernate Integration:Spring Hibernate Configuration setup,DataSource Bean, SessionFactory Bean & TransactionManager Bean,Hibernate based DAO layer.Spring Managed Service Layer to handle transactions,Integration & Testing
+         <br> Introduction to Web Services,SOA basics,SOAP based Vs RESTful web services
+         <br> REST Architecture,Implementing RESTful web services using Spring MVC framework, @RESTController,ResponseEntity,Content Negotiation,REST Template for RESTful web service client,Integration with JSON,Integration & Testing of RESTful server & client,Introduction to Java Mail,Setting up Java mail using Spring framework,Sending Mail.
+         <br> <br>
+         <h4><strong>iOS Programming</strong></h4>
+         Introducing iOS core specifications,Understanding iOS input and output,Using Xcode and Interface builder,Views and Controllers,Creating and Managing Table Views,Core Data and Address Book,Graphics and Animation,Core Location and Maps,Networking, JSON, Push Notifications into iOS, Introduction to Reactive Programming , iCloud, Uploading in application in apple store
+         <br> <br>
+         <h4><strong> Android Programming</strong></h4>
+         Introduction of android,Why develop for android,Android SDK features,Creating android activities,Fundamental android UI design ,Intents, adapters, dialogs,Android Technique for saving data,Data base in Androids,Maps, Geocoding, Location based services,Toast, using alarms,,Instant messaging,Using blue tooth,Using Telephony,Introducing sensor manager,Managing network and wi-fi connection,Advanced androids development ,Implement AIDL Interface,Push Notification in Android,Material Design,Augmentation of reality application like Wikitude etc,Integration with Social Networking like Facebook, Twitter etc,Uploading application in play store, Introduction to Reactive Programming
+         <br> <br>
+         <h4><strong> Hybrid Mobile Apps Programming</strong></h4>
+         HTML 5.0,CSS,jScripts,jQuery, jQuery Mobile,REST API,MBass(mobile backend as a service),Introduction to Flutter,Cross Platform App design,Intel framework for mobile  
+         <br> <br>
+        </div>
+      </section>
+
+    
+      <section id="services" class="py-5 bg-secondary text-white">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-md-4">
+                <i class="fas fa-comment fa-4x mr-4"></i>
+                <hr>
+                <h3>About Us</h3>
+                <p>Hey guys this is the website I have developed to all those students wants
+                  to success in cdac from start to end here you will find everything regarding CDAC.
+                </p>
+              </div>
+
+             
+              <div class="col-md-4">
+                  <i class='fas fa-laptop-code' style='font-size:48px'></i>
+                <hr>
+                <h3>Test Series</h3>
+                <p>This online test series i have designed for ccat exam you will feel like you are 
+                  giving ccat exam after taking this test you will feel confident for exam. I recommend
+                  you guys at leaset give 2,3 test before exam my quetions are very relevent to ccat. 
+                </p>
+              </div>
+              <div class="col-md-4">
+                <i class="fas fa-suitcase fa-4x mr-4"></i>
+                <hr>
+                <h3>Contact Us</h3>
+                <p>This is the website only to clear doubts of all the students so feel free to contact us at any time for anything 
+                  regarding cdac.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+{% endblock %}

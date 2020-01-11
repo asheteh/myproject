@@ -227,10 +227,47 @@ def cpp_interview(request):
 def java_interview(request):
     return render(request,'pages/ds-interview.html')
 
+def other(request):
+    return render(request,'pages/other.html')
+
+def dmc(request):
+    return render(request,'pages/dmc.html')
+
+
+def iot(request):
+    return render(request,'pages/iot.html')
+
+
+def desd(request):
+    return render(request,'pages/desd.html')
+
+def dittis(request):
+    return render(request,'pages/dittis.html')
+
+def hpcsa(request):
+    return render(request,'pages/hpcsa.html')
+
+
+def vlsi(request):
+    return render(request,'pages/vlsi.html')
+
+def ai(request):
+    return render(request,'pages/ai.html')
+
+
+
+def syllabus(request):
+    return render(request,'pages/syllabus.html')
+
+
+def admit(request):
+    return render(request,'pages/admit.html')
 
 
 
 
+def result(request):
+    return render(request,'pages/result.html')
 
 
 

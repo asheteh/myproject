@@ -1,0 +1,306 @@
+{% extends 'base.html '%}
+{% block title %} cdac course pune DESD {% endblock %}
+{% block content %}
+<style>
+  p {
+        font-size: 17px;
+  }
+  * {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 700px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 700px;
+}
+.tabcontents {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 100%;
+  border-left:  1px solid #ccc;
+ 
+}
+</style>
+ <!-- Showcase -->
+ <section id="showcase" style="background-image: url(../static/img/ccee.jpg);background-attachment: fixed;">
+        <div class="container text-center">
+          <div class="home-search p-5">
+            <div class="overlay p-5">
+              <h1 class="display-4 mb-4">
+                Search Centers Course Wise
+              </h1>
+            
+              <p class="lead">Please enter course name and city you will get list of cdac center</p>
+              <div class="search">
+                <form action="{% url 'search' %}">
+                  <!-- Form Row 1 -->
+                  <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label class="sr-only">Course</label>
+                        <select name="course" class="form-control">
+                          <option selected="true" disabled="disabled">Courses (All)</option>
+                          <option value="DAC">DAC</option>
+                          <option value="Big Data">Big Data</option>
+                          <option value="IOT">IOT</option>
+                          <option value="VLSI">VLSI</option>
+                          <option value="HPCSA">HPCSA</option>
+                        </select>
+                    </div>
+    
+    
+                    <div class="col-md-6 mb-3">
+                      <label class="sr-only">City</label>
+                      <select name="city" class="form-control">
+                        <option selected="true" disabled="disabled">City (All)</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkatta">Kolkatta</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Noida">Noida</option>
+                      </select>
+                    </div>
+                  </div>
+               
+                  </div>
+                  <button class="btn btn-secondary btn-block mt-4" type="submit">Search Center</button>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+        </div>
+      </section>
+      <section id="about" class="py-4" style="background-color:#f7f7f7">
+        <div class="container" style="background-color: white;">
+         
+              <h3> <strong>DESD Course Details</strong></h3>
+
+              <div class="tab">
+               
+                <button class="tablinks" onclick="openCity(event, 'Paris')">Fees</button>
+                <button class="tablinks" onclick="openCity(event, 'London')"id="defaultOpen">Syllabus</button>
+                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Placement</button>
+                <button class="tablinks" onclick="openCity(event, 'main')">Job Profile</button>
+                <button class="tablinks" onclick="openCity(event, 'center')">Best Centers</button>
+                <button class="tablinks" onclick="openCity(event, 'out')">Course Outcome</button>
+                <button class="tablinks" onclick="openCity(event, 'other')">Other Courses</button>
+              </div>
+              
+              <div id="London" class="tabcontent">
+                <h3 style="color: black;">DESD</h3>
+                <p style="font-size: 12px;"> <strong>
+                   <br> <br> Programming Concepts 150 Hours  
+                   <br> <br> Microcontrollers and Interfacing 120 Hours  
+                   <br> <br> Embedded Operating Systems 120 Hours  
+                   <br> <br> Real Time Operating System 60 Hours  
+                   <br> <br> Internet of Things(IoT) and Mobile Porgramming 120 Hours  
+                   <br> <br> Embedded Hardware Design and Development 60 Hours  
+                   <br> <br> Effective Communication 50 Hours  
+                   <br> <br> Aptitude & General English 50 Hours  
+                   <br> <br> Project and Seminar 150 Hours  
+                
+                
+                </strong>
+                 </p> <br>
+              </div>
+              
+              <div id="Paris" class="tabcontent">
+                <h3>Fees</h3>
+                <p style="font-size: 12px;;"> <strong>
+                  The total fees of the course is Rs. 90,000/- plus Goods and Service Tax (GST) currently 18%.   <br>
+                    <br>
+                  The course fees has to be paid in two installment as per the schedule. <br>                     <br>
+                  First installment is Rs. 10,000/- plus Goods and Service Tax (GST) currently 18%. <br> <br>
+                  Second installment is Rs. 80,000/- plus Goods and Service Tax (GST) currently 18%. <br> <br>
+                </strong></p> 
+              </div>
+              
+              <div id="Tokyo" class="tabcontent">
+                <h3>Placement</h3>
+                <p style="font-size: 12px;"> <strong>
+                  Overall placement for DESD course is average you cant expeact no of interview calls like DAC,DBDA <br> <br>
+                  No of interview calls are depends on your ccee exam score. <br>  <br>
+                  <a href="{%url 'ccee' %}">CCEE</a>
+                  <br> <br>
+                  Colleges For DESD : <br> <br>
+                                    
+                  1. CDAC ACTS Pune <br> <br>
+                  2. CDAC ACTS Banglore <br> <br>
+                  3. Sunbeam Pune <br> <br>
+                 
+                 <strong>If your high priority is to getting a job as a fresher I will not recommend this course go for DAC </strong>
+
+                </strong> 
+                
+                </p>
+              </div>
+              <div id="main" class="tabcontent">
+                <h3>Job Profile In DESD</h3>
+                <p style="font-size: 12px;"> <strong>
+                  OS  Developer <br>        <br>
+                  Embedded Developer <br> <br>
+                  Linux engineer <br> <br>
+                
+                  <br> <br>
+                  Realizing the growth of embedded systems in day-to-day life and the need for trained manpower in this promising area, C-DAC has launched a Diploma in Embedded Systems Design (DESD) for Engineers in computers, electronics and IT. Embedded Systems is a unique field, where engineers need to have sound knowledge in hardware and software design. Keeping this aspect in view, C-DAC has designed the diploma giving equal emphasis to hardware and software, enabling engineers to face challenges in the design and development of state of the art embedded systems. The latest curriculum includes a module on wireless embedded systems design, specifically focusing on wireless technologies and Wireless Sensor Networks  (WSN).
+
+                </strong> 
+                
+                </p>
+              </div>
+              <div id="center" class="tabcontent">
+                <h3>1 Center  for DESD</h3>
+                <p style="font-size: 12px;"> <strong>
+                 CDAC ACTS Pune  <br> <br>
+                 CDAC ACTS Banglore <br> <br>
+                 Subeam Pune <br> <br>
+                 CDAC Hyderabad <br> <br>
+                  <br>
+                 
+                </strong> 
+                
+                </p>
+              </div>   
+              <div id="other" class="tabcontent">
+                <h3>Other CDAC Courses</h3>
+                <p style="font-size: 12px;"> <strong>
+                  <a href="{%url 'cdac-courses' %}"> DBDA (Big Data Analytics)</a> <br> <br>
+                 <a href="{%url 'dmc-cdac-course' %}"> DMC  (Mobile Computing) </a> <br> <br>
+                 <a href="{%url 'iot-cdac-course' %}">IOT  </a><br> <br>
+                 <a href="{%url 'hpcsa-cdac-course' %}">HPCSA </a> <br> <br>
+                 <a href="{%url 'ai-cdac-course' %}"> AI </a> <br> <br>
+                 <a href="{%url 'vlsi-cdac-course' %}"> VLSI </a> <br> <br>
+                 <a href="{%url 'desd-cdac-course' %}"> DESD </a><br> <br>
+                 <a href="{%url 'dittis-cdac-course' %}"> DITTIS </a> <br> <br>
+                  <br>
+                 
+                </strong> 
+                
+                </p>
+              </div>   
+              <div id="out" class="tabcontent">
+                <h3>After Course Complete :</h3>
+                <p style="font-size: 12px;"> <strong>  
+                    The candidates will be trained in Hardware and Firmware design of Embedded System based applications, Internet of Things ( IoT), Project development and Management skills. At the end of the course students will be able to work as System design engineer and embedded engineer with good knowledge of RT Linux, Microcontroller and Microprocessor based design, Device driver and RTOS. Students can start career as Embedded Developer, tester and leads to project manager after having relevant experience.
+                    <br> <br>
+        
+                  
+                </strong> 
+                
+                </p>
+              </div>           
+              <script>
+              function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+              }
+              
+              // Get the element with id="defaultOpen" and click on it
+              document.getElementById("defaultOpen").click();
+              </script>
+          
+            
+          
+        
+        </div>
+      </section> 
+      <section id="about" class="py-4" style="background-color:#f7f7f7;">
+        <div class="container" style="background-color: white; border: 1px solid #ccc; ">
+  
+          <h3><strong>IOT Eligibility:</strong></h3>
+            <p>
+               <br> Graduate in Engineering (10+2+4 or 10+3+3 years) in IT / Computer Science / Electronics / Telecommunications / Electrical / Instrumentation. OR MSc/MS (10+2+3+2 years) in Computer Science, IT, Electronics. 
+               <br> Mathematics in 10+2 (exempted for candidates with Diploma + Engineering) OR
+               <br> MCA
+               <br> With minimum 55% marks in qualifying exam
+            </p>
+        </div>
+      </section>
+    
+
+    
+      <section id="services" class="py-5 bg-secondary text-white">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-md-4">
+                <i class="fas fa-comment fa-4x mr-4"></i>
+                <hr>
+                <h3>About Us</h3>
+                <p>Hey guys this is the website I have developed to all those students wants
+                  to success in cdac from start to end here you will find everything regarding CDAC.
+                </p>
+              </div>
+
+             
+              <div class="col-md-4">
+                  <i class='fas fa-laptop-code' style='font-size:48px'></i>
+                <hr>
+                <h3>Test Series</h3>
+                <p>This online test series i have designed for ccat exam you will feel like you are 
+                  giving ccat exam after taking this test you will feel confident for exam. I recommend
+                  you guys at leaset give 2,3 test before exam my quetions are very relevent to ccat. 
+                </p>
+              </div>
+              <div class="col-md-4">
+                <i class="fas fa-suitcase fa-4x mr-4"></i>
+                <hr>
+                <h3>Contact Us</h3>
+                <p>This is the website only to clear doubts of all the students so feel free to contact us at any time for anything 
+                  regarding cdac.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+{% endblock %}

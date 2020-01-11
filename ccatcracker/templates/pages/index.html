@@ -5,9 +5,63 @@
   p {
         font-size: 17px;
   }
+  * {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 700px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 700px;
+}
+.tabcontents {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 100%;
+  border-left:  1px solid #ccc;
+ 
+}
 </style>
  <!-- Showcase -->
- <section id="showcase" style="background-image: url(../static/img/ccee.jpg);background-repeat: no-repeat;background-attachment: fixed;">
+ <section id="showcase" style="background-image: url(../static/img/ccee.jpg);background-attachment: fixed;">
         <div class="container text-center">
           <div class="home-search p-5">
             <div class="overlay p-5">
@@ -50,6 +104,7 @@
                   <button class="btn btn-secondary btn-block mt-4" type="submit">Search Center</button>
                 </form>
               </div>
+              
             </div>
           </div>
         </div>
@@ -57,48 +112,193 @@
       </div>
         </div>
       </section>
-      <section id="about" class="py-4">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8">
-              <h2>Search everything Related to cdac here </h2>
-              <p>Check out the study Material for ccat , Which college you will get  as per your rank .</p>
-             
-              <h3>What I will get on ccatcracker : </h3>
-              <p class="mt-4"> 
+      <section id="about" class="py-4" style="background-color:#f7f7f7">
+        <div class="container" style="background-color: white;">
+         
+              <h3> <strong>DAC Course Details</strong></h3>
 
-               Here everything you will get related to cdac .how to prepare free for ccat exam , how to prepare for 
-               interview. how to prepare for ccee exam . Mock test for ccat exam . Rank wise college list . 
-              </p>
-              <br>
-              <h3 style="color: brown">Pre Dac Free Course :</h3>
+              <div class="tab">
+               
+                <button class="tablinks" onclick="openCity(event, 'Paris')">Fees</button>
+                <button class="tablinks" onclick="openCity(event, 'London')"id="defaultOpen">Syllabus</button>
+                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Placement</button>
+                <button class="tablinks" onclick="openCity(event, 'main')">Job Profile</button>
+                <button class="tablinks" onclick="openCity(event, 'center')">Best Centers</button>
+                <button class="tablinks" onclick="openCity(event, 'out')">Course Outcome</button>
+                <button class="tablinks" onclick="openCity(event, 'other')">Other Courses</button>
+              </div>
+              
+              <div id="London" class="tabcontent">
+                <h3 style="color: black;">DAC</h3>
+                <p style="font-size: 12px;"> <strong>OOPs with C++ Programming 60 Hours                   <br>         <br>
+                  Algorithm & Data Structures 70 Hours   <br>                             <br>
+                  Advanced Software Development Methodologies 90 Hours   <br> <br>
+                  Operating Systems Concepts 60 Hours   <br> <br>
+                  Advanced Web Programming 50 Hours   <br> <br>
+                  MEAN Stack 60 Hours   <br> <br>
+                  Database Technologies 60 Hours   <br> <br>
+                  Java Technologies-I( Core Java) 70 Hours   <br> <br>
+                  Java Technologies-II( Web Based Java) 90 Hours   <br> <br>
+                  Microsoft.Net Technologies 70 Hours   <br> <br>
+                  Effective Communication 50 Hours   <br> <br>
+                  Aptitude & General English 50 Hours   <br> <br>
+                  Project 120 Hours  </strong> </p> <br>
+              </div>
+              
+              <div id="Paris" class="tabcontent">
+                <h3>Fees</h3>
+                <p style="font-size: 12px;;"> <strong>
+                  The total fees of the course is Rs. 90,000/- plus Goods and Service Tax (GST) currently 18%.   <br>
+                    <br>
+                  The course fees has to be paid in two installment as per the schedule. <br>                     <br>
+                  First installment is Rs. 10,000/- plus Goods and Service Tax (GST) currently 18%. <br> <br>
+                  Second installment is Rs. 80,000/- plus Goods and Service Tax (GST) currently 18%. <br> <br>
+                </strong></p> 
+              </div>
+              
+              <div id="Tokyo" class="tabcontent">
+                <h3>Placement</h3>
+                <p style="font-size: 12px;"> <strong>
+                  Overall placement for DAC course is always high compared <br>     <br>
+                  to other courses. <br> <br>
+                  No of interview calls are depends on your ccee exam score. <br>  <br>
+                  <a href="{%url 'ccee' %}">CCEE</a>
+                  <br> <br>
+                  Top 6 Colleges For Placement : <br> <br>
+                  1. CDAC ACTS Pune <br>                           <br>
+                  2. Sunbeam Pune <br> <br>
+                  3. IACSD Akurdi  <br> <br>
+                  4. VITA Mumbai <br> <br>
+                  5. Knowledge Park Banglore <br> <br>
+                  6. CDAC Kharghar Mumbai <br> <br>
+
+
+                </strong> 
+                
+                </p>
+              </div>
+              <div id="main" class="tabcontent">
+                <h3>Job Profile In DAC</h3>
+                <p style="font-size: 12px;"> <strong>
+                  Java  Developer <br>        <br>
+                  Dot net developer <br> <br>
+                  Full stack developer <br> <br>
+                  Software Engineer <br> <br>
+                  Testing Engineer <br> <br>
+                  <br>
+                 
+                </strong> 
+                
+                </p>
+              </div>
+              <div id="center" class="tabcontent">
+                <h3>Best Center  for DAC</h3>
+                <p style="font-size: 12px;"> <strong>
+                  1. CDAC ACTS Pune <br>                           <br>
+                  2. Sunbeam Pune <br> <br>
+                  3. IACSD Akurdi  <br> <br>
+                  4. VITA Mumbai <br> <br>
+                  5. Knowledge Park Banglore <br> <br>
+                  6. CDAC Kharghar Mumbai <br> <br>
+                  7. Sunbeam Karad  <br> <br>
+                  8. Know IT Pune <br> <br>
+                  9. CDAC Juhu Mumbai <br> <br>
+                  10. CDAC E-City Banglore <br>
+                  <br>
+                 
+                </strong> 
+                
+                </p>
+              </div>   
+              <div id="other" class="tabcontent">
+                <h3>Other CDAC Courses</h3>
+                <p style="font-size: 12px;"> <strong>
+                 <a href="{%url 'cdac-courses' %}"> DBDA (Big Data Analytics)</a> <br> <br>
+                 <a href="{%url 'dmc-cdac-course' %}"> DMC  (Mobile Computing) </a> <br> <br>
+                 <a href="{%url 'iot-cdac-course' %}">IOT  </a><br> <br>
+                 <a href="{%url 'hpcsa-cdac-course' %}">HPCSA </a> <br> <br>
+                 <a href="{%url 'ai-cdac-course' %}"> AI </a> <br> <br>
+                 <a href="{%url 'vlsi-cdac-course' %}"> VLSI </a> <br> <br>
+                 <a href="{%url 'desd-cdac-course' %}"> DESD </a><br> <br>
+                 <a href="{%url 'dittis-cdac-course' %}"> DITTIS </a> <br> <br>
+                  <br>
+                 
+                </strong> 
+                
+                </p>
+              </div>   
+              <div id="out" class="tabcontent">
+                <h3>After Course Complete :</h3>
+                <p style="font-size: 12px;"> <strong>  
+                  Use technologies to access and interpret information effectively.      <br>                                                                                                                      <br>
+                  Apply their analytical skills to investigate unfamiliar problems Web technologies like HTML 5.0, CSS, Java Script, Jquery, Angular JS,  <br> <br>
+                  Use quantitative data confidently and competently,  <br> <br>
+                  Use communication technologies competently.  <br>
+                  Understand the multi-tier architecture of web-based enterprise applications using. Enterprise JavaBeans. Integrate Servlets, JSPs with EJB and Databases in J2EE application. <br> <br>
+                  Understand .net architecture, develop and maintain the application. <br>
+                  <br>
+                 
+                </strong> 
+                
+                </p>
+              </div>           
+              <script>
+              function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+              }
+              
+              // Get the element with id="defaultOpen" and click on it
+              document.getElementById("defaultOpen").click();
+              </script>
+          
+            
+          
+        
+        </div>
+      </section> 
+      <section id="about" class="py-4" style="background-color:#f7f7f7;">
+        <div class="container" style="background-color: white; border: 1px solid #ccc; ">
+  
+          
+               
+                <p dir="ltr" style="text-align: justify; margin-top:10px;"><strong>CDAC C-CAT Application Form 2019-</strong> The Centre for Development of Advanced Computing (CDAC) released the application form for February 2020 batch of Computerized Common Admission Test- C-CAT registration. The authorities commenced the CDAC C-CAT registration for December 2019 on October 30 which lasted till November 27, 2019 and the respective candidates were required to fill the same through official website in online mode only.  <br> It may be noted that CCAT 2019 is the entrance examination for admission to Postgraduate diploma courses offered by various training centres of CDAC. Only those candidates complying with the eligibility criteria, which differs for different PG Diploma courses, are able to proceed with CDAC C-CAT registration and application form respectively. The process includes various steps including payment of application fee, selection of course and CDAC training centre, etc. An application form number will be generated after completion of this process which will be required during CDAC login further along with the password set by candidates. The article below provides more information incidental to <br><a href="{%url 'ccat_notify' %}" rel="noopener noreferrer" target="_blank">Pre DAC</a> Free Pre Dac Course</p>
+              <h3> <strong>Pre Dac Free Course :</strong></h3>
               <p>
                     On this website I have designed free predac ccat course that course is designed in such a way 
-                    it will not only help you in cdac ccat journey but also it will help you a lot in CDAC . <br> <br>
+                    it will not only help you in cdac ccat journey but also it will help you a lot in CDAC . <br> 
                     Because normally in ccat exam you will learn very basics from private coaching even if you get  good rank 
-                    after that while doing cdac students will face lots of problems because they even dont know how to code in C Language . <br> <br>
+                    after that while doing cdac students will face lots of problems because they even dont know how to code in C Language . <br> 
                     This is very simple logic if you dont know C , how will you understand C++ in CDAC . And if you dont know
                     C++ you will pick java that means you will face very very big issue while interview . <br> <br>
 
-                    Thats why pre dac is very very Important you have to prepare yourself very strong in C and C++ before join CDAC . <br> <br>
+                    Thats why pre dac is very very Important you have to prepare yourself very strong in C and C++ before join CDAC . <br> 
 
-                    Hence I have developed pre dac course which will give you very strong hands on for C and C++ you will get too much benefits while doing CDAC if you follow my free ccat Course . <br>
-                    <br>
+                    Hence I have developed pre dac course which will give you very strong hands on for C and C++ you will get too much benefits while doing CDAC if you follow my free ccat Course.
+                   
+                    So even if you want to join any private coaching then go ahead and join class but still you can free follow my course which will help you a lot in cdac . <br>
 
-                    So even if you want to join any private coaching then go ahead and join class but still you can free follow my course which will help you a lot in cdac . <br> <br>
+                    Here we have quetions-of-the day Program in that I will upload daily one new Aptitude and Coding question with answer that will help you to prepare technically very strong during interview . <br>
 
-                    Here we have quetions-of-the day Program in that I will upload daily one new Aptitude and Coding question with answer that will help you to prepare technically very strong during interview . <br><br>
-
-                    So dont miss this Course if you are prepare now for ccat exam . Our test series is really very very relevent to exam which will help you to understand exam pattern so dont forget to give ccat test series before exam . <br> <br> 
+                    So dont miss this Course if you are prepare now for ccat exam . Our test series is really very very relevent to exam which will help you to understand exam pattern so dont forget to give ccat test series before exam . <br>
 
                     Click below link for start free pre dac course . <br> <br>
-                    <a  style="margin-left: 40%"  href="{% url 'ccat' %}" class="btn btn-secondary text-white btn-lg">Pre-Dac Course</a>
+                    <a  style="margin-left: 40%"  href="{% url 'ccat-predac-course-pune' %}">Pre-Dac Course</a>
                     <br> <br>
             
               </p>
-              <h3 style="color: brown">What is CCEE Exam  :</h3>
+              <h3> <strong>What is CCEE Exam  </strong> </h3>
               <p>
-                Guys This is the exam on which your whole placement is depend . <br>
+                This is the exam on which your whole placement is depend . <br>
                 No matter in which college you studied whether it acts or sunbeam or any placemement is commom for all . <br>
                 It only depends on what is your ccee scrore thats it . <br>
                 If your ccee scrore is above 60% Then you will get lots of calls . <br>
@@ -108,22 +308,98 @@
                 This is a very very worst joke guys there is nothing like dumps its just myths.. <br>
                 <br> 
                 Lets checkout more detail abour ccee exam click below : <br> <br>
-                <a  style="margin-left: 40%"  href="{% url 'ccee' %}" class="btn btn-secondary text-white btn-lg">CCEE Exam </a>
+                <a  style="margin-left: 40%"  href="{% url 'ccee' %}">CCEE Exam </a>
                 <br> <br>
               </p>
-              <h3 style="color: brown">Which college I will get for my rank ?  :</h3>
+              <h3> <strong> Which college I will get for my rank (CCAT Cut-Off)</strong></h3>
               <p>
-                Everyone will confuse after result declare which college i will for my rank . <br> <br>
+                Everyone will confuse after result declare which college i will for my rank . <br> 
                 so here as per last records we have provided some probability that which college you will get as per your rank . <br><br>
-                Click bewlow to check that : 
+                
                 <br> 
-                <a  style="margin-left: 40%"  href="{% url 'cdac' %}" class="btn btn-secondary text-white btn-lg">College-My-Rank</a>
+                <a  style="margin-left: 40%"  href="{% url 'cdac' %}">Cutt-Off</a>
                 <br> <br>
               </p>
+              </div>
+           
+          
+            
+          
+         
+        </div>
+      </section>
+      <section id="about" class="py-4" style="background-color:#f7f7f7">
+        <div class="container" style="background-color: white;">
+          <h4><strong>You may also like :</strong></h4>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card listing-preview">
+              <div class="card-body">
+                <div class="listing-heading text-center">
+                  <h4><strong>Pre Dac Course</strong></h4>
+                  CDAC ccat free pre dac course 45 days you can check here..<br>
+                  <a href="{% url 'ccat-predac-course-pune' %}">Pre Dac</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card listing-preview">
+              <div class="card-body">
+                <div class="listing-heading text-center">
+                  <h4><strong>CDAC C-CAT Syllabus 2019</strong></h4>
+                  CDAC C-CAT Syllabus 2019 - you can check here.. <br>
+                  <a href="{% url 'cdac-c-cat-syllabus' %}">Syllabus</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card listing-preview">
+              <div class="card-body">
+                <div class="listing-heading text-center">
+                  <h4><strong> CDAC C-CAT Admit Card 2019 </strong></h4>
+                  CDAC C-CAT Admit Card 2019- The Authorities has released CDAC ... <br>
+                  <a href="{% url 'cdac-c-cat-admit-card' %}">Admit Card </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card listing-preview">
+              <div class="card-body">
+                <div class="listing-heading text-center">
+                  <h4><strong>CDAC C-CAT Result 2019</strong></h4>
+                  CDAC C-CAT Result & Rank 2019 - The Centre for Development of... <br>
+                  <a href="{% url 'cdac-c-cat-result' %}">CCAT Result </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card listing-preview">
+              <div class="card-body">
+                <div class="listing-heading text-center">
+                  <h4><strong>CDAC C-CAT Cut-Off</strong></h4>
+                  CDAC C-CAT Cut-Off 2019- You can check latest cutoff for CDAC here .. <br>
+                  <a href="{% url 'cdac' %}">Cut-Off</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card listing-preview">
+              <div class="card-body">
+                <div class="listing-heading text-center">
+                  <h4><strong>CDAC C-CAT Test Seties</strong></h4>
+                  CDAC C-CAT Mock Test 2019- free 2 mock test for both section.. <br>
+                  <a href="{% url 'onlinetest' %}">Mock Test</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+    
       <section id="services" class="py-5 bg-secondary text-white">
           <div class="container">
             <div class="row text-center">
@@ -152,9 +428,14 @@
                 <h3>Contact Us</h3>
                 <p>This is the website only to clear doubts of all the students so feel free to contact us at any time for anything 
                   regarding cdac.</p>
+            
               </div>
+        
             </div>
+          
           </div>
+    
         </section>
+
 
 {% endblock %}

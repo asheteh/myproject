@@ -1,125 +1,223 @@
-{% extends 'base_1.html' %}
-{% block title %} Dynamic Memory Allocation | C Language Tutorial  {% endblock %}
+{% extends 'base.html '%}
+{% block title %}CDAC C-CAT 2019 - Application Form ,Cutoff, Counselling, Seat Allotment{% endblock %}
 {% block content %}
 <style>
-   p {
-   display: block;
-   margin-top: 1em;
-   margin-bottom: 1em;
-   margin-left: 0;
-   margin-right: 0;
-   font-style: italic;
-   font-size: 15px;
-   }
-   pre{
-   background-color: #e0e0e0;
-   border-radius: 10px;
-   color: rgba(0,0,0,.9);
-   font-family: Consolas,monospace;
-   margin-bottom: 10px;
-   overflow: auto;
-   padding: 10px;
-   margin: 0px 0px 10px;
-   text-align: left;
-   }
+	table,th{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	}
+	td {
+	border: 1px solid #ddd;
+	padding: 4px;
+	}
+	p{
+	font-family: sans-serif
+	}
+	tr:nth-child(even){background-color: #f2f2f2;}
+	tr:hover {background-color: #ddd;}
+	.div1 {
+	width: 300px;
+	height: 100px;
+	border: 1px solid black;
+	padding: 1px;
+	}
 </style>
 <!-- Breadcrumb -->
+<!-- Breadcrumb -->
 <section id="bc" class="mt-3">
-   <div class="container">
-      <nav aria-label="breadcrumb">
-         <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-               <a href="{% url 'Pointers-In-C-Language-Tutorial' %}">
-                 Previous</a>
-            </li>
-            <li class="breadcrumb-item active"> C Language</li>
-         </ol>
-      </nav>
-   </div>
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="{% url 'index' %}">
+					<i class="fas fa-home"></i> Home</a>
+				</li>
+				<li class="breadcrumb-item active">CDAC C-CAT Course</li>
+			</ol>
+		</nav>
+	</div>
 </section>
-</div>
-<section id="about" class="py-4">
-   <div class="container">
-      <div class="row">
-         <div class="col-md-8">
-               <h3 style="color: green">Why Should I join ccatcracker Course not Private ? </h3>
-               <p>
-                  I got mail 4,5 why should we join your course why not private and how can you be sure your 
-                  course will give us good rank ? 
-                  <br> <br>
-                  So , I will tell why you should join ccatcracker course . <br> <br>
-                  Look its simple ccat exam is not too much difficult so it doesnt make any sense that you are 
-                  investing 12,15k for pre cat 40 days course . <br><br>
-                  Believe me or not ask anyone who completed pre dac course is he/ she able to solve C++ coding
-                  or they are able to solve some data Structure . <br><br>
-                  You can ask by your self I will tell 70 % student dont know even C ,C++ basic but they got 
-                  good rank its just luck . <br> <br>
-                  But while doing CDAC how much they face problem that you will know while doing cdac  . <br><br>
-                  And why you dont want self study if anyone tell you start study then only you will study 
-                  if you think by doing these activity you will great success in CDAC then you are wrong my friend . 
-                  <br> <br>
-                  I have completed CDAC i know that what issues we face thats why I developed these free website . <br>
-                  <br>
-                  Now if you do my course you can able to solve C,Data Structure,C++ programming that much we have covered 
-                  from very basic to advance . <br> <br>
-                  My goal is not only get success in ccat exam I want whoever follow my website will get placed within 
-                  first month of placement . <br> <br>
-                  And thats why i have coverd too much syllabus which will make you very strong and confident while doing CDAC . 
-                  <br> <br>
-                  This is the benefit of my course you can as your own speed its not mandatory you have to finish it in 45 days 
-                  if you not able to understand any concept watch video twice that you cannot do in private classes . <br>
+<section id="about" class="py-4" style="background-color:#f7f7f7">
+	<div class="container" style="background-color: white;">
+		<h3> <strong>CDAC C-CAT Pre Dac Course ccatcracker</strong>  </h3>
+		<br> <br>
+		<p style="font-size: 17px;"> 
+        
+           <strong> CDAC C-CAT  </strong> The Centre for Development of Advanced Computing (CDAC) determines the Common Admission Test (C-CAT) 2019 syllabus. All the subjects and topics which are covered in the exam are mentioned in the CDAC CCAT syllabus 2019. The syllabus of CDAC C-CAT 2019 differs for various PG diploma courses. Since the CDAC 2019 was conducted on December 8 and 15, 2019, it is essential for candidates to be well versed with the CDAC CCAT 2019 syllabus so that their preparation can be completed on time. Knowing the CDAC C-CAT syllabus 2019 allows candidates to prepare efficiently and prevent wasting their time on insignificant topics. Along with the syllabus, the reference books for various subjects are given below for the candidates’ convenience. Scroll down the article below to know more about the syllabus of CDAC C-CAT 2019.
 
-                  <br> 
-                  Thats it from my side if you like join else Your own wish ... <br> <br>
-                  
-                  All The Best Happy Coding .. <br>
+        </p>
+		<br>
+        <h3><strong>CDAC C-CAT Exam Pattern 2020</strong></h3> <br>
+        <p style="font-size: 17px;">
+            Candidates should go through the exam pattern of CDAC C-CAT December 2019 to prepare accordingly and perform well in the exam. The CDAC C-CAT 2019 exam pattern mentions the mode of exam, type of questions, marking scheme, etc. Check the CDAC C-CAT exam pattern given below:
+            <br> <br>
+        </p>
+		
+        <table><tbody><tr><td><p dir="ltr"  ><span >Mode of Exam</span></p></td><td ><p dir="ltr"  ><span>Online</span</p></td></tr><tr style="height:0pt;"><td><p dir="ltr"  ><span  ">Number of Questions</span></p></td><td  "><p dir="ltr"  ><span  ">50 per paper</span></p></td></tr><tr style="height:0pt;"><td  "><p dir="ltr"  ><span  ">Type of Questions</span></p></td><td><p dir="ltr"  ><span  ">Multiple Choice questions</span></p></td></tr><tr style="height:0pt;"><td  "><p dir="ltr"  ><span  ">Medium of Exam</span></p></td><td  "><p dir="ltr"  ><span  ">English</span></p></td></tr><tr style="height:0pt;"><td  "><p dir="ltr"  ><span  ">Duration of Exam</span></p></td><td  "><p dir="ltr"  ><span  ">1 hour per paper</span></p></td></tr><tr style="height:0pt;"><td  "><p dir="ltr"  ><span  ">Total marks</span></p></td><td  "><p dir="ltr"  ><span  ">150 per paper</span></p></td></tr><tr style="height:22pt;"><td rowspan="2"  "><p dir="ltr"  ><span  ">Marking Scheme</span></p></td><td  "><p dir="ltr"  ><span  ">+3 for every correct answer</span></p></td></tr><tr style="height:22pt;"><td  "><p dir="ltr"  ><span  ">-1 for every wrong answer</span></p></td></tr></tbody></table>
 
-               </p>
+	
+        <br> <br>
+        
+        <h4><strong>CDAC C-CAT Syllabus 2020</strong></h4> <br>
+        <p style="font-size: 17px;">
+            The course-wise CDAC CCAT 2019 syllabus is given below so candidates can prepare accordingly. The various PG diploma courses offered have been divided into three sections, namely- section A, B and C. Depending on the category of courses opted by the candidate, he/ she will have to appear for either Section A or A+B or A+B+C. 
+            <br> <br>
+         <h4><strong>CCAT Syllabus</strong></h4>
+         <br>
+         <table><tbody><tr ><td><p><span><strong>Course category</strong></span></p></td><td><p><span ><strong>Test paper</strong></span></p></td><td ><p dir="ltr"  ><span ><strong>Topics</strong></span></p></td></tr><tr style="height:30pt;"><td><p dir="ltr"  ><span  ">Category I</span></p></td><td><p dir="ltr"  ><span  ">Section A</span></p></td><td  ><p dir="ltr"  ><span  ">English, Reasoning, Quantitative Aptitude</span></p></td></tr><tr style="height:57pt;"><td><p dir="ltr"  ><span  ">Category II</span></p></td><td><p dir="ltr"  ><span  ">Section B</span></p></td><td  ><p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;"><span  ">Computer Fundamentals, Data Structures, C Programming, Data Communication &amp; Networking, Operating Systems, Object-Oriented Programming Concepts</span></p></td></tr><tr style="height:30pt;"><td><p dir="ltr"  ><span  ">Category III</span></p></td><td><p dir="ltr"  ><span  ">Section C</span></p></td><td  ><p dir="ltr"  ><span  ">Microprocessors, Computer Architecture, Digital Electronics</span></p></td></tr></tbody></table>
 
-          
-            <h3>Welcome to ccatcracker 45 Days Crash course  . </h3>
-            <h4 style="color: green">Learning Agenda  : </h4>
-            <h5 style="color: black">Note : Course will start from 1st sep 2019 </h5>
-            <p class="mt-4">
-                <h5>I have divided whole course in 45 days So please start from day 1 </h5> <br>
-                <h5>Dont miss any single lecture videos just think like you have paid 12k , and you are 
-                    doing pre dac course from private institue . <br>
-                </h5>
-                <h5>
-                    Fix your daily target of 6 hrs same like any coaching center .
-                </h5>
-                <h5>After each day learn first then solve my assignments before start next day you must have to finish assignments on the same day .  </h5> <br>
-                <h5>If you follow all these instructions honsetly for 45 days you will achieve very very great rank </h5> 
-                <h5>Take holiday only on sunday then again mon-sat concentrate on your course . </h5> 
-                <br>
-                <h4 style="color: green">C Language (Day 1 -  Day 15) :</h4>
-                <br>
-                <a style="margin-left: 30%"  href="{% url 'intro' %}" class="btn btn-secondary text-white btn-lg">C Language Tutorial</a><br> 
-                <br> <br>
-                <h4 style="color: green">C++ Language (Day 16 -  Day 26) :</h4> <br>
+		</p>
+		<br> <br>
+		<h5><Strong>Detail Syllabus For CCAT 2020 </Strong></h5>
+		<br>
+    <a href="{% url 'ccat_notify' %}">CCAT 2020 Syllabus</a> <br> <br>
+    
+    <h4><strong>Free Pre Dac Course 45 Days</strong></h4> 
+      <br>
+     
+    <p style="font-size: 17px;">
+    
 
-                <a style="margin-left: 30%"  href="{% url 'cpp' %}" class="btn btn-secondary text-white btn-lg">C++ Language Tutorials</a><br> <br>
-                
-                <h4 style="color: green">Data Structure (Day 27 -  Day 31) :</h4> <br>
+    First question comes in mind is why should i join this <strong>course why not private</strong>  and how can i trust your 
+    course will it give me a good rank  or not ? 
+   <br > <br>
+    So , I will tell why you should join ccatcracker course
+    see, ccat exam is not too much difficult so it doesnt make any sense that you are 
+    investing 12,15k for <strong>pre cat 40 days private course </strong> .
+    Believe me or not ask anyone who completed pre dac course is he/ she able to solve <strong>C++ coding question</strong> 
+    or they are able to solve some <strong> data Structure problems ?</strong> .
+    You can ask by your self I will tell 70 % student dont know even <strong> C  & C++ basic</strong> but they will get a 
+    good rank just because may they have good command on english and apti or may be luck . <br> <br>
 
-                <a style="margin-left: 30%"  href="{% url 'Data-Structure-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Data Structure Tutorials</a><br> <br>
-            
-                <h4 style="color: green">Operating System (Day 32 -  Day 34) :</h4> <br>
+    But while doing <strong>CDAC how much they face problem</strong>  that you will know while doing cdac  .
+    And why you dont want self study if anyone tells you start study then only you will learn lots of new things by self study
+    if you think just by join any private pre dac course  you will get great success in <strong>CDAC placement</strong>  then you are wrong . 
+  
+    I have completed CDAC i know that what issues we face that's why I developed these free website . <br>
+    <br>
+    Now if you do our course you can able to solve <strong>C,Data Structure,C++ programming</strong>  that much we have covered 
+    from very basic to advance .
+    My goal is not only get success in ccat exam I want whoever follow <strong>ccatcracker course</strong>  will get placed within 
+    with good package and in good company . 
+    And that's why i have coverd too much syllabus which will make you very strong and confident while doing CDAC . 
+    <br> <br>
+    This are the benefits of <strong>ccatcracker course</strong> you can learn with your own speed its not mandatory you have to finish it in 45 days 
+    if you not able to understand any concept watch video twice that you cannot do in private classes . <br>
 
-                <a style="margin-left: 30%"  href="{% url 'OS-Tutorial' %}" class="btn btn-secondary text-white btn-lg">Opearating System Tutorials</a><br> <br>
-            
-                <h4 style="color: green">Networking  (Day 35-  Day 36) :</h4> <br>
+  </p>
+  <br> <br>
+  <h3><strong>Lets Start Course Read Instruction </strong></h3> <br>
+  <p style="font-size: 17px;;">
+    I have divided whole course in 45 days So please start from day 1,
+    don't miss any single lecture videos just think like you have paid 12k , and you are 
+    doing pre dac course from private institue. <br> <br>
+   
+    Fix your daily target of 6 hrs same like any coaching center .
+    
+    After complete each day , then solve my assignments before start next day you must have to finish assignments on the same day .  
+    If you follow all these instructions honsetly for 45 days you will achieve very very great rank  in ccat exam .
+    Take holiday only on <strong>sunday</strong>  then again mon-sat concentrate on your course .
+    <br> <br>
+  
+  </p>
 
-                <a style="margin-left: 30%"  href="{% url 'Networking-Tutorials' %}" class="btn btn-secondary text-white btn-lg">Networking Tutorials</a><br> <br>
-                
-                <h4 style="color: green">English & Aptitude (Day 37 - Day 45):</h4> <br>
+  <h4><strong> C Language (Day 1 -  Day 15) </strong></h4>
+  <br>
+  <a  href="{% url 'intro' %}">C Language Tutorial</a><br> 
+  <br> <br>
+  <h4> <strong> C++ Language (Day 16 -  Day 26)</strong></h4> <br>
 
-                <a style="margin-left: 30%"  href="{% url 'English-Tutorial' %}" class="btn btn-secondary text-white btn-lg">English & Aptitude </a><br> <br>
-                <br> <br>
-                <h5 style="color: black">Note : Course will start from 1st sep 2019 </h5>
-         </div>
-      </div>
-   </div>
+  <a  href="{% url 'cpp' %}">C++ Language Tutorials</a><br> <br>
+  
+  <h4> <strong> Data Structure (Day 27 -  Day 31)</strong></h4> <br>
+
+  <a  href="{% url 'Data-Structure-Tutorial' %}" >Data Structure Tutorials</a><br> <br>
+
+  <h4> <strong> Operating System (Day 32 -  Day 34)</strong></h4> <br>
+
+  <a  href="{% url 'OS-Tutorial' %}" >Opearating System Tutorials</a><br> <br>
+
+  <h4><strong> Networking  (Day 35-  Day 36)</strong></h4> <br>
+
+  <a   href="{% url 'Networking-Tutorials' %}" >Networking Tutorials</a><br> <br>
+  
+  <h4> <strong>English & Aptitude (Day 37 - Day 45)</strong> </h4> <br>
+
+  <a  href="{% url 'English-Tutorial' %}" >English & Aptitude </a><br> <br>
+  <br> <br>
+       
+	</div>
 </section>
-</div>
+<section id="about" class="py-4" style="background-color:#f7f7f7">
+	<div class="container" style="background-color: white;">
+		<h4><strong>You may also like :</strong></h4>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>Pre Dac Course</strong></h4>
+						CDAC ccat free pre dac course 45 days you can check here..<br>
+						<a href="{% url 'ccat-predac-course-pune' %}">Pre Dac</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>CDAC C-CAT Syllabus 2019</strong></h4>
+						CDAC C-CAT Syllabus 2019 - you can check here.. <br>
+						<a href="{% url 'cdac-c-cat-syllabus' %}">Syllabus</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong> CDAC C-CAT Admit Card 2019 </strong></h4>
+						CDAC C-CAT Admit Card 2019- The Authorities has released CDAC ... <br>
+						<a href="{% url 'cdac-c-cat-admit-card' %}">Admit Card </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>CDAC C-CAT Result 2019</strong></h4>
+						CDAC C-CAT Result & Rank 2019 - The Centre for Development of... <br>
+						<a href="{% url 'cdac-c-cat-result' %}">CCAT Result </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>CDAC C-CAT Cut-Off</strong></h4>
+						CDAC C-CAT Cut-Off 2019- You can check latest cutoff for CDAC here .. <br>
+						<a href="{% url 'cdac' %}">Cut-Off</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-4">
+			<div class="card listing-preview">
+				<div class="card-body">
+					<div class="listing-heading text-center">
+						<h4><strong>CDAC C-CAT Test Seties</strong></h4>
+						CDAC C-CAT Mock Test 2019- free 2 mock test for both section.. <br>
+						<a href="{% url 'onlinetest' %}">Mock Test</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 {% endblock %}

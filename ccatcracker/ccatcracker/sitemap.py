@@ -1164,7 +1164,20 @@ class StaticViewSitemap(Sitemap):
 'ja-ja-ja-sargam-notes-gajendra-verma',
 'ho-ja-rangeela-re-sargam-notes-bhangra-paa-le',
 'bijli-ki-taar-sargam-notes-tony-kakkar',
-'baby-bewafa-sargam-notes-goldie-sohel'
+'baby-bewafa-sargam-notes-goldie-sohel',
+'cdac-courses',
+'dmc-cdac-course',
+'iot-cdac-course',
+'desd-cdac-course',
+'dittis-cdac-course',
+'hpcsa-cdac-course',
+'vlsi-cdac-course',
+'ai-cdac-course',
+'cdac-c-cat-syllabus',
+'cdac-c-cat-result',
+'cdac-c-cat-admit-card',
+'ccat-predac-course-pune'
+
 
 
 ]

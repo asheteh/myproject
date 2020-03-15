@@ -3,10 +3,13 @@
 
 {% block title %}{{songs.0.song_names}} {% endblock %}
 
-<meta name="keywords" content="Hindi songs 2019 ,sargam & notations,notes of songs,chords hindi songs,english songs 2019,2020,chords in hindi,hindi chords">
-        <!-- Main -->
+
+
+<!-- Main -->
 {% block content %}
-<style>
+
+	
+	<style>
 h2{
 	
 		
@@ -53,77 +56,87 @@ form.example input[type=text] {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+.nbsp {
+    white-space: nowrap;
+}
 
 </style>
- 
-<section style="background-color: black;">    
-<div id="content-wrap">
-<section id="about" class="py-4" >
-
-
-	<div class="container">
-	  <div class="row">
-		<div class="col-md-8" >
+	<section id="about" class="py-4" style="background-color:black">
+		<div class="container" style="background-color:white;">
 			<h2 style="color: white;">Search your Faviourite Songs</h2>
-			<form class="example" method="post" action="{% url 'chord_list' %}">
+			<form class="example" method="post" action="{% url 'song_list' %}">
 					{% csrf_token %}
-					<input type="text" name="query" id="searchsong" value="" placeholder="Song Name" />
-			
-				<button type="submit"><i class="fa fa-search"></i></button>
-			  </form>
-			  <p id="search-results">
-
-
-				</p>
-			  <br> <br>
-			  <h4 style="color:white;">Your Search Song : </h4> <br>
+					
+				
+				<input type="text" name="query" id="search" value="" placeholder="Song Name" />
+				<button type="submit">
+					<i class="fa fa-search"></i>
+				</button>
+			</form>
+			<p id="search-results"></p>
+			<br>
+				<br>
+				</div>
+			</section>
+			<section id="about" class="py-4" style="background-color:black">
+				<div class="container" style="background-color:white;">
+					<h4 >
+						<strong>{{songs.0.song_names}} </strong>
+					</h4>
+					<br>
               {% if songs %}
               {% for p in songs %} 
-              <h5 style="color:white;">
-                    {{p.sargam|linebreaks}}    
-			  </h5>
+              
+						
+						<h5 style="color:black;">
+							<p >
+								<strong>{{p.sargam|linebreaksbr}}</strong>
+							</p>
+						</h5>
               {% endfor %}
-			  {% endif %} <br> <br>
-			  <h2 style="color: white;">You may also like this :</h2>
-<section id="listings" class="py-4">
-		<div class="container">
-		  <div class="row">
+			  {% endif %} 
+			
+				
+					</div>
+				</section>
+				<section id="about" class="py-4" style="background-color:black">
+					<div class="container" style="background-color:grey;">
+						<h2 style="color: white;">You may also like this :</h2>
+
 	
 				{% if lists %}
 				{% for list in lists %}
 	
-				 <!-- Listing 1 -->
-			  <div class="col-md-6 col-lg-4 mb-4">
-				  <div class="card listing-preview">
-					
-					<div class="card-body">
-					  <div class="listing-heading text-center">
-						  <h4>Sargam	 and Notation</h4>
-						<a href="{{list.url}}">{{list.song_names}}</a>
-						</div>
-					  <hr>
-				</div>
-			</div>
-		</div>
+				 
+								
+						<!-- Listing 1 -->
+						<div class="col-md-6 col-lg-4 mb-4">
+							<div class="card listing-preview">
+								<div class="card-body">
+									<div class="listing-heading text-center">
+										<h4>Sargam	 and Notation</h4>
+										<a href="{{list.url}}">{{list.song_names}}</a>
+									</div>
+									<hr>
+									</div>
+								</div>
+							</div>
 	
 				{% endfor %}
 	
 			  {% else %}
-			  <div class="col-md-12">
-				<p>No Listings Available</p>
-			  </div>
+			  
+									
+							<div class="col-md-12">
+								<p>No Listings Available</p>
+							</div>
 			  {% endif %}
-			</section> 
-			
-</section>	
-			
-			
-		</div>
-			
-		</div>
-	  </div>
-	</div>
-  </section>
-</div>
+		
+	  
+								
+						</div>
+					</div>
+				</section>
+				
 
 {% endblock %}

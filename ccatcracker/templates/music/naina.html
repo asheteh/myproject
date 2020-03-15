@@ -1,0 +1,139 @@
+{% load static %}
+<html lang="en">
+   <head>
+      <title> {{songs.0.song_names}}</title>
+      <meta name="keywords" content="{{songs.0.keywords}}">   
+      <meta content= "{{songs.0.meta_disc}}" name='description'/>
+      <meta content='{{songs.0.meta_name}}' property='og:description'/>
+      <link rel="icon" href= "{% static '/img/ccat9.png' %}" type="image/gif" >
+      <meta charset="ANSI">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="{% static 'css/all.css' %}">
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+      <!-- Custom -->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <!--Lightbox-->
+      <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+      <script src ="{% static 'js/jquery-2.0.0.min.js' %}"></script>
+      <script src ="{% static 'assets/js/ajax.js' %}"></script>
+   <body style>
+      <!-- Top Bar -->
+      {% include 'partials/_topbar.html' %}
+      <!-- Nav Bar -->
+      {% include 'partials/nav.html' %}
+      <!-- Footer -->
+      {% block content %}{% endblock %}
+      <script src="{% static 'js/main.js' %} "></script>
+      <script src="{% static 'js/lightbox.min.js' %} "></script>
+      <!-- Main -->
+      <style>
+         h2{
+         font: inherit;
+         vertical-align: baseline;
+         font-weight: 900;
+         line-height: 1.9;
+         font-family:  sans-serif;
+         margin: 0 0 1em 0;
+         }
+         form.example input[type=text] {
+         padding: 10px;
+         font-size: 17px;
+         border: 1px solid grey;
+         float: left;
+         width: 80%;
+         background: #f1f1f1;
+         }
+         form.example button {
+         float: left;
+         width: 20%;
+         padding: 10px;
+         background: blue;
+         color: white;
+         font-size: 17px;
+         border: 1px solid grey;
+         border-left: none;
+         cursor: pointer;
+         height: 45.5px;
+         }
+         form.example button:hover {
+         background: darkslategray;
+         }
+         form.example::after {
+         content: "";
+         clear: both;
+         display: table;
+         }
+         #content-wrap {
+         padding-top: 50px;
+         padding-bottom: 50px;
+         }
+         .nbsp {
+         white-space: nowrap;
+         }
+      </style>
+      <section id="about" class="py-4" style="background-color:black">
+         <div class="container" style="background-color:white;">
+            <h2 style="color: white;">Search your Faviourite Songs</h2>
+            <form class="example" method="post" action="{% url 'song_list' %}">
+                  {% csrf_token %}
+                  
+               
+               <input type="text" name="query" id="search" value="" placeholder="Song Name" />
+               <button type="submit">
+                  <i class="fa fa-search"></i>
+               </button>
+            </form>
+            <p id="search-results"></p>
+            <br>
+               <br>
+               </div>
+            </section>
+      <section id="about" class="py-4" style="background-color:black">
+         <div class="container" style="background-color:white;">
+            <h4 >
+               <strong>{{songs.0.song_names}} </strong>
+            </h4>
+            <br>
+            {% if songs %}
+            {% for p in songs %} 
+            <h5 style="color:black;">
+               <p >
+                  <strong>{{p.sargam|linebreaksbr}}</strong>
+               </p>
+            </h5>
+            {% endfor %}
+            {% endif %}  
+            <br> <br>
+         </div>
+      </section>
+      <section id="about" class="py-4" style="background-color:black">
+         <div class="container" style="background-color:grey;">
+            <h2 style="color: white;">You may also like this :</h2>
+            {% if lists %}
+            {% for list in lists %}
+            <!-- Listing 1 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+               <div class="card listing-preview">
+                  <div class="card-body">
+                     <div class="listing-heading text-center">
+                        <h4>Sargam	 and Notation</h4>
+                        <a href="{{list.url}}">{{list.song_names}}</a>
+                     </div>
+                     <hr>
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="col-md-12">
+               <p>No Listings Available</p>
+            </div>
+            {% endif %}
+         </div>
+         </div>
+      </section>
+   </body>
+   {% include 'partials/foot.html' %}
+   </head>
+</html>

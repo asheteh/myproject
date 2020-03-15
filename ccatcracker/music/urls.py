@@ -419,6 +419,14 @@ urlpatterns = [
     path('ho-ja-rangeela-re-sargam-notes-bhangra-paa-le',views.rangeela,name='ho-ja-rangeela-re-sargam-notes-bhangra-paa-le'),
     path('bijli-ki-taar-sargam-notes-tony-kakkar',views.bijji,name='bijli-ki-taar-sargam-notes-tony-kakkar'),
     path('baby-bewafa-sargam-notes-goldie-sohel',views.baby,name='baby-bewafa-sargam-notes-goldie-sohel'),
+    
+    path('kabhi-kabhi-mere-dil-mein-hindi-song-notes-harmonium-sargam',views.kabhi_kabhi,name='kabhi-kabhi-mere-dil-mein-hindi-song-notes-harmonium-sargam'),
+    path('tu-pyar-ka-sagar-hai-hindi-song-harmonium-notes-sargam',views.tu_pyar,name='tu-pyar-ka-sagar-hai-hindi-song-harmonium-notes-sargam'),
+    path('filhaal-song-notation-for-harmonium--full-free',views.filhal,name='filhaal-song-notation-for-harmonium--full-free'),
+    path('mere-naina-sawan-bhado-मेरे-नैना-सावन-भादो-फि',views.mere_naina,name='mere-naina-sawan-bhado-मेरे-नैना-सावन-भादो-फि'),
+    path('tumse-milke-aisa-laga-harmonium-flute-notations',views.tumse_milke,name='tumse-milke-aisa-laga-harmonium-flute-notations'),
+    path('pachtaoge-arijit-singh-sargam-and-flute-notations',views.pachtaoge,name='pachtaoge-arijit-singh-sargam-and-flute-notations'),
+    path('chale-aana-armaan-malik-sargam-piano-flute',views.chale_aana,name='chale-aana-armaan-malik-sargam-piano-flute'),
 
 ]
 

@@ -1176,10 +1176,14 @@ class StaticViewSitemap(Sitemap):
 'cdac-c-cat-syllabus',
 'cdac-c-cat-result',
 'cdac-c-cat-admit-card',
-'ccat-predac-course-pune'
-
-
-
+'ccat-predac-course-pune',
+'kabhi-kabhi-mere-dil-mein-hindi-song-notes-harmonium-sargam',
+'tu-pyar-ka-sagar-hai-hindi-song-harmonium-notes-sargam',
+'filhaal-song-notation-for-harmonium--full-free',
+'mere-naina-sawan-bhado-मेरे-नैना-सावन-भादो-फि',
+'tumse-milke-aisa-laga-harmonium-flute-notations',
+'pachtaoge-arijit-singh-sargam-and-flute-notations',
+'chale-aana-armaan-malik-sargam-piano-flute',
 ]
        
         return urls

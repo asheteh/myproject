@@ -309,8 +309,7 @@ h1, .h1 {
   font-size: 2.5rem; }
 
 h2, .h2 {
-  font-size: 2rem;
- }
+  font-size: 2rem; }
 
 h3, .h3 {
   font-size: 1.75rem; }
@@ -451,7 +450,9 @@ pre {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+
+}
   @media (min-width: 576px) {
     .container {
       max-width: 540px; } }

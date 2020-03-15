@@ -2500,3 +2500,54 @@ def baby(request):
 	lists = Sargams.objects.filter(song_names__icontains='deewani')[:10]
 	context={'lists':lists}
 	return render(request,'music/baby.html',context)
+
+
+def kabhi_kabhi(request):
+    
+	text = Sargams.objects.filter(id__iexact =785)
+	lists = Sargams.objects.filter(song_names__icontains='kabhi')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/naina.html',context)
+
+def tu_pyar(request):
+
+	text = Sargams.objects.filter(id__iexact =786)
+	lists = Sargams.objects.filter(song_names__icontains='tu')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/naina.html',context)
+
+def filhal(request):
+
+	text = Sargams.objects.filter(id__iexact =787)
+	lists = Sargams.objects.filter(song_names__icontains='aye')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/naina.html',context)
+
+
+def mere_naina(request):
+
+	text = Sargams.objects.filter(id__iexact =788)
+	lists = Sargams.objects.filter(song_names__icontains='mere')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/naina.html',context)
+
+def tumse_milke(request):
+
+	text = Sargams.objects.filter(id__iexact =789)
+	lists = Sargams.objects.filter(song_names__icontains='naina')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/naina.html',context)
+
+def pachtaoge(request):
+
+	text = Sargams.objects.filter(id__iexact =790)
+	lists = Sargams.objects.filter(song_names__icontains='naina')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/naina.html',context)
+
+def chale_aana(request):
+
+	text = Sargams.objects.filter(id__iexact =791)
+	lists = Sargams.objects.filter(song_names__icontains='chale')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/naina.html',context)

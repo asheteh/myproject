@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Sargams
+from .models import Sargams,email_subscription
 
 def music(request):
     listings =Sargams.objects.filter(song_names__icontains='s')[:80]
@@ -2541,13 +2541,46 @@ def tumse_milke(request):
 def pachtaoge(request):
 
 	text = Sargams.objects.filter(id__iexact =790)
-	lists = Sargams.objects.filter(song_names__icontains='naina')[:10]
+	lists = Sargams.objects.filter(relased__icontains='march')[:10]
 	context={'songs' : text,'lists':lists}
 	return render(request,'music/naina.html',context)
 
 def chale_aana(request):
 
 	text = Sargams.objects.filter(id__iexact =791)
-	lists = Sargams.objects.filter(song_names__icontains='chale')[:10]
+	lists = Sargams.objects.filter(relased__icontains='march')[:10]
 	context={'songs' : text,'lists':lists}
 	return render(request,'music/naina.html',context)
+
+
+def subscribes(request):
+    	
+		if request.method == 'POST':
+    		
+			email = request.POST['email']
+			print(email)
+			sub = email_subscription(emails=email)
+			try:
+				sub.save()
+				return render(request,'music/sargam.html')
+				
+			except:
+				 return render(request,'music/sargam.html')
+		
+		return render(request,'music/sargam.html')
+	
+def isharo(request):
+    
+	text = Sargams.objects.filter(id__iexact =792)
+	lists = Sargams.objects.filter(relased__icontains='march')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/naina.html',context)
+
+
+def mehandi(request):
+    
+	text = Sargams.objects.filter(id__iexact =793)
+	lists = Sargams.objects.filter(relased__icontains='march')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/naina.html',context)
+

@@ -1,143 +1,158 @@
-
 {% extends 'base_6.html' %}
-
 {% block title %}{{songs.0.song_names}} {% endblock %}
-
-
-
 <meta name="keywords" content="Hindi songs 2019 ,sargam & notations,notes of songs,chords hindi songs,english songs 2019,2020,chords in hindi,hindi chords">
-	<!-- Main -->
+<!-- Main -->
 {% block content %}
-
-	
-	<style>
-h2{
-	
-		
-	
-		font: inherit;
-		vertical-align: baseline;
-		font-weight: 900;
-		line-height: 1.9;
-		font-family:  sans-serif;
-		margin: 0 0 1em 0;
-}
-form.example input[type=text] {
-	padding: 10px;
-	font-size: 17px;
-	border: 1px solid grey;
-	float: left;
-	width: 80%;
-	background: #f1f1f1;
-  }
-  
-  form.example button {
-	float: left;
-	width: 20%;
-	padding: 10px;
-	background: blue;
-	color: white;
-	font-size: 17px;
-	border: 1px solid grey;
-	border-left: none;
-	cursor: pointer;
-	height: 45.5px;
-  }
-  
-  form.example button:hover {
-	background: darkslategray;
-  }
-  
-  form.example::after {
-	content: "";
-	clear: both;
-	display: table;
-  }
-  #content-wrap {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-.nbsp {
-    white-space: nowrap;
-}
-
+<style>
+   h2{
+   font: inherit;
+   vertical-align: baseline;
+   font-weight: 900;
+   line-height: 1.9;
+   font-family:  sans-serif;
+   margin: 0 0 1em 0;
+   }
+   form.example input[type=text] {
+   padding: 10px;
+   font-size: 17px;
+   border: 1px solid grey;
+   float: left;
+   width: 80%;
+   background: #f1f1f1;
+   }
+   form.example button {
+   float: left;
+   width: 20%;
+   padding: 10px;
+   background: blue;
+   color: white;
+   font-size: 17px;
+   border: 1px solid grey;
+   border-left: none;
+   cursor: pointer;
+   height: 45.5px;
+   }
+   form.example button:hover {
+   background: darkslategray;
+   }
+   form.example::after {
+   content: "";
+   clear: both;
+   display: table;
+   }
+   #content-wrap {
+   padding-top: 50px;
+   padding-bottom: 50px;
+   }
+   .nbsp {
+   white-space: nowrap;
+   }
 </style>
-	<section id="about" class="py-4" style="background-color:black">
-		<div class="container" style="background-color:white;">
-			<h2 style="color: white;">Search your Faviourite Songs</h2>
-			<form class="example" method="post" action="{% url 'song_list' %}">
-					{% csrf_token %}
-					
-				
-				<input type="text" name="query" id="search" value="" placeholder="Song Name" />
-				<button type="submit">
-					<i class="fa fa-search"></i>
-				</button>
-			</form>
-			<p id="search-results"></p>
-			<br>
-				<br>
-				</div>
-			</section>
-			<section id="about" class="py-4" style="background-color:black">
-				<div class="container" style="background-color:white;">
-					<h4 >
-						<strong>{{songs.0.song_names}} </strong>
-					</h4>
-					<br>
-              {% if songs %}
-              {% for p in songs %} 
-              
-						
-						<h5 style="color:black;">
-							<p >
-								<strong>{{p.sargam|linebreaksbr}}</strong>
-							</p>
-						</h5>
-              {% endfor %}
-			  {% endif %} 
-			
-				
-					</div>
-				</section>
-				<section id="about" class="py-4" style="background-color:black">
-					<div class="container" style="background-color:grey;">
-						<h2 style="color: white;">You may also like this :</h2>
-
-	
-				{% if lists %}
-				{% for list in lists %}
-	
-				 
-								
-						<!-- Listing 1 -->
-						<div class="col-md-6 col-lg-4 mb-4">
-							<div class="card listing-preview">
-								<div class="card-body">
-									<div class="listing-heading text-center">
-										<h4>Sargam	 and Notation</h4>
-										<a href="{{list.url}}">{{list.song_names}}</a>
-									</div>
-									<hr>
-									</div>
-								</div>
-							</div>
-	
-				{% endfor %}
-	
-			  {% else %}
-			  
-									
-							<div class="col-md-12">
-								<p>No Listings Available</p>
-							</div>
-			  {% endif %}
-		
-	  
-								
-						</div>
-					</div>
-				</section>
-				
-
+<section id="about" class="py-4" style="background-color:black">
+   <div class="container" style="background-color:white;">
+      <div class="fb-page"  data-href="https://www.facebook.com/notations/" data-tabs="timeline" data-width="" data-height="70" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false">
+         <blockquote cite="https://www.facebook.com/notations/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/notations/">Notation &amp; sargams Hindi songs</a></blockquote>
+      </div>
+      <h2 style="color: white;">Search your Faviourite Songs</h2>
+      <form class="example" method="post" action="{% url 'song_list' %}">
+         {% csrf_token %}
+         <input type="text" name="query" id="search" value="" placeholder="Song Name" />
+         <button type="submit">
+         <i class="fa fa-search"></i>
+         </button>
+      </form>
+      <p id="search-results"></p>
+      <br>
+      <br>
+   </div>
+</section>
+<section id="about" class="py-4" style="background-color:black">
+   <div class="container" style="background-color:white;">
+      <h4 >
+         <div class="fb-page"  data-href="https://www.facebook.com/notations/" data-tabs="timeline" data-width="" data-height="70" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false">
+            <blockquote cite="https://www.facebook.com/notations/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/notations/">Notation &amp; sargams Hindi songs</a></blockquote>
+         </div>
+         <br> <br>
+         <strong>{{songs.0.song_names}} </strong>
+      </h4>
+      <br>
+      {% if songs %}
+      {% for p in songs %} 
+      <h5 style="color:black;">
+         <p >
+            <strong>{{p.sargam|linebreaksbr}}</strong>
+         </p>
+      </h5>
+      {% endfor %}
+      {% endif %} 
+      <div id="fb-root"></div>
+      <div class="fb-page" data-href="https://www.facebook.com/notations/" data-tabs="timeline" data-width="" data-height="70" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false">
+         <blockquote cite="https://www.facebook.com/notations/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/notations/">Notation &amp; sargams Hindi songs</a></blockquote>
+      </div>
+   </div>
+</section>
+<br>
+<section id="work" class="bg-dark text-white text-center">
+   <form  method="POST" action="{% url 'subscribes' %}">
+      {% csrf_token %}
+      <div class="container">
+         <div class="fb-page"  data-href="https://www.facebook.com/notations/" data-tabs="timeline" data-width="" data-height="70" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false">
+            <blockquote cite="https://www.facebook.com/notations/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/notations/">Notation &amp; sargams Hindi songs</a></blockquote>
+         </div>
+         <h3> <strong>Subscribe to our Newsletter</strong> </h3>
+         <p>Any latest release song notation  sargams you will get notified.</p>
+      </div>
+      <input type="text" placeholder="Email address" name="email" required style="color: black; width: 280px;">
+      <br> <br>
+      <div class="container">
+         <input type="submit" value="Subscribe" style="color: green;">
+      </div>
+   </form>
+</section>
+<section id="about" class="py-4" style="background-color:black">
+   <div class="container" style="background-color:grey;">
+      <h2 style="color: white;">You may also like this :</h2>
+      {% if lists %}
+      {% for list in lists %}
+      <!-- Listing 1 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+         <div class="card listing-preview">
+            <div class="card-body">
+               <div class="listing-heading text-center">
+                  <h4>Sargam	 and Notation</h4>
+                  <a href="{{list.url}}">{{list.song_names}}</a>
+               </div>
+               <hr>
+            </div>
+         </div>
+      </div>
+      {% endfor %}
+      {% else %}
+      <div class="col-md-12">
+         <p>No Listings Available</p>
+      </div>
+      {% endif %}
+   </div>
+   </div>
+</section>
+<br>
+<br>
+<section id="work" class="bg-dark text-white text-center">
+   <div class="fb-page"  data-href="https://www.facebook.com/notations/" data-tabs="timeline" data-width="" data-height="70" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false">
+      <blockquote cite="https://www.facebook.com/notations/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/notations/">Notation &amp; sargams Hindi songs</a></blockquote>
+   </div>
+   <form  method="POST" action="{% url 'subscribes' %}">
+      {% csrf_token %}
+      <div class="container">
+         <h3> <strong>Subscribe to our Newsletter</strong> </h3>
+         <p>Any latest release song notation  sargams you will get notified.</p>
+      </div>
+      <input type="text" placeholder="Email address" name="email" required style="color: black; width: 280px;">
+      <br> <br>
+      <div class="container">
+         <input type="submit" value="Subscribe" style="color: green;">
+      </div>
+   </form>
+</section>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
 {% endblock %}

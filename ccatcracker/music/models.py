@@ -38,3 +38,7 @@ class Sargams(models.Model):
    
     
 
+class email_subscription(models.Model):
+    emails  = models.CharField(max_length=200)
+    def __str__(self):
+        return self.emails

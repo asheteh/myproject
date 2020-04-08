@@ -1184,6 +1184,12 @@ class StaticViewSitemap(Sitemap):
 'tumse-milke-aisa-laga-harmonium-flute-notations',
 'pachtaoge-arijit-singh-sargam-and-flute-notations',
 'chale-aana-armaan-malik-sargam-piano-flute',
+'isharon-isharon-mein-harmonium-sargam',
+'mehandi-laga-ke-rakhna-harmonium-notes-sargam',
+'faaslon-mein-chords',
+'channa-ve-chords-bhoot',
+'love-aaj-kal-dooriyan-chords',
+'arijit-singh/shayad-tabs',
 ]
        
         return urls

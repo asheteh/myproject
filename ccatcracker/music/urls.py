@@ -427,6 +427,8 @@ urlpatterns = [
     path('tumse-milke-aisa-laga-harmonium-flute-notations',views.tumse_milke,name='tumse-milke-aisa-laga-harmonium-flute-notations'),
     path('pachtaoge-arijit-singh-sargam-and-flute-notations',views.pachtaoge,name='pachtaoge-arijit-singh-sargam-and-flute-notations'),
     path('chale-aana-armaan-malik-sargam-piano-flute',views.chale_aana,name='chale-aana-armaan-malik-sargam-piano-flute'),
-
+    path('subscribes',views.subscribes,name='subscribes'),
+    path('mehandi-laga-ke-rakhna-harmonium-notes-sargam',views.mehandi,name='mehandi-laga-ke-rakhna-harmonium-notes-sargam'),
+    path('isharon-isharon-mein-harmonium-sargam',views.isharo,name='isharon-isharon-mein-harmonium-sargam'),
 ]
 

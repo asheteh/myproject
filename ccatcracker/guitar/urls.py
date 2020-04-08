@@ -708,7 +708,10 @@ urlpatterns = [
     path('sam-smith/how-do-you-sleep-chords-tabs',views.sleep,name='sam-smith/how-do-you-sleep-chords-tabs'),
     path('pal-pal-dil-ke-paas-guitar-chords-tabs',views.pal,name='pal-pal-dil-ke-paas-guitar-chords-tabs'),
     path('yaad-piya-ki-neha-kakkar-guitar-chords',views.yaad,name='yaad-piya-ki-neha-kakkar-guitar-chords'),
-
-
+    path('subscribe',views.subscribe,name='subscribe'),
+    path('faaslon-mein-chords',views.faslo,name='faaslon-mein-chords'),
+    path('channa-ve-chords-bhoot',views.boot,name='channa-ve-chords-bhoot'),
+    path('love-aaj-kal-dooriyan-chords',views.yeh_dooriya,name='love-aaj-kal-dooriyan-chords'),
+    path('arijit-singh/shayad-tabs',views.shayad,name='arijit-singh/shayad-tabs'),
 
 ]

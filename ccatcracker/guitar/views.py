@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import chord
-
+from .models import email_subscriptions
 
 def chord_list(request):
     try:
@@ -23,7 +23,10 @@ def chord_list(request):
 
    
 		
-     
+
+
+		   
+
 
 
 def search(request):
@@ -4249,3 +4252,63 @@ def yaad(request):
     lists = chord.objects.filter(song_names__icontains='piya')[:10]
     context={'lists':lists}
     return render(request,'guitar/yaad.html',context)
+
+
+
+
+def subscribe(request):
+    	
+		if request.method == 'POST':
+    		
+			email = request.POST['email']
+			print(email)
+			sub = email_subscriptions(emails=email)
+			try:
+				sub.save()
+				return render(request,'guitar/guitar.html')
+				
+			except:
+				 return render(request,'guitar/guitar.html')
+		
+		return render(request,'guitar/guitar.html')
+	
+
+
+def faslo(request):
+    
+	text = chord.objects.filter(id__iexact =702)
+	lists = chord.objects.filter(song_names__icontains='piya')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/guitarall.html',context)
+
+
+def boot(request):
+    
+	text = chord.objects.filter(id__iexact =703)
+	lists = chord.objects.filter(song_names__icontains='piya')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/guitarall.html',context)
+
+
+
+def yeh_dooriya(request):
+    	
+	text = chord.objects.filter(id__iexact =704)
+	lists = chord.objects.filter(song_names__icontains='piya')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/guitarall.html',context)
+
+def shayad(request):
+    
+	text = chord.objects.filter(id__iexact =705)
+	lists = chord.objects.filter(song_names__icontains='piya')[:10]
+	context={'songs' : text,'lists':lists}
+	return render(request,'music/guitarall.html',context)
+
+
+
+
+
+
+
+

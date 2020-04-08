@@ -197,5 +197,23 @@ form.example input[type=text] {
   </section>
 
 		
-</section>
+</section> <br> <br>
+<section id="work" class="bg-dark text-white text-center">
+	<form  method="POST" action="{% url 'subscribes' %}">
+	  {% csrf_token %}
+	  <div class="container">
+		<h3> <strong>Subscribe to our Newsletter</strong> </h3>
+		<p>Any latest release song notations sargams you will get notified.</p>
+	  </div>
+	
+	  
+	  
+		<input type="text" placeholder="Email address" name="email" required style="color: black; width: 280px;">
+		<br> <br>
+	
+	  <div class="container">
+		<input type="submit" value="Subscribe" style="color: green;">
+	  </div>
+	</form>
+  </section>
 {% endblock %}

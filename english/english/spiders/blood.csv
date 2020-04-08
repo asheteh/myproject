@@ -1,0 +1,56 @@
+Question,A,B,C,D,Answer,Q
+Introducing a lady a man said Her mother is the only daughter of my mother in law What is the man to the lady ,Son,Father,Uncle,Husband,B,Blood
+Introducing a woman a man said Her mother s husband s sister is my aunt How man is related to the woman ,Nephew,Brother,brother-in-law,Cousin,B,Blood
+Leela who is Sohan s daughter says to Latika Your mother Alka is the younger sister of my father who is the third child of Gajanan What is the relation of Gajanan to Latika ,Father,Uncle,Grandfather,Father-in-law,C,Blood
+Old man s son is my son s uncle then what relation has the old man me ,Brother,Father,Grandfather,Uncle,B,Blood
+There are five persons sitting on a bench Blue eyed lady sitting in the middle is my mother At the extreme left the man with grey hair is my maternal uncle Lady sitting at the extreme right is having a pimple on her nose and is the wife of person who is sitting between blue eyed lady and grey haired man and has a pointed nose A lady having marks on her face is the younger sister of the blue eyed lady and sitting on the remaining fifth place The person having a pointed nose is the son of the blue eyed lady What is the lady having marks on her face to the man sitting at extreme left ,Wife,Maternal Aunt,Sister,Sister-in-law,C,Blood
+Pointing to Gopi Nalni says I am the daughter of the only son of his grandfather How Nalni is related to Gopi ,Niece,Daughter,Sister,Cannot be determined,C,Blood
+A s son B is married with C whose sister D is married to E the brother of B How D is related to A ,Sister,Daughter,Sister-in-law,Cousin,B,Blood
+Pointing to a lady a person said The son of her only brother is the brother of my wife How is the lady related to the person ,Maternal aunt,Grandmother,Sister of father-in-law,None of these,C,Blood
+1 B5D means B is the father of D ,F3M5K,F5M3K,F9M4N3K,F3M5N3K,A,Blood
+ 2 B9D means B is the sister of D ,Q $ R # T @ M,Q $ R @ T # M,Q $ R * T # M,Q $ R @ T * M,D,Blood
+Pointing a photograph X said to his friend Y She is the only daughter of the father of my mother How X is related to the person of photograph ,Daughter,Son,Nephew,Cannot be decided,B,Blood
+Veena who is the sister in law of Ashok is the daughter in law of Kalyani Dheeraj is the father of Sudeep who is the only brother of Ashok How Kalyani is related to Ashok ,Mother-in-law,Aunt,Wife,None of these,D,Blood
+If A B means A is the sister of B A x B means A is the wife of B A B means A is the father of B and A B means A is the brother of B Which of the following means T is the daughter of P ,P x Q % R + S - T,P x Q % R - T + S,P x Q % R + T - S,P x Q % R + S + T,B,Blood
+Pointing to a woman Abhijit said Her granddaughter is the only daughter of my brother How is the woman related to Abhijit ,Sister,Grandmother,Mother-in-law,Mother,D,Blood
+Amit said This girl is the wife of the grandson of my mother How is Amit related to the girl ,Brother,Grandfather,Husband,Father-in-law,D,Blood
+Pointing to a person Deepak said His only brother is the father of my daughter s father How is the person related to Deepak ,Father,Grandfather,Uncle,Brother-in-law,C,Blood
+P is the mother of K K is the sister of D D is the father of J How is P related to J ,Mother,Grandmother,Aunt,Data inadequate,B,Blood
+If P Q means P is the father of Q P Q means P is the mother of Q and P Q means P is the sister of Q then N L P Q shows which of the relation of Q to N ,Grand son,Grand daughter,Nephew,Data is inadequate,D,Blood
+If A B means A is the brother of B A B means A is the wife of B A B means A is the daughter of B and A B means A is the father of B which of the following indicates that U is the father in law of P ,P @ Q $ T # U * W,P @ W $ Q * T # U,P @ Q $ W * T # U,P @ Q $ T # W * U,A,Blood
+Introducing a man a woman said He is the only son of the mother of my mother How is the woman related to the man ,Mother,Sister,Niece,Maternal aunt,C,Blood
+If A B means A is the mother of B A B means A is the brother B A B means A is the father of B and A x B means A is the sister of B which of the following shows that P is the maternal uncle of Q ,Q - N + M x P,P + S x N - Q,P - M + N x Q,Q - S % P,C,Blood
+If A is the brother of B B is the sister of C and C is the father of D how D is related to A ,Brother,Sister,Nephew,Cannot be determined,D,Blood
+If A B means A is the brother of B A B means A is the sister of B and A x B means A is the father of B Which of the following means that C is the son of M ,M - N x C + F,F - C + N x M,N + M - F x C,M x N - C + F,D,Blood
+Introducing a boy a girl said He is the son of the daughter of the father of my uncle How is the boy related to the girl ,Brother,Nephew,Uncle,Son-in-law,A,Blood
+Pointing to a photograph Lata says He is the son of the only son of my grandfather How is the man in the photograph related to Lata ,Brother,Uncle,Cousin,Data is inadequate,A,Blood
+If A B means A is the brother of B A x B means A is the son of B and A B means B is the daughter of A then which of the following means M is the maternal uncle of N ,M + O x N,M % O x N + P,M + O % N,None of these,D,Blood
+If D is the brother of B how B is related to C To answer this question which of the statements is are necessary 1 The son of D is the grandson of C ,Only 1,Only 2,Either 1 or 2,1 and 2 both are required,D,Blood
+ 2 B is the sister of D ,M x N % S + T,M x N - S % T,M x S - N % T,M x N x S % T,A,Blood
+If A B means A is the father of B A B means A is the brother B A B means A is the wife of B and A x B means A is the mother of B which of the following shows that M is the maternal grandmother of T ,Nephew,Brother,Father,Maternal Uncle,D,Blood
+Pointing to a photograph Bajpai said He is the son of the only daughter of the father of my brother How Bajpai is related to the man in the photograph ,Son,Brother,Cousin,Brother-in-law,B,Blood
+A and B are children of D Who is the father of A To answer this question which of the statements 1 and 2 is necessary ,Only (1),Only (2),Either (1) or (2),(1) and (2) both,B,Blood
+ 2 F is the mother B ,Mother,Grandmother,Sister,Daughter,A,Blood
+Pointing towards a man a woman said His mother is the only daughter of my mother How is the woman related to the man ,D,B,C,Data is inadequate,A,Blood
+If P Q means P is the brother of Q P Q means P is the mother of Q P Q means P is the daughter of Q in A B C D who is the father ,Wife,Sister,Sister-in-law,Data is inadequate,A,Blood
+Introducing Sonia Aamir says She is the wife of only nephew of only brother of my mother How Sonia is related to Aamir ,M % N x P,N x P % M,M + S % R % P,M + K % T x P,D,Blood
+If A B means A is the brother of B B C means B is the son of C C D means C is the wife of D and A D means A is the son of D how C is related to A ,Maternal grandmother,Maternal aunt,Aunt,Mother,D,Blood
+Pointing to a girl Sandeep said She is the daughter of the only sister of my father How is sandeep related to the girl ,Uncle,Cousin,Father,Grandfather,B,Blood
+Pointing to a boy in the photograph Reena said He is the only son of the only child of my grandfather How Reena is related to that boy ,Mother,Sister,Aunt,Cannot be determined,B,Blood
+1 A B means A is the sister of B,M = P + Q * N,N + P = Q * M,N * P $ Q * M,None of these,D,Blood
+ 2 A B means B is the mother of A,Daughter-in-law,Sister-in-law,Aunt,None of these,D,Blood
+Pointing to Varman Madhav said I am the only son of one of the sons of his father How is Varman related to Madhav ,Nephew,Uncle,Father or Uncle,Father,C,Blood
+Introducing a woman Shashank said She is the mother of the only daughter of my son How that woman is related to Shashank ,Daughter,Sister-in-law,Wife,Daughter-in-law,D,Blood
+If A B means B is the brother of A A x B means B is the husband of A A B means A is the mother of B and A B means A is the father of B which of the following relations shows that Q is the grandmother of T ,Q - P + R % T,P x Q % R - T,P x Q % R + T,P + Q % R - T,A,Blood
+1 A3P means A is the mother of P,M9N3K4J,M9N5K3J,K5J9M3N,K3J9N4M,B,Blood
+ 2 A4P means A is the brother of P,Brother,Uncle,Son,Data is inadequate,A,Blood
+If P Q means P is the brother of Q P x Q means P is the father of Q and P Q means P is the sister of Q which of the following relations shows that I is the niece of K ,K + Y + Z - I,K + Y x I - Z,Z - I x Y + K,K x Y + I - Z,B,Blood
+Pointing towards a girl Abhisek says This girl is the daughter of only a child of my father What is the relation of Abhisek s wife to that girl ,Daughter,Mother,Aunt,Sister,B,Blood
+If A B means B is the father of A A B means B is the mother of A A B means B is the sister of A and A B means B is the husband of A which of the following indicates that N is the grandmother of P ,P * Q # M $ N,P @ Q $ M # N,P # Q $ N * M,None of these,D,Blood
+Anupam said to a lady sitting in a car The only daughter of the brother of my wife is the sister in law of the brother of your sister How the husband of the lady is related to Anupam ,Maternal uncle,Uncle,Father,Son-in-law,D,Blood
+If P Q means P is the brother of Q P x Q means P is the wife of Q and P Q means P is the daughter of Q then which of the following means D is the uncle of A ,A % B x C + D,A x B + C % D,A + C % B x D,None of these,D,Blood
+Introducing a lady a man said Her mother is the only daughter of my mother in law What is the man to the lady ,Son,Father,Uncle,Husband,B,Blood
+Introducing a woman a man said Her mother s husband s sister is my aunt How man is related to the woman ,Nephew,Brother,brother-in-law,Cousin,B,Blood
+Leela who is Sohan s daughter says to Latika Your mother Alka is the younger sister of my father who is the third child of Gajanan What is the relation of Gajanan to Latika ,Father,Uncle,Grandfather,Father-in-law,C,Blood
+Old man s son is my son s uncle then what relation has the old man me ,Brother,Father,Grandfather,Uncle,B,Blood
+There are five persons sitting on a bench Blue eyed lady sitting in the middle is my mother At the extreme left the man with grey hair is my maternal uncle Lady sitting at the extreme right is having a pimple on her nose and is the wife of person who is sitting between blue eyed lady and grey haired man and has a pointed nose A lady having marks on her face is the younger sister of the blue eyed lady and sitting on the remaining fifth place The person having a pointed nose is the son of the blue eyed lady What is the lady having marks on her face to the man sitting at extreme left ,Wife,Maternal Aunt,Sister,Sister-in-law,C,Blood

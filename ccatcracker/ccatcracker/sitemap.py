@@ -1190,13 +1190,49 @@ class StaticViewSitemap(Sitemap):
 'channa-ve-chords-bhoot',
 'love-aaj-kal-dooriyan-chords',
 'arijit-singh/shayad-tabs',
+'bole-chudiyan-sargam-notes-kabhi-khushi-kabhi-gham',
+'main-to-ek-khwaab-hoon-harmonium-sargam',
+'meri-mohabbat-jawan-rahegi-harmonium',
+'ya-dil-ki-suno-duniyawalon-sagam',
+'ruke-ruke-se-kadam-harmonium-sargam',
+'na-tum-humein-jano-harmonium-sargam',
+'tera-saath-hai-to-harmonium-sargam',
+'chookar-mere-man-ko-notation',
+'main-shayar-to-nahin-piano',
+'choo-lene-do-nazuk-piano-notes-sargam',
+'tum-na-jane-kis-jahan-mein-kho-gaye-sargam-notation',
+'jeevan-ke-safar-mein-rahi-harmonium',
+'happy-birthday-tune',
+'mujhe-yaad-karne-wale-sargam-harmonium',
+'tujh-sang-preet-lagayi-sajna-harmonium',
+'wo-paas-rahein-ya-door-sargam',
+'kismat-bigdi-duniya-badli-harmonium',
+'chal-chal-chal-mere-saathi-harmonium',
+'kehta-hai-jokar-harmonium-sargam',
+'teri-duniya-mein-jeene-se-sargam',
+'chahunga-main-tujhe-sargam-hindi',
+'jab-hum-jawan-honge-sargam',
+'tu-rootha-to-main-rodungi-sanam-notation',
+'kya-hua-tera-wada-sargam',
+'ye-zindagi-usi-ki-hai-harmonium',
+'aap-jaisa-koi-meri-sargam',
+'khaike-paan-banaras-wala-sargam',
+'ye-desh-pardes-kishore-kumar-sargam',
+'sansaar-ki-har-shay-ka-sargam',
+'kai-sadiyon-se-kai-janmon-se-sargam',
+'tu-mere-samne-hai-harmonium-sargam',
+'suhani-raat-dhal-chuki-sargam',
+'ye-zameen-ga-rahi-hai-harmonium-sargam',
+'mohabbat-tark-ki-maine-sargam',
+'sheesha-ho-ya-dil-ho-sargam',
+'chand-phir-nikla-magar-sargam',
+'tu-hi-sagar-tu-hi-kinara-sargam',
+'mera-dil-ye-pukare-aaja-sargam',
 ]
        
         return urls
                  
        
-
-    
 
     def location(self, item):
         return reverse(item)

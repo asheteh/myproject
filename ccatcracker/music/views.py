@@ -2584,3 +2584,238 @@ def mehandi(request):
 	context={'songs' : text,'lists':lists}
 	return render(request,'music/naina.html',context)
 
+
+
+def main_to(request):
+	text =Sargams.objects.filter(id__iexact =795)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def meri_mohabbat(request):
+	text =Sargams.objects.filter(id__iexact =796)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def ya_dil(request):
+	text =Sargams.objects.filter(id__iexact =797)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def ruke_ruke(request):
+	text =Sargams.objects.filter(id__iexact =798)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def na_tum(request):
+	text =Sargams.objects.filter(id__iexact =799)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def tera_saath(request):
+	text =Sargams.objects.filter(id__iexact =800)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def chookar_mere(request):
+	text =Sargams.objects.filter(id__iexact =801)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def main_shayar(request):
+	text =Sargams.objects.filter(id__iexact =802)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def choo_lene(request):
+	text =Sargams.objects.filter(id__iexact =803)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def tum_na(request):
+	text =Sargams.objects.filter(id__iexact =804)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def jeevan_ke(request):
+	text =Sargams.objects.filter(id__iexact =805)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def happy_birthday(request):
+	text =Sargams.objects.filter(id__iexact =806)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def mujhe_yaad(request):
+	text =Sargams.objects.filter(id__iexact =807)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def tujh_sang(request):
+	text =Sargams.objects.filter(id__iexact =808)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def wo_paas(request):
+	text =Sargams.objects.filter(id__iexact =809)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def kismat_bigdi(request):
+	text =Sargams.objects.filter(id__iexact =812)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def chal_chal(request):
+	text =Sargams.objects.filter(id__iexact =813)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def kehta_hai(request):
+	text =Sargams.objects.filter(id__iexact =814)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def teri_duniya(request):
+	text =Sargams.objects.filter(id__iexact =815)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def chahunga_main(request):
+	text =Sargams.objects.filter(id__iexact =816)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def jab_hum(request):
+	text =Sargams.objects.filter(id__iexact =817)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def tu_rootha(request):
+	text =Sargams.objects.filter(id__iexact =818)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def kya_hua(request):
+	text =Sargams.objects.filter(id__iexact =819)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def ye_zindagi(request):
+	text =Sargams.objects.filter(id__iexact =820)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def aap_jaisa(request):
+	text =Sargams.objects.filter(id__iexact =821)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+
+def bole_chudiyan(request):
+    	
+	text =Sargams.objects.filter(id__iexact =794)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+
+
+
+def ye_desh(request):
+	text =Sargams.objects.filter(id__iexact =823)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def sansaar_ki(request):
+	text =Sargams.objects.filter(id__iexact =824)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def kai_sadiyon(request):
+	text =Sargams.objects.filter(id__iexact =825)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def tu_mere(request):
+	text =Sargams.objects.filter(id__iexact =826)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def suhani_raat(request):
+	text =Sargams.objects.filter(id__iexact =827)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def ye_zameen(request):
+	text =Sargams.objects.filter(id__iexact =828)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def mohabbat_tark(request):
+	text =Sargams.objects.filter(id__iexact =829)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def sheesha_ho(request):
+	text =Sargams.objects.filter(id__iexact =830)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def chand_phir(request):
+	text =Sargams.objects.filter(id__iexact =831)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def tu_hi(request):
+	text =Sargams.objects.filter(id__iexact =832)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :lists}
+	return render(request,'music/naina.html',context)
+
+def mera_dil(request):
+	text =Sargams.objects.filter(id__iexact =833)
+	lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+	context={'songs':text,'lists' :	lists}
+	return render(request,'music/naina.html',context)
+
+def khaike_paan(request):
+    	
+		text =Sargams.objects.filter(id__iexact =822)
+		lists =Sargams.objects.filter(relased__icontains ='apr')[:10]
+		context={'songs':text,'lists' :lists}
+		return render(request,'music/naina.html',context)

@@ -32,6 +32,7 @@ class Sargams(models.Model):
     meta_disc =  models.TextField(blank=True,default="music sargams")
     keywords = models.TextField(blank=True,default="music sargams")
     meta_name = models.TextField(blank=True,default="music sargams")
+    youtube = models.TextField(blank=True,default="https://www.youtube.com/embed/f3YdJ6oBLVc")
     
     def __str__(self):
         return self.song_names

@@ -468,5 +468,14 @@ urlpatterns = [
     path('tu-hi-sagar-tu-hi-kinara-sargam',views.tu_hi,name='tu-hi-sagar-tu-hi-kinara-sargam'),
     path('mera-dil-ye-pukare-aaja-sargam',views.mera_dil,name='mera-dil-ye-pukare-aaja-sargam'),
 
+    path('daga-daga-vai-vai-harmonium-sargam',views.daga_daga,name='daga-daga-vai-vai-harmonium-sargam'),
+    path('har-tukda-mere-dil-ka-sargam-harmonium',views.har_tukda,name='har-tukda-mere-dil-ka-sargam-harmonium'),
+    path('seene-mein-jalan-harmonium-sargam',views.seene_mein,name='seene-mein-jalan-harmonium-sargam'),
+    path('mausam-hai-aashiqana-harmonium',views.mausam_hai,name='mausam-hai-aashiqana-harmonium'),
+    path('kanha-bajaye-bansuri-harmonium-sargam',views.kanha_bajaye,name='kanha-bajaye-bansuri-harmonium-sargam'),
+    path('mere-mann-ka-bawra-panchhi-sargam',views.mere_mann,name='mere-mann-ka-bawra-panchhi-sargam'),
+    path('Chaap-Tilak-Sab-Harmonium-Sargam-notation',views.Chaap_Tilak,name='Chaap-Tilak-Sab-Harmonium-Sargam-notation'),
+
+
 ]
 

@@ -1228,6 +1228,13 @@ class StaticViewSitemap(Sitemap):
 'chand-phir-nikla-magar-sargam',
 'tu-hi-sagar-tu-hi-kinara-sargam',
 'mera-dil-ye-pukare-aaja-sargam',
+'daga-daga-vai-vai-harmonium-sargam',
+'har-tukda-mere-dil-ka-sargam-harmonium',
+'seene-mein-jalan-harmonium-sargam',
+'mausam-hai-aashiqana-harmonium',
+'kanha-bajaye-bansuri-harmonium-sargam',
+'mere-mann-ka-bawra-panchhi-sargam',
+'Chaap-Tilak-Sab-Harmonium-Sargam-notation',
 ]
        
         return urls

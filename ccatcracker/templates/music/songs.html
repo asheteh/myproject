@@ -64,24 +64,7 @@
       <br>
    </div>
 </section>
-<section id="about" class="py-4" style="background-color:black">
-   <div class="container" style="background-color:grey;">
-   <form  method="POST" action="{% url 'subscribes' %}">
-      {% csrf_token %}
-         <br>
-         <div class="fb-page" data-href="https://www.facebook.com/notations/" data-tabs="timeline" data-width="" data-height="80" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false">
-            <blockquote cite="https://www.facebook.com/notations/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/notations/">Notation &amp; sargams Hindi songs</a></blockquote>
-         </div>
-         <h3 style="color: #f1f1f1;"> <strong>Subscribe to our Newsletter</strong> </h3>
-         <p style="color: #f1f1f1;">Any latest release song notations sargams you will get notified.</p>
-      
-      <input type="text" placeholder="Email address" name="email" required style="color: black; width: 280px;">
-      
-     
-         <input type="submit" value="Subscribe" style="color: green;">
-      </div>
-   </form>
-</section>
+
 <section id="about" class="py-4" style="background-color:black">
    <div class="container" style="background-color:white;">
       <h4 >
@@ -98,10 +81,15 @@
       </h5>
       {% endfor %}
       {% endif %}  <br> <br>
-      <iframe width="340" height="245"  src={{songs.0.youtube}}>
-      </iframe>&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="col-md-6 col-lg-4 mb-4">
+         <div class="card listing-preview">
+           
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/IYxuT60Tmh0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               
+             
+            </div>
+         </div>
      
-      
    </div>
 </section>
 <section id="about" class="py-4" style="background-color:black">
